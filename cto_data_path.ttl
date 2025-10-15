@@ -32,3 +32,204 @@ cto:Antibes_Grasse_Path a cs:Path ;
     cs:difficulty "moderate" ;
     cs:recommendedForElectric "recommended" ;
     cs:hasDifficultyScore "3.5"^^xsd:decimal .
+
+### Tour de France 2022
+
+cto:Copenhagen_Copenhagen_Path a cs:Path ;
+    rdfs:label "Copenhagen - Copenhagen (ITT)" ;
+    cs:hasStart dbp:Copenhagen ;
+    cs:hasEnd dbp:Copenhagen ;
+    cs:length "13.2"^^xsd:decimal ;
+    cs:difficulty "easy" ;
+    cs:elevationGain 50 ;
+    cs:recommendedForElectric "no" ;
+    cs:hasDifficultyScore "1.0"^^xsd:decimal .
+
+cto:Roskilde_Nyborg_Path a cs:Path ;
+    rdfs:label "Roskilde - Nyborg" ;
+    cs:hasStart dbp:Roskilde ;
+    cs:hasEnd dbp:Nyborg ;
+    cs:length "202.5"^^xsd:decimal ;
+    cs:difficulty "easy" ;
+    cs:elevationGain 200 ;
+    cs:recommendedForElectric "no" ;
+    cs:hasDifficultyScore "1.5"^^xsd:decimal .
+
+cto:Vejle_Sonderborg_Path a cs:Path ;
+    rdfs:label "Vejle - Sønderborg" ;
+    cs:hasStart dbp:Vejle ;
+    cs:hasEnd dbp:Sønderborg ;
+    cs:length "182.0"^^xsd:decimal ;
+    cs:difficulty "easy" ;
+    cs:elevationGain 300 ;
+    cs:recommendedForElectric "no" ;
+    cs:hasDifficultyScore "1.6"^^xsd:decimal .
+
+cto:Dunkerque_Calais_Path a cs:Path ;
+    rdfs:label "Dunkerque - Calais" ;
+    cs:hasStart dbp:Dunkerque ;
+    cs:hasEnd dbp:Calais ;
+    cs:length "171.5"^^xsd:decimal ;
+    cs:difficulty "moderate" ;
+    cs:elevationGain 800 ;
+    cs:recommendedForElectric "recommended" ;
+    cs:hasDifficultyScore "2.8"^^xsd:decimal .
+
+cto:Lille_Arenberg_Path a cs:Path ;
+    rdfs:label "Lille Métropole - Arenberg Porte du Hainaut" ;
+    cs:hasStart dbp:Lille ;
+    cs:hasEnd dbp:Arenberg_Porte_du_Hainaut ;
+    cs:length "157.0"^^xsd:decimal ;
+    cs:difficulty "hard" ;
+    cs:elevationGain 1200 ;
+    cs:recommendedForElectric "recommended" ;
+    cs:hasDifficultyScore "3.5"^^xsd:decimal .
+
+cto:Binche_Longwy_Path a cs:Path ;
+    rdfs:label "Binche - Longwy" ;
+    cs:hasStart dbp:Binche ;
+    cs:hasEnd dbp:Longwy ;
+    cs:length "220.0"^^xsd:decimal ;
+    cs:difficulty "hard" ;
+    cs:elevationGain 1500 ;
+    cs:recommendedForElectric "recommended" ;
+    cs:hasDifficultyScore "4.0"^^xsd:decimal .
+
+cto:Tomblaine_SuperPlanche_Path a cs:Path ;
+    rdfs:label "Tomblaine - La Super Planche des Belles Filles" ;
+    cs:hasStart dbp:Tomblaine ;
+    cs:hasEnd dbp:La_Planche_des_Belles_Filles ;
+    cs:length "176.5"^^xsd:decimal ;
+    cs:difficulty "hard" ;
+    cs:elevationGain 1900 ;
+    cs:recommendedForElectric "recommended" ;
+    cs:hasDifficultyScore "5.0"^^xsd:decimal ;
+    cs:includesMountain cto:La_Super_Planche_des_Belles_Filles .
+
+cto:Dole_Lausanne_Path a cs:Path ;
+    rdfs:label "Dole - Lausanne" ;
+    cs:hasStart dbp:Dole ;
+    cs:hasEnd dbp:Lausanne ;
+    cs:length "186.5"^^xsd:decimal ;
+    cs:difficulty "moderate" ;
+    cs:elevationGain 1200 ;
+    cs:recommendedForElectric "recommended" ;
+    cs:hasDifficultyScore "3.2"^^xsd:decimal .
+
+cto:Aigle_Chatel_Path a cs:Path ;
+    rdfs:label "Aigle - Châtel Portes du Soleil" ;
+    cs:hasStart dbp:Aigle ;
+    cs:hasEnd dbp:Châtel ;
+    cs:length "193.0"^^xsd:decimal ;
+    cs:difficulty "hard" ;
+    cs:elevationGain 1800 ;
+    cs:recommendedForElectric "recommended" ;
+    cs:hasDifficultyScore "4.3"^^xsd:decimal ;
+    cs:includesMountain cto:Col_de_la_Croix .
+
+cto:Morzine_Megeve_Path a cs:Path ;
+    rdfs:label "Morzine Les Portes du Soleil - Megève" ;
+    cs:hasStart dbp:Morzine ;
+    cs:hasEnd dbp:Megève ;
+    cs:length "148.5"^^xsd:decimal ;
+    cs:difficulty "moderate" ;
+    cs:elevationGain 1600 ;
+    cs:recommendedForElectric "yes" ;
+    cs:hasDifficultyScore "3.5"^^xsd:decimal ;
+    cs:includesMountain cto:Col_de_Megève .
+
+cto:Albertville_Granon_Path a cs:Path ;
+    rdfs:label "Albertville - Col du Granon" ;
+    cs:hasStart dbp:Albertville ;
+    cs:hasEnd dbp:Col_du_Granon ;
+    cs:length "152.0"^^xsd:decimal ;
+    cs:difficulty "very hard" ;
+    cs:elevationGain 2300 ;
+    cs:recommendedForElectric "yes" ;
+    cs:hasDifficultyScore "5.8"^^xsd:decimal ;
+    cs:includesMountain cto:Col_du_Granon , cto:Col_du_Telegraphe , cto:Col_du_Galibier .
+
+cto:Briancon_Alpe_Path a cs:Path ;
+    rdfs:label "Briançon - Alpe d’Huez" ;
+    cs:hasStart dbp:Briançon ;
+    cs:hasEnd dbp:Alpe_d%27Huez ;
+    cs:length "165.5"^^xsd:decimal ;
+    cs:difficulty "very hard" ;
+    cs:elevationGain 2100 ;
+    cs:recommendedForElectric "yes" ;
+    cs:hasDifficultyScore "5.7"^^xsd:decimal ;
+    cs:includesMountain cto:Alpe_dHuez , cto:Col_du_Galibier , cto:Col_de_la_Croix_de_Fer .
+
+cto:SaintEtienne_Mende_Path a cs:Path ;
+    rdfs:label "Saint-Étienne - Mende" ;
+    cs:hasStart dbp:Saint-Étienne ;
+    cs:hasEnd dbp:Mende ;
+    cs:length "192.5"^^xsd:decimal ;
+    cs:difficulty "hard" ;
+    cs:elevationGain 1800 ;
+    cs:recommendedForElectric "yes" ;
+    cs:hasDifficultyScore "4.5"^^xsd:decimal ;
+    cs:includesMountain cto:Montée_de_Mende .
+
+cto:Rodez_Carcassonne_Path a cs:Path ;
+    rdfs:label "Rodez - Carcassonne" ;
+    cs:hasStart dbp:Rodez ;
+    cs:hasEnd dbp:Carcassonne ;
+    cs:length "202.5"^^xsd:decimal ;
+    cs:difficulty "moderate" ;
+    cs:elevationGain 1000 ;
+    cs:recommendedForElectric "yes" ;
+    cs:hasDifficultyScore "3.0"^^xsd:decimal .
+
+cto:Carcassonne_Foix_Path a cs:Path ;
+    rdfs:label "Carcassonne - Foix" ;
+    cs:hasStart dbp:Carcassonne ;
+    cs:hasEnd dbp:Foix ;
+    cs:length "178.5"^^xsd:decimal ;
+    cs:difficulty "hard" ;
+    cs:elevationGain 1700 ;
+    cs:recommendedForElectric "yes" ;
+    cs:hasDifficultyScore "4.0"^^xsd:decimal ;
+    cs:includesMountain cto:Col_dAspin , cto:Col_du_Portet_dAspet .
+
+cto:SaintGaudens_Peyragudes_Path a cs:Path ;
+    rdfs:label "Saint-Gaudens - Peyragudes" ;
+    cs:hasStart dbp:Saint-Gaudens ;
+    cs:hasEnd dbp:Peyragudes ;
+    cs:length "130.0"^^xsd:decimal ;
+    cs:difficulty "hard" ;
+    cs:elevationGain 1600 ;
+    cs:recommendedForElectric "yes" ;
+    cs:hasDifficultyScore "4.3"^^xsd:decimal ;
+    cs:includesMountain cto:Peyragudes .
+
+cto:Lourdes_Hautacam_Path a cs:Path ;
+    rdfs:label "Lourdes - Hautacam" ;
+    cs:hasStart dbp:Lourdes ;
+    cs:hasEnd dbp:Hautacam ;
+    cs:length "143.5"^^xsd:decimal ;
+    cs:difficulty "very hard" ;
+    cs:elevationGain 1800 ;
+    cs:recommendedForElectric "yes" ;
+    cs:hasDifficultyScore "5.0"^^xsd:decimal ;
+    cs:includesMountain cto:Col_de_Spandelles , cto:Hautacam .
+
+cto:Lacapelle_Rocamadour_Path a cs:Path ;
+    rdfs:label "Lacapelle-Marival - Rocamadour (ITT)" ;
+    cs:hasStart dbp:Lacapelle-Marival ;
+    cs:hasEnd dbp:Rocamadour ;
+    cs:length "40.7"^^xsd:decimal ;
+    cs:difficulty "moderate" ;
+    cs:elevationGain 600 ;
+    cs:recommendedForElectric "optional" ;
+    cs:hasDifficultyScore "2.5"^^xsd:decimal .
+
+cto:Paris_LaDefense_Champs_Path a cs:Path ;
+    rdfs:label "Paris La Défense Arena - Champs-Élysées" ;
+    cs:hasStart dbp:La_Défense ;
+    cs:hasEnd dbp:Champs-Élysées ;
+    cs:length "116.0"^^xsd:decimal ;
+    cs:difficulty "easy" ;
+    cs:elevationGain 200 ;
+    cs:recommendedForElectric "no" ;
+    cs:hasDifficultyScore "1.3"^^xsd:decimal .
