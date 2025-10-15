@@ -1,0 +1,41 @@
+@prefix cto: <http://data.cyclingtour.fr/data#> .
+@prefix cs:  <http://data.cyclingtour.fr/schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+cto:EBike_100 a cs:ElectricBike ;
+    rdfs:label "E-Bike Model 100" ;
+    cs:pricePerDay "28.00"^^xsd:decimal ;
+    cs:availableFrom "2025-04-01"^^xsd:date ;
+    cs:maintenanceStatus "ok" .
+
+cto:EBike_200 a cs:ElectricBike ;
+    rdfs:label "E-Bike Model 200" ;
+    cs:pricePerDay "32.00"^^xsd:decimal ;
+    cs:availableFrom "2025-04-10"^^xsd:date ;
+    cs:maintenanceStatus "ok" .
+
+cto:RoadBike_300 a cs:RoadBike ;
+    rdfs:label "Road Bike Model 300" ;
+    cs:pricePerDay "22.00"^^xsd:decimal ;
+    cs:availableFrom "2025-03-20"^^xsd:date ;
+    cs:maintenanceStatus "needs_service" .
+
+cto:GravelBike_400 a cs:Bike ;
+    rdfs:label "Gravel Bike Model 400" ;
+    cs:pricePerDay "26.00"^^xsd:decimal ;
+    cs:availableFrom "2025-03-25"^^xsd:date ;
+    cs:maintenanceStatus "ok" .
+
+cto:MountainBike_500 a cs:MountainBike ;
+    rdfs:label "Mountain Bike Model 500" ;
+    cs:pricePerDay "30.00"^^xsd:decimal ;
+    cs:availableFrom "2025-04-05"^^xsd:date ;
+    cs:maintenanceStatus "ok" .
+
+cto:BeginnerBike_600 a cs:Bike ;
+    rdfs:label "Beginner Bike Model 600" ;
+    cs:pricePerDay "18.00"^^xsd:decimal ;
+    cs:availableFrom "2025-03-30"^^xsd:date ;
+    cs:maintenanceStatus "ok" .

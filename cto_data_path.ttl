@@ -1,0 +1,34 @@
+@prefix cto: <http://data.cyclingtour.fr/data#> .
+@prefix cs:  <http://data.cyclingtour.fr/schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+cto:Nice_Cannes_Path a cs:Path ;
+    rdfs:label "Nice to Cannes coastal path" ;
+    cs:hasStart dbp:Nice ;
+    cs:hasEnd dbp:Cannes ;
+    cs:length "33.5"^^xsd:decimal ;
+    cs:elevationGain 120 ;
+    cs:difficulty "easy" ;
+    cs:recommendedForElectric "yes" ;
+    cs:hasDifficultyScore "2.0"^^xsd:decimal .
+
+cto:Cannes_Antibes_Path a cs:Path ;
+    rdfs:label "Cannes to Antibes scenic path" ;
+    cs:hasStart dbp:Cannes ;
+    cs:hasEnd dbp:Antibes ;
+    cs:length "12.2"^^xsd:decimal ;
+    cs:elevationGain 80 ;
+    cs:difficulty "easy" ;
+    cs:recommendedForElectric "yes" ;
+    cs:hasDifficultyScore "1.5"^^xsd:decimal .
+
+cto:Antibes_Grasse_Path a cs:Path ;
+    rdfs:label "Antibes to Grasse climb" ;
+    cs:hasStart dbp:Antibes ;
+    cs:hasEnd dbp:Grasse ;
+    cs:length "24.0"^^xsd:decimal ;
+    cs:elevationGain 420 ;
+    cs:difficulty "moderate" ;
+    cs:recommendedForElectric "recommended" ;
+    cs:hasDifficultyScore "3.5"^^xsd:decimal .

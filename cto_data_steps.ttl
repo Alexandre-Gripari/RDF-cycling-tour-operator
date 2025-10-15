@@ -1,0 +1,32 @@
+@prefix cto: <http://data.cyclingtour.fr/data#> .
+@prefix cs:  <http://data.cyclingtour.fr/schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+cto:Stage1 a cs:TourStage ;
+    rdfs:label "Stage 1: Nice to Cannes" ;
+    cs:stageNumber 1 ;
+    cs:stagePath cto:Nice_Cannes_Path ;
+    cs:capacity 12 ;
+    cs:guideAssigned cto:Guide_Pierre .
+
+cto:Stage2 a cs:TourStage ;
+    rdfs:label "Stage 2: Cannes to Antibes" ;
+    cs:stageNumber 2 ;
+    cs:stagePath cto:Cannes_Antibes_Path ;
+    cs:capacity 12 ;
+    cs:guideAssigned cto:Guide_Pierre .
+
+cto:Stage3 a cs:TourStage ;
+    rdfs:label "Stage 3: Antibes to Grasse" ;
+    cs:stageNumber 3 ;
+    cs:stagePath cto:Antibes_Grasse_Path ;
+    cs:capacity 10 ;
+    cs:guideAssigned cto:Guide_Marie .
+
+cto:CoastalEasyWeek a cs:TourPackage ;
+    rdfs:label "Coastal Easy Week" ;
+    cs:pricePerDay "125.00"^^xsd:decimal ;
+    cs:capacity 12 ;
+    cs:includesStage cto:Stage1, cto:Stage2, cto:Stage3 ;
+    cs:guideAssigned cto:Guide_Pierre .

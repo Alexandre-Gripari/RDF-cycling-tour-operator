@@ -1,0 +1,23 @@
+@prefix cto: <http://data.cyclingtour.fr/data#> .
+@prefix cs:  <http://data.cyclingtour.fr/schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbp:  <http://dbpedia.org/resource/> .
+
+cto:WaterPoint_NicePort a cs:WaterPoint ;
+    rdfs:label "Water Point - Nice Port" ;
+    cs:location dbp:Nice ;
+    cs:capacity 200 ;
+    cs:description "Refill station near Nice old port" .
+
+cto:WaterPoint_CannesBeach a cs:WaterPoint ;
+    rdfs:label "Water Point - Cannes Beach" ;
+    cs:location dbp:Cannes ;
+    cs:capacity 150 ;
+    cs:description "Cold water dispenser near the beach" .
+
+cto:WaterPoint_GrasseSquare a cs:WaterPoint ;
+    rdfs:label "Water Point - Grasse Main Square" ;
+    cs:location dbp:Grasse ;
+    cs:capacity 180 ;
+    cs:description "Public fountain in the town square" .

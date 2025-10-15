@@ -1,0 +1,161 @@
+@prefix cs:  <http://data.cyclingtour.fr/schema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+### Class
+
+cs:Bike a rdfs:Class ;
+    rdfs:label "Bike" ;
+    rdfs:comment "A bicycle available for rent or use during a tour." .
+
+cs:ElectricBike a rdfs:Class ;
+    rdfs:subClassOf cs:Bike ;
+    rdfs:label "Electric Bike" ;
+    rdfs:comment "A bike equipped with an electric motor for assisted pedaling." .
+
+cs:RoadBike a rdfs:Class ;
+    rdfs:subClassOf cs:Bike ;
+    rdfs:label "Road Bike" ;
+    rdfs:comment "A lightweight bike designed for paved surfaces and long distances." .
+
+cs:Path a rdfs:Class ;
+    rdfs:label "Cycling Path" ;
+    rdfs:comment "A cycling route connecting two destinations." .
+
+cs:Mountain a rdfs:Class ;
+    rdfs:label "Mountain" ;
+    rdfs:comment "A mountain or climb along a cycling route." .
+
+cs:WaterPoint a rdfs:Class ;
+    rdfs:label "Water Point" ;
+    rdfs:comment "A location where riders can refill water during a tour." .
+
+cs:Guide a rdfs:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "Tour Guide" ;
+    rdfs:comment "A professional cycling guide who accompanies clients on tours." .
+
+cs:Client a rdfs:Class ;
+    rdfs:subClassOf foaf:Person ;
+    rdfs:label "Client" ;
+    rdfs:comment "A person booking or participating in a cycling tour." .
+
+cs:TourStage a rdfs:Class ;
+    rdfs:label "Tour Stage" ;
+    rdfs:comment "A single stage or segment of a tour." .
+
+cs:TourPackage a rdfs:Class ;
+    rdfs:label "Tour Package" ;
+    rdfs:comment "A complete multi-day cycling tour combining several stages." .
+
+cs:Booking a rdfs:Class ;
+    rdfs:label "Booking" ;
+    rdfs:comment "A booking made by a client for a tour or a bike." .
+
+### Properties
+
+cs:pricePerDay a rdf:Property ;
+    rdfs:domain cs:Bike , cs:TourPackage ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "price per day" .
+
+cs:availableFrom a rdf:Property ;
+    rdfs:domain cs:Bike ;
+    rdfs:range xsd:date ;
+    rdfs:label "available from date" .
+
+cs:maintenanceStatus a rdf:Property ;
+    rdfs:domain cs:Bike ;
+    rdfs:range xsd:string ;
+    rdfs:label "maintenance status" .
+
+cs:hasStart a rdf:Property ;
+    rdfs:domain cs:Path ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "start location" .
+
+cs:hasEnd a rdf:Property ;
+    rdfs:domain cs:Path ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "end location" .
+
+cs:length a rdf:Property ;
+    rdfs:domain cs:Path ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "path length in km" .
+
+cs:elevationGain a rdf:Property ;
+    rdfs:domain cs:Path , cs:Mountain ;
+    rdfs:range xsd:integer ;
+    rdfs:label "elevation gain (m)" .
+
+cs:difficulty a rdf:Property ;
+    rdfs:domain cs:Path , cs:Mountain ;
+    rdfs:range xsd:string ;
+    rdfs:label "difficulty level" .
+
+cs:recommendedForElectric a rdf:Property ;
+    rdfs:domain cs:Path ;
+    rdfs:range xsd:string ;
+    rdfs:label "recommended for e-bike" .
+
+cs:hasDifficultyScore a rdf:Property ;
+    rdfs:domain cs:Path ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "difficulty score (numeric)" .
+
+cs:stageNumber a rdf:Property ;
+    rdfs:domain cs:TourStage ;
+    rdfs:range xsd:integer ;
+    rdfs:label "stage number" .
+
+cs:stagePath a rdf:Property ;
+    rdfs:domain cs:TourStage ;
+    rdfs:range cs:Path ;
+    rdfs:label "path of the stage" .
+
+cs:guideAssigned a rdf:Property ;
+    rdfs:domain cs:TourStage , cs:TourPackage ;
+    rdfs:range cs:Guide ;
+    rdfs:label "assigned guide" .
+
+cs:includesStage a rdf:Property ;
+    rdfs:domain cs:TourPackage ;
+    rdfs:range cs:TourStage ;
+    rdfs:label "includes stage" .
+
+cs:capacity a rdf:Property ;
+    rdfs:domain cs:TourStage , cs:TourPackage ;
+    rdfs:range xsd:integer ;
+    rdfs:label "capacity (participants)" .
+
+cs:bookedBy a rdf:Property ;
+    rdfs:domain cs:Booking ;
+    rdfs:range cs:Client ;
+    rdfs:label "booked by" .
+
+cs:bookingFor a rdf:Property ;
+    rdfs:domain cs:Booking ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "booking target (bike or tour)" .
+
+cs:bookingDate a rdf:Property ;
+    rdfs:domain cs:Booking ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "booking date" .
+
+cs:contact a rdf:Property ;
+    rdfs:domain foaf:Person ;
+    rdfs:range xsd:string ;
+    rdfs:label "contact phone number" .
+
+cs:location a rdf:Property ;
+    rdfs:domain cs:Mountain , cs:WaterPoint ;
+    rdfs:range rdfs:Resource ;
+    rdfs:label "geographic location" .
+
+cs:description a rdf:Property ;
+    rdfs:domain cs:WaterPoint ;
+    rdfs:range xsd:string ;
+    rdfs:label "description" .

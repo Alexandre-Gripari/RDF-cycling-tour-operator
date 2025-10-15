@@ -1,0 +1,18 @@
+@prefix cto: <http://data.cyclingtour.fr/data#> .
+@prefix cs:  <http://data.cyclingtour.fr/schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+cto:Guide_Pierre a cs:Guide ;
+    foaf:name "Pierre Dupont" ;
+    foaf:mbox "pierre@cyclingtour.fr" ;
+    cs:contact "+33-6-12345678" .
+
+cto:Guide_Marie a cs:Guide ;
+    foaf:name "Marie Leclerc" ;
+    foaf:mbox "marie@cyclingtour.fr" ;
+    cs:contact "+33-6-87654321" .
+
+cto:Guide_Lucas a cs:Guide ;
+    foaf:name "Lucas Bernard" ;
+    foaf:mbox "lucas@cyclingtour.fr" ;
+    cs:contact "+33-6-45678901" .
