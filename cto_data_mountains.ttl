@@ -2,6 +2,7 @@
 @prefix cs:  <http://data.cyclingtour.fr/schema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix dbp:  <http://dbpedia.org/resource/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cto:La_Super_Planche_des_Belles_Filles a cs:Mountain ;
     rdfs:label "La Super Planche des Belles Filles" ;
@@ -28,7 +29,9 @@ cto:Alpe_dHuez a cs:Mountain ;
     cs:averageGradient "8.1"^^xsd:decimal ;
     cs:length "13.8"^^xsd:decimal ;
     cs:difficulty "very hard" ;
-    cs:hasDBpediaLink dbp:Alpe_d%27Huez .
+    cs:hasDBpediaLink dbp:Alpe_dHuez .
+
+# True line is dbp:Alpe_d%27Huez but the ' is not supported
 
 cto:Col_de_la_Croix a cs:Mountain ;
     rdfs:label "Col de la Croix" ;
@@ -37,7 +40,9 @@ cto:Col_de_la_Croix a cs:Mountain ;
     cs:averageGradient "7.0"^^xsd:decimal ;
     cs:length "8.0"^^xsd:decimal ;
     cs:difficulty "hard" ;
-    cs:hasDBpediaLink dbp:Col_de_la_Croix_(Switzerland) .
+    cs:hasDBpediaLink dbp:Col_de_la_Croix_Switzerland .
+
+# True line is dbp:Col_de_la_Croix_(Switzerland) but the ( and ) are not supported
 
 cto:Col_du_Telegraphe a cs:Mountain ;
     rdfs:label "Col du Télégraphe" ;
@@ -82,7 +87,9 @@ cto:Col_dAspin a cs:Mountain ;
     cs:averageGradient "6.5"^^xsd:decimal ;
     cs:length "12.0"^^xsd:decimal ;
     cs:difficulty "moderate" ;
-    cs:hasDBpediaLink dbp:Col_d%27Aspin .
+    cs:hasDBpediaLink dbp:Col_dAspin .
+
+# True line is dbp:Col_d%27Aspin but the ' is not supported
 
 cto:Col_du_Portet_dAspet a cs:Mountain ;
     rdfs:label "Col du Portet-d’Aspet" ;
@@ -91,7 +98,9 @@ cto:Col_du_Portet_dAspet a cs:Mountain ;
     cs:averageGradient "7.4"^^xsd:decimal ;
     cs:length "5.4"^^xsd:decimal ;
     cs:difficulty "moderate" ;
-    cs:hasDBpediaLink dbp:Col_du_Portet_d%27Aspet .
+    cs:hasDBpediaLink dbp:Col_du_Portet_dAspet .
+
+# True line is dbp:Col_du_Portet_d%27Aspet but the ' is not supported
 
 cto:Col_de_Spandelles a cs:Mountain ;
     rdfs:label "Col de Spandelles" ;
@@ -109,7 +118,9 @@ cto:Montée_de_Mende a cs:Mountain ;
     cs:averageGradient "10.2"^^xsd:decimal ;
     cs:length "3.0"^^xsd:decimal ;
     cs:difficulty "hard" ;
-    cs:hasDBpediaLink dbp:Mende,_Lozère .
+    cs:hasDBpediaLink dbp:Mende_Lozère .
+
+# True line is dbp:Mende,_Lozère but the , is not supported
 
 cto:Col_de_Megève a cs:Mountain ;
     rdfs:label "Col de Megève" ;
@@ -128,4 +139,13 @@ cto:Montagne_de_Lure a cs:Mountain ;
     cs:length "13.0"^^xsd:decimal ;
     cs:difficulty "hard" ;
     cs:hasDBpediaLink dbp:Montagne_de_Lure .
+    
+cto:Col_de_la_Croix_de_Fer a cs:Mountain ;
+    rdfs:label "Col de la Croix de Fer" ;
+    cs:locatedInRegion dbp:Isère ;
+    cs:elevation "2067"^^xsd:decimal ;
+    cs:averageGradient "6.9"^^xsd:decimal ;
+    cs:length "22.4"^^xsd:decimal ;
+    cs:difficulty "very hard" ;
+    cs:hasDBpediaLink dbp:Col_de_la_Croix_de_Fer .
     

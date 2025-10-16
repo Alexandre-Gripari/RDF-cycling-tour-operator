@@ -2,6 +2,7 @@
 @prefix cs:  <http://data.cyclingtour.fr/schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbp:  <http://dbpedia.org/resource/> .
 
 cto:Nice_Cannes_Path a cs:Path ;
     rdfs:label "Nice to Cannes coastal path" ;
@@ -152,13 +153,15 @@ cto:Albertville_Granon_Path a cs:Path ;
 cto:Briancon_Alpe_Path a cs:Path ;
     rdfs:label "Briançon - Alpe d’Huez" ;
     cs:hasStart dbp:Briançon ;
-    cs:hasEnd dbp:Alpe_d%27Huez ;
+    cs:hasEnd dbp:Alpe_dHuez ;
     cs:length "165.5"^^xsd:decimal ;
     cs:difficulty "very hard" ;
     cs:elevationGain 2100 ;
     cs:recommendedForElectric "yes" ;
     cs:hasDifficultyScore "5.7"^^xsd:decimal ;
     cs:includesMountain cto:Alpe_dHuez , cto:Col_du_Galibier , cto:Col_de_la_Croix_de_Fer .
+
+# True line is dbp:Alpe_d%27Huez but the ' is not supported
 
 cto:SaintEtienne_Mende_Path a cs:Path ;
     rdfs:label "Saint-Étienne - Mende" ;

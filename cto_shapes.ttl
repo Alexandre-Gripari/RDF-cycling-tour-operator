@@ -4,3 +4,336 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dbp:  <http://dbpedia.org/resource/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+# Bike shapes
+
+cs:BikeShape
+    a sh:NodeShape ;
+    sh:targetClass cs:Bike ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "The label/name of the bike model" ;
+    ] ;
+    sh:property [
+        sh:path cs:pricePerDay ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:description "Daily rental price in euros" ;
+    ] ;
+    sh:property [
+        sh:path cs:availableFrom ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Date from which the bike is available for rental" ;
+    ] ;
+    sh:property [
+        sh:path cs:maintenanceStatus ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "ok" "needs_service" "under_maintenance" ) ;
+        sh:description "Current maintenance status of the bike" ;
+    ] .
+
+cs:ElectricBikeShape
+    a sh:NodeShape ;
+    sh:targetClass cs:ElectricBike ;
+    sh:node cs:BikeShape ;
+    sh:description "Electric bikes inherit all properties from Bike" .
+
+cs:RoadBikeShape
+    a sh:NodeShape ;
+    sh:targetClass cs:RoadBike ;
+    sh:node cs:BikeShape ;
+    sh:description "Road bikes inherit all properties from Bike" .
+
+cs:MountainBikeShape
+    a sh:NodeShape ;
+    sh:targetClass cs:MountainBike ;
+    sh:node cs:BikeShape ;
+    sh:description "Mountain bikes inherit all properties from Bike" .
+
+
+# Guide shapes
+
+cs:GuideShape
+    a sh:NodeShape ;
+    sh:targetClass cs:Guide ;
+    sh:property [
+        sh:path foaf:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Full name of the guide" ;
+    ] ;
+    sh:property [
+        sh:path foaf:mbox ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern "^[^@]+@[^@]+\\.[^@]+$" ;
+        sh:description "Email address of the guide" ;
+    ] ;
+    sh:property [
+        sh:path cs:contact ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Contact phone number of the guide" ;
+    ] .
+
+# Mountain shapes
+
+
+cs:MountainShape
+    a sh:NodeShape ;
+    sh:targetClass cs:Mountain ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Name of the mountain or col" ;
+    ] ;
+    sh:property [
+        sh:path cs:locatedInRegion ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "DBpedia reference to the region where the mountain is located" ;
+    ] ;
+    sh:property [
+        sh:path cs:elevation ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:description "Elevation in meters" ;
+    ] ;
+    sh:property [
+        sh:path cs:averageGradient ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:maxInclusive 100.0 ;
+        sh:description "Average gradient percentage" ;
+    ] ;
+    sh:property [
+        sh:path cs:length ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:description "Length of the climb in kilometers" ;
+    ] ;
+    sh:property [
+        sh:path cs:difficulty ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "easy" "moderate" "hard" "very hard" ) ;
+        sh:description "Difficulty level of the climb" ;
+    ] ;
+    sh:property [
+        sh:path cs:hasDBpediaLink ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Link to DBpedia resource for more information" ;
+    ] .
+
+# Path shapes
+
+cs:PathShape
+    a sh:NodeShape ;
+    sh:targetClass cs:Path ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Descriptive label for the path" ;
+    ] ;
+    sh:property [
+        sh:path cs:hasStart ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Starting location (DBpedia reference)" ;
+    ] ;
+    sh:property [
+        sh:path cs:hasEnd ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Ending location (DBpedia reference)" ;
+    ] ;
+    sh:property [
+        sh:path cs:length ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:description "Total length of the path in kilometers" ;
+    ] ;
+    sh:property [
+        sh:path cs:elevationGain ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0 ;
+        sh:description "Total elevation gain in meters" ;
+    ] ;
+    sh:property [
+        sh:path cs:difficulty ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "easy" "moderate" "hard" "very hard" ) ;
+        sh:description "Overall difficulty level of the path" ;
+    ] ;
+    sh:property [
+        sh:path cs:recommendedForElectric ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "yes" "no" "recommended" "optional" ) ;
+        sh:description "Whether electric bikes are recommended for this path" ;
+    ] ;
+    sh:property [
+        sh:path cs:hasDifficultyScore ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:description "Numerical difficulty score" ;
+    ] ;
+    sh:property [
+        sh:path cs:includesMountain ;
+        sh:class cs:Mountain ;
+        sh:description "Mountains or cols included in this path (optional, multiple allowed)" ;
+    ] .
+
+# Tour Stage shapes
+
+cs:TourStageShape
+    a sh:NodeShape ;
+    sh:targetClass cs:TourStage ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Descriptive label for the tour stage" ;
+    ] ;
+    sh:property [
+        sh:path cs:stageNumber ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+        sh:description "Sequential number of the stage" ;
+    ] ;
+    sh:property [
+        sh:path cs:stagePath ;
+        sh:class cs:Path ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "The path associated with this stage" ;
+    ] ;
+    sh:property [
+        sh:path cs:capacity ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+        sh:description "Maximum number of participants for this stage" ;
+    ] ;
+    sh:property [
+        sh:path cs:guideAssigned ;
+        sh:class cs:Guide ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Guide assigned to lead this stage" ;
+    ] .
+
+cs:TourPackageShape
+    a sh:NodeShape ;
+    sh:targetClass cs:TourPackage ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Name of the tour package" ;
+    ] ;
+    sh:property [
+        sh:path cs:pricePerDay ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 0.0 ;
+        sh:description "Daily price for the tour package in euros" ;
+    ] ;
+    sh:property [
+        sh:path cs:capacity ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+        sh:description "Maximum number of participants for the package" ;
+    ] ;
+    sh:property [
+        sh:path cs:includesStage ;
+        sh:class cs:TourStage ;
+        sh:minCount 1 ;
+        sh:description "Stages included in this tour package (one or more)" ;
+    ] ;
+    sh:property [
+        sh:path cs:guideAssigned ;
+        sh:class cs:Guide ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Primary guide assigned to the tour package" ;
+    ] .
+
+cs:WaterPointShape
+    a sh:NodeShape ;
+    sh:targetClass cs:WaterPoint ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Name/label of the water point" ;
+    ] ;
+    sh:property [
+        sh:path cs:location ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Location of the water point (DBpedia reference)" ;
+    ] ;
+    sh:property [
+        sh:path cs:capacity ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+        sh:description "Water capacity in liters" ;
+    ] ;
+    sh:property [
+        sh:path cs:description ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Description of the water point location and features" ;
+    ] .
