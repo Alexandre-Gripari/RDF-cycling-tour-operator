@@ -201,14 +201,6 @@ cs:PathShape
         sh:description "Overall difficulty level of the path" ;
     ] ;
     sh:property [
-        sh:path cs:recommendedForElectric ;
-        sh:datatype xsd:string ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:in ( "yes" "no" "recommended" "optional" ) ;
-        sh:description "Whether electric bikes are recommended for this path" ;
-    ] ;
-    sh:property [
         sh:path cs:hasDifficultyScore ;
         sh:datatype xsd:decimal ;
         sh:minCount 1 ;
