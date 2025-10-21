@@ -337,3 +337,38 @@ cs:WaterPointShape
         sh:maxCount 1 ;
         sh:description "Description of the water point location and features" ;
     ] .
+
+# Clients shapes
+
+cs:ClientShape
+    a sh:NodeShape ;
+    sh:targetClass cs:Client ;
+    sh:property [
+        sh:path foaf:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Full name of the client" ;
+    ] ;
+    sh:property [
+        sh:path cs:phone ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Primary phone number of the client" ;
+    ] ;
+    sh:property [
+        sh:path cs:status ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:in ( "Finished" "In Progress" "Not Started" ) ;
+        sh:description "Tour status for the client" ;
+    ] ;
+    sh:property [
+        sh:path cs:bike ;
+        sh:class cs:Bike ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Bike assigned to or rented by the client" ;
+    ] .
