@@ -2,3 +2,45 @@
 @prefix cs:  <http://data.cyclingtour.fr/schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+cto:Client_Anna a cs:Client ;
+    foaf:name "Anna Martin" ;
+    foaf:mbox "<mailto:anna.martin@example.com>" ;
+    cs:bike cto:EBike_100 ;
+    cs:status "Finished" ;
+    cs:phone "+33-6-23456789" .
+
+cto:Client_Ben a cs:Client ;
+    foaf:name "Ben Smith" ;
+    foaf:mbox "<mailto:ben.smith@example.com>" ;
+    cs:bike cto:RoadBike_300 ;
+    cs:status "In Progress" ;
+    cs:phone "+33-6-98765432" .
+
+cto:Client_Clara a cs:Client ;
+    foaf:name "Clara Johnson" ;
+    foaf:mbox "<mailto:clara.johnson@example.com>" ;
+    cs:bike cto:GravelBike_400 ;
+    cs:status "Finished" ;
+    cs:phone "+33-6-34567890" .
+
+cto:Client_David a cs:Client ;
+    foaf:name "David Lee" ;
+    foaf:mbox "<mailto:david.lee@example.com>" ;
+    cs:bike cto:MountainBike_500 ;
+    cs:status "Finished" ;
+    cs:phone "+33-6-45678901" .
+
+cto:Client_Eva a cs:Client ;
+    foaf:name "Eva Green" ;
+    foaf:mbox "<mailto:eva.green@example.com>" ;
+    cs:bike cto:EBike_200 ;
+    cs:status "Not Started" ;
+    cs:phone "+33-6-56789012" .
+
+cto:Client_Frank a cs:Client ;
+    foaf:name "Frank Wilson" ;
+    foaf:mbox "<mailto:frank.wilson@example.com>" ;
+    cs:bike cto:BeginnerBike_600 ;
+    cs:status "Finished" ;
+    cs:phone "+33-6-67890123" .
