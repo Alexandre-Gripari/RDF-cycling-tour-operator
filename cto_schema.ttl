@@ -53,6 +53,16 @@ cs:Booking a rdfs:Class ;
     rdfs:label "Booking" ;
     rdfs:comment "A booking made by a client for a tour or a bike." .
 
+cs:BikeBooking a rdfs:Class ;
+    rdfs:subClassOf cs:Booking ;
+    rdfs:label "Bike Booking" ;
+    rdfs:comment "A booking specifically for renting a bike." .
+
+cs:TourBooking a rdfs:Class ;
+    rdfs:subClassOf cs:Booking ;
+    rdfs:label "Tour Booking" ;
+    rdfs:comment "A booking specifically for a tour package." .
+
 ### Properties
 
 cs:pricePerDay a rdf:Property ;
@@ -134,11 +144,6 @@ cs:bookedBy a rdf:Property ;
     rdfs:domain cs:Booking ;
     rdfs:range cs:Client ;
     rdfs:label "booked by" .
-
-cs:bookingFor a rdf:Property ;
-    rdfs:domain cs:Booking ;
-    rdfs:range rdfs:Resource ;
-    rdfs:label "booking target (bike or tour)" .
 
 cs:bookingDate a rdf:Property ;
     rdfs:domain cs:Booking ;
