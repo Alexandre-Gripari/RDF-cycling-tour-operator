@@ -19,7 +19,7 @@ cs:BikeShape
         sh:description "The label/name of the bike model" ;
     ] ;
     sh:property [
-        sh:path cs:pricePerDay ;
+        sh:path cs:pricePerDayBike ;
         sh:datatype xsd:decimal ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -242,7 +242,7 @@ cs:TourStageShape
         sh:description "The path associated with this stage" ;
     ] ;
     sh:property [
-        sh:path cs:capacity ;
+        sh:path cs:tourCapacity ;
         sh:datatype xsd:integer ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -268,7 +268,7 @@ cs:TourPackageShape
         sh:description "Name of the tour package" ;
     ] ;
     sh:property [
-        sh:path cs:pricePerDay ;
+        sh:path cs:pricePerDayTour ;
         sh:datatype xsd:decimal ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -276,7 +276,7 @@ cs:TourPackageShape
         sh:description "Daily price for the tour package in euros" ;
     ] ;
     sh:property [
-        sh:path cs:capacity ;
+        sh:path cs:packageCapacity ;
         sh:datatype xsd:integer ;
         sh:minCount 1 ;
         sh:maxCount 1 ;

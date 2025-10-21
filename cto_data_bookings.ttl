@@ -5,39 +5,41 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
 cto:BikeBooking_001 a cs:BikeBooking ;
-    cs:bookedBy cs:Client_Anna ;
+    cs:bookedBy cto:Client_Anna ;
     cs:bookingDate "2025-03-15"^^xsd:date ;
     cs:tourDate "2025-04-10"^^xsd:date ;
     cs:bikeBooked cto:EBike_100 .
 
 cto:BikeBooking_002 a cs:BikeBooking ;
-    cs:bookedBy cs:Client_Ben ;
+    cs:bookedBy cto:Client_Ben ;
     cs:bookingDate "2025-03-16"^^xsd:date ;
     cs:tourDate "2025-04-11"^^xsd:date ;
     cs:bikeBooked cto:RoadBike_300 .
 
 cto:BikeBooking_003 a cs:BikeBooking ;
-    cs:bookedBy cs:Client_Clara ;
+    cs:bookedBy cto:Client_Clara ;
     cs:bookingDate "2025-03-17"^^xsd:date ;
     cs:tourDate "2025-04-12"^^xsd:date ;
     cs:bikeBooked cto:GravelBike_400 .
 
 cto:BikeBooking_004 a cs:BikeBooking ;
-    cs:bookedBy cs:Client_David ;
+    cs:bookedBy cto:Client_David ;
     cs:bookingDate "2025-03-18"^^xsd:date ;
     cs:tourDate "2025-04-13"^^xsd:date ;
     cs:bikeBooked cto:MountainBike_500 .
 
 cto:TourBooking_001 a cs:TourBooking ;
-    cs:bookedBy cs:Client_Eva ;
+    cs:label "Tour Booking 001" ;
+    cs:bookedBy cto:Client_Eva ;
     cs:bookingDate "2025-03-19"^^xsd:date ;
     cs:tourPackageBooked cto:CoastalEasyWeek ;
     cs:tourStartDate "2025-05-01"^^xsd:date ;
     cs:guideAssigned cto:Guide_Pierre .
 
 cto:TourBooking_002 a cs:TourBooking ;
-    cs:bookedBy cs:Client_Frank ;
+    cs:bookedBy cto:Client_Frank ;
     cs:bookingDate "2025-03-20"^^xsd:date ;
     cs:tourPackageBooked cto:MountainAdventureWeek ;
     cs:tourStartDate "2025-05-02"^^xsd:date ;
     cs:guideAssigned cto:Guide_Sophie .
+    

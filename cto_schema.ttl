@@ -71,8 +71,13 @@ cs:TourBooking a rdfs:Class ;
 
 ### Properties
 
-cs:pricePerDay a rdf:Property ;
-    rdfs:domain cs:Bike , cs:TourPackage ;
+cs:pricePerDayTour a rdf:Property ;
+    rdfs:domain cs:TourPackage ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "price per week" .
+
+cs:pricePerDayBike a rdf:Property ;
+    rdfs:domain cs:Bike ;
     rdfs:range xsd:decimal ;
     rdfs:label "price per day" .
 
@@ -141,10 +146,15 @@ cs:includesStage a rdf:Property ;
     rdfs:range cs:TourStage ;
     rdfs:label "includes stage" .
 
-cs:capacity a rdf:Property ;
-    rdfs:domain cs:TourStage , cs:TourPackage ;
+cs:tourCapacity a rdf:Property ;
+    rdfs:domain cs:TourStage ;
     rdfs:range xsd:integer ;
     rdfs:label "capacity (participants)" .
+
+cs:packageCapacity a rdf:Property ;
+    rdfs:domain cs:TourPackage ;
+    rdfs:range xsd:integer ;
+    rdfs:label "package capacity (participants)" .
 
 cs:bookedBy a rdf:Property ;
     rdfs:domain cs:Booking ;

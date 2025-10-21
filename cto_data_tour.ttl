@@ -7,89 +7,89 @@ cto:Stage1 a cs:TourStage ;
     rdfs:label "Stage 1: Nice to Cannes" ;
     cs:stageNumber 1 ;
     cs:stagePath cto:Nice_Cannes_Path ;
-    cs:capacity 12 ;
+    cs:tourCapacity 12 ;
     cs:guideAssigned cto:Guide_Pierre .
 
 cto:Stage2 a cs:TourStage ;
     rdfs:label "Stage 2: Cannes to Antibes" ;
     cs:stageNumber 2 ;
     cs:stagePath cto:Cannes_Antibes_Path ;
-    cs:capacity 12 ;
+    cs:tourCapacity 12 ;
     cs:guideAssigned cto:Guide_Pierre .
 
 cto:Stage3 a cs:TourStage ;
     rdfs:label "Stage 3: Antibes to Grasse" ;
     cs:stageNumber 3 ;
     cs:stagePath cto:Antibes_Grasse_Path ;
-    cs:capacity 10 ;
+    cs:tourCapacity 10 ;
     cs:guideAssigned cto:Guide_Marie .
 
 cto:Stage4 a cs:TourStage ;
     rdfs:label "Stage 4: Tomblaine to La Super Planche des Belles Filles" ;
     cs:stageNumber 4 ;
     cs:stagePath cto:Tomblaine_SuperPlanche_Path ;
-    cs:capacity 8 ;
+    cs:tourCapacity 8 ;
     cs:guideAssigned cto:Guide_Lucas .
 
 cto:Stage5 a cs:TourStage ;
-    rdfs:label "Stage 5: Lille to Arenberg_Porte_du_Hainaut" ;
+    rdfs:label "Stage 5: Lille to Arenberg" ;
     cs:stageNumber 5 ;
-    cs:stagePath cto:Lille_ArenbergPorteduHainaut_Path ;
-    cs:capacity 10 ;
+    cs:stagePath cto:Lille_Arenberg_Path ;
+    cs:tourCapacity 10 ;
     cs:guideAssigned cto:Guide_Lucas .
 
 cto:Stage6 a cs:TourStage ;
     rdfs:label "Stage 6: Dunkerque to Calais" ;
     cs:stageNumber 6 ;
     cs:stagePath cto:Dunkerque_Calais_Path ;
-    cs:capacity 10 ;
+    cs:tourCapacity 10 ;
     cs:guideAssigned cto:Guide_Sophie .
 
 cto:Stage7 a cs:TourStage ;
-    rdfs:label "Stage 7: Châtel to Aigle" ;
+    rdfs:label "Stage 7: Aigle to Chatel" ;
     cs:stageNumber 7 ;
-    cs:stagePath cto:Chatel_Aigle_Path ;
-    cs:capacity 8 ;
+    cs:stagePath cto:Aigle_Chatel_Path ;
+    cs:tourCapacity 8 ;
     cs:guideAssigned cto:Guide_Marie .
 
 cto:Stage8 a cs:TourStage ;
     rdfs:label "Stage 8: Albertville to Col du Granon" ;
     cs:stageNumber 8 ;
-    cs:stagePath cto:Albertville_ColduGranon_Path ;
-    cs:capacity 6 ;
+    cs:stagePath cto:Albertville_Granon_Path ;
+    cs:tourCapacity 6 ;
     cs:guideAssigned cto:Guide_Sophie .
 
 cto:Stage9 a cs:TourStage ;
     rdfs:label "Stage 9: Granon to Briançon" ;
     cs:stageNumber 9 ;
     cs:stagePath cto:Granon_Briancon_Path ;
-    cs:capacity 6 ;
+    cs:tourCapacity 6 ;
     cs:guideAssigned cto:Guide_Marie .
 
 cto:Stage10 a cs:TourStage ;
-    rdfs:label "Stage 10: Alpe_dHuez to Briançon" ;
+    rdfs:label "Stage 10: Briançon to Alpe d'Huez" ;
     cs:stageNumber 10 ;
-    cs:stagePath cto:Alpe_dHuez_Briancon_Path ;
-    cs:capacity 6 ;
+    cs:stagePath cto:Briancon_Alpe_Path ;
+    cs:tourCapacity 6 ;
     cs:guideAssigned cto:Guide_Lucas .
 
 cto:CoastalEasyWeek a cs:TourPackage ;
     rdfs:label "Coastal Easy Week" ;
-    cs:pricePerDay "125.00"^^xsd:decimal ;
-    cs:capacity 12 ;
+    cs:pricePerDayTour "625.00"^^xsd:decimal ;
+    cs:packageCapacity 12 ;
     cs:includesStage cto:Stage1, cto:Stage2, cto:Stage3 ;
     cs:guideAssigned cto:Guide_Pierre .
 
 cto:MountainAdventureWeek a cs:TourPackage ;
     rdfs:label "Mountain Adventure Week" ;
-    cs:pricePerDay "150.00"^^xsd:decimal ;
-    cs:capacity 10 ;
+    cs:pricePerDayTour "750.00"^^xsd:decimal ;
+    cs:packageCapacity 10 ;
     cs:includesStage cto:Stage4, cto:Stage5, cto:Stage6 ;
     cs:guideAssigned cto:Guide_Lucas .
 
 cto:AlpsChallengeWeek a cs:TourPackage ;
     rdfs:label "Alps Challenge Week" ;
-    cs:pricePerDay "175.00"^^xsd:decimal ;
-    cs:capacity 8 ;
+    cs:pricePerDayTour "975.00"^^xsd:decimal ;
+    cs:packageCapacity 8 ;
     cs:includesStage cto:Stage7, cto:Stage8, cto:Stage9, cto:Stage10 ;
     cs:guideAssigned cto:Guide_Sophie .
