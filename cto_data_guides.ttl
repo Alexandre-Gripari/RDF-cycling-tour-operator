@@ -16,3 +16,8 @@ cto:Guide_Lucas a cs:Guide ;
     foaf:name "Lucas Bernard" ;
     foaf:mbox "lucas@cyclingtour.fr" ;
     cs:contact "+33-6-45678901" .
+
+cto:Guide_Sophie a cs:Guide ;
+    foaf:name "Sophie Moreau" ;
+    foaf:mbox "sophie@cyclingtour.fr" ;
+    cs:contact "+33-6-98765432" 

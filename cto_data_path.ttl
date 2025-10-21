@@ -136,6 +136,16 @@ cto:Albertville_Granon_Path a cs:Path ;
     cs:hasDifficultyScore "5.8"^^xsd:decimal ;
     cs:includesMountain cto:Col_du_Granon , cto:Col_du_Telegraphe , cto:Col_du_Galibier .
 
+cto:Granon_Briancon_Path a cs:Path ;
+    rdfs:label "Col du Granon - Briançon" ;
+    cs:hasStart dbp:Col_du_Granon ;
+    cs:hasEnd dbp:Briançon ;
+    cs:length "49.5"^^xsd:decimal ;
+    cs:difficulty "hard" ;
+    cs:elevationGain 900 ;
+    cs:hasDifficultyScore "4.2"^^xsd:decimal ;
+    cs:includesMountain cto:Col_du_Galibier .
+
 cto:Briancon_Alpe_Path a cs:Path ;
     rdfs:label "Briançon - Alpe d’Huez" ;
     cs:hasStart dbp:Briançon ;
