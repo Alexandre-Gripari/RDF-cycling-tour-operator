@@ -21,3 +21,21 @@ cto:WaterPoint_GrasseSquare a cs:WaterPoint ;
     cs:location dbp:Grasse ;
     cs:capacity 180 ;
     cs:description "Public fountain in the town square" .
+
+cto:WaterPoint_Antibes a cs:WaterPoint ;
+    rdfs:label "Water Point - Antibes Marina" ;
+    cs:location dbp:Antibes ;
+    cs:capacity 220 ;
+    cs:description "Large fountain at the marina entrance" .
+
+cto:WaterPoint_Albertville a cs:WaterPoint ;
+    rdfs:label "Water Point - Albertville Station" ;
+    cs:location dbp:Albertville ;
+    cs:capacity 300 ;
+    cs:description "Mountain water source near train station" .
+
+cto:WaterPoint_Briancon a cs:WaterPoint ;
+    rdfs:label "Water Point - Briançon Center" ;
+    cs:location dbp:Briançon ;
+    cs:capacity 250 ;
+    cs:description "Alpine spring water in historic center" .

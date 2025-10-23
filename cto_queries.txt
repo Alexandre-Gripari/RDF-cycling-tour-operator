@@ -278,82 +278,29 @@ PREFIX cs: <http://data.cyclingtour.fr/schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?stageOrTour ?label ?type ?assignedGuide ?lastEndDate ?nextAvailableDate
+SELECT
+  ?stage
+  ?label
+  ?guide
+  (COALESCE(MAX(?end), "2025-03-01"^^xsd:date) AS ?nextAvailable)
 WHERE {
-  {
-    ?stageOrTour a cs:TourStage ;
-                 rdfs:label ?label ;
-                 cs:guideAssigned ?assignedGuide ;
-                 cs:duration ?duration .
-    BIND("Stage" AS ?type)
+
+  # Only stages
+  ?stage a cs:TourStage ;
+         rdfs:label ?label ;
+         cs:guideAssigned ?guide .
+
+  # All bookings of this guide (optional)
+  OPTIONAL {
+    ?tourBooking a cs:TourBooking ;
+                 cs:guideAssigned ?guide ;
+                 cs:endDate ?end .
   }
-  UNION
-  {
-    ?stageOrTour a cs:TourPackage ;
-                 rdfs:label ?label ;
-                 cs:guideAssigned ?assignedGuide ;
-                 cs:duration ?duration .
-    BIND("Tour Package" AS ?type)
-  }
-  
-  {
-    SELECT ?stageOrTour (MAX(?existingEndDate) AS ?lastEndDate)
-    WHERE {
-      {
-        ?booking a cs:TourBooking ;
-                 cs:tourPackageBooked ?stageOrTour ;
-                 cs:endDate ?existingEndDate .
-      }
-      UNION
-      {
-        ?stage cs:stagePath ?path .
-        ?stageOrTour cs:includesStage ?stage .
-        ?client cs:bike ?bike ;
-                cs:status "In Progress" .
-        ?bikeBooking a cs:BikeBooking ;
-                    cs:bikeBooked ?bike ;
-                    cs:endDate ?existingEndDate .
-      }
-    }
-    GROUP BY ?stageOrTour
-  }
-  
-  BIND(
-    IF(BOUND(?lastEndDate),
-       STRDT(
-         CONCAT(
-           STR(YEAR(?lastEndDate)), "-",
-           IF(MONTH(?lastEndDate) < 10, CONCAT("0", STR(MONTH(?lastEndDate))), STR(MONTH(?lastEndDate))), "-",
-           IF(DAY(?lastEndDate) + 1 < 10, CONCAT("0", STR(DAY(?lastEndDate) + 1)), STR(DAY(?lastEndDate) + 1))
-         ), 
-         xsd:date
-       ),
-       "2025-04-01"^^xsd:date
-    ) AS ?nextAvailableDate
-  )
-  
-  FILTER NOT EXISTS {
-    {
-      ?conflictingTour a cs:TourPackage ;
-                      cs:guideAssigned ?assignedGuide .
-      ?conflictingBooking a cs:TourBooking ;
-                         cs:tourPackageBooked ?conflictingTour ;
-                         cs:endDate ?conflictEndDate .
-      FILTER(?nextAvailableDate <= ?conflictEndDate)
-    }
-    UNION
-    {
-      ?conflictingStage a cs:TourStage ;
-                       cs:guideAssigned ?assignedGuide .
-      ?conflictingPackage cs:includesStage ?conflictingStage .
-      ?conflictingBooking a cs:TourBooking ;
-                         cs:tourPackageBooked ?conflictingPackage ;
-                         cs:endDate ?conflictEndDate .
-      FILTER(?nextAvailableDate <= ?conflictEndDate)
-    }
-  }
+
 }
-ORDER BY ?stageOrTour
+GROUP BY ?stage ?label ?guide
+ORDER BY ?guide ?nextAvailable
+
 
 
 # ----------------------------------------------------------------------------

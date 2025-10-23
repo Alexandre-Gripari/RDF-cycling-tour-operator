@@ -33,7 +33,7 @@ cto:TourBooking_001 a cs:TourBooking ;
     cs:bookedBy cto:Client_Eva ;
     cs:bookingDate "2025-03-19"^^xsd:date ;
     cs:tourPackageBooked cto:CoastalEasyWeek ;
-    cs:endDate "2025-05-01"^^xsd:date ;
+    cs:endDate "2025-03-23"^^xsd:date ;
     cs:guideAssigned cto:Guide_Pierre .
 
 cto:TourBooking_002 a cs:TourBooking ;
@@ -41,5 +41,37 @@ cto:TourBooking_002 a cs:TourBooking ;
     cs:bookedBy cto:Client_Frank ;
     cs:bookingDate "2025-03-20"^^xsd:date ;
     cs:tourPackageBooked cto:MountainAdventureWeek ;
-    cs:endDate "2025-05-02"^^xsd:date ;
+    cs:endDate "2025-03-24"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Sophie .
+
+cto:TourBooking_003 a cs:TourBooking ;
+    rdfs:label "Tour Booking 003" ;
+    cs:bookedBy cto:Client_Gina ;
+    cs:bookingDate "2025-05-05"^^xsd:date ;
+    cs:tourPackageBooked cto:CoastalEasyWeek ;
+    cs:endDate "2025-05-09"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Pierre .
+
+cto:TourBooking_004 a cs:TourBooking ;
+    rdfs:label "Tour Booking 004" ;
+    cs:bookedBy cto:Client_Anna ;
+    cs:bookingDate "2025-05-12"^^xsd:date ;
+    cs:tourPackageBooked cto:MountainAdventureWeek ;
+    cs:endDate "2025-05-16"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Sophie .
+
+cto:TourBooking_005 a cs:TourBooking ;
+    rdfs:label "Tour Booking 005" ;
+    cs:bookedBy cto:Client_Emma ;
+    cs:bookingDate "2025-05-25"^^xsd:date ;
+    cs:tourPackageBooked cto:CoastalEasyWeek ;
+    cs:endDate "2025-05-28"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Pierre .
+
+cto: TourBooking_006 a cs:TourBooking ;
+    rdfs:label "Tour Booking 006" ;
+    cs:bookedBy cto:Client_Eva ;
+    cs:bookingDate "2025-06-01"^^xsd:date ;
+    cs:tourPackageBooked cto:AlpsChallengeWeek ;
+    cs:endDate "2025-06-06"^^xsd:date ;
     cs:guideAssigned cto:Guide_Sophie .

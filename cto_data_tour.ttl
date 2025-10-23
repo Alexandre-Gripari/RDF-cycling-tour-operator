@@ -91,7 +91,6 @@ cto:CoastalEasyWeek a cs:TourPackage ;
     cs:guideAssigned cto:Guide_Pierre ;
     cs:duration "PT56H"^^xsd:duration .
 
-
 cto:MountainAdventureWeek a cs:TourPackage ;
     rdfs:label "Mountain Adventure Week" ;
     cs:pricePerDayTour "750.00"^^xsd:decimal ;
