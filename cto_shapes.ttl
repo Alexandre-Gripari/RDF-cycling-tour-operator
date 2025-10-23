@@ -60,6 +60,88 @@ cs:MountainBikeShape
     sh:node cs:BikeShape ;
     sh:description "Mountain bikes inherit all properties from Bike" .
 
+# Booking Bike shapes
+
+cs:BikeBookingShape
+    a sh:NodeShape ;
+    sh:targetClass cs:BikeBooking ;
+    sh:property [
+        sh:path cs:bookedBy ;
+        sh:class cs:Client ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Client who made the booking" ;
+    ] ;
+    sh:property [
+        sh:path cs:bookingDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Date when the booking was made" ;
+    ] ;
+    sh:property [
+        sh:path cs:endDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "End date of the booked tour" ;
+    ] ;
+    sh:property [
+        sh:path cs:bikeBooked ;
+        sh:class cs:Bike ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Bike that was booked for the tour" ;
+    ] .
+
+# Booking Tour shapes
+
+cs:BookingTourShape
+    a sh:NodeShape ;
+    sh:targetClass cs:TourBooking ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Label for the tour booking" ;
+    ] ;
+    sh:property [
+        sh:path cs:bookedBy ;
+        sh:class cs:Client ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Client who made the booking" ;
+    ] ;
+    sh:property [
+        sh:path cs:bookingDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Date when the booking was made" ;
+    ] ;
+    sh:property [
+        sh:path cs:tourPackageBooked ;
+        sh:class cs:TourPackage ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Tour package that was booked" ;
+    ] ;
+    sh:property [
+        sh:path cs:endDate ;
+        sh:datatype xsd:date ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "End date of the booked tour" ;
+    ] ;
+    sh:property [
+        sh:path cs:guideAssigned ;
+        sh:class cs:Guide ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Guide assigned to the booked tour" ;
+    ] .
+
 # Clients shapes
 
 cs:ClientShape
@@ -124,7 +206,6 @@ cs:GuideShape
     ] .
 
 # Mountain shapes
-
 
 cs:MountainShape
     a sh:NodeShape ;
@@ -289,7 +370,16 @@ cs:TourStageShape
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:description "Guide assigned to lead this stage" ;
+    ] ;
+    sh:property [
+        sh:path cs:duration ;
+        sh:datatype xsd:duration ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Duration of the stage" ;
     ] .
+
+# Tour Package shapes
 
 cs:TourPackageShape
     a sh:NodeShape ;
@@ -329,7 +419,14 @@ cs:TourPackageShape
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:description "Primary guide assigned to the tour package" ;
+    ] ;
+    sh:property [
+        sh:path cs:duration ;
+        sh:datatype xsd:duration ;
+        sh:description "Total duration of the tour" ;
     ] .
+
+# Water Point shapes
 
 cs:WaterPointShape
     a sh:NodeShape ;

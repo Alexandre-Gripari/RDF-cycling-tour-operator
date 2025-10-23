@@ -29,17 +29,17 @@ cto:BikeBooking_004 a cs:BikeBooking ;
     cs:bikeBooked cto:MountainBike_500 .
 
 cto:TourBooking_001 a cs:TourBooking ;
-    cs:label "Tour Booking 001" ;
+    rdfs:label "Tour Booking 001" ;
     cs:bookedBy cto:Client_Eva ;
     cs:bookingDate "2025-03-19"^^xsd:date ;
     cs:tourPackageBooked cto:CoastalEasyWeek ;
-    cs:tourStartDate "2025-05-01"^^xsd:date ;
+    cs:endDate "2025-05-01"^^xsd:date ;
     cs:guideAssigned cto:Guide_Pierre .
 
 cto:TourBooking_002 a cs:TourBooking ;
+    rdfs:label "Tour Booking 002" ;
     cs:bookedBy cto:Client_Frank ;
     cs:bookingDate "2025-03-20"^^xsd:date ;
     cs:tourPackageBooked cto:MountainAdventureWeek ;
-    cs:tourStartDate "2025-05-02"^^xsd:date ;
+    cs:endDate "2025-05-02"^^xsd:date ;
     cs:guideAssigned cto:Guide_Sophie .
-    

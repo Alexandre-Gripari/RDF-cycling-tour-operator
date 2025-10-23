@@ -224,3 +224,4 @@ cto:Paris_LaDefense_Champs_Path a cs:Path ;
     cs:difficulty "easy" ;
     cs:elevationGain 200 ;
     cs:hasDifficultyScore "1.3"^^xsd:decimal .
+    
