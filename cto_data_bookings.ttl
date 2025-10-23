@@ -7,25 +7,25 @@
 cto:BikeBooking_001 a cs:BikeBooking ;
     cs:bookedBy cto:Client_Anna ;
     cs:bookingDate "2025-03-15"^^xsd:date ;
-    cs:tourDate "2025-04-10"^^xsd:date ;
+    cs:endDate "2025-04-10"^^xsd:date ;
     cs:bikeBooked cto:EBike_100 .
 
 cto:BikeBooking_002 a cs:BikeBooking ;
     cs:bookedBy cto:Client_Ben ;
     cs:bookingDate "2025-03-16"^^xsd:date ;
-    cs:tourDate "2025-04-11"^^xsd:date ;
+    cs:endDate "2025-04-11"^^xsd:date ;
     cs:bikeBooked cto:RoadBike_300 .
 
 cto:BikeBooking_003 a cs:BikeBooking ;
     cs:bookedBy cto:Client_Clara ;
     cs:bookingDate "2025-03-17"^^xsd:date ;
-    cs:tourDate "2025-04-12"^^xsd:date ;
+    cs:endDate "2025-04-12"^^xsd:date ;
     cs:bikeBooked cto:GravelBike_400 .
 
 cto:BikeBooking_004 a cs:BikeBooking ;
     cs:bookedBy cto:Client_David ;
     cs:bookingDate "2025-03-18"^^xsd:date ;
-    cs:tourDate "2025-04-13"^^xsd:date ;
+    cs:endDate "2025-04-13"^^xsd:date ;
     cs:bikeBooked cto:MountainBike_500 .
 
 cto:TourBooking_001 a cs:TourBooking ;

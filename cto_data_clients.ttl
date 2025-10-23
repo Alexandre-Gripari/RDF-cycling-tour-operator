@@ -31,6 +31,13 @@ cto:Client_David a cs:Client ;
     cs:status "Finished" ;
     cs:phone "+33-6-45678901" .
 
+cto:Client_Emma a cs:Client ;
+    foaf:name "Emma Wilson" ;
+    foaf:mbox "<mailto:emma.wilson@example.com>" ;
+    cs:bike cto:EBike_800 ;
+    cs:status "In Progress" ;
+    cs:phone "+33-6-89012345" .
+
 cto:Client_Eva a cs:Client ;
     foaf:name "Eva Green" ;
     foaf:mbox "<mailto:eva.green@example.com>" ;
@@ -38,9 +45,23 @@ cto:Client_Eva a cs:Client ;
     cs:status "Not Started" ;
     cs:phone "+33-6-56789012" .
 
+cto:Client_Felix a cs:Client ;
+    foaf:name "Felix Turner" ;
+    foaf:mbox "<mailto:felix.turner@example.com>" ;
+    cs:bike cto:EBike_900 ;
+    cs:status "Finished" ;
+    cs:phone "+33-6-89012345" .
+
 cto:Client_Frank a cs:Client ;
     foaf:name "Frank Wilson" ;
     foaf:mbox "<mailto:frank.wilson@example.com>" ;
     cs:bike cto:BeginnerBike_600 ;
     cs:status "Finished" ;
     cs:phone "+33-6-67890123" .
+
+cto:Client_Gina a cs:Client ;
+    foaf:name "Gina Brown" ;
+    foaf:mbox "<mailto:gina.brown@example.com>" ;
+    cs:bike cto:BeginnerBike_700 ;
+    cs:status "Finished" ;
+    cs:phone "+33-6-78901234" .

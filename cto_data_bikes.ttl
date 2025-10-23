@@ -39,3 +39,21 @@ cto:BeginnerBike_600 a cs:Bike ;
     cs:pricePerDayBike "18.00"^^xsd:decimal ;
     cs:availableFrom "2025-03-30"^^xsd:date ;
     cs:maintenanceStatus "ok" .
+
+cto:BeginnerBike_700 a cs:Bike ;
+    rdfs:label "Beginner Bike Model 700" ;
+    cs:pricePerDayBike "20.00"^^xsd:decimal ;
+    cs:availableFrom "2025-04-02"^^xsd:date ;
+    cs:maintenanceStatus "needs_service" .
+
+cto:EBike_800 a cs:ElectricBike, cs:Bike ;
+    rdfs:label "E-Bike Model 800" ;
+    cs:pricePerDayBike "30.00"^^xsd:decimal ;
+    cs:availableFrom "2025-04-15"^^xsd:date ;
+    cs:maintenanceStatus "needs_service" .
+
+cto:EBike_900 a cs:ElectricBike, cs:Bike ;
+    rdfs:label "E-Bike Model 900" ;
+    cs:pricePerDayBike "35.00"^^xsd:decimal ;
+    cs:availableFrom "2025-04-20"^^xsd:date ;
+    cs:maintenanceStatus "needs_service" .

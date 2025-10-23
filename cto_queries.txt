@@ -76,33 +76,29 @@ ORDER BY ?clientName
 
 
 # ----------------------------------------------------------------------------
-# QUERY 4: Calculate the capacity utilization rate for each guide based on 
-# their assigned stages and tour packages
+# QUERY 4: List "In Progress" customers with their bike and contact details for 
+# real-time tracking
 # ----------------------------------------------------------------------------
 
 PREFIX cto: <http://data.cyclingtour.fr/data#>
 PREFIX cs: <http://data.cyclingtour.fr/schema#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?guideName (COUNT(DISTINCT ?stage) AS ?stageCount) 
-       (COUNT(DISTINCT ?package) AS ?packageCount)
-       (COALESCE(SUM(DISTINCT ?stageCapacity), 0) + COALESCE(SUM(DISTINCT ?packageCapacity), 0) AS ?totalCapacity)
+SELECT ?clientName ?phone ?email ?bikeLabel ?bikeType
 WHERE {
-  ?guide a cs:Guide ;
-         foaf:name ?guideName .
-  OPTIONAL {
-    ?stage a cs:TourStage ;
-           cs:guideAssigned ?guide ;
-           cs:tourCapacity ?stageCapacity .
-  }
-  OPTIONAL {
-    ?package a cs:TourPackage ;
-             cs:guideAssigned ?guide ;
-             cs:packageCapacity ?packageCapacity .
-  }
+  ?client a cs:Client ;
+          foaf:name ?clientName ;
+          cs:phone ?phone ;
+          foaf:mbox ?email ;
+          cs:status "In Progress" ;
+          cs:bike ?bike .
+  
+  ?bike rdfs:label ?bikeLabel ;
+        a ?bikeType .
+  
+  FILTER(?bikeType != cs:Bike)
 }
-GROUP BY ?guideName
-ORDER BY DESC(?totalCapacity)
 
 
 # ----------------------------------------------------------------------------
@@ -165,32 +161,31 @@ ORDER BY DESC(?hardnessRatio)
 
 
 # ----------------------------------------------------------------------------
-# QUERY 7: Find paths that start and end in different countries (using DBpedia 
-# location data) and calculate their cross-border difficulty
+# QUERY 7: Calculate the total cost of a package tour including bike rental 
+# for one week (7 days)
 # ----------------------------------------------------------------------------
 
 PREFIX cto: <http://data.cyclingtour.fr/data#>
 PREFIX cs: <http://data.cyclingtour.fr/schema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX dbp: <http://dbpedia.org/resource/>
 
-SELECT ?pathLabel ?startLocation ?endLocation ?difficulty ?length
+SELECT ?packageLabel ?tourPriceWeek ?bikeLabel ?bikePriceWeek
+       (?tourPriceWeek + ?bikePriceWeek AS ?totalCost)
 WHERE {
-  ?path a cs:Path ;
-        rdfs:label ?pathLabel ;
-        cs:hasStart ?start ;
-        cs:hasEnd ?end ;
-        cs:difficulty ?difficulty ;
-        cs:length ?length .
-  BIND(REPLACE(STR(?start), "^.*/", "") AS ?startLocation)
-  BIND(REPLACE(STR(?end), "^.*/", "") AS ?endLocation)
-  FILTER(?start != ?end)
-  FILTER(
-    (CONTAINS(STR(?start), "Copenhagen") || CONTAINS(STR(?start), "Roskilde") || CONTAINS(STR(?start), "Vejle")) &&
-    (!CONTAINS(STR(?end), "Copenhagen") && !CONTAINS(STR(?end), "Roskilde") && !CONTAINS(STR(?end), "Vejle"))
-  )
+  ?package a cs:TourPackage ;
+           rdfs:label ?packageLabel ;
+           cs:pricePerDayTour ?tourPriceDay .
+  
+  ?bike a cs:Bike ;
+        rdfs:label ?bikeLabel ;
+        cs:pricePerDayBike ?bikePriceDay ;
+        cs:maintenanceStatus "ok" .
+  
+  BIND(?tourPriceDay * 7 AS ?tourPriceWeek)
+  BIND(?bikePriceDay * 7 AS ?bikePriceWeek)
 }
-ORDER BY ?length
+ORDER BY ?totalCost
+LIMIT 10
 
 
 # ----------------------------------------------------------------------------
@@ -283,7 +278,7 @@ PREFIX cs: <http://data.cyclingtour.fr/schema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?bikeLabel ?bikeType ?price ?packageLabel ?packageDifficulty
+SELECT ?bikeLabel ?bikeType ?price ?packageLabel ?pathName ?packageDifficulty
        (IF(?packageDifficulty IN ("very hard", "hard"), "Recommended", "Suitable") AS ?recommendation)
 WHERE {
   ?bike a ?bikeType ;
@@ -297,6 +292,7 @@ WHERE {
            cs:includesStage ?stage .
   ?stage cs:stagePath ?path .
   ?path cs:difficulty ?packageDifficulty .
+  ?path rdfs:label ?pathName
   
   FILTER(?availDate <= "2025-04-15"^^xsd:date)
   FILTER(?bikeType IN (cs:ElectricBike, cs:MountainBike))
@@ -315,10 +311,16 @@ PREFIX cs: <http://data.cyclingtour.fr/schema#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 
 SELECT ?guideName ?guideContact
-       (COUNT(DISTINCT ?stage) AS ?stagesAssigned)
+       (COUNT(DISTINCT ?stage) AS ?uniqueStagesAssigned)
        (COUNT(DISTINCT ?package) AS ?packagesAssigned)
-       (COALESCE(SUM(DISTINCT ?stageCapacity), 0) AS ?totalStageCapacity)
-       (COALESCE(SUM(DISTINCT ?packageCapacity), 0) AS ?totalPackageCapacity)
+       ((COUNT(DISTINCT ?stage) + COUNT(DISTINCT ?package)) AS ?totalAssignments)
+       (SUM(COALESCE(?stageCapacity, 0)) AS ?totalStageCapacity)
+       (SUM(COALESCE(?packageCapacity, 0)) AS ?totalPackageCapacity)
+       ((SUM(COALESCE(?stageCapacity, 0)) + SUM(COALESCE(?packageCapacity, 0))) AS ?totalParticipantCapacity)
+       (xsd:decimal(SUM(COALESCE(?stageCapacity, 0)) + SUM(COALESCE(?packageCapacity, 0))) / 40.0 AS ?capacityRatio)
+       (IF((SUM(COALESCE(?stageCapacity, 0)) + SUM(COALESCE(?packageCapacity, 0))) > 50, "OVERBOOKED", 
+           IF((SUM(COALESCE(?stageCapacity, 0)) + SUM(COALESCE(?packageCapacity, 0))) > 40, "High Load", "Normal")) 
+        AS ?workloadStatus)
 WHERE {
   ?guide a cs:Guide ;
          foaf:name ?guideName ;
@@ -327,17 +329,17 @@ WHERE {
   OPTIONAL {
     ?stage a cs:TourStage ;
            cs:guideAssigned ?guide ;
-           cs:capacity ?stageCapacity .
+           cs:tourCapacity ?stageCapacity .
   }
   
   OPTIONAL {
     ?package a cs:TourPackage ;
              cs:guideAssigned ?guide ;
-             cs:capacity ?packageCapacity .
+             cs:packageCapacity ?packageCapacity .
   }
 }
 GROUP BY ?guideName ?guideContact
-ORDER BY DESC(?totalPackageCapacity)
+ORDER BY DESC(?totalParticipantCapacity)
 
 
 # ----------------------------------------------------------------------------
@@ -400,7 +402,7 @@ ORDER BY ?status DESC(?clientCount)
 
 
 # ----------------------------------------------------------------------------
-# QUERY 14: Find the optimal tour package for beginners based on difficulty, 
+# QUERY 14: Find the optimal tour package for beginners based on difficulty (< 3.0), 
 # price, and available beginner-friendly bikes
 # ----------------------------------------------------------------------------
 
