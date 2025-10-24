@@ -185,7 +185,6 @@ WHERE {
   BIND(?bikePriceDay * 7 AS ?bikePriceWeek)
 }
 ORDER BY ?totalCost
-LIMIT 10
 
 
 # ----------------------------------------------------------------------------
@@ -442,7 +441,6 @@ ORDER BY ?avgDifficulty ?pricePerDay
 # ----------------------------------------------------------------------------
 # QUERY 15: Complex federated-style query finding paths that connect regions 
 # with mountains, analyzing the geographic clustering of challenges
-#           multi-level JOIN, BIND with URI manipulation
 # ----------------------------------------------------------------------------
 
 PREFIX cto: <http://data.cyclingtour.fr/data#>
