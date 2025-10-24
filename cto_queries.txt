@@ -210,7 +210,6 @@ WHERE {
              cs:bikeBooked ?bike .
     BIND("Bike Only" AS ?bookingType)
     
-    # Calculate lead time manually
     BIND(
       (YEAR(?tourDate) - YEAR(?bookingDate)) * 365 +
       (MONTH(?tourDate) - MONTH(?bookingDate)) * 30 +
@@ -227,7 +226,6 @@ WHERE {
     BIND("Tour Package" AS ?bookingType)
     OPTIONAL { ?client cs:bike ?bike . }
     
-    # Calculate lead time manually
     BIND(
       (YEAR(?tourDate) - YEAR(?bookingDate)) * 365 +
       (MONTH(?tourDate) - MONTH(?bookingDate)) * 30 +
@@ -284,19 +282,17 @@ SELECT
   ?guide
   (COALESCE(MAX(?end), "2025-03-01"^^xsd:date) AS ?nextAvailable)
 WHERE {
-
-  # Only stages
   ?stage a cs:TourStage ;
          rdfs:label ?label ;
          cs:guideAssigned ?guide .
-
-  # All bookings of this guide (optional)
+  
+  FILTER NOT EXISTS { ?stage a cs:TourBooking }
+  
   OPTIONAL {
     ?tourBooking a cs:TourBooking ;
                  cs:guideAssigned ?guide ;
                  cs:endDate ?end .
   }
-
 }
 GROUP BY ?stage ?label ?guide
 ORDER BY ?guide ?nextAvailable

@@ -68,7 +68,7 @@ cto:TourBooking_005 a cs:TourBooking ;
     cs:endDate "2025-05-28"^^xsd:date ;
     cs:guideAssigned cto:Guide_Pierre .
 
-cto: TourBooking_006 a cs:TourBooking ;
+cto:TourBooking_006 a cs:TourBooking ;
     rdfs:label "Tour Booking 006" ;
     cs:bookedBy cto:Client_Eva ;
     cs:bookingDate "2025-06-01"^^xsd:date ;
