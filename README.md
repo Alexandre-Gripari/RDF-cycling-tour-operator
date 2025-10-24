@@ -1,1 +1,0 @@
-# RDF-cycling-tour-operator
