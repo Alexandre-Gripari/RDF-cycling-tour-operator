@@ -132,27 +132,32 @@ cs:TourBooking a owl:Class ;
     rdfs:label "Tour Booking" ;
     rdfs:comment "A booking specifically for a tour package." .
 
+cs:Review a owl:Class ;
+    rdfs:label "Review" ;
+    rdfs:comment "A review or feedback provided by a client about a tour or bike." .
+
+
 ### Properties
 
 cs:pricePerDayTour a owl:DatatypeProperty ;
     rdfs:domain cs:TourPackage ;
     rdfs:range xsd:decimal ;
-    rdfs:label "price per week" .
+    rdfs:label "price per day for tour" .
 
 cs:pricePerDayBike a owl:DatatypeProperty ;
     owl:propertyDisjointWith cs:pricePerDayTour ;
     rdfs:domain cs:Bike ;
     rdfs:range xsd:decimal ;
-    rdfs:label "price per day" .
+    rdfs:label "price per day for bike" .
 
 cs:availableFrom a owl:DatatypeProperty ;
     rdfs:domain cs:Bike ;
     rdfs:range xsd:date ;
     rdfs:label "available from date" .
 
-cs:maintenanceStatus a owl:DatatypeProperty ;
+cs:maintenanceStatus a owl:ObjectProperty ;
     rdfs:domain cs:Bike ;
-    rdfs:range xsd:string ;
+    rdfs:range skos:Concept ;
     rdfs:label "maintenance status" .
 
 cs:hasStart a owl:FunctionalProperty ;
@@ -180,17 +185,10 @@ cs:difficulty a owl:ObjectProperty ;
     rdfs:range skos:Concept ;
     rdfs:label "difficulty level" .
 
-cs:recommendedForElectric a owl:ObjectProperty ;
+cs:recommendedForElectric a owl:DatatypeProperty ;
     rdfs:domain cs:Path ;
-    rdfs:range xsd:string ;
+    rdfs:range xsd:boolean ;
     rdfs:label "recommended for e-bike" .
-
-
-# À enlever potentiellement
-cs:hasDifficultyScore a owl:FunctionalProperty ;
-    rdfs:domain cs:Path ;
-    rdfs:range xsd:decimal ;
-    rdfs:label "difficulty score (numeric)" .
 
 cs:stageNumber a owl:FunctionalProperty ;
     rdfs:domain cs:TourStage ;
@@ -249,11 +247,6 @@ cs:bike a owl:ObjectProperty ;
     rdfs:label "bike" ;
     rdfs:comment "Bike assigned to or rented by the client." .
 
-cs:status a owl:ObjectProperty ;
-    rdfs:domain cs:TourStage ;
-    rdfs:range skos:Concept ;
-    rdfs:label "stage status" .
-
 cs:phone a owl:DatatypeProperty ;
     rdfs:domain cs:Client ;
     rdfs:range xsd:string ;
@@ -296,3 +289,29 @@ cs:includesPath a owl:ObjectProperty ;
     rdfs:range cs:Path ;
     owl:propertyChainAxiom ( cs:includesStage cs:stagePath ) ;
     rdfs:label "includes path" .
+
+cs:reviewedBy a owl:ObjectProperty ;
+    rdfs:domain cs:Review ;
+    rdfs:range cs:Client ;
+    rdfs:label "reviewed by" .
+
+cs:hasReview a owl:ObjectProperty ;
+    owl:inverseOf cs:reviewedBy ;
+    rdfs:domain cs:Client ;
+    rdfs:range cs:Review .
+
+cs:reviewsItem a owl:ObjectProperty ;
+    rdfs:domain cs:Review ;
+    rdfs:range [ owl:unionOf ( cs:TourPackage cs:Bike ) ] ;
+    rdfs:label "reviews item" .
+
+cs:rating a owl:DatatypeProperty ;
+    rdfs:domain cs:Review ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "rating" ;
+    rdfs:comment "A numeric rating given in a review, typically on a scale from 1 to 5." .
+
+cs:reviewText a owl:DatatypeProperty ;
+    rdfs:domain cs:Review ;
+    rdfs:range xsd:string ;
+    rdfs:label "review text" .

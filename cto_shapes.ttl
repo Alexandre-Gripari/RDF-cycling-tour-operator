@@ -35,7 +35,7 @@ cs:BikeShape
     ] ;
     sh:property [
         sh:path cs:maintenanceStatus ;
-        sh:datatype xsd:string ;
+        sh:class skos:Concept ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:in ( cs:MaintenanceOk cs:MaintenanceNeedsService cs:MaintenanceUnderRepair ) ;
@@ -74,7 +74,7 @@ cs:BikeBookingShape
     ] ;
     sh:property [
         sh:path cs:bookingDate ;
-        sh:datatype xsd:date ;
+        sh:datatype xsd:dateTime ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:description "Date when the booking was made" ;
@@ -115,7 +115,7 @@ cs:BookingTourShape
     ] ;
     sh:property [
         sh:path cs:bookingDate ;
-        sh:datatype xsd:date ;
+        sh:datatype xsd:dateTime ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:description "Date when the booking was made" ;
@@ -162,7 +162,7 @@ cs:ClientShape
         sh:description "Primary phone number of the client" ;
     ] ;
     sh:property [
-        sh:path cs:status ;
+        sh:path cs:tourStatus ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
@@ -251,7 +251,7 @@ cs:MountainShape
     ] ;
     sh:property [
         sh:path cs:difficulty ;
-        sh:datatype xsd:string ;
+        sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:in ( cs:Easy cs:Moderate cs:Hard cs:VeryHard ) ;
@@ -263,6 +263,45 @@ cs:MountainShape
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:description "Link to DBpedia resource for more information" ;
+    ] .
+
+# Review shapes
+
+cs:ReviewShape
+    a sh:NodeShape ;
+    sh:targetClass cs:Review ;
+    sh:property [
+        sh:path cs:reviewedBy ;
+        sh:class cs:Client ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:description "Client who wrote the review" ;
+    ] ;
+    sh:property [
+        sh:path cs:rating ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minInclusive 1 ;
+        sh:maxInclusive 5 ;
+        sh:description "Rating given by the client (1 to 5)" ;
+    ] ;
+    sh:property [
+        sh:path cs:reviewText ;
+        sh:datatype xsd:string ;
+        sh:minCount 0 ;
+        sh:maxCount 1 ;
+        sh:description "Optional comments provided by the client" ;
+    ] ;
+    sh:property [
+        sh:path cs:reviewsItem ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:or (
+            [ sh:class cs:TourPackage ]
+            [ sh:class cs:Bike ]
+        ) ;
+        sh:description "The item being reviewed (e.g., TourPackage, Guide)" ;
     ] .
 
 # Path shapes
@@ -309,7 +348,7 @@ cs:PathShape
     ] ;
     sh:property [
         sh:path cs:difficulty ;
-        sh:datatype xsd:string ;
+        sh:nodeKind sh:IRI ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:in ( cs:Easy cs:Moderate cs:Hard cs:VeryHard ) ;
