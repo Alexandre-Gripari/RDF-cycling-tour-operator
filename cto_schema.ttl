@@ -110,7 +110,7 @@ cs:TourStage a owl:Class ;
         owl:onProperty cs:guideAssigned ;
         owl:class cs:Guide ;
         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-    ]
+    ] ;
     rdfs:label "Tour Stage" ;
     rdfs:comment "A single stage or segment of a tour." .
 
