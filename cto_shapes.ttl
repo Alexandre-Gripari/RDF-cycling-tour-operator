@@ -38,7 +38,7 @@ cs:BikeShape
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:in ( "ok" "needs_service" "under_maintenance" ) ;
+        sh:in ( cs:MaintenanceOk cs:MaintenanceNeedsService cs:MaintenanceUnderRepair ) ;
         sh:description "Current maintenance status of the bike" ;
     ] .
 
@@ -254,7 +254,7 @@ cs:MountainShape
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:in ( "easy" "moderate" "hard" "very hard" ) ;
+        sh:in ( cs:Easy cs:Moderate cs:Hard cs:VeryHard ) ;
         sh:description "Difficulty level of the climb" ;
     ] ;
     sh:property [
@@ -312,7 +312,7 @@ cs:PathShape
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:in ( "easy" "moderate" "hard" "very hard" ) ;
+        sh:in ( cs:Easy cs:Moderate cs:Hard cs:VeryHard ) ;
         sh:description "Overall difficulty level of the path" ;
     ] ;
     sh:property [

@@ -3,203 +3,296 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+### SKOS Vocabulary
+
+cs:DifficultyScheme a skos:ConceptScheme ;
+    rdfs:label "Difficulty Level Scheme"@en ;
+    skos:prefLabel "Difficulty Level Scheme"@en ;
+    skos:prefLabel "Schéma des niveaux de difficulté"@fr ;
+    skos:definition "A scheme defining the difficulty levels for cycling paths."@en .
+
+cs:Easy a skos:Concept ;
+    skos:inScheme cs:DifficultyScheme ;     
+    skos:prefLabel "Easy"@en ;              
+    skos:prefLabel "Facile"@fr ;           
+    skos:definition "Path suitable for beginners, flat terrain."@en .
+
+cs:Moderate a skos:Concept ;
+    skos:inScheme cs:DifficultyScheme ;
+    skos:prefLabel "Moderate"@en ;
+    skos:prefLabel "Moyen"@fr .
+
+cs:Hard a skos:Concept ;
+    skos:inScheme cs:DifficultyScheme ;
+    skos:prefLabel "Hard"@en ;
+    skos:prefLabel "Difficile"@fr .
+
+cs:VeryHard a skos:Concept ;
+    skos:inScheme cs:DifficultyScheme ;
+    skos:prefLabel "Very Hard"@en ;
+    skos:prefLabel "Très difficile"@fr ;
+    skos:definition "Path with steep climbs and challenging terrain."@en .
+
+
+cs:MaintenanceStatus a skos:ConceptScheme ;
+    rdfs:label "Maintenance Status Scheme"@en ;
+    skos:prefLabel "Maintenance Status Scheme"@en ;
+    skos:prefLabel "Schéma de status de maintenance" ;
+    skos:definition "A scheme defining the maintenance status of bikes."@en .
+
+cs:MaintenanceOk a skos:Concept ;
+    skos:inScheme cs:MaintenanceStatus ;
+    skos:prefLabel "Operational"@en ;
+    skos:prefLabel "Operationnel"@fr ;
+    skos:altLabel "Ok"@en ;
+    skos:definition "Bike is in good working condition."@en .
+
+cs:MaintenanceNeedsService a skos:Concept ;
+    skos:inScheme cs:MaintenanceStatus ;
+    skos:prefLabel "Needs service"@en ;
+    skos:prefLabel "À réviser"@fr ;
+    skos:definition "Bike requires maintenance or servicing."@en .
+
+cs:MaintenanceUnderRepair a skos:Concept ;
+    skos:inScheme cs:MaintenanceStatus ;
+    skos:prefLabel "Under repair"@en ;
+    skos:prefLabel "En cours de réparation"@fr ;
+    skos:definition "Bike is currently being repaired."@en .
 
 ### Class
 
-cs:Bike a rdfs:Class ;
-    rdfs:label "Bike" ;
-    rdfs:comment "A bicycle available for rent or use during a tour." .
+cs:Bike a owl:Class .
 
-cs:ElectricBike a rdfs:Class ;
+cs:ElectricBike a owl:Class ;
     rdfs:subClassOf cs:Bike ;
     rdfs:label "Electric Bike" ;
     rdfs:comment "A bike equipped with an electric motor for assisted pedaling." .
 
-cs:RoadBike a rdfs:Class ;
+cs:RoadBike a owl:Class ;
     rdfs:subClassOf cs:Bike ;
+    owl:disjointWith cs:MountainBike ;
     rdfs:label "Road Bike" ;
     rdfs:comment "A lightweight bike designed for paved surfaces and long distances." .
 
-cs:MountainBike a rdfs:Class ;
+cs:MountainBike a owl:Class ;
     rdfs:subClassOf cs:Bike ;
+    owl:disjointWith cs:RoadBike ;
     rdfs:label "Mountain Bike" ;
     rdfs:comment "A bike designed for off-road cycling on rough terrains." .
 
-cs:Path a rdfs:Class ;
+cs:Path a owl:Class ;
     rdfs:label "Cycling Path" ;
     rdfs:comment "A cycling route connecting two destinations." .
 
-cs:Mountain a rdfs:Class ;
+cs:Mountain a owl:Class ;
     rdfs:label "Mountain" ;
     rdfs:comment "A mountain or climb along a cycling route." .
 
-cs:WaterPoint a rdfs:Class ;
+cs:WaterPoint a owl:Class ;
     rdfs:label "Water Point" ;
     rdfs:comment "A location where riders can refill water during a tour." .
 
-cs:Guide a rdfs:Class ;
+cs:Guide a owl:Class ;
     rdfs:subClassOf foaf:Person ;
     rdfs:label "Tour Guide" ;
     rdfs:comment "A professional cycling guide who accompanies clients on tours." .
 
-cs:Client a rdfs:Class ;
+cs:Client a owl:Class ;
     rdfs:subClassOf foaf:Person ;
     rdfs:label "Client" ;
     rdfs:comment "A person booking or participating in a cycling tour." .
 
-cs:TourStage a rdfs:Class ;
+cs:TourStage a owl:Class ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty cs:guideAssigned ;
+        owl:class cs:Guide ;
+        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+    ]
     rdfs:label "Tour Stage" ;
     rdfs:comment "A single stage or segment of a tour." .
 
-cs:TourPackage a rdfs:Class ;
+cs:TourPackage a owl:Class ;
     rdfs:label "Tour Package" ;
     rdfs:comment "A complete multi-day cycling tour combining several stages." .
 
-cs:Booking a rdfs:Class ;
+cs:Booking a owl:Class ;
     rdfs:label "Booking" ;
     rdfs:comment "A booking made by a client for a tour or a bike." .
 
-cs:BikeBooking a rdfs:Class ;
+cs:BikeBooking a owl:Class ;
     rdfs:subClassOf cs:Booking ;
     rdfs:label "Bike Booking" ;
     rdfs:comment "A booking specifically for renting a bike." .
 
-cs:TourBooking a rdfs:Class ;
+cs:TourBooking a owl:Class ;
     rdfs:subClassOf cs:Booking ;
     rdfs:label "Tour Booking" ;
     rdfs:comment "A booking specifically for a tour package." .
 
 ### Properties
 
-cs:pricePerDayTour a rdf:Property ;
+cs:pricePerDayTour a owl:DatatypeProperty ;
     rdfs:domain cs:TourPackage ;
     rdfs:range xsd:decimal ;
     rdfs:label "price per week" .
 
-cs:pricePerDayBike a rdf:Property ;
+cs:pricePerDayBike a owl:DatatypeProperty ;
+    owl:propertyDisjointWith cs:pricePerDayTour ;
     rdfs:domain cs:Bike ;
     rdfs:range xsd:decimal ;
     rdfs:label "price per day" .
 
-cs:availableFrom a rdf:Property ;
+cs:availableFrom a owl:DatatypeProperty ;
     rdfs:domain cs:Bike ;
     rdfs:range xsd:date ;
     rdfs:label "available from date" .
 
-cs:maintenanceStatus a rdf:Property ;
+cs:maintenanceStatus a owl:DatatypeProperty ;
     rdfs:domain cs:Bike ;
     rdfs:range xsd:string ;
     rdfs:label "maintenance status" .
 
-cs:hasStart a rdf:Property ;
+cs:hasStart a owl:FunctionalProperty ;
     rdfs:domain cs:Path ;
     rdfs:range rdfs:Resource ;
     rdfs:label "start location" .
 
-cs:hasEnd a rdf:Property ;
+cs:hasEnd a owl:FunctionalProperty ;
     rdfs:domain cs:Path ;
     rdfs:range rdfs:Resource ;
     rdfs:label "end location" .
 
-cs:length a rdf:Property ;
+cs:length a owl:DatatypeProperty ;
     rdfs:domain cs:Path ;
     rdfs:range xsd:decimal ;
     rdfs:label "path length in km" .
 
-cs:elevationGain a rdf:Property ;
+cs:elevationGain a owl:DatatypeProperty ;
     rdfs:domain cs:Path , cs:Mountain ;
     rdfs:range xsd:integer ;
     rdfs:label "elevation gain (m)" .
 
-cs:difficulty a rdf:Property ;
+cs:difficulty a owl:ObjectProperty ;     
     rdfs:domain cs:Path , cs:Mountain ;
-    rdfs:range xsd:string ;
+    rdfs:range skos:Concept ;
     rdfs:label "difficulty level" .
 
-cs:recommendedForElectric a rdf:Property ;
+cs:recommendedForElectric a owl:ObjectProperty ;
     rdfs:domain cs:Path ;
     rdfs:range xsd:string ;
     rdfs:label "recommended for e-bike" .
 
-cs:hasDifficultyScore a rdf:Property ;
+
+# À enlever potentiellement
+cs:hasDifficultyScore a owl:FunctionalProperty ;
     rdfs:domain cs:Path ;
     rdfs:range xsd:decimal ;
     rdfs:label "difficulty score (numeric)" .
 
-cs:stageNumber a rdf:Property ;
+cs:stageNumber a owl:FunctionalProperty ;
     rdfs:domain cs:TourStage ;
     rdfs:range xsd:integer ;
     rdfs:label "stage number" .
 
-cs:stagePath a rdf:Property ;
+cs:stagePath a owl:ObjectProperty ;
     rdfs:domain cs:TourStage ;
     rdfs:range cs:Path ;
     rdfs:label "path of the stage" .
 
-cs:guideAssigned a rdf:Property ;
+cs:guideAssigned a owl:ObjectProperty ;
     rdfs:domain cs:TourStage , cs:TourPackage ;
     rdfs:range cs:Guide ;
     rdfs:label "assigned guide" .
 
-cs:includesStage a rdf:Property ;
+cs:includesStage a owl:ObjectProperty ;
     rdfs:domain cs:TourPackage ;
     rdfs:range cs:TourStage ;
     rdfs:label "includes stage" .
 
-cs:tourCapacity a rdf:Property ;
+cs:tourCapacity a owl:DatatypeProperty ;
     rdfs:domain cs:TourStage ;
     rdfs:range xsd:integer ;
     rdfs:label "capacity (participants)" .
 
-cs:packageCapacity a rdf:Property ;
+cs:packageCapacity a owl:DatatypeProperty ;
     rdfs:domain cs:TourPackage ;
     rdfs:range xsd:integer ;
     rdfs:label "package capacity (participants)" .
 
-cs:bookedBy a rdf:Property ;
+cs:bookedBy a owl:ObjectProperty ;
     rdfs:domain cs:Booking ;
     rdfs:range cs:Client ;
     rdfs:label "booked by" .
 
-cs:bookingDate a rdf:Property ;
+cs:hasBooking a owl:ObjectProperty ;
+    rdfs:domain cs:Client ;
+    owl:inverseOf cs:bookedBy ;
+    rdfs:range cs:Booking ;
+    rdfs:label "has booking" .
+
+cs:bookingDate a owl:DatatypeProperty ;
     rdfs:domain cs:Booking ;
     rdfs:range xsd:dateTime ;
     rdfs:label "booking date" .
 
-cs:contact a rdf:Property ;
+cs:contact a owl:DatatypeProperty ;
     rdfs:domain foaf:Person ;
     rdfs:range xsd:string ;
     rdfs:label "contact phone number" .
 
-cs:bike a rdf:Property ;
+cs:bike a owl:ObjectProperty ;
     rdfs:domain cs:Client ;
     rdfs:range cs:Bike ;
     rdfs:label "bike" ;
     rdfs:comment "Bike assigned to or rented by the client." .
 
-cs:status a rdf:Property ;
-    rdfs:domain cs:Client ;
-    rdfs:range xsd:string ;
-    rdfs:label "status" ;
-    rdfs:comment "Tour status for the client (e.g., 'Finished', 'In Progress')." .
+cs:status a owl:ObjectProperty ;
+    rdfs:domain cs:TourStage ;
+    rdfs:range skos:Concept ;
+    rdfs:label "stage status" .
 
-cs:phone a rdf:Property ;
+cs:phone a owl:DatatypeProperty ;
     rdfs:domain cs:Client ;
     rdfs:range xsd:string ;
     rdfs:label "phone" ;
     rdfs:comment "Primary phone number of the client." .
 
-cs:location a rdf:Property ;
+cs:location a owl:FunctionalProperty ;
     rdfs:domain cs:Mountain , cs:WaterPoint ;
     rdfs:range rdfs:Resource ;
     rdfs:label "geographic location" .
 
-cs:description a rdf:Property ;
+cs:description a owl:DatatypeProperty ;
     rdfs:domain cs:WaterPoint ;
     rdfs:range xsd:string ;
     rdfs:label "description" .
 
-cs:tourPackageBooked a rdf:Property ;
+cs:tourPackageBooked a owl:ObjectProperty ;
     rdfs:domain cs:TourBooking ;
     rdfs:range cs:TourPackage ;
     rdfs:label "tour package booked" .
+
+cs:isNear a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain cs:WaterPoint ;
+    rdfs:range cs:WaterPoint ;
+    rdfs:label "is near" .
+
+cs:isHigherThan a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain cs:Mountain ;
+    rdfs:range cs:Mountain ;
+    rdfs:label "is higher than" .
+
+cs:isAssignedTo a owl:ObjectProperty ; 
+    rdfs:domain cs:Bike ;
+    rdfs:range cs:Client ;
+    owl:inverseOf cs:bike ;
+    rdfs:label "is assigned to" .
+
+cs:includesPath a owl:ObjectProperty ;
+    rdfs:domain cs:TourPackage ;
+    rdfs:range cs:Path ;
+    owl:propertyChainAxiom ( cs:includesStage cs:stagePath ) ;
+    rdfs:label "includes path" .
