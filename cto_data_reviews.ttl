@@ -38,23 +38,23 @@ cto:Review_velo_de_ville_elops_120___cadre_bas_bleu_R2 a cs:Review ;
     cs:reviewedBy cto:Client_yvon_velo_de_ville_elops_120___cadre_bas_bleu_2 ;
     cs:reviewsItem cto:Bike_velo_de_ville_elops_120___cadre_bas_bleu .
 
-cto:Review_velo_de_ville_elops_520_cadre_bas_bleu_j_R0 a cs:Review ;
+cto:Review_velo_de_ville_elops_520_cadre_bas_vert_R0 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Très bonne accueil "^^xsd:string ;
-    cs:reviewedBy cto:Client_lili_velo_de_ville_elops_520_cadre_bas_bleu_j_0 ;
-    cs:reviewsItem cto:Bike_velo_de_ville_elops_520_cadre_bas_bleu_j .
+    cs:reviewedBy cto:Client_lili_velo_de_ville_elops_520_cadre_bas_vert_0 ;
+    cs:reviewsItem cto:Bike_velo_de_ville_elops_520_cadre_bas_vert .
 
-cto:Review_velo_de_ville_elops_520_cadre_bas_bleu_j_R1 a cs:Review ;
+cto:Review_velo_de_ville_elops_520_cadre_bas_vert_R1 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Top"^^xsd:string ;
-    cs:reviewedBy cto:Client_los_velo_de_ville_elops_520_cadre_bas_bleu_j_1 ;
-    cs:reviewsItem cto:Bike_velo_de_ville_elops_520_cadre_bas_bleu_j .
+    cs:reviewedBy cto:Client_los_velo_de_ville_elops_520_cadre_bas_vert_1 ;
+    cs:reviewsItem cto:Bike_velo_de_ville_elops_520_cadre_bas_vert .
 
-cto:Review_velo_de_ville_elops_520_cadre_bas_bleu_j_R2 a cs:Review ;
+cto:Review_velo_de_ville_elops_520_cadre_bas_vert_R2 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Génial top"^^xsd:string ;
-    cs:reviewedBy cto:Client_los_velo_de_ville_elops_520_cadre_bas_bleu_j_2 ;
-    cs:reviewsItem cto:Bike_velo_de_ville_elops_520_cadre_bas_bleu_j .
+    cs:reviewedBy cto:Client_los_velo_de_ville_elops_520_cadre_bas_vert_2 ;
+    cs:reviewsItem cto:Bike_velo_de_ville_elops_520_cadre_bas_vert .
 
 cto:Review_velo_enfant_2en1_draisienne_35_ans_14_po_R0 a cs:Review ;
     cs:rating 5.0 ;
@@ -329,23 +329,23 @@ cto:Review_vlo_gravel_microshift_sword_1x10v_grvl_a_R2 a cs:Review ;
     cs:reviewedBy cto:Client_carlo_vlo_gravel_microshift_sword_1x10v_grvl_a_2 ;
     cs:reviewsItem cto:Bike_vlo_gravel_microshift_sword_1x10v_grvl_a .
 
-cto:Review_vlo_route_edr_easy_van_rysel_blanc_R0 a cs:Review ;
+cto:Review_vlo_route_edr_easy_van_rysel_bordeaux_R0 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "super pour un premier prix : confortable, réglable, simple pour débuter, plutot léger pour un entrée de gamme"^^xsd:string ;
-    cs:reviewedBy cto:Client_alexandra_vlo_route_edr_easy_van_rysel_blanc_0 ;
-    cs:reviewsItem cto:Bike_vlo_route_edr_easy_van_rysel_blanc .
+    cs:reviewedBy cto:Client_alexandra_vlo_route_edr_easy_van_rysel_bordeaux_0 ;
+    cs:reviewsItem cto:Bike_vlo_route_edr_easy_van_rysel_bordeaux .
 
-cto:Review_vlo_route_edr_easy_van_rysel_blanc_R1 a cs:Review ;
+cto:Review_vlo_route_edr_easy_van_rysel_bordeaux_R1 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Cycliste débutante, je me suis tournée vers ce vélo et j’en suis ravie : facile à utiliser, deux types de frein, des vitesses «&nbsp;basiques&nbsp;». Ce vélo conviendra aux débutants qui, en fonction de leur pratique, pourront se tourner vers des vélos plus sophistiqués."^^xsd:string ;
-    cs:reviewedBy cto:Client_stcy_vlo_route_edr_easy_van_rysel_blanc_1 ;
-    cs:reviewsItem cto:Bike_vlo_route_edr_easy_van_rysel_blanc .
+    cs:reviewedBy cto:Client_stcy_vlo_route_edr_easy_van_rysel_bordeaux_1 ;
+    cs:reviewsItem cto:Bike_vlo_route_edr_easy_van_rysel_bordeaux .
 
-cto:Review_vlo_route_edr_easy_van_rysel_blanc_R2 a cs:Review ;
+cto:Review_vlo_route_edr_easy_van_rysel_bordeaux_R2 a cs:Review ;
     cs:rating 4.0 ;
     cs:reviewText "Cool "^^xsd:string ;
-    cs:reviewedBy cto:Client_marc_vlo_route_edr_easy_van_rysel_blanc_2 ;
-    cs:reviewsItem cto:Bike_vlo_route_edr_easy_van_rysel_blanc .
+    cs:reviewedBy cto:Client_marc_vlo_route_edr_easy_van_rysel_bordeaux_2 ;
+    cs:reviewsItem cto:Bike_vlo_route_edr_easy_van_rysel_bordeaux .
 
 cto:Review_vlo_tout_chemin_electrique__neomouv_raip_R0 a cs:Review ;
     cs:rating 1.0 ;
@@ -510,23 +510,23 @@ cto:Review_vtc_enfant_20_69_ans_btwin_500_beige_R2 a cs:Review ;
     cs:reviewedBy cto:Client_fabienne_vtc_enfant_20_69_ans_btwin_500_beige_2 ;
     cs:reviewsItem cto:Bike_vtc_enfant_20_69_ans_btwin_500_beige .
 
-cto:Review_vtt_enfant_20_expl_500_noir_69_ans_R0 a cs:Review ;
+cto:Review_vtt_enfant_20_expl_500_orange_69_ans_R0 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Excellent produit à un prix très compétitif."^^xsd:string ;
-    cs:reviewedBy cto:Client_dominique_vtt_enfant_20_expl_500_noir_69_ans_0 ;
-    cs:reviewsItem cto:Bike_vtt_enfant_20_expl_500_noir_69_ans .
+    cs:reviewedBy cto:Client_dominique_vtt_enfant_20_expl_500_orange_69_ans_0 ;
+    cs:reviewsItem cto:Bike_vtt_enfant_20_expl_500_orange_69_ans .
 
-cto:Review_vtt_enfant_20_expl_500_noir_69_ans_R1 a cs:Review ;
+cto:Review_vtt_enfant_20_expl_500_orange_69_ans_R1 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Ce vélo pour enfant est très bien. Cela permet de découvrir les vitesses pour un enfant, il est solide, costaud, même si un peu lourd. Il est joli, bref, c'est un excellent produit."^^xsd:string ;
-    cs:reviewedBy cto:Client_milano_vtt_enfant_20_expl_500_noir_69_ans_1 ;
-    cs:reviewsItem cto:Bike_vtt_enfant_20_expl_500_noir_69_ans .
+    cs:reviewedBy cto:Client_milano_vtt_enfant_20_expl_500_orange_69_ans_1 ;
+    cs:reviewsItem cto:Bike_vtt_enfant_20_expl_500_orange_69_ans .
 
-cto:Review_vtt_enfant_20_expl_500_noir_69_ans_R2 a cs:Review ;
+cto:Review_vtt_enfant_20_expl_500_orange_69_ans_R2 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Premier vélo à vitesse pour mon fils! Il est ravi!!! La couleur noire est top "^^xsd:string ;
-    cs:reviewedBy cto:Client_bertrand_vtt_enfant_20_expl_500_noir_69_ans_2 ;
-    cs:reviewsItem cto:Bike_vtt_enfant_20_expl_500_noir_69_ans .
+    cs:reviewedBy cto:Client_bertrand_vtt_enfant_20_expl_500_orange_69_ans_2 ;
+    cs:reviewsItem cto:Bike_vtt_enfant_20_expl_500_orange_69_ans .
 
 cto:Review_vtt_enfant_24_expl_500_jaune_912_ans_R0 a cs:Review ;
     cs:rating 5.0 ;
@@ -547,23 +547,23 @@ Ravis."""^^xsd:string ;
     cs:reviewedBy cto:Client_michael_vtt_enfant_24_expl_500_jaune_912_ans_2 ;
     cs:reviewsItem cto:Bike_vtt_enfant_24_expl_500_jaune_912_ans .
 
-cto:Review_vtt_enfant_26_912_ans_expl_500_orange_R0 a cs:Review ;
+cto:Review_vtt_enfant_26_912_ans_expl_500_violet_R0 a cs:Review ;
     cs:rating 3.0 ;
     cs:reviewText "Achat d’un vélo neuf avec une pedale défectueuse qui ne cesse ne tourner quand mon enfant l’utilise. "^^xsd:string ;
-    cs:reviewedBy cto:Client_jonathan_vtt_enfant_26_912_ans_expl_500_orange_0 ;
-    cs:reviewsItem cto:Bike_vtt_enfant_26_912_ans_expl_500_orange .
+    cs:reviewedBy cto:Client_jonathan_vtt_enfant_26_912_ans_expl_500_violet_0 ;
+    cs:reviewsItem cto:Bike_vtt_enfant_26_912_ans_expl_500_violet .
 
-cto:Review_vtt_enfant_26_912_ans_expl_500_orange_R1 a cs:Review ;
+cto:Review_vtt_enfant_26_912_ans_expl_500_violet_R1 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Tres bon velo pour un enfant de 11 ans.<br>Il est ravie de sont achat!"^^xsd:string ;
-    cs:reviewedBy cto:Client_anne_vtt_enfant_26_912_ans_expl_500_orange_1 ;
-    cs:reviewsItem cto:Bike_vtt_enfant_26_912_ans_expl_500_orange .
+    cs:reviewedBy cto:Client_anne_vtt_enfant_26_912_ans_expl_500_violet_1 ;
+    cs:reviewsItem cto:Bike_vtt_enfant_26_912_ans_expl_500_violet .
 
-cto:Review_vtt_enfant_26_912_ans_expl_500_orange_R2 a cs:Review ;
+cto:Review_vtt_enfant_26_912_ans_expl_500_violet_R2 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Super vélo pour enfants et pour adulte"^^xsd:string ;
-    cs:reviewedBy cto:Client_katie_vtt_enfant_26_912_ans_expl_500_orange_2 ;
-    cs:reviewsItem cto:Bike_vtt_enfant_26_912_ans_expl_500_orange .
+    cs:reviewedBy cto:Client_katie_vtt_enfant_26_912_ans_expl_500_violet_2 ;
+    cs:reviewsItem cto:Bike_vtt_enfant_26_912_ans_expl_500_violet .
 
 cto:Review_xcr_tri_rival_axs_power_roues_fulcrum_wi_R0 a cs:Review ;
     cs:rating 5.0 ;

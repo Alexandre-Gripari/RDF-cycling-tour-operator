@@ -13,6 +13,7 @@ CS = Namespace("http://data.cyclingtour.fr/schema#")
 CTO_DATA = Namespace("http://data.cyclingtour.fr/data#")
 
 fake = Faker('fr_FR')
+fake.seed_instance(42)
 
 g_bikes = Graph()
 g_clients = Graph()
@@ -41,12 +42,23 @@ def generate_slug(text):
 
 def get_bike_type(name, description):
     text = (name + " " + description).lower()
-    if "électrique" in text or "electric" in text or "vtc electrique" in text:
+
+    is_electric = any(word in text for word in ["électrique", "electric", "vtc electrique", "e-bike", "vae"])
+    is_mountain = any(word in text for word in ["vtt", "rockrider", "mountain", "tout terrain"])
+    is_road = any(word in text for word in ["route", "triban", "van rysel", "road", "course"])
+
+    if is_electric and is_mountain:
+        return CS.ElectricMountainBike
+    if is_electric and is_road:
+        return CS.ElectricRoadBike
+    
+    if is_electric:
         return CS.ElectricBike
-    elif "vtt" in text or "rockrider" in text or "mountain" in text:
+    if is_mountain:
         return CS.MountainBike
-    elif "route" in text or "triban" in text or "van rysel" in text:
+    if is_road:
         return CS.RoadBike
+    
     return CS.Bike
 
 
@@ -152,6 +164,10 @@ def main():
     
     all_links = get_bike_links(main_url, scraper)
     print(f"Found {len(all_links)} bike links.")
+
+    if len(all_links) == 0:
+        print("No bike links found. Exiting.")
+        return
 
     for i, url in enumerate(all_links):
         scrape_bike_page(url, scraper)

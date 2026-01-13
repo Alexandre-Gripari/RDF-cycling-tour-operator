@@ -3,7 +3,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cto:Bike_rcr_pro_team_dura_ace_di2_signature a cs:Bike ;
+cto:Bike_rcr_pro_team_dura_ace_di2_signature a cs:RoadBike ;
     rdfs:label "RCR PRO TEAM DURA ACE DI2 SIGNATURE"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
@@ -18,15 +18,15 @@ cto:Bike_velo_de_ville_elops_120___cadre_bas_bleu a cs:Bike ;
     cs:pricePerDayBike 4.5 ;
     rdfs:comment "Notre équipe de concepteurs⸱trices a conçu ce vélo classique hollandais confortable pour vos trajets urbains occasionnels et pour y transporter l'essentiel. Evadez-vous grâce à un vélo de type hollandais confortable, sûr et équipé pour répondre simplement à votre besoin ocassionnel de déplacement urbain tout en pouvant transporter l'essentiel."^^xsd:string .
 
-cto:Bike_velo_de_ville_elops_520_cadre_bas_bleu_j a cs:Bike ;
-    rdfs:label "VELO DE VILLE ELOPS 520 CADRE BAS BLEU JEANS"^^xsd:string ;
+cto:Bike_velo_de_ville_elops_520_cadre_bas_vert a cs:Bike ;
+    rdfs:label "VELO DE VILLE ELOPS 520 CADRE BAS VERT"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
     cs:pricePerDayBike 5.25 ;
     rdfs:comment "Notre équipe de concepteurs⸱trices a conçu ce vélo confortable pour réaliser vos trajets urbains occasionnels, équipé pour le transport en toute sécurité. Pour rouler encore plus confortablement lors de vos trajets occasionnels en ville, ce vélo Elops vous propose également un niveau d'équipement complet."^^xsd:string .
 
 cto:Bike_velo_enfant_2en1_draisienne_35_ans_14_po a cs:Bike ;
-    rdfs:label "VELO ENFANT 2EN1 DRAISIENNE 3-5 ANS 14 pouces - DISCOVER 500  Jaune"^^xsd:string,
+    rdfs:label "VELO ENFANT 2EN1 DRAISIENNE 3-5 ANS 14 pouces - DISCOVER 500  Rouge"^^xsd:string,
         "VELO ENFANT 2EN1 DRAISIENNE 3-5 ANS 14 pouces - DISCOVER 900  Bleu"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
@@ -66,28 +66,28 @@ cto:Bike_velo_ville_longue_distance_900_cadre_bas a cs:RoadBike ;
     rdfs:comment """Ce vélo est conçu pour vos trajets quotidiens en ville et sur routes. Si vous recherchez un vélo ville léger et facile, et plus confortable pour avaler les kilomètres, ou parce que
 votre parcours comporte des dénivelés, alors ce vélo est fait pour vous."""^^xsd:string .
 
-cto:Bike_velo_vtc_neomouv_raipon_2 a cs:ElectricBike ;
+cto:Bike_velo_vtc_neomouv_raipon_2 a cs:ElectricRoadBike ;
     rdfs:label "VELO VTC NEOMOUV RAIPON 2"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
     cs:pricePerDayBike 21.0 ;
     rdfs:comment "Notre partenaire NEOMOUV a conçu ce vélo à assistance électrique pour faciliter vos randonnées sur routes et chemins Gagnez en confort et roulez sans effort grâce au coup de pouce de l'électrique ! Moteur à capteur de pédalage, autonomie jusqu'à 100km, fourche suspendue, freins hydrauliques, pour un confort garanti."^^xsd:string .
 
-cto:Bike_vlo_cargo_lectrique_longtail_chargement_ a cs:ElectricBike ;
-    rdfs:label "Vélo cargo électrique longtail chargement arrière R500E vert clair"^^xsd:string ;
+cto:Bike_vlo_cargo_lectrique_longtail_chargement_ a cs:ElectricRoadBike ;
+    rdfs:label "Vélo cargo électrique longtail chargement arrière R500E noir"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
-    cs:pricePerDayBike 37.5 ;
+    cs:pricePerDayBike 40.5 ;
     rdfs:comment "Avec sa grande capacité de chargement, ce vélo cargo Longtail électrique est conçu pour transporter votre quotidien à vélo, en ville et sur route. Si vous cherchez une très grosse capacité de chargement sur votre vélo, le longtail VELOCARGO R500E vous permettra de transporter 2 enfants et 1 adulte ou 170 kg de chargement hors poids du vélo."^^xsd:string .
 
-cto:Bike_vlo_de_route__assistance_lectrique__eedr a cs:ElectricBike ;
+cto:Bike_vlo_de_route__assistance_lectrique__eedr a cs:ElectricRoadBike ;
     rdfs:label "Vélo de route à assistance électrique - E-EDR AF Shimano 105 2x11S rouge"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
     cs:pricePerDayBike 27.0 ;
     rdfs:comment "Notre VAE route E-EDR AF vous permet de vous attaquer à des montées plus longues et plus raides lors de vos sorties sans vous pénaliser sur les portions plates. Le kit électrique quasiment invisible Mahle X35 bénéficie de 3 modes d'assistance. Sa batterie de 250Wh vous assure une autonomie jusqu'à 100km."^^xsd:string .
 
-cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 a cs:ElectricBike ;
+cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 a cs:ElectricRoadBike ;
     rdfs:label "Vélo de route électrique SRAM Apex AXS 1x12v, E-EDR AF lila"^^xsd:string,
         "Vélo de route électrique SRAM Apex AXS 1x12v, E-EDR AF rouge"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
@@ -117,7 +117,7 @@ cto:Bike_vlo_de_ville_pliant__assistance_lectriqu a cs:ElectricBike ;
     cs:pricePerDayBike 19.5 ;
     rdfs:comment "Vélo électrique pliant de ville, confort urbain et design. Ses pneus 24 facilitent vos trajets quotidiens en ville. Système électrique MAHLE Smartbike."^^xsd:string .
 
-cto:Bike_vlo_de_voyage_offroad_bikepacking_advt_9 a cs:Bike ;
+cto:Bike_vlo_de_voyage_offroad_bikepacking_advt_9 a cs:RoadBike ;
     rdfs:label "Vélo de voyage offroad bikepacking, ADVT 920 jaune"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
@@ -125,14 +125,14 @@ cto:Bike_vlo_de_voyage_offroad_bikepacking_advt_9 a cs:Bike ;
     rdfs:comment "Ce vélo a été conçu pour vos expéditions hors des sentiers battus en bikepacking Fiable et polyvalent, ce vélo ADVT 920 sera votre compagnon de confiance sur toutes vos aventures bikepacking"^^xsd:string .
 
 cto:Bike_vlo_enfant_16_pouces_46_ans_discover_500 a cs:Bike ;
-    rdfs:label "Vélo enfant 16 pouces 4-6 ans, DISCOVER 500 rouge"^^xsd:string ;
+    rdfs:label "Vélo enfant 16 pouces 4-6 ans, DISCOVER 500 rose"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
     cs:pricePerDayBike 2.4 ;
     rdfs:comment "Conçu pour accompagner vos enfants dans leurs premières aventures ! Adapté à la morphologie des enfants entre 105 et 125 cm (4-6 ans), ce vélo 16 offre confort et tranquillité grâce à son système de freins innovant, pour des premières sorties plus funs et sereines !"^^xsd:string .
 
 cto:Bike_vlo_enfant_16_pouces_46_ans_discover_900 a cs:Bike ;
-    rdfs:label "Vélo enfant 16 pouces 4-6 ans, DISCOVER 900 beige"^^xsd:string ;
+    rdfs:label "Vélo enfant 16 pouces 4-6 ans, DISCOVER 900 rose"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
     cs:pricePerDayBike 3.15 ;
@@ -157,24 +157,25 @@ cto:Bike_vlo_inconnu a cs:Bike ;
     rdfs:label "Vélo Inconnu"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
-    cs:pricePerDayBike 4.05 ;
+    cs:pricePerDayBike 2.25 ;
     rdfs:comment ""^^xsd:string .
 
-cto:Bike_vlo_route_edr_easy_van_rysel_blanc a cs:RoadBike ;
-    rdfs:label "Vélo route EDR EASY VAN RYSEL Blanc"^^xsd:string ;
+cto:Bike_vlo_route_edr_easy_van_rysel_bordeaux a cs:RoadBike ;
+    rdfs:label "Vélo route EDR EASY VAN RYSEL Bordeaux"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
     cs:pricePerDayBike 6.0 ;
     rdfs:comment "Conçu pour débuter le vélo route en toute sécurité et simplicité. Avec son double freinage et son passage de vitesses facile, ce vélo, vous permettra d'aborder la pratique du vélo route en toute sérénité."^^xsd:string .
 
-cto:Bike_vlo_tout_chemin_electrique__neomouv_raip a cs:ElectricBike ;
+cto:Bike_vlo_tout_chemin_electrique__neomouv_raip a cs:ElectricRoadBike ;
     rdfs:label "Vélo Tout Chemin Electrique - NEOMOUV RAIPON"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
     cs:pricePerDayBike 16.5 ;
     rdfs:comment "Notre partenaire NEOMOUV a conçu ce vélo à assistance électrique pour faciliter vos randonnées sur routes et chemins Gagnez en confort et roulez sans effort grâce au coup de pouce de l'électrique ! Moteur à capteur de pédalage, autonomie jusqu'à 100km, fourche suspendue, freins hydrauliques, pour un confort garanti."^^xsd:string .
 
-cto:Bike_vlo_tout_chemin_lectrique__moteur_centra a cs:ElectricBike ;
+cto:Bike_vlo_tout_chemin_lectrique__moteur_centra a cs:ElectricBike,
+        cs:ElectricRoadBike ;
     rdfs:label "Vélo tout chemin électrique à moteur central bosch cadre haut - stilus e-touring"^^xsd:string,
         "Vélo tout chemin électrique à moteur central et cadre bas, E-ACTV 500 lavande"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
@@ -205,14 +206,14 @@ cto:Bike_vlo_tout_chemin_riverside_500_bleu_nuit a cs:RoadBike ;
     cs:pricePerDayBike 5.25 ;
     rdfs:comment "Vélo polyvalent,  confortable et dynamique pour vos balades régulières sur piste cyclable, route et chemin. Partez en balade en pleine nature ! Léger, maniable et confort, le Riverside 500 saura vous convaincre de toute sa polyvalence sur route et chemin."^^xsd:string .
 
-cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti a cs:ElectricBike ;
+cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti a cs:ElectricMountainBike ;
     rdfs:label "vélo VTT ELECTRIQUE tout suspendu 29\" - STILUS E-TRAIL Gris"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
     cs:pricePerDayBike 22.5 ;
     rdfs:comment "Ce VTT électrique tout suspendu (VTTAE) a été sélectionné pour les randonnées tout terrain, avec beaucoup de dénivelé (parcours en montagne). C'est un vélo parfaitement adapté pour rouler sur des trails moyennement engagés. Son amortisseur et sa fourche suspendue vous apporteront plus de confort."^^xsd:string .
 
-cto:Bike_vlo_vtt_lectrique_pliant_275_smartbike__ a cs:ElectricBike ;
+cto:Bike_vlo_vtt_lectrique_pliant_275_smartbike__ a cs:ElectricMountainBike ;
     rdfs:label "Vélo VTT Électrique Pliant 27,5\" Smartbike - Legend Etna SR 14Ah Gris"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
@@ -233,8 +234,8 @@ cto:Bike_vtc_enfant_20_69_ans_btwin_500_beige a cs:Bike ;
     cs:pricePerDayBike 3.45 ;
     rdfs:comment "Nous avons conçu ce vélo tout chemin tout équipé, pour les enfants de 6 à 9 ans (120 à 135 cm), souhaitant passer de la ville aux sentiers, par tous les temps. Pour vous balader toute l'année, ce VTC 20 pouces est équipé de garde-boue, d'une béquille et d'une lampe avant à LED. Les 6 vitesses permettent d'aborder tous les types de chemins."^^xsd:string .
 
-cto:Bike_vtt_enfant_20_expl_500_noir_69_ans a cs:MountainBike ;
-    rdfs:label "Vtt enfant 20\" expl 500 noir 6-9 ans"^^xsd:string ;
+cto:Bike_vtt_enfant_20_expl_500_orange_69_ans a cs:MountainBike ;
+    rdfs:label "Vtt enfant 20\" expl 500 orange 6-9 ans"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
     cs:pricePerDayBike 3.3 ;
@@ -247,8 +248,8 @@ cto:Bike_vtt_enfant_24_expl_500_jaune_912_ans a cs:MountainBike ;
     cs:pricePerDayBike 3.6 ;
     rdfs:comment "Nous avons conçu ce vélo tout terrain pour les enfants de 9 à 12 ans (135 à 150 cm) souhaitant pratiquer régulièrement le VTT. Pour affronter facilement les obstacles des terrains accidentés, nous avons équipé ce VTT 24 pouces d'une fourche suspendue. Grâce à ses 7 vitesses  vous pouvez aborder des sentiers vallonnés."^^xsd:string .
 
-cto:Bike_vtt_enfant_26_912_ans_expl_500_orange a cs:MountainBike ;
-    rdfs:label "VTT enfant 26\" 9-12 ans, EXPL 500 orange"^^xsd:string ;
+cto:Bike_vtt_enfant_26_912_ans_expl_500_violet a cs:MountainBike ;
+    rdfs:label "VTT enfant 26\" 9-12 ans, EXPL 500 violet"^^xsd:string ;
     cs:availableFrom "2026-01-13"^^xsd:date ;
     cs:maintenanceStatus cs:MaintenanceOk ;
     cs:pricePerDayBike 4.05 ;

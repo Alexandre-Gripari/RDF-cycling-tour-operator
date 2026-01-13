@@ -4,6 +4,8 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
 
 ### SKOS Vocabulary
 
@@ -90,6 +92,16 @@ cs:MountainBike a owl:Class ;
     rdfs:label "Mountain Bike" ;
     rdfs:comment "A bike designed for off-road cycling on rough terrains." .
 
+cs:ElectricMountainBike a owl:Class ;
+    owl:intersectionOf ( cs:ElectricBike cs:MountainBike ) ;
+    rdfs:label "Electric Mountain Bike" ;
+    rdfs:comment "A mountain bike equipped with an electric motor for assisted pedaling." .
+
+cs:ElectricRoadBike a owl:Class ;
+    owl:intersectionOf ( cs:ElectricBike cs:RoadBike ) ;
+    rdfs:label "Electric Road Bike" ;
+    rdfs:comment "A road bike equipped with an electric motor for assisted pedaling." .
+
 cs:Path a owl:Class ;
     rdfs:label "Cycling Path" ;
     rdfs:comment "A cycling route connecting two destinations." .
@@ -141,6 +153,7 @@ cs:TourBooking a owl:Class ;
     rdfs:comment "A booking specifically for a tour package." .
 
 cs:Review a owl:Class ;
+    owl:equivalentClass schema:Review ;
     rdfs:label "Review" ;
     rdfs:comment "A review or feedback provided by a client about a tour or bike." .
 
