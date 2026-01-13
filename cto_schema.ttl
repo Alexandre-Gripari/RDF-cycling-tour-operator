@@ -39,26 +39,34 @@ cs:VeryHard a skos:Concept ;
 cs:MaintenanceStatus a skos:ConceptScheme ;
     rdfs:label "Maintenance Status Scheme"@en ;
     skos:prefLabel "Maintenance Status Scheme"@en ;
-    skos:prefLabel "Schéma de status de maintenance" ;
+    skos:prefLabel "Schéma de status de maintenance"@fr ;
     skos:definition "A scheme defining the maintenance status of bikes."@en .
 
-cs:MaintenanceOk a skos:Concept ;
+cs:MaintenanceOperational a skos:Concept ;
     skos:inScheme cs:MaintenanceStatus ;
     skos:prefLabel "Operational"@en ;
     skos:prefLabel "Operationnel"@fr ;
     skos:altLabel "Ok"@en ;
     skos:definition "Bike is in good working condition."@en .
 
-cs:MaintenanceNeedsService a skos:Concept ;
+cs:MaintenanceUnavailable a skos:Concept ;
     skos:inScheme cs:MaintenanceStatus ;
-    skos:prefLabel "Needs service"@en ;
-    skos:prefLabel "À réviser"@fr ;
-    skos:definition "Bike requires maintenance or servicing."@en .
+    skos:prefLabel "Not Operational"@en ;
+    skos:prefLabel "Non opérationnel"@fr ;
+    skos:definition "The bike cannot be used due to mechanical issues."@en .
+
+cs:MaintenanceNeedsService a skos:Concept ;
+    skos:narrower cs:MaintenanceKO ;
+    skos:inScheme cs:MaintenanceStatus ;
+    skos:prefLabel "Needs Service"@en ;
+    skos:prefLabel "Besoin de maintenance"@fr ;
+    skos:definition "Bike requires maintenance before it can be used."@en .
 
 cs:MaintenanceUnderRepair a skos:Concept ;
+    skos:narrower cs:MaintenanceKO ;
     skos:inScheme cs:MaintenanceStatus ;
-    skos:prefLabel "Under repair"@en ;
-    skos:prefLabel "En cours de réparation"@fr ;
+    skos:prefLabel "Under Repair"@en ;
+    skos:prefLabel "En réparation"@fr ;
     skos:definition "Bike is currently being repaired."@en .
 
 ### Class

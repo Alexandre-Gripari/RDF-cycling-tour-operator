@@ -9,7 +9,6 @@ import re
 import json
 from faker import Faker
 
-# --- 1. CONFIGURATION ---
 CS = Namespace("http://data.cyclingtour.fr/schema#")
 CTO_DATA = Namespace("http://data.cyclingtour.fr/data#")
 
@@ -25,7 +24,6 @@ for g in [g_bikes, g_clients, g_reviews]:
     g.bind("foaf", FOAF)
     g.bind("xsd", XSD)
 
-# --- 2. FONCTIONS UTILITAIRES ---
 
 def clean_price(price_str):
     if not price_str: return 0.0
@@ -51,10 +49,8 @@ def get_bike_type(name, description):
         return CS.RoadBike
     return CS.Bike
 
-# --- 3. API AVIS ---
 
 def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
-    # URL de l'API avis officielle de Decathlon
     api_url = f"https://www.decathlon.fr/fr/ajax/nfs/openvoice/reviews/product/{sku}?page=0&size=20"
     
     headers = {
