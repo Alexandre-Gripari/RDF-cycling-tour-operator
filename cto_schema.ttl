@@ -278,6 +278,12 @@ cs:isHigherThan a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:range cs:Mountain ;
     rdfs:label "is higher than" .
 
+cs:isSmallerThan a owl:ObjectProperty ;
+    owl:inverseOf cs:isHigherThan ;
+    rdfs:domain cs:Mountain ;
+    rdfs:range cs:Mountain ;
+    rdfs:label "is smaller than" .
+
 cs:isAssignedTo a owl:ObjectProperty ; 
     rdfs:domain cs:Bike ;
     rdfs:range cs:Client ;
