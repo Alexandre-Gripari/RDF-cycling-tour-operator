@@ -40,9 +40,9 @@
             SELECT 
                 *,
                 CASE 
-                    WHEN Elevation_Gain > 1000 OR Distance_Value > 180 THEN 'http://data.cyclingtour.fr/schema#VeryHard'
-                    WHEN Elevation_Gain > 600 OR Distance_Value > 140 THEN 'http://data.cyclingtour.fr/schema#Hard'
-                    WHEN Elevation_Gain > 300 THEN 'http://data.cyclingtour.fr/schema#Moderate'
+                    WHEN Elevation_Gain > 3000 THEN 'http://data.cyclingtour.fr/schema#VeryHard'
+                    WHEN Elevation_Gain > 2000 THEN 'http://data.cyclingtour.fr/schema#Hard'
+                    WHEN Elevation_Gain > 1000 THEN 'http://data.cyclingtour.fr/schema#Moderate'
                     ELSE 'http://data.cyclingtour.fr/schema#Easy'
                 END AS difficulty_uri
             FROM stages_ready
