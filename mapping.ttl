@@ -48,7 +48,11 @@
 
     rr:predicateObjectMap [
         rr:predicate rdfs:label ; 
-        rr:objectMap [ rr:template "{Start_City} - {End_City}"]
+        rr:objectMap [ 
+            rr:template "{Start_City} - {End_City}" ; 
+            rr:termType rr:Literal ; 
+            rr:datatype xsd:string 
+        ]
     ] ;
 
     rr:predicateObjectMap [
