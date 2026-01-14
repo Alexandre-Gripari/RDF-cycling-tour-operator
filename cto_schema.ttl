@@ -4,6 +4,8 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <http://schema.org/> .
 
 ### SKOS Vocabulary
 
@@ -39,26 +41,34 @@ cs:VeryHard a skos:Concept ;
 cs:MaintenanceStatus a skos:ConceptScheme ;
     rdfs:label "Maintenance Status Scheme"@en ;
     skos:prefLabel "Maintenance Status Scheme"@en ;
-    skos:prefLabel "Schéma de status de maintenance" ;
+    skos:prefLabel "Schéma de status de maintenance"@fr ;
     skos:definition "A scheme defining the maintenance status of bikes."@en .
 
-cs:MaintenanceOk a skos:Concept ;
+cs:MaintenanceOperational a skos:Concept ;
     skos:inScheme cs:MaintenanceStatus ;
     skos:prefLabel "Operational"@en ;
     skos:prefLabel "Operationnel"@fr ;
     skos:altLabel "Ok"@en ;
     skos:definition "Bike is in good working condition."@en .
 
-cs:MaintenanceNeedsService a skos:Concept ;
+cs:MaintenanceUnavailable a skos:Concept ;
     skos:inScheme cs:MaintenanceStatus ;
-    skos:prefLabel "Needs service"@en ;
-    skos:prefLabel "À réviser"@fr ;
-    skos:definition "Bike requires maintenance or servicing."@en .
+    skos:prefLabel "Not Operational"@en ;
+    skos:prefLabel "Non opérationnel"@fr ;
+    skos:definition "The bike cannot be used due to mechanical issues."@en .
+
+cs:MaintenanceNeedsService a skos:Concept ;
+    skos:narrower cs:MaintenanceKO ;
+    skos:inScheme cs:MaintenanceStatus ;
+    skos:prefLabel "Needs Service"@en ;
+    skos:prefLabel "Besoin de maintenance"@fr ;
+    skos:definition "Bike requires maintenance before it can be used."@en .
 
 cs:MaintenanceUnderRepair a skos:Concept ;
+    skos:narrower cs:MaintenanceKO ;
     skos:inScheme cs:MaintenanceStatus ;
-    skos:prefLabel "Under repair"@en ;
-    skos:prefLabel "En cours de réparation"@fr ;
+    skos:prefLabel "Under Repair"@en ;
+    skos:prefLabel "En réparation"@fr ;
     skos:definition "Bike is currently being repaired."@en .
 
 ### Class
@@ -81,6 +91,16 @@ cs:MountainBike a owl:Class ;
     owl:disjointWith cs:RoadBike ;
     rdfs:label "Mountain Bike" ;
     rdfs:comment "A bike designed for off-road cycling on rough terrains." .
+
+cs:ElectricMountainBike a owl:Class ;
+    owl:intersectionOf ( cs:ElectricBike cs:MountainBike ) ;
+    rdfs:label "Electric Mountain Bike" ;
+    rdfs:comment "A mountain bike equipped with an electric motor for assisted pedaling." .
+
+cs:ElectricRoadBike a owl:Class ;
+    owl:intersectionOf ( cs:ElectricBike cs:RoadBike ) ;
+    rdfs:label "Electric Road Bike" ;
+    rdfs:comment "A road bike equipped with an electric motor for assisted pedaling." .
 
 cs:Path a owl:Class ;
     rdfs:label "Cycling Path" ;
@@ -133,6 +153,7 @@ cs:TourBooking a owl:Class ;
     rdfs:comment "A booking specifically for a tour package." .
 
 cs:Review a owl:Class ;
+    owl:equivalentClass schema:Review ;
     rdfs:label "Review" ;
     rdfs:comment "A review or feedback provided by a client about a tour or bike." .
 
@@ -277,6 +298,12 @@ cs:isHigherThan a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:domain cs:Mountain ;
     rdfs:range cs:Mountain ;
     rdfs:label "is higher than" .
+
+cs:isSmallerThan a owl:ObjectProperty ;
+    owl:inverseOf cs:isHigherThan ;
+    rdfs:domain cs:Mountain ;
+    rdfs:range cs:Mountain ;
+    rdfs:label "is smaller than" .
 
 cs:isAssignedTo a owl:ObjectProperty ; 
     rdfs:domain cs:Bike ;
