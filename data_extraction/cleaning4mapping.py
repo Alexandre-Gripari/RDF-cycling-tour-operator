@@ -75,6 +75,8 @@ df_m.to_csv('mountains_ready.csv', index=False)
 
 df_s['Path_ID'] = df_s.apply(lambda row: f"{make_safe_uri(row['Start_City'])}_{make_safe_uri(row['End_City'])}_Path", axis=1)
 
+df_s['Mountain_Name'] = df_s['Mountain_Name'].apply(lambda x: ','.join([str(name).strip().replace(" ", "_") for name in str(x).split(',')]))
+
 df_s = df_s.dropna(subset=['Start_City_URI', 'End_City_URI'])
 invalid_values = ['unknown', '', 'nan']
 mask_end = df_s['End_City_URI'].astype(str).str.strip().str.lower().isin(invalid_values)

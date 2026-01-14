@@ -83,7 +83,7 @@
                             rr:predicateObjectMap [
                                 rr:predicate grel:valueParameter ;
                                 rr:objectMap [ 
-                                    rr:template "http://data.cyclingtour.fr/data#{Mountain_Names}"
+                                    rr:template "http://data.cyclingtour.fr/data#{Mountain_Name}"
                                 ]
                             ] ;
                             rr:predicateObjectMap [ rr:predicate grel:p_string_find ; rr:object "%2C" ] ;
