@@ -7,6 +7,10 @@
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix dbp: <http://dbpedia.org/resource/> .
 
+@prefix fnml: <http://semweb.mmlab.be/ns/fnml#> .
+@prefix fno: <https://w3id.org/function/ontology#> .
+@prefix grel: <http://users.ugent.be/~bjdmeest/function/grel.ttl#> .
+
 @prefix cto: <http://data.cyclingtour.fr/data#> .
 @prefix cs: <http://data.cyclingtour.fr/schema#> .
 
@@ -31,52 +35,63 @@
     
     rr:predicateObjectMap [ 
         rr:predicate cs:isHigherThan ; 
-        rr:objectMap [ rr:template "{Higher_Than}" ] 
+        rr:objectMap [ rr:template "http://dbpedia.org/resource/{Higher_Than}" ] 
     ] .
 
 <#PathMapping> a rr:TriplesMap ;
-    rr:logicalTable [
-        rr:sqlQuery """
-            SELECT 
-                *,
-                CASE 
-                    WHEN Elevation_Gain > 3000 THEN 'http://data.cyclingtour.fr/schema#VeryHard'
-                    WHEN Elevation_Gain > 2000 THEN 'http://data.cyclingtour.fr/schema#Hard'
-                    WHEN Elevation_Gain > 1000 THEN 'http://data.cyclingtour.fr/schema#Moderate'
-                    ELSE 'http://data.cyclingtour.fr/schema#Easy'
-                END AS difficulty_uri
-            FROM stages_ready
-        """
+    rml:logicalSource [
+        rml:source "stages_ready.csv" ;
+        rml:referenceFormulation ql:CSV
     ] ;
 
     rr:subjectMap [ rr:template "{Path_ID}" ; rr:class cs:Path ] ;
 
-    rr:predicateObjectMap [ rr:predicate rdfs:label ; rr:objectMap [ rr:template "{Start_City_URI} - {End_City_URI}" ] ] ;
-    
+    rr:predicateObjectMap [
+        rr:predicate rdfs:label ; 
+        rr:objectMap [ rr:template "{Start_City} - {End_City}"]
+    ] ;
+
     rr:predicateObjectMap [
         rr:predicate cs:hasStart ;
-        rr:objectMap [ rr:column "Start_City_URI" ; rr:template "http://dbpedia.org/resource/{Start_City_URI}" ]
+        rr:objectMap [ rr:template "http://dbpedia.org/resource/{Start_City_URI}" ]
     ] ;
     rr:predicateObjectMap [
         rr:predicate cs:hasEnd ;
-        rr:objectMap [ rr:column "End_City_URI" ; rr:template "http://dbpedia.org/resource/{End_City_URI}" ]
+        rr:objectMap [ rr:template "http://dbpedia.org/resource/{End_City_URI}" ]
     ] ;
 
-    rr:predicateObjectMap [ rr:predicate cs:length ; rr:objectMap [ rr:column "Distance_Value"; rr:datatype xsd:decimal ] ] ;
-    rr:predicateObjectMap [ rr:predicate cs:elevationGain ; rr:objectMap [ rr:column "Elevation_Gain"; rr:datatype xsd:integer ] ] ;
-    
-    rr:predicateObjectMap [ 
-        rr:predicate cs:difficulty ; 
-        rr:objectMap [ rr:column "difficulty_uri" ; rr:termType rr:IRI ] 
-    ] ;
+    rr:predicateObjectMap [ rr:predicate cs:length ; rr:objectMap [ rml:reference "Distance_Value"; rr:datatype xsd:decimal ] ] ;
+    rr:predicateObjectMap [ rr:predicate cs:elevationGain ; rr:objectMap [ rml:reference "Elevation_Gain"; rr:datatype xsd:integer ] ] ;
 
     rr:predicateObjectMap [
         rr:predicate cs:includesMountain ;
         rr:objectMap [
-            rr:parentTriplesMap <#MountainMapping> ;
-            rr:joinCondition [
-                rr:child "Mountain_Name" ;
-                rr:parent "Nom" ;          
+            fnml:functionValue [
+                rr:predicateObjectMap [
+                    rr:predicate fno:executes ;
+                    rr:object grel:string_split ;
+                ] ;
+                rr:predicateObjectMap [
+                    rr:predicate grel:valueParameter ; 
+                    rr:objectMap [
+                        fnml:functionValue [
+                            rr:predicateObjectMap [ rr:predicate fno:executes ; rr:object grel:string_replace ] ;
+                            rr:predicateObjectMap [
+                                rr:predicate grel:valueParameter ;
+                                rr:objectMap [ 
+                                    rr:template "http://data.cyclingtour.fr/data#{Mountain_Names}"
+                                ]
+                            ] ;
+                            rr:predicateObjectMap [ rr:predicate grel:p_string_find ; rr:object "%2C" ] ;
+                            rr:predicateObjectMap [ 
+                                rr:predicate grel:p_string_replace ; 
+                                rr:object "%2Chttp://data.cyclingtour.fr/data#"
+                            ]
+                        ]
+                    ]
+                ] ;
+                rr:predicateObjectMap [ rr:predicate grel:p_string_sep ; rr:object "%2C" ]
             ] ;
+            rr:termType rr:IRI ;
         ]
     ] .
