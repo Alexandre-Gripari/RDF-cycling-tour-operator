@@ -207,62 +207,61 @@ cs:GuideShape
 
 # Mountain shapes
 
-cs:MountainShape
+cs:MountainShape 
     a sh:NodeShape ;
     sh:targetClass cs:Mountain ;
     sh:property [
-        sh:path rdfs:label ;
-        sh:datatype xsd:string ;
+        sh:path cs:country ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:description "Name of the mountain or col" ;
-    ] ;
-    sh:property [
-        sh:path cs:locatedInRegion ;
         sh:nodeKind sh:IRI ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:description "DBpedia reference to the region where the mountain is located" ;
     ] ;
     sh:property [
         sh:path cs:elevation ;
-        sh:datatype xsd:decimal ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:minInclusive 0.0 ;
-        sh:description "Elevation in meters" ;
+        sh:datatype xsd:integer ; 
     ] ;
     sh:property [
-        sh:path cs:averageGradient ;
-        sh:datatype xsd:decimal ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:minInclusive 0.0 ;
-        sh:maxInclusive 100.0 ;
-        sh:description "Average gradient percentage" ;
-    ] ;
-    sh:property [
-        sh:path cs:length ;
-        sh:datatype xsd:decimal ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:minInclusive 0.0 ;
-        sh:description "Length of the climb in kilometers" ;
-    ] ;
-    sh:property [
-        sh:path cs:difficulty ;
+        sh:path cs:isHigherThan ;
+        sh:minCount 0 ;
         sh:nodeKind sh:IRI ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:in ( cs:Easy cs:Moderate cs:Hard cs:VeryHard ) ;
-        sh:description "Difficulty level of the climb" ;
     ] ;
     sh:property [
-        sh:path cs:hasDBpediaLink ;
-        sh:nodeKind sh:IRI ;
+        sh:path cs:mountainRange ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
-        sh:description "Link to DBpedia resource for more information" ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path cs:specificMountainRange ;
+        sh:minCount 0 ; 
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+    ] ;
+    sh:property [
+        sh:path owl:sameAs ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:nodeKind sh:IRI ;
+    ] ;
+    sh:property [
+        sh:path geo:lat ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float ;
+    ] ;
+    sh:property [
+        sh:path geo:long ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:float ;
     ] .
 
 # Review shapes
