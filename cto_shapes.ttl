@@ -215,53 +215,62 @@ cs:MountainShape
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
+        sh:description "Country where the mountain is located (DBpedia reference)" ;
     ] ;
     sh:property [
         sh:path cs:elevation ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:integer ; 
+        sh:description "Elevation of the mountain in meters" ;
     ] ;
     sh:property [
         sh:path cs:isHigherThan ;
         sh:minCount 0 ;
         sh:nodeKind sh:IRI ;
+        sh:description "Other mountains that are lower than this mountain" ;
     ] ;
     sh:property [
         sh:path cs:mountainRange ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
+        sh:description "Mountain range to which this mountain belongs (DBpedia reference)" ;
     ] ;
     sh:property [
         sh:path cs:specificMountainRange ;
         sh:minCount 0 ; 
         sh:maxCount 1 ;
         sh:datatype xsd:string ;
+        sh:description "Specific mountain range name if not covered by DBpedia reference" ;
     ] ;
     sh:property [
         sh:path rdfs:label ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:string ;
+        sh:description "Name/label of the mountain" ;
     ] ;
     sh:property [
         sh:path owl:sameAs ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:nodeKind sh:IRI ;
+        sh:description "DBpedia reference for the mountain" ;
     ] ;
     sh:property [
         sh:path geo:lat ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:float ;
+        sh:description "Latitude of the mountain's location" ;
     ] ;
     sh:property [
         sh:path geo:long ;
         sh:minCount 1 ;
         sh:maxCount 1 ;
         sh:datatype xsd:float ;
+        sh:description "Longitude of the mountain's location" ;
     ] .
 
 # Review shapes
@@ -352,14 +361,6 @@ cs:PathShape
         sh:maxCount 1 ;
         sh:in ( cs:Easy cs:Moderate cs:Hard cs:VeryHard ) ;
         sh:description "Overall difficulty level of the path" ;
-    ] ;
-    sh:property [
-        sh:path cs:hasDifficultyScore ;
-        sh:datatype xsd:decimal ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:minInclusive 0.0 ;
-        sh:description "Numerical difficulty score" ;
     ] ;
     sh:property [
         sh:path cs:includesMountain ;

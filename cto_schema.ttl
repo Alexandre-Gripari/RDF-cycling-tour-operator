@@ -197,19 +197,14 @@ cs:length a owl:DatatypeProperty ;
     rdfs:label "path length in km" .
 
 cs:elevationGain a owl:DatatypeProperty ;
-    rdfs:domain cs:Path , cs:Mountain ;
+    rdfs:domain cs:Path ;
     rdfs:range xsd:integer ;
     rdfs:label "elevation gain (m)" .
 
 cs:difficulty a owl:ObjectProperty ;     
-    rdfs:domain cs:Path , cs:Mountain ;
+    rdfs:domain cs:Path;
     rdfs:range skos:Concept ;
     rdfs:label "difficulty level" .
-
-cs:recommendedForElectric a owl:DatatypeProperty ;
-    rdfs:domain cs:Path ;
-    rdfs:range xsd:boolean ;
-    rdfs:label "recommended for e-bike" .
 
 cs:stageNumber a owl:FunctionalProperty ;
     rdfs:domain cs:TourStage ;
@@ -273,11 +268,6 @@ cs:phone a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:label "phone" ;
     rdfs:comment "Primary phone number of the client." .
-
-cs:location a owl:FunctionalProperty ;
-    rdfs:domain cs:Mountain , cs:WaterPoint ;
-    rdfs:range rdfs:Resource ;
-    rdfs:label "geographic location" .
 
 cs:description a owl:DatatypeProperty ;
     rdfs:domain cs:WaterPoint ;
