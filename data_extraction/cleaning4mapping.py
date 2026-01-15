@@ -60,6 +60,16 @@ def check_uri(df_m, df_s):
     
     df_m['URI_Suffix'] = df_m['Nom'].str.strip().map(uri_map)
 
+def calculate_difficulties(elevation_gain):
+    if elevation_gain < 1000:
+        return 'Easy'
+    elif 1000 <= elevation_gain < 2000:
+        return 'Moderate'
+    elif 2000 <= elevation_gain < 3000:
+        return 'Hard'
+    else:
+        return 'VeryHard'
+
 df_m = pd.read_csv('data/mountains_details_final.csv')
 df_s = pd.read_csv('data/stages_clean.csv')
 
@@ -76,6 +86,8 @@ df_m.to_csv('mountains_ready.csv', index=False)
 df_s['Path_ID'] = df_s.apply(lambda row: f"{make_safe_uri(row['Start_City'])}_{make_safe_uri(row['End_City'])}_Path", axis=1)
 
 df_s['Mountain_Name'] = df_s['Mountain_Name'].apply(lambda x: ','.join([str(name).strip().replace(" ", "_") for name in str(x).split(',')]))
+
+df_s['Difficulty'] = df_s['Elevation_Gain'].apply(lambda x: calculate_difficulties(float(x)) if pd.notna(x) else None)
 
 df_s = df_s.dropna(subset=['Start_City_URI', 'End_City_URI'])
 invalid_values = ['unknown', '', 'nan']

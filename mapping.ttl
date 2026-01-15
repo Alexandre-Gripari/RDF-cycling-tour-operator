@@ -66,6 +66,7 @@
 
     rr:predicateObjectMap [ rr:predicate cs:length ; rr:objectMap [ rml:reference "Distance_Value"; rr:datatype xsd:decimal ] ] ;
     rr:predicateObjectMap [ rr:predicate cs:elevationGain ; rr:objectMap [ rml:reference "Elevation_Gain"; rr:datatype xsd:integer ] ] ;
+    rr:predicateObjectMap [ rr:predicate cs:difficulty ; rr:objectMap [ rr:template "http://data.cyclingtour.fr/schema#{Difficulty}" ] ] ;
 
     rr:predicateObjectMap [
         rr:predicate cs:includesMountain ;
