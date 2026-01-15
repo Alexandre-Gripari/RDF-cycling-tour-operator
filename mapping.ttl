@@ -22,7 +22,7 @@
         rml:referenceFormulation ql:CSV
     ] ;
     
-    rr:subjectMap [ rr:template "{URI_Suffix}" ; rr:class cs:Mountain ] ;
+    rr:subjectMap [ rr:template "{Nom}" ; rr:class cs:Mountain ] ;
 
     rr:predicateObjectMap [ rr:predicate rdfs:label ; rr:objectMap [ rml:reference "Nom" ] ] ;
     rr:predicateObjectMap [ rr:predicate cs:elevation ; rr:objectMap [ rml:reference "Altitude"; rr:datatype xsd:integer ] ] ;

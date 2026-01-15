@@ -113,7 +113,7 @@ cto:Albi_Toulouse_Path a cs:Path;
   cs:length 167.0;
   rdfs:label "Albi - Toulouse" .
 
-cto:Alpe_d%27Huez a cs:Mountain;
+cto:Alpe%20d%27Huez a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1109;
   cs:isHigherThan dbp:Col_de_Ceyssat;
@@ -495,6 +495,26 @@ cto:Brussels_Spa_%28Belgium%29_Path a cs:Path;
   cs:length 201.0;
   rdfs:label "Brussels - Spa (Belgium)" .
 
+cto:C%C3%B4te%20de%20Chabrits a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 894;
+  cs:isHigherThan dbp:Col_de_la_Croix_des_Moinats;
+  cs:mountainRange dbp:Massif%20central;
+  cs:specificMountainRange "Grands Causses";
+  rdfs:label "Côte de Chabrits";
+  geo:lat "44.52916666666667"^^xsd:float;
+  geo:long "3.4558333333333335"^^xsd:float .
+
+cto:C%C3%B4te%20de%20la%20Croix%20Neuve a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1045;
+  cs:isHigherThan dbp:Col_de_Richemond;
+  cs:mountainRange dbp:Massif%20central;
+  cs:specificMountainRange "Grands Causses";
+  rdfs:label "Côte de la Croix Neuve";
+  geo:lat "44.510555555555555"^^xsd:float;
+  geo:long "3.5208333333333335"^^xsd:float .
+
 cto:Cagnes-sur-Mer_Marseille_Path a cs:Path;
   cs:difficulty cs:Easy;
   cs:elevationGain 0;
@@ -693,7 +713,7 @@ cto:Cluses_Tignes_Path a cs:Path;
   cs:length 144.9;
   rdfs:label "Cluses - Tignes" .
 
-cto:Col_Bayard a cs:Mountain;
+cto:Col%20Bayard a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1250;
   cs:isHigherThan dbp:Col_de_Port;
@@ -704,18 +724,18 @@ cto:Col_Bayard a cs:Mountain;
   geo:lat "44.61416666666667"^^xsd:float;
   geo:long "6.0811111111111105"^^xsd:float .
 
-cto:Col_d%27%C3%88ze a cs:Mountain;
+cto:Col%20d%27%C3%88ze a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1604;
-  cs:isHigherThan dbp:Col_de_Val_Louron-Azet;
+  cs:elevation 507;
+  cs:isHigherThan dbp:Col_de_Marsolino;
   cs:mountainRange dbp:Alpes;
   cs:specificMountainRange "Préalpes de Nice";
-  rdfs:label "Col de Turini";
+  rdfs:label "Col d'Èze";
   owl:sameAs dbp:Col_d%27%C3%88ze;
-  geo:lat "43.97777777777778"^^xsd:float;
-  geo:long "7.3916666666666675"^^xsd:float .
+  geo:lat "43.73388888888889"^^xsd:float;
+  geo:long "7.346666666666667"^^xsd:float .
 
-cto:Col_d%27Agnes a cs:Mountain;
+cto:Col%20d%27Agnes a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1570;
   cs:isHigherThan dbp:Col_de_Peyresourde;
@@ -726,7 +746,7 @@ cto:Col_d%27Agnes a cs:Mountain;
   geo:lat "42.79388888888889"^^xsd:float;
   geo:long "1.373888888888889"^^xsd:float .
 
-cto:Col_d%27Aspin a cs:Mountain;
+cto:Col%20d%27Aspin a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1493;
   cs:isHigherThan dbp:Col_des_Aravis;
@@ -737,7 +757,7 @@ cto:Col_d%27Aspin a cs:Mountain;
   geo:lat "42.942499999999995"^^xsd:float;
   geo:long "0.3275"^^xsd:float .
 
-cto:Col_d%27Aubisque a cs:Mountain;
+cto:Col%20d%27Aubisque a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1709;
   cs:isHigherThan dbp:Col_du_Pre;
@@ -747,18 +767,47 @@ cto:Col_d%27Aubisque a cs:Mountain;
   geo:lat "42.97666666666667"^^xsd:float;
   geo:long "-0.33999999999999997"^^xsd:float .
 
-cto:Col_d%27Izoard a cs:Mountain;
+cto:Col%20d%27Azet a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 2108, 2362;
-  cs:isHigherThan dbp:Col_de_la_Loze, dbp:Port_de_la_Bonaigua;
-  cs:mountainRange dbp:Alpes;
-  cs:specificMountainRange "Massif du Parpaillon / Massif d'Escreins", "Massif du Queyras";
-  rdfs:label "Col d'Izoard", "Col de Vars";
-  owl:sameAs dbp:Col_d%27Izoard;
-  geo:lat "44.53916666666667"^^xsd:float, "44.819722222222225"^^xsd:float;
-  geo:long "6.702777777777778"^^xsd:float, "6.735277777777778"^^xsd:float .
+  cs:elevation 1585;
+  cs:isHigherThan dbp:Col_dAgnes;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  cs:specificMountainRange "Massif de Batchimale";
+  rdfs:label "Col d'Azet";
+  owl:sameAs dbp:Col_d%27Azet;
+  geo:lat "42.7925"^^xsd:float;
+  geo:long "0.3813888888888889"^^xsd:float .
 
-cto:Col_d%27Ornon a cs:Mountain;
+cto:Col%20d%27Ich%C3%A8re a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 677;
+  cs:isHigherThan dbp:Col_de_Bluffy;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col d'Ichère";
+  geo:lat "43.04083333333333"^^xsd:float;
+  geo:long "-0.6372222222222222"^^xsd:float .
+
+cto:Col%20d%27Izoard a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 2362;
+  cs:isHigherThan dbp:Col_de_la_Loze;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif du Queyras";
+  rdfs:label "Col d'Izoard";
+  owl:sameAs dbp:Col_d%27Izoard;
+  geo:lat "44.819722222222225"^^xsd:float;
+  geo:long "6.735277777777778"^^xsd:float .
+
+cto:Col%20d%27Oderen a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 884;
+  cs:isHigherThan dbp:Col_du_Wettstein;
+  cs:mountainRange dbp:Vosges;
+  rdfs:label "Col d'Oderen";
+  geo:lat "47.922777777777775"^^xsd:float;
+  geo:long "6.9175"^^xsd:float .
+
+cto:Col%20d%27Ornon a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1360;
   cs:isHigherThan dbp:Col_de_Mente;
@@ -769,18 +818,86 @@ cto:Col_d%27Ornon a cs:Mountain;
   geo:lat "45.00833333333333"^^xsd:float;
   geo:long "5.966944444444445"^^xsd:float .
 
-cto:Col_de_Font-de-C%C3%A8re a cs:Mountain;
+cto:Col%20de%20B%C3%A9rentin a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1241;
-  cs:isHigherThan dbp:Col_du_Grand_Cucheron;
+  cs:elevation 1144;
+  cs:isHigherThan dbp:Col_de_la_Schlucht;
+  cs:mountainRange dbp:Jura;
+  rdfs:label "Col de Bérentin";
+  geo:lat "46.11833333333333"^^xsd:float;
+  geo:long "5.683888888888889"^^xsd:float .
+
+cto:Col%20de%20Beixal%C3%ADs a cs:Mountain;
+  cs:country dbp:Andorre;
+  cs:elevation 1795;
+  cs:isHigherThan dbp:Port_de_Bales;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col de Beixalís";
+  geo:lat "42.52777777777778"^^xsd:float;
+  geo:long "1.5477777777777777"^^xsd:float .
+
+cto:Col%20de%20Bluffy a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 631;
+  cs:isHigherThan dbp:Col_du_Mont_de_Fourche;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif des Bornes";
+  rdfs:label "Col de Bluffy";
+  geo:lat "45.873333333333335"^^xsd:float;
+  geo:long "6.2122222222222225"^^xsd:float .
+
+cto:Col%20de%20Ceyssat a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1077;
+  cs:isHigherThan dbp:Col_de_Portet-dAspet;
+  cs:mountainRange dbp:Massif%20central;
+  cs:specificMountainRange "Chaîne des Puys";
+  rdfs:label "Col de Ceyssat";
+  geo:lat "45.763888888888886"^^xsd:float;
+  geo:long "2.9555555555555557"^^xsd:float .
+
+cto:Col%20de%20Font-de-C%C3%A8re a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1290;
+  cs:isHigherThan dbp:Col_de_Saanenmoser;
   cs:mountainRange dbp:Massif%20central;
   cs:specificMountainRange "Monts du Cantal";
-  rdfs:label "Col de Néronne";
+  rdfs:label "Col de Font-de-Cère";
   owl:sameAs dbp:Col_de_Font-de-C%C3%A8re;
-  geo:lat "45.155"^^xsd:float;
-  geo:long "2.5922222222222224"^^xsd:float .
+  geo:lat "45.08527777777778"^^xsd:float;
+  geo:long "2.7330555555555556"^^xsd:float .
 
-cto:Col_de_Joux_Plane a cs:Mountain;
+cto:Col%20de%20Grosse%20Pierre a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 954;
+  cs:isHigherThan dbp:Col_des_Chevreres;
+  cs:mountainRange dbp:Vosges;
+  rdfs:label "Col de Grosse Pierre";
+  geo:lat "48.02638888888889"^^xsd:float;
+  geo:long "6.884444444444444"^^xsd:float .
+
+cto:Col%20de%20Gu%C3%A9ry a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1268;
+  cs:isHigherThan dbp:Col_Bayard;
+  cs:mountainRange dbp:Massif%20central;
+  cs:specificMountainRange "Monts Dore";
+  rdfs:label "Col de Guéry";
+  geo:lat "45.62083333333334"^^xsd:float;
+  geo:long "2.8205555555555555"^^xsd:float .
+
+cto:Col%20de%20Jambaz a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1027;
+  cs:isHigherThan dbp:Col_de_la_Joux;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif du Chablais";
+  rdfs:label "Col de Jambaz";
+  owl:sameAs dbp:Col_de_Jambaz;
+  geo:lat "46.235"^^xsd:float;
+  geo:long "6.52"^^xsd:float .
+
+cto:Col%20de%20Joux%20Plane a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1712;
   cs:isHigherThan dbp:Col_dAubisque;
@@ -791,7 +908,17 @@ cto:Col_de_Joux_Plane a cs:Mountain;
   geo:lat "46.1325"^^xsd:float;
   geo:long "6.711111111111111"^^xsd:float .
 
-cto:Col_de_Latrape a cs:Mountain;
+cto:Col%20de%20La%20Morte a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1375;
+  cs:isHigherThan dbp:Col_dOrnon;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Taillefer";
+  rdfs:label "Col de La Morte";
+  geo:lat "45.02472222222222"^^xsd:float;
+  geo:long "5.861111111111111"^^xsd:float .
+
+cto:Col%20de%20Latrape a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1109;
   cs:isHigherThan dbp:Col_de_Ceyssat;
@@ -801,18 +928,59 @@ cto:Col_de_Latrape a cs:Mountain;
   geo:lat "42.79555555555555"^^xsd:float;
   geo:long "1.3141666666666667"^^xsd:float .
 
-cto:Col_de_Manse a cs:Mountain;
+cto:Col%20de%20Leschaux a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1068, 1269;
-  cs:isHigherThan dbp:Col_de_Guery, dbp:Col_de_Montsegur;
+  cs:elevation 897;
+  cs:isHigherThan dbp:Cote_de_Chabrits;
   cs:mountainRange dbp:Alpes;
-  cs:specificMountainRange "Massif des Écrins", "Monts de Vaucluse / Massif des Baronnies";
-  rdfs:label "Col de Macuègne", "Col de Manse";
-  owl:sameAs dbp:Col_de_Manse;
-  geo:lat "44.18194444444444"^^xsd:float, "44.61138888888889"^^xsd:float;
-  geo:long "5.51"^^xsd:float, "6.131666666666666"^^xsd:float .
+  cs:specificMountainRange "Massif des Bauges";
+  rdfs:label "Col de Leschaux";
+  geo:lat "45.77194444444444"^^xsd:float;
+  geo:long "6.131666666666666"^^xsd:float .
 
-cto:Col_de_Ment%C3%A9 a cs:Mountain;
+cto:Col%20de%20Macu%C3%A8gne a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1068;
+  cs:isHigherThan dbp:Col_de_Montsegur;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Monts de Vaucluse / Massif des Baronnies";
+  rdfs:label "Col de Macuègne";
+  owl:sameAs dbp:Col_de_Macu%C3%A8gne;
+  geo:lat "44.18194444444444"^^xsd:float;
+  geo:long "5.51"^^xsd:float .
+
+cto:Col%20de%20Manse a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1269;
+  cs:isHigherThan dbp:Col_de_Guery;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif des Écrins";
+  rdfs:label "Col de Manse";
+  owl:sameAs dbp:Col_de_Manse;
+  geo:lat "44.61138888888889"^^xsd:float;
+  geo:long "6.131666666666666"^^xsd:float .
+
+cto:Col%20de%20Marie-Blanque a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1035;
+  cs:isHigherThan dbp:Col_de_Jambaz;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col de Marie-Blanque";
+  owl:sameAs dbp:Col_de_Marie-Blanque;
+  geo:lat "43.07055555555556"^^xsd:float;
+  geo:long "-0.5077777777777778"^^xsd:float .
+
+cto:Col%20de%20Marsolino a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 443;
+  cs:isHigherThan dbp:Col_du_Perthus;
+  cs:mountainRange dbp:Massif%20du%20Monte%20Cinto;
+  rdfs:label "Col de Marsolino";
+  owl:sameAs dbp:Col_de_Marsolino;
+  geo:lat "42.475833333333334"^^xsd:float;
+  geo:long "8.75611111111111"^^xsd:float .
+
+cto:Col%20de%20Ment%C3%A9 a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1346;
   cs:isHigherThan dbp:Col_du_Grand_Ballon;
@@ -822,51 +990,101 @@ cto:Col_de_Ment%C3%A9 a cs:Mountain;
   geo:lat "42.91916666666666"^^xsd:float;
   geo:long "0.7613888888888889"^^xsd:float .
 
-cto:Col_de_N%C3%A9ronne a cs:Mountain;
+cto:Col%20de%20Montgen%C3%A8vre a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1077;
-  cs:isHigherThan dbp:Col_de_Portet-dAspet;
+  cs:elevation 1850;
+  cs:isHigherThan dbp:Col_de_Beixalis;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Cerces / Queyras";
+  rdfs:label "Col de Montgenèvre";
+  owl:sameAs dbp:Col_de_Montgen%C3%A8vre;
+  geo:lat "44.93083333333333"^^xsd:float;
+  geo:long "6.723333333333334"^^xsd:float .
+
+cto:Col%20de%20Monts%C3%A9gur a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1056;
+  cs:isHigherThan dbp:Cote_de_la_Croix_Neuve;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  cs:specificMountainRange "Massif de Tabe";
+  rdfs:label "Col de Montségur";
+  geo:lat "42.87416666666667"^^xsd:float;
+  geo:long "1.823611111111111"^^xsd:float .
+
+cto:Col%20de%20N%C3%A9ronne a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1241;
+  cs:isHigherThan dbp:Col_du_Grand_Cucheron;
   cs:mountainRange dbp:Massif%20central;
-  cs:specificMountainRange "Chaîne des Puys";
-  rdfs:label "Col de Ceyssat";
+  cs:specificMountainRange "Monts du Cantal";
+  rdfs:label "Col de Néronne";
   owl:sameAs dbp:Col_de_N%C3%A9ronne;
-  geo:lat "45.763888888888886"^^xsd:float;
-  geo:long "2.9555555555555557"^^xsd:float .
+  geo:lat "45.155"^^xsd:float;
+  geo:long "2.5922222222222224"^^xsd:float .
 
-cto:Col_de_P%C3%A9gu%C3%A8re a cs:Mountain;
+cto:Col%20de%20P%C3%A9gu%C3%A8re a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1517;
-  cs:isHigherThan dbp:Col_de_la_Colmiane;
+  cs:elevation 1376;
+  cs:isHigherThan dbp:Col_de_La_Morte;
   cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
-  cs:specificMountainRange "Lherz et Trois-Seigneurs";
-  rdfs:label "Port de Lers";
+  cs:specificMountainRange "Massif de l'Arize";
+  rdfs:label "Col de Péguère";
   owl:sameAs dbp:Col_de_P%C3%A9gu%C3%A8re;
-  geo:lat "42.80638888888888"^^xsd:float;
-  geo:long "1.4116666666666666"^^xsd:float .
+  geo:lat "42.91833333333333"^^xsd:float;
+  geo:long "1.3891666666666667"^^xsd:float .
 
-cto:Col_de_Palaquit a cs:Mountain;
+cto:Col%20de%20Pailh%C3%A8res a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 811;
-  cs:isHigherThan dbp:Col_des_Ares;
-  cs:mountainRange dbp:Massif%20central;
-  cs:specificMountainRange "Pilat";
-  rdfs:label "Col de la Croix de Montvieux";
-  owl:sameAs dbp:Col_de_Palaquit;
-  geo:lat "45.445277777777775"^^xsd:float;
-  geo:long "4.6325"^^xsd:float .
-
-cto:Col_de_Peyresourde a cs:Mountain;
-  cs:country dbp:France;
-  cs:elevation 1568, 1585, 1755;
-  cs:isHigherThan dbp:Col_dAgnes, dbp:Col_du_Telegraphe, dbp:Port_del_Canto;
+  cs:elevation 2001;
+  cs:isHigherThan dbp:Col_de_Sarenne;
   cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
-  cs:specificMountainRange "Massif de Batchimale", "Massif de la Barousse";
-  rdfs:label "Col d'Azet", "Col de Peyresourde", "Port de Balès";
-  owl:sameAs dbp:Col_de_Peyresourde;
-  geo:lat "42.7925"^^xsd:float, "42.80222222222222"^^xsd:float, "42.87444444444444"^^xsd:float;
-  geo:long "0.3813888888888889"^^xsd:float, "0.4625"^^xsd:float, "0.5011111111111111"^^xsd:float .
+  rdfs:label "Col de Pailhères";
+  owl:sameAs dbp:Col_de_Pailh%C3%A8res;
+  geo:lat "42.73361111111111"^^xsd:float;
+  geo:long "1.9927777777777778"^^xsd:float .
 
-cto:Col_de_Port a cs:Mountain;
+cto:Col%20de%20Palaquit a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1154;
+  cs:isHigherThan dbp:Col_des_Leques;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif de la Chartreuse";
+  rdfs:label "Col de Palaquit";
+  owl:sameAs dbp:Col_de_Palaquit;
+  geo:lat "45.272777777777776"^^xsd:float;
+  geo:long "5.765555555555555"^^xsd:float .
+
+cto:Col%20de%20Peyra%20Taillade a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1173;
+  cs:isHigherThan dbp:Col_des_Borderes;
+  cs:mountainRange dbp:Massif%20central;
+  cs:specificMountainRange "Massif du Devès";
+  rdfs:label "Col de Peyra Taillade";
+  geo:lat "45.03472222222222"^^xsd:float;
+  geo:long "3.651388888888889"^^xsd:float .
+
+cto:Col%20de%20Peyresourde a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1568;
+  cs:isHigherThan dbp:Col_du_Telegraphe;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  cs:specificMountainRange "Massif de la Barousse";
+  rdfs:label "Col de Peyresourde";
+  owl:sameAs dbp:Col_de_Peyresourde;
+  geo:lat "42.80222222222222"^^xsd:float;
+  geo:long "0.4625"^^xsd:float .
+
+cto:Col%20de%20Pisseloup a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 968;
+  cs:isHigherThan dbp:Col_de_Grosse_Pierre;
+  cs:mountainRange dbp:Jura;
+  rdfs:label "Col de Pisseloup";
+  geo:lat "46.04416666666666"^^xsd:float;
+  geo:long "5.568888888888889"^^xsd:float .
+
+cto:Col%20de%20Port a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1249;
   cs:isHigherThan dbp:Col_du_Rouvey;
@@ -877,7 +1095,7 @@ cto:Col_de_Port a cs:Mountain;
   geo:lat "42.899166666666666"^^xsd:float;
   geo:long "1.4530555555555555"^^xsd:float .
 
-cto:Col_de_Portet a cs:Mountain;
+cto:Col%20de%20Portet a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 2214;
   cs:isHigherThan dbp:Col_du_Tourmalet;
@@ -888,7 +1106,17 @@ cto:Col_de_Portet a cs:Mountain;
   geo:lat "42.83305555555556"^^xsd:float;
   geo:long "0.23666666666666666"^^xsd:float .
 
-cto:Col_de_Portet-d%27Aspet a cs:Mountain;
+cto:Col%20de%20Portet%20d%27Aspet a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1070;
+  cs:isHigherThan dbp:Col_de_Macuegne;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col de Portet d'Aspet";
+  owl:sameAs dbp:Col_de_Portet-d%27Aspet;
+  geo:lat "42.94472222222222"^^xsd:float;
+  geo:long "0.8538888888888889"^^xsd:float .
+
+cto:Col%20de%20Portet-d%27Aspet a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1070;
   cs:isHigherThan dbp:Col_de_Macuegne;
@@ -898,39 +1126,100 @@ cto:Col_de_Portet-d%27Aspet a cs:Mountain;
   geo:lat "42.94472222222222"^^xsd:float;
   geo:long "0.8538888888888889"^^xsd:float .
 
-cto:Col_de_Portet_d%27Aspet a cs:Mountain;
+cto:Col%20de%20Puymorens a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1070;
-  cs:isHigherThan dbp:Col_de_Macuegne;
+  cs:elevation 1920;
+  cs:isHigherThan dbp:Col_de_Montgenevre;
   cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
-  rdfs:label "Col de Portet d'Aspet";
-  owl:sameAs dbp:Col_de_Portet_d%27Aspet;
-  geo:lat "42.94472222222222"^^xsd:float;
-  geo:long "0.8538888888888889"^^xsd:float .
+  cs:specificMountainRange "Massif du Carlit";
+  rdfs:label "Col de Puymorens";
+  owl:sameAs dbp:Col_de_Puymorens;
+  geo:lat "42.56027777777778"^^xsd:float;
+  geo:long "1.81"^^xsd:float .
 
-cto:Col_de_Romme a cs:Mountain;
+cto:Col%20de%20Richemond a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1467;
-  cs:isHigherThan dbp:Col_des_Mosses;
+  cs:elevation 1036;
+  cs:isHigherThan dbp:Col_de_Marie-Blanque;
+  cs:mountainRange dbp:Jura;
+  rdfs:label "Col de Richemond";
+  geo:lat "46.00833333333333"^^xsd:float;
+  geo:long "5.748333333333333"^^xsd:float .
+
+cto:Col%20de%20Romme a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1297;
+  cs:isHigherThan dbp:Col_de_Font-de-Cere;
   cs:mountainRange dbp:Alpes;
   cs:specificMountainRange "Chaîne des Aravis";
-  rdfs:label "Col de la Croix Fry";
+  rdfs:label "Col de Romme";
   owl:sameAs dbp:Col_de_Romme;
-  geo:lat "45.87722222222222"^^xsd:float;
-  geo:long "6.404444444444445"^^xsd:float .
+  geo:lat "46.03"^^xsd:float;
+  geo:long "6.574722222222222"^^xsd:float .
 
-cto:Col_de_Turini a cs:Mountain;
-  cs:country dbp:France;
-  cs:elevation 1500;
-  cs:isHigherThan dbp:Col_du_Grand_Colombier;
+cto:Col%20de%20Saanenm%C3%B6ser a cs:Mountain;
+  cs:country dbp:Suisse;
+  cs:elevation 1273;
+  cs:isHigherThan dbp:Col_de_Manse;
   cs:mountainRange dbp:Alpes;
-  cs:specificMountainRange "Massif du Mercantour-Argentera";
-  rdfs:label "Col de la Colmiane";
-  owl:sameAs dbp:Col_de_Turini;
-  geo:lat "44.07083333333334"^^xsd:float;
-  geo:long "7.221388888888889"^^xsd:float .
+  cs:specificMountainRange "Alpes bernoises";
+  rdfs:label "Col de Saanenmöser";
+  geo:lat "46.51277777777778"^^xsd:float;
+  geo:long "7.304444444444444"^^xsd:float .
 
-cto:Col_de_Val_Louron-Azet a cs:Mountain;
+cto:Col%20de%20Saint-Louis a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 696;
+  cs:isHigherThan dbp:Col_de_lEspinas;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  cs:specificMountainRange "Corbières";
+  rdfs:label "Col de Saint-Louis";
+  geo:lat "42.837500000000006"^^xsd:float;
+  geo:long "2.3274999999999997"^^xsd:float .
+
+cto:Col%20de%20Sarenne a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1999;
+  cs:isHigherThan dbp:Col_de_la_Madeleine;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Grandes Rousses";
+  rdfs:label "Col de Sarenne";
+  owl:sameAs dbp:Col_de_Sarenne;
+  geo:lat "45.087500000000006"^^xsd:float;
+  geo:long "6.149166666666667"^^xsd:float .
+
+cto:Col%20de%20Spandelles a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1378;
+  cs:isHigherThan dbp:Col_de_Peguere;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  cs:specificMountainRange "Massif du Granquet";
+  rdfs:label "Col de Spandelles";
+  geo:lat "43.01138888888889"^^xsd:float;
+  geo:long "-0.21861111111111112"^^xsd:float .
+
+cto:Col%20de%20Tami%C3%A9 a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 907;
+  cs:isHigherThan dbp:Col_de_la_Croix_des_Morts;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif des Bauges";
+  rdfs:label "Col de Tamié";
+  geo:lat "45.672777777777775"^^xsd:float;
+  geo:long "6.3086111111111105"^^xsd:float .
+
+cto:Col%20de%20Turini a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1604;
+  cs:isHigherThan dbp:Col_de_Val_Louron-Azet;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Préalpes de Nice";
+  rdfs:label "Col de Turini";
+  owl:sameAs dbp:Col_de_Turini;
+  geo:lat "43.97777777777778"^^xsd:float;
+  geo:long "7.3916666666666675"^^xsd:float .
+
+cto:Col%20de%20Val%20Louron-Azet a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1585;
   cs:isHigherThan dbp:Col_dAgnes;
@@ -941,18 +1230,67 @@ cto:Col_de_Val_Louron-Azet a cs:Mountain;
   geo:lat "42.7925"^^xsd:float;
   geo:long "0.3813888888888889"^^xsd:float .
 
-cto:Col_de_l%27%C3%89pine a cs:Mountain;
+cto:Col%20de%20Vars a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 907;
-  cs:isHigherThan dbp:Col_de_la_Croix_des_Morts;
+  cs:elevation 2108;
+  cs:isHigherThan dbp:Port_de_la_Bonaigua;
   cs:mountainRange dbp:Alpes;
-  cs:specificMountainRange "Massif des Bauges";
-  rdfs:label "Col de Tamié";
-  owl:sameAs dbp:Col_de_l%27%C3%89pine;
-  geo:lat "45.672777777777775"^^xsd:float;
-  geo:long "6.3086111111111105"^^xsd:float .
+  cs:specificMountainRange "Massif du Parpaillon / Massif d'Escreins";
+  rdfs:label "Col de Vars";
+  owl:sameAs dbp:Col_de_Vars;
+  geo:lat "44.53916666666667"^^xsd:float;
+  geo:long "6.702777777777778"^^xsd:float .
 
-cto:Col_de_la_Colombi%C3%A8re a cs:Mountain;
+cto:Col%20de%20Vizzavona a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1161;
+  cs:isHigherThan dbp:Col_de_Palaquit;
+  cs:mountainRange dbp:Massif%20du%20Monte%20Rotondo%20%2F%20Massif%20du%20Monte%20Renoso;
+  rdfs:label "Col de Vizzavona";
+  owl:sameAs dbp:Col_de_Vizzavona;
+  geo:lat "42.11194444444445"^^xsd:float;
+  geo:long "9.112222222222222"^^xsd:float .
+
+cto:Col%20de%20l%27Espinas a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 681;
+  cs:isHigherThan dbp:Col_des_Croix;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  cs:specificMountainRange "Massif des Corbières";
+  rdfs:label "Col de l'Espinas";
+  geo:lat "42.989444444444445"^^xsd:float;
+  geo:long "2.3525"^^xsd:float .
+
+cto:Col%20de%20la%20Biche a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1310;
+  cs:isHigherThan dbp:Col_de_Romme;
+  cs:mountainRange dbp:Jura;
+  rdfs:label "Col de la Biche";
+  geo:lat "45.952222222222225"^^xsd:float;
+  geo:long "5.748888888888889"^^xsd:float .
+
+cto:Col%20de%20la%20Colle-Saint-Michel a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1431;
+  cs:isHigherThan dbp:Col_de_la_Core;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif du Pelat / Préalpes de Castellane";
+  rdfs:label "Col de la Colle-Saint-Michel";
+  geo:lat "44.04666666666667"^^xsd:float;
+  geo:long "6.593333333333333"^^xsd:float .
+
+cto:Col%20de%20la%20Colmiane a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1500;
+  cs:isHigherThan dbp:Col_du_Grand_Colombier;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif du Mercantour-Argentera";
+  rdfs:label "Col de la Colmiane";
+  geo:lat "44.07083333333334"^^xsd:float;
+  geo:long "7.221388888888889"^^xsd:float .
+
+cto:Col%20de%20la%20Colombi%C3%A8re a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1607;
   cs:isHigherThan dbp:Col_de_Turini;
@@ -963,7 +1301,7 @@ cto:Col_de_la_Colombi%C3%A8re a cs:Mountain;
   geo:lat "45.992222222222225"^^xsd:float;
   geo:long "6.475555555555555"^^xsd:float .
 
-cto:Col_de_la_Core a cs:Mountain;
+cto:Col%20de%20la%20Core a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1395;
   cs:isHigherThan dbp:Col_de_Spandelles;
@@ -973,51 +1311,106 @@ cto:Col_de_la_Core a cs:Mountain;
   geo:lat "42.85861111111111"^^xsd:float;
   geo:long "1.105"^^xsd:float .
 
-cto:Col_de_la_Croix-de-Fer cs:country dbp:France;
-  cs:elevation 2065;
-  cs:isHigherThan dbp:Col_du_Lautaret;
-  cs:mountainRange dbp:Alpes;
-  a cs:Mountain;
-  cs:specificMountainRange "Grandes Rousses / Massif des Arves";
-  rdfs:label "Col de la Croix-de-Fer";
-  owl:sameAs dbp:Col_de_la_Croix-de-Fer;
-  geo:lat "45.2275"^^xsd:float;
-  geo:long "6.203055555555555"^^xsd:float .
-
-cto:Col_de_la_Croix_Fry a cs:Mountain;
+cto:Col%20de%20la%20Croix%20Fry a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 631;
-  cs:isHigherThan dbp:Col_du_Mont_de_Fourche;
+  cs:elevation 1467;
+  cs:isHigherThan dbp:Col_des_Mosses;
   cs:mountainRange dbp:Alpes;
-  cs:specificMountainRange "Massif des Bornes";
-  rdfs:label "Col de Bluffy";
+  cs:specificMountainRange "Chaîne des Aravis";
+  rdfs:label "Col de la Croix Fry";
   owl:sameAs dbp:Col_de_la_Croix_Fry;
-  geo:lat "45.873333333333335"^^xsd:float;
-  geo:long "6.2122222222222225"^^xsd:float .
+  geo:lat "45.87722222222222"^^xsd:float;
+  geo:long "6.404444444444445"^^xsd:float .
 
-cto:Col_de_la_Croix_de_Fer a cs:Mountain;
+cto:Col%20de%20la%20Croix%20de%20Fer a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 2065;
   cs:isHigherThan dbp:Col_du_Lautaret;
   cs:mountainRange dbp:Alpes;
   cs:specificMountainRange "Grandes Rousses / Massif des Arves";
   rdfs:label "Col de la Croix de Fer";
-  owl:sameAs dbp:Col_de_la_Croix_de_Fer;
+  owl:sameAs dbp:Col_de_la_Croix-de-Fer;
   geo:lat "45.2275"^^xsd:float;
   geo:long "6.203055555555555"^^xsd:float .
 
-cto:Col_de_la_Forclaz a cs:Mountain;
-  cs:country dbp:Suisse;
-  cs:elevation 1445;
-  cs:isHigherThan dbp:Col_de_la_Hourcere;
-  cs:mountainRange dbp:Alpes;
-  cs:specificMountainRange "Alpes bernoises";
-  rdfs:label "Col des Mosses";
-  owl:sameAs dbp:Col_de_la_Forclaz;
-  geo:lat "46.39888888888889"^^xsd:float;
-  geo:long "7.1025"^^xsd:float .
+cto:Col%20de%20la%20Croix%20de%20Montvieux a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 811;
+  cs:isHigherThan dbp:Col_des_Ares;
+  cs:mountainRange dbp:Massif%20central;
+  cs:specificMountainRange "Pilat";
+  rdfs:label "Col de la Croix de Montvieux";
+  geo:lat "45.445277777777775"^^xsd:float;
+  geo:long "4.6325"^^xsd:float .
 
-cto:Col_de_la_Loze a cs:Mountain;
+cto:Col%20de%20la%20Croix%20des%20Moinats a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 890;
+  cs:isHigherThan dbp:Col_dOderen;
+  cs:mountainRange dbp:Vosges;
+  rdfs:label "Col de la Croix des Moinats";
+  geo:lat "47.987500000000004"^^xsd:float;
+  geo:long "6.816944444444444"^^xsd:float .
+
+cto:Col%20de%20la%20Croix%20des%20Morts a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 899;
+  cs:isHigherThan dbp:Col_de_Leschaux;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col de la Croix des Morts";
+  geo:lat "42.876666666666665"^^xsd:float;
+  geo:long "1.9711111111111113"^^xsd:float .
+
+cto:Col%20de%20la%20Croix-de-Fer a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 2065;
+  cs:isHigherThan dbp:Col_du_Lautaret;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Grandes Rousses / Massif des Arves";
+  rdfs:label "Col de la Croix-de-Fer";
+  owl:sameAs dbp:Col_de_la_Croix-de-Fer;
+  geo:lat "45.2275"^^xsd:float;
+  geo:long "6.203055555555555"^^xsd:float .
+
+cto:Col%20de%20la%20Forclaz%20de%20Montmin a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1147;
+  cs:isHigherThan dbp:Col_de_Berentin;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif des Bornes";
+  rdfs:label "Col de la Forclaz de Montmin";
+  geo:lat "45.80833333333333"^^xsd:float;
+  geo:long "6.244722222222222"^^xsd:float .
+
+cto:Col%20de%20la%20Hourc%C3%A8re a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1438;
+  cs:isHigherThan dbp:Col_de_la_Colle-Saint-Michel;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col de la Hourcère";
+  geo:lat "43.01555555555556"^^xsd:float;
+  geo:long "-0.7913888888888889"^^xsd:float .
+
+cto:Col%20de%20la%20Joux a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1026;
+  cs:isHigherThan dbp:Col_de_la_Liguiere;
+  cs:mountainRange dbp:Jura;
+  rdfs:label "Col de la Joux";
+  geo:lat "46.54138888888889"^^xsd:float;
+  geo:long "5.851388888888889"^^xsd:float .
+
+cto:Col%20de%20la%20Ligui%C3%A8re a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 980;
+  cs:isHigherThan dbp:Col_de_Pisseloup;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Monts de Vaucluse";
+  rdfs:label "Col de la Liguière";
+  geo:lat "43.992222222222225"^^xsd:float;
+  geo:long "5.386388888888889"^^xsd:float .
+
+cto:Col%20de%20la%20Loze a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 2275;
   cs:isHigherThan dbp:Col_du_Portet;
@@ -1028,7 +1421,7 @@ cto:Col_de_la_Loze a cs:Mountain;
   geo:lat "45.405"^^xsd:float;
   geo:long "6.601666666666667"^^xsd:float .
 
-cto:Col_de_la_Madeleine a cs:Mountain;
+cto:Col%20de%20la%20Madeleine a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1993;
   cs:isHigherThan dbp:Montee_de_Bisanne;
@@ -1039,7 +1432,7 @@ cto:Col_de_la_Madeleine a cs:Mountain;
   geo:lat "45.43527777777778"^^xsd:float;
   geo:long "6.375555555555555"^^xsd:float .
 
-cto:Col_de_la_Ramaz a cs:Mountain;
+cto:Col%20de%20la%20Ramaz a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1559;
   cs:isHigherThan dbp:Col_du_Soudet;
@@ -1050,7 +1443,7 @@ cto:Col_de_la_Ramaz a cs:Mountain;
   geo:lat "46.163333333333334"^^xsd:float;
   geo:long "6.574722222222222"^^xsd:float .
 
-cto:Col_de_la_Schlucht a cs:Mountain;
+cto:Col%20de%20la%20Schlucht a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1139;
   cs:isHigherThan dbp:Col_des_Pres;
@@ -1060,49 +1453,117 @@ cto:Col_de_la_Schlucht a cs:Mountain;
   geo:lat "48.06388888888888"^^xsd:float;
   geo:long "7.022777777777778"^^xsd:float .
 
-cto:Col_des_Aravis a cs:Mountain;
+cto:Col%20des%20Aravis a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1486, 1632;
-  cs:isHigherThan dbp:Col_du_Mollard, dbp:Col_du_Soulor;
+  cs:elevation 1486;
+  cs:isHigherThan dbp:Col_du_Soulor;
   cs:mountainRange dbp:Alpes;
-  cs:specificMountainRange "Chaîne des Aravis", "Massif du Beaufortain";
-  rdfs:label "Col des Aravis", "Col des Saisies";
+  cs:specificMountainRange "Chaîne des Aravis";
+  rdfs:label "Col des Aravis";
   owl:sameAs dbp:Col_des_Aravis;
-  geo:lat "45.75861111111111"^^xsd:float, "45.8725"^^xsd:float;
-  geo:long "6.464722222222222"^^xsd:float, "6.528888888888889"^^xsd:float .
+  geo:lat "45.8725"^^xsd:float;
+  geo:long "6.464722222222222"^^xsd:float .
 
-cto:Col_des_Chevr%C3%A8res a cs:Mountain;
+cto:Col%20des%20Ares a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1174, 1183;
-  cs:isHigherThan dbp:Col_de_Peyra_Taillade, dbp:Col_du_Ballon_dAlsace;
-  cs:mountainRange dbp:Vosges;
-  rdfs:label "Col du Ballon d'Alsace", "Col du Platzerwasel";
-  owl:sameAs dbp:Col_des_Chevr%C3%A8res;
-  geo:lat "47.82027777777778"^^xsd:float, "47.96944444444445"^^xsd:float;
-  geo:long "6.835"^^xsd:float, "7.0424999999999995"^^xsd:float .
+  cs:elevation 799;
+  cs:isHigherThan dbp:Col_du_Sappel;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col des Ares";
+  owl:sameAs dbp:Col_des_Ares;
+  geo:lat "42.990833333333335"^^xsd:float;
+  geo:long "0.6936111111111112"^^xsd:float .
 
-cto:Col_des_Mosses a cs:Mountain;
+cto:Col%20des%20Bord%C3%A8res a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1161;
+  cs:isHigherThan dbp:Col_de_Palaquit;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col des Bordères";
+  geo:lat "42.95111111111111"^^xsd:float;
+  geo:long "-0.19499999999999998"^^xsd:float .
+
+cto:Col%20des%20Chevr%C3%A8res a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 918;
+  cs:isHigherThan dbp:Col_de_Tamie;
+  cs:mountainRange dbp:Vosges;
+  rdfs:label "Col des Chevrères";
+  owl:sameAs dbp:Col_des_Chevr%C3%A8res;
+  geo:lat "47.79111111111111"^^xsd:float;
+  geo:long "6.742222222222222"^^xsd:float .
+
+cto:Col%20des%20Croix a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 679;
+  cs:isHigherThan dbp:Col_dIchere;
+  cs:mountainRange dbp:Vosges;
+  rdfs:label "Col des Croix";
+  geo:lat "47.85944444444445"^^xsd:float;
+  geo:long "6.747222222222223"^^xsd:float .
+
+cto:Col%20des%20L%C3%A8ques a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1147;
+  cs:isHigherThan dbp:Col_de_Berentin;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Préalpes de Digne";
+  rdfs:label "Col des Lèques";
+  geo:lat "43.86555555555556"^^xsd:float;
+  geo:long "6.4638888888888895"^^xsd:float .
+
+cto:Col%20des%20Mosses a cs:Mountain;
   cs:country dbp:Suisse;
-  cs:elevation 1273;
-  cs:isHigherThan dbp:Col_de_Manse;
+  cs:elevation 1445;
+  cs:isHigherThan dbp:Col_de_la_Hourcere;
   cs:mountainRange dbp:Alpes;
   cs:specificMountainRange "Alpes bernoises";
-  rdfs:label "Col de Saanenmöser";
+  rdfs:label "Col des Mosses";
   owl:sameAs dbp:Col_des_Mosses;
-  geo:lat "46.51277777777778"^^xsd:float;
-  geo:long "7.304444444444444"^^xsd:float .
+  geo:lat "46.39888888888889"^^xsd:float;
+  geo:long "7.1025"^^xsd:float .
 
-cto:Col_du_Ballon_d%27Alsace a cs:Mountain;
+cto:Col%20des%20Pr%C3%A9s a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 746;
-  cs:isHigherThan dbp:Col_du_Firstplan;
-  cs:mountainRange dbp:Vosges;
-  rdfs:label "Col du Hundsruck";
-  owl:sameAs dbp:Col_du_Ballon_d%27Alsace;
-  geo:lat "47.806666666666665"^^xsd:float;
-  geo:long "7.042777777777777"^^xsd:float .
+  cs:elevation 1135;
+  cs:isHigherThan dbp:Col_du_Granier;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif des Bauges";
+  rdfs:label "Col des Prés";
+  geo:lat "45.59583333333334"^^xsd:float;
+  geo:long "6.061111111111111"^^xsd:float .
 
-cto:Col_du_Berthiand a cs:Mountain;
+cto:Col%20des%20Saisies a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1632;
+  cs:isHigherThan dbp:Col_du_Mollard;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif du Beaufortain";
+  rdfs:label "Col des Saisies";
+  owl:sameAs dbp:Col_des_Saisies;
+  geo:lat "45.75861111111111"^^xsd:float;
+  geo:long "6.528888888888889"^^xsd:float .
+
+cto:Col%20du%20Bac a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 620;
+  cs:isHigherThan dbp:Col_du_Portel;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col du Bac";
+  geo:lat "42.99805555555556"^^xsd:float;
+  geo:long "2.0533333333333332"^^xsd:float .
+
+cto:Col%20du%20Ballon%20d%27Alsace a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1174;
+  cs:isHigherThan dbp:Col_de_Peyra_Taillade;
+  cs:mountainRange dbp:Vosges;
+  rdfs:label "Col du Ballon d'Alsace";
+  owl:sameAs dbp:Col_du_Ballon_d%27Alsace;
+  geo:lat "47.82027777777778"^^xsd:float;
+  geo:long "6.835"^^xsd:float .
+
+cto:Col%20du%20Berthiand a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 780;
   cs:isHigherThan dbp:Col_du_Hundsruck;
@@ -1112,7 +1573,26 @@ cto:Col_du_Berthiand a cs:Mountain;
   geo:lat "46.172777777777775"^^xsd:float;
   geo:long "5.493888888888889"^^xsd:float .
 
-cto:Col_du_Galibier a cs:Mountain;
+cto:Col%20du%20Chaussy a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1531;
+  cs:isHigherThan dbp:Port_de_Lers;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Massif de la Vanoise";
+  rdfs:label "Col du Chaussy";
+  geo:lat "45.34388888888889"^^xsd:float;
+  geo:long "6.356388888888889"^^xsd:float .
+
+cto:Col%20du%20Firstplan a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 722;
+  cs:isHigherThan dbp:Col_de_Saint-Louis;
+  cs:mountainRange dbp:Vosges;
+  rdfs:label "Col du Firstplan";
+  geo:lat "47.99944444444444"^^xsd:float;
+  geo:long "7.1850000000000005"^^xsd:float .
+
+cto:Col%20du%20Galibier a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 2642;
   cs:isHigherThan dbp:Port_dEnvalira;
@@ -1123,7 +1603,7 @@ cto:Col_du_Galibier a cs:Mountain;
   geo:lat "45.064166666666665"^^xsd:float;
   geo:long "6.4077777777777785"^^xsd:float .
 
-cto:Col_du_Glandon a cs:Mountain;
+cto:Col%20du%20Glandon a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1922;
   cs:isHigherThan dbp:Col_de_Puymorens;
@@ -1134,7 +1614,7 @@ cto:Col_du_Glandon a cs:Mountain;
   geo:lat "45.239444444444445"^^xsd:float;
   geo:long "6.175833333333333"^^xsd:float .
 
-cto:Col_du_Grand_Ballon a cs:Mountain;
+cto:Col%20du%20Grand%20Ballon a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1341;
   cs:isHigherThan dbp:Col_de_la_Biche;
@@ -1144,17 +1624,17 @@ cto:Col_du_Grand_Ballon a cs:Mountain;
   geo:lat "47.90472222222222"^^xsd:float;
   geo:long "7.103333333333333"^^xsd:float .
 
-cto:Col_du_Grand_Colombier a cs:Mountain;
+cto:Col%20du%20Grand%20Colombier a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1174, 788;
-  cs:isHigherThan dbp:Col_de_Peyra_Taillade, dbp:Col_du_Pilon;
-  cs:mountainRange dbp:Jura, dbp:Massif%20du%20Jura;
-  rdfs:label "Col du Sappel", "Montée de la Selle de Fromentel";
+  cs:elevation 1498;
+  cs:isHigherThan dbp:Col_dAspin;
+  cs:mountainRange dbp:Jura;
+  rdfs:label "Col du Grand Colombier";
   owl:sameAs dbp:Col_du_Grand_Colombier;
-  geo:lat "45.90555555555555"^^xsd:float, "46.09805555555556"^^xsd:float;
-  geo:long "5.5025"^^xsd:float, "5.745277777777778"^^xsd:float .
+  geo:lat "45.90333333333333"^^xsd:float;
+  geo:long "5.761666666666667"^^xsd:float .
 
-cto:Col_du_Grand_Cucheron a cs:Mountain;
+cto:Col%20du%20Grand%20Cucheron a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1188;
   cs:isHigherThan dbp:Col_du_Platzerwasel;
@@ -1165,7 +1645,7 @@ cto:Col_du_Grand_Cucheron a cs:Mountain;
   geo:lat "45.49"^^xsd:float;
   geo:long "6.248055555555555"^^xsd:float .
 
-cto:Col_du_Granier a cs:Mountain;
+cto:Col%20du%20Granier a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1133;
   cs:isHigherThan dbp:Col_de_Latrape;
@@ -1176,7 +1656,16 @@ cto:Col_du_Granier a cs:Mountain;
   geo:lat "45.480555555555554"^^xsd:float;
   geo:long "5.915277777777778"^^xsd:float .
 
-cto:Col_du_Lautaret a cs:Mountain;
+cto:Col%20du%20Hundsruck a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 746;
+  cs:isHigherThan dbp:Col_du_Firstplan;
+  cs:mountainRange dbp:Vosges;
+  rdfs:label "Col du Hundsruck";
+  geo:lat "47.806666666666665"^^xsd:float;
+  geo:long "7.042777777777777"^^xsd:float .
+
+cto:Col%20du%20Lautaret a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 2057;
   cs:isHigherThan dbp:Col_de_Pailheres;
@@ -1187,28 +1676,66 @@ cto:Col_du_Lautaret a cs:Mountain;
   geo:lat "45.03527777777778"^^xsd:float;
   geo:long "6.405555555555556"^^xsd:float .
 
-cto:Col_du_Mollard a cs:Mountain;
+cto:Col%20du%20Mollard a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1531, 1630;
-  cs:isHigherThan dbp:Col_de_la_Colombiere, dbp:Port_de_Lers;
+  cs:elevation 1630;
+  cs:isHigherThan dbp:Col_de_la_Colombiere;
   cs:mountainRange dbp:Alpes;
-  cs:specificMountainRange "Massif de la Vanoise", "Massif des Arves";
-  rdfs:label "Col du Chaussy", "Col du Mollard";
+  cs:specificMountainRange "Massif des Arves";
+  rdfs:label "Col du Mollard";
   owl:sameAs dbp:Col_du_Mollard;
-  geo:lat "45.21027777777778"^^xsd:float, "45.34388888888889"^^xsd:float;
-  geo:long "6.336666666666666"^^xsd:float, "6.356388888888889"^^xsd:float .
+  geo:lat "45.21027777777778"^^xsd:float;
+  geo:long "6.336666666666666"^^xsd:float .
 
-cto:Col_du_Platzerwasel a cs:Mountain;
+cto:Col%20du%20Mont%20de%20Fourche a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 722;
-  cs:isHigherThan dbp:Col_de_Saint-Louis;
+  cs:elevation 620;
+  cs:isHigherThan dbp:Col_du_Portel;
   cs:mountainRange dbp:Vosges;
-  rdfs:label "Col du Firstplan";
-  owl:sameAs dbp:Col_du_Platzerwasel;
-  geo:lat "47.99944444444444"^^xsd:float;
-  geo:long "7.1850000000000005"^^xsd:float .
+  rdfs:label "Col du Mont de Fourche";
+  geo:lat "47.90416666666667"^^xsd:float;
+  geo:long "6.645277777777777"^^xsd:float .
 
-cto:Col_du_Portet a cs:Mountain;
+cto:Col%20du%20Perthus a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 283;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  cs:specificMountainRange "Massif des Salines / massif des Albères";
+  rdfs:label "Col du Perthus";
+  owl:sameAs dbp:Col_du_Perthus;
+  geo:lat "42.46527777777778"^^xsd:float;
+  geo:long "2.8630555555555555"^^xsd:float .
+
+cto:Col%20du%20Pilon a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 783;
+  cs:isHigherThan dbp:Col_du_Berthiand;
+  cs:mountainRange dbp:Alpes;
+  cs:specificMountainRange "Préalpes de Castellane";
+  rdfs:label "Col du Pilon";
+  geo:lat "43.684999999999995"^^xsd:float;
+  geo:long "6.8825"^^xsd:float .
+
+cto:Col%20du%20Platzerwasel a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1183;
+  cs:isHigherThan dbp:Col_du_Ballon_dAlsace;
+  cs:mountainRange dbp:Vosges;
+  rdfs:label "Col du Platzerwasel";
+  owl:sameAs dbp:Col_du_Platzerwasel;
+  geo:lat "47.96944444444445"^^xsd:float;
+  geo:long "7.0424999999999995"^^xsd:float .
+
+cto:Col%20du%20Portel a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 601;
+  cs:isHigherThan dbp:Col_dEze;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col du Portel";
+  geo:lat "42.87972222222222"^^xsd:float;
+  geo:long "2.1533333333333333"^^xsd:float .
+
+cto:Col%20du%20Portet a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 2214;
   cs:isHigherThan dbp:Col_du_Tourmalet;
@@ -1219,7 +1746,7 @@ cto:Col_du_Portet a cs:Mountain;
   geo:lat "42.83305555555556"^^xsd:float;
   geo:long "0.23666666666666666"^^xsd:float .
 
-cto:Col_du_Portillon a cs:Mountain;
+cto:Col%20du%20Portillon a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 12901293;
   cs:isHigherThan dbp:Col_du_Galibier;
@@ -1229,18 +1756,57 @@ cto:Col_du_Portillon a cs:Mountain;
   geo:lat "42.76888888888889"^^xsd:float;
   geo:long "0.66"^^xsd:float .
 
-cto:Col_du_Pr%C3%A9 a cs:Mountain;
+cto:Col%20du%20Pr%C3%A9 a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1941;
-  cs:isHigherThan dbp:Col_du_Glandon;
+  cs:elevation 1703;
+  cs:isHigherThan dbp:Col_des_Saisies;
   cs:mountainRange dbp:Alpes;
-  cs:specificMountainRange "Massif du Beaufortain";
-  rdfs:label "Montée de Bisanne";
+  cs:specificMountainRange "Beaufortain";
+  rdfs:label "Col du Pré";
   owl:sameAs dbp:Col_du_Pr%C3%A9;
-  geo:lat "45.746944444444445"^^xsd:float;
-  geo:long "6.505833333333333"^^xsd:float .
+  geo:lat "45.69027777777777"^^xsd:float;
+  geo:long "6.598055555555555"^^xsd:float .
 
-cto:Col_du_T%C3%A9l%C3%A9graphe a cs:Mountain;
+cto:Col%20du%20Rouvey a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1245;
+  cs:isHigherThan dbp:Col_de_Neronne;
+  cs:mountainRange dbp:Massif%20central;
+  cs:specificMountainRange "Monts du Vivarais";
+  rdfs:label "Col du Rouvey";
+  geo:lat "45.14888888888889"^^xsd:float;
+  geo:long "4.501944444444445"^^xsd:float .
+
+cto:Col%20du%20Sappel a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 788;
+  cs:isHigherThan dbp:Col_du_Pilon;
+  cs:mountainRange dbp:Jura;
+  rdfs:label "Col du Sappel";
+  geo:lat "46.09805555555556"^^xsd:float;
+  geo:long "5.5025"^^xsd:float .
+
+cto:Col%20du%20Soudet a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1533;
+  cs:isHigherThan dbp:Col_du_Chaussy;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  rdfs:label "Col du Soudet";
+  geo:lat "42.986666666666665"^^xsd:float;
+  geo:long "-0.7547222222222222"^^xsd:float .
+
+cto:Col%20du%20Soulor a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1471;
+  cs:isHigherThan dbp:Col_de_la_Croix_Fry;
+  cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
+  cs:specificMountainRange "Massif du Granquet";
+  rdfs:label "Col du Soulor";
+  owl:sameAs dbp:Col_du_Soulor;
+  geo:lat "42.96055555555556"^^xsd:float;
+  geo:long "-0.26166666666666666"^^xsd:float .
+
+cto:Col%20du%20T%C3%A9l%C3%A9graphe a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 1566;
   cs:isHigherThan dbp:Col_de_la_Ramaz;
@@ -1251,7 +1817,7 @@ cto:Col_du_T%C3%A9l%C3%A9graphe a cs:Mountain;
   geo:lat "45.2025"^^xsd:float;
   geo:long "6.445277777777778"^^xsd:float .
 
-cto:Col_du_Tourmalet a cs:Mountain;
+cto:Col%20du%20Tourmalet a cs:Mountain;
   cs:country dbp:France;
   cs:elevation 2115;
   cs:isHigherThan dbp:Col_de_Vars;
@@ -1261,6 +1827,15 @@ cto:Col_du_Tourmalet a cs:Mountain;
   owl:sameAs dbp:Col_du_Tourmalet;
   geo:lat "42.90833333333333"^^xsd:float;
   geo:long "0.145"^^xsd:float .
+
+cto:Col%20du%20Wettstein a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 882;
+  cs:isHigherThan dbp:Col_de_la_Croix_de_Montvieux;
+  cs:mountainRange dbp:Massif%20des%20Vosges;
+  rdfs:label "Col du Wettstein";
+  geo:lat "48.088055555555556"^^xsd:float;
+  geo:long "7.116388888888888"^^xsd:float .
 
 cto:Colmar_Besancon_Path a cs:Path;
   cs:difficulty cs:Easy;
@@ -1947,16 +2522,24 @@ cto:Mondorf-les-Bains_%28Luxembourg%29_Vittel_Path a cs:Path;
   cs:length 207.5;
   rdfs:label "Mondorf-les-Bains (Luxembourg) - Vittel" .
 
-cto:Mont%C3%A9e_de_Tignes cs:country dbp:France;
-  cs:elevation 1703;
-  cs:isHigherThan dbp:Col_des_Saisies;
+cto:Mont%C3%A9e%20de%20Bisanne a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1941;
+  cs:isHigherThan dbp:Col_du_Glandon;
   cs:mountainRange dbp:Alpes;
-  a cs:Mountain;
-  cs:specificMountainRange "Beaufortain";
-  rdfs:label "Col du Pré";
-  owl:sameAs dbp:Mont%C3%A9e_de_Tignes;
-  geo:lat "45.69027777777777"^^xsd:float;
-  geo:long "6.598055555555555"^^xsd:float .
+  cs:specificMountainRange "Massif du Beaufortain";
+  rdfs:label "Montée de Bisanne";
+  geo:lat "45.746944444444445"^^xsd:float;
+  geo:long "6.505833333333333"^^xsd:float .
+
+cto:Mont%C3%A9e%20de%20la%20Selle%20de%20Fromentel a cs:Mountain;
+  cs:country dbp:France;
+  cs:elevation 1174;
+  cs:isHigherThan dbp:Col_de_Peyra_Taillade;
+  cs:mountainRange dbp:Massif%20du%20Jura;
+  rdfs:label "Montée de la Selle de Fromentel";
+  geo:lat "45.90555555555555"^^xsd:float;
+  geo:long "5.745277777777778"^^xsd:float .
 
 cto:Mont_Saint-Michel_Utah_Beach_%28Sainte-Marie-du-Mont%29_Path a cs:Path;
   cs:difficulty cs:Easy;
@@ -2309,39 +2892,39 @@ cto:Pontarlier_Verbier_%28Switzerland%29_Path a cs:Path;
   cs:length 207.5;
   rdfs:label "Pontarlier - Verbier (Switzerland)" .
 
-cto:Port_d%27Envalira a cs:Mountain;
-  cs:country dbp:France;
-  cs:elevation 1920;
-  cs:isHigherThan dbp:Col_de_Montgenevre;
+cto:Port%20d%27Envalira a cs:Mountain;
+  cs:country dbp:Andorre;
+  cs:elevation 2408;
+  cs:isHigherThan dbp:Col_dIzoard;
   cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
-  cs:specificMountainRange "Massif du Carlit";
-  rdfs:label "Col de Puymorens";
+  rdfs:label "Port d'Envalira";
   owl:sameAs dbp:Port_d%27Envalira;
-  geo:lat "42.56027777777778"^^xsd:float;
-  geo:long "1.81"^^xsd:float .
+  geo:lat "42.54"^^xsd:float;
+  geo:long "1.7197222222222224"^^xsd:float .
 
-cto:Port_de_Bal%C3%A8s a cs:Mountain;
+cto:Port%20de%20Bal%C3%A8s a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 799;
-  cs:isHigherThan dbp:Col_du_Sappel;
+  cs:elevation 1755;
+  cs:isHigherThan dbp:Port_del_Canto;
   cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
-  rdfs:label "Col des Ares";
+  cs:specificMountainRange "Massif de la Barousse";
+  rdfs:label "Port de Balès";
   owl:sameAs dbp:Port_de_Bal%C3%A8s;
-  geo:lat "42.990833333333335"^^xsd:float;
-  geo:long "0.6936111111111112"^^xsd:float .
+  geo:lat "42.87444444444444"^^xsd:float;
+  geo:long "0.5011111111111111"^^xsd:float .
 
-cto:Port_de_Lers a cs:Mountain;
+cto:Port%20de%20Lers a cs:Mountain;
   cs:country dbp:France;
-  cs:elevation 1056, 601;
-  cs:isHigherThan dbp:Col_dEze, dbp:Cote_de_la_Croix_Neuve;
+  cs:elevation 1517;
+  cs:isHigherThan dbp:Col_de_la_Colmiane;
   cs:mountainRange dbp:Pyr%C3%A9n%C3%A9es;
-  cs:specificMountainRange "Massif de Tabe";
-  rdfs:label "Col de Montségur", "Col du Portel";
+  cs:specificMountainRange "Lherz et Trois-Seigneurs";
+  rdfs:label "Port de Lers";
   owl:sameAs dbp:Port_de_Lers;
-  geo:lat "42.87416666666667"^^xsd:float, "42.87972222222222"^^xsd:float;
-  geo:long "1.823611111111111"^^xsd:float, "2.1533333333333333"^^xsd:float .
+  geo:lat "42.80638888888888"^^xsd:float;
+  geo:long "1.4116666666666666"^^xsd:float .
 
-cto:Port_de_la_Bonaigua a cs:Mountain;
+cto:Port%20de%20la%20Bonaigua a cs:Mountain;
   cs:country dbp:Espagne;
   cs:elevation 2072;
   cs:isHigherThan dbp:Col_de_la_Croix-de-Fer;
@@ -2351,7 +2934,7 @@ cto:Port_de_la_Bonaigua a cs:Mountain;
   geo:lat "42.66305555555555"^^xsd:float;
   geo:long "0.9819444444444444"^^xsd:float .
 
-cto:Port_del_Cant%C3%B3 a cs:Mountain;
+cto:Port%20del%20Cant%C3%B3 a cs:Mountain;
   cs:country dbp:Espagne;
   cs:elevation 1718;
   cs:isHigherThan dbp:Col_de_Joux_Plane;

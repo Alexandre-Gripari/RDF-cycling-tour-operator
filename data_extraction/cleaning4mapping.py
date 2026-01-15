@@ -25,7 +25,7 @@ def make_safe_uri(val):
 def is_higher_than_column(df):
     altitudes_numeric = pd.to_numeric(df['Altitude'], errors='coerce')
     
-    temp_ref = pd.DataFrame({'alt': altitudes_numeric, 'id': df_m['Nom'].apply(make_safe_uri)})
+    temp_ref = pd.DataFrame({'alt': altitudes_numeric, 'id': df['Nom'].apply(make_safe_uri)})
     
     temp_ref = temp_ref.dropna(subset=['alt']).sort_values('alt').drop_duplicates('alt')
     
@@ -36,29 +36,27 @@ def is_higher_than_column(df):
     
     df['Higher_Than'] = altitudes_numeric.map(prev_alt_map).map(altitude_to_id)
 
+def normalize_key(text):
+    if pd.isna(text) or text == "":
+        return None
+    text = unicodedata.normalize('NFKD', str(text)).encode('ASCII', 'ignore').decode('utf-8')
+    return re.sub(r'[^a-z0-9]', '', text.lower())
+
 def check_uri(df_m, df_s):
-    names = []
-    uris = []
-    
-    subset = df_s[['Mountain_Name', 'Mountain_URI']].dropna()
-    
-    for idx, row in subset.iterrows():
-        n_list = str(row['Mountain_Name']).split(',')
-        u_list = str(row['Mountain_URI']).split(',')
-        
-        n_list = [n.strip() for n in n_list]
-        u_list = [u.strip() for u in u_list]
-        
-        min_len = min(len(n_list), len(u_list))
-        names.extend(n_list[:min_len])
-        uris.extend(u_list[:min_len])
-        
-    lookup_df = pd.DataFrame({'Name': names, 'URI': uris})
-    lookup_df = lookup_df.drop_duplicates(subset=['Name'])
-    
-    uri_map = dict(zip(lookup_df['Name'], lookup_df['URI']))
-    
-    df_m['URI_Suffix'] = df_m['Nom'].str.strip().map(uri_map)
+    valid_uris = set()
+    for uri_entry in df_s['Mountain_URI'].dropna():
+        for uri in str(uri_entry).split(','):
+            clean_uri = uri.strip()
+            if clean_uri:
+                valid_uris.add(clean_uri)
+
+    uri_map = {}
+    for uri in valid_uris:
+        key = normalize_key(uri)
+        if key:
+            uri_map[key] = uri
+
+    df_m['URI_Suffix'] = df_m['Nom'].apply(lambda x: uri_map.get(normalize_key(x), None))
 
 def calculate_difficulties(elevation_gain):
     if elevation_gain < 1000:
