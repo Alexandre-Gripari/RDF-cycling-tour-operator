@@ -15,7 +15,6 @@ cto:Abbeville_Le_Havre_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Le_Havre;
   cs:hasStart dbp:Abbeville;
-  cs:includesMountain cto:nan;
   cs:length 191.5;
   rdfs:label "Abbeville - Le Havre" .
 
@@ -24,7 +23,6 @@ cto:Abbeville_Rouen_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Rouen;
   cs:hasStart dbp:Abbeville;
-  cs:includesMountain cto:nan;
   cs:length 214.5;
   rdfs:label "Abbeville - Rouen" .
 
@@ -42,7 +40,6 @@ cto:Aigurande_Super_Besse_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Super_Besse;
   cs:hasStart dbp:Aigurande;
-  cs:includesMountain cto:nan;
   cs:length 189.0;
   rdfs:label "Aigurande - Super Besse" .
 
@@ -51,7 +48,6 @@ cto:Aix-en-Provence_Montpellier_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Montpellier;
   cs:hasStart dbp:Aix-en-Provence;
-  cs:includesMountain cto:nan;
   cs:length 176.5;
   rdfs:label "Aix-en-Provence - Montpellier" .
 
@@ -98,7 +94,6 @@ cto:Albertville_Val_Thorens_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Val_Thorens;
   cs:hasStart dbp:Albertville;
-  cs:includesMountain cto:nan;
   cs:length 59.5;
   rdfs:label "Albertville - Val Thorens" .
 
@@ -107,7 +102,6 @@ cto:Albertville_Valence_Path a cs:Path;
   cs:elevationGain 1472;
   cs:hasEnd dbp:Valence;
   cs:hasStart dbp:Albertville;
-  cs:includesMountain cto:nan;
   cs:length 190.7;
   rdfs:label "Albertville - Valence" .
 
@@ -116,7 +110,6 @@ cto:Albi_Toulouse_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Toulouse;
   cs:hasStart dbp:Albi;
-  cs:includesMountain cto:nan;
   cs:length 167.0;
   rdfs:label "Albi - Toulouse" .
 
@@ -135,7 +128,6 @@ cto:Andorra_la_Vella_Saint-Girons_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Saint-Girons;
   cs:hasStart dbp:Andorra_la_Vella;
-  cs:includesMountain cto:nan;
   cs:length 176.5;
   rdfs:label "Andorra la Vella - Saint-Girons" .
 
@@ -173,7 +165,6 @@ cto:Arc-et-Senans_Besancon_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Besan%C3%A7on;
   cs:hasStart dbp:Arc-et-Senans;
-  cs:includesMountain cto:nan;
   cs:length 41.5;
   rdfs:label "Arc-et-Senans - Besançon" .
 
@@ -182,7 +173,6 @@ cto:Arpajon-sur-Cere_Montauban_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Montauban;
   cs:hasStart dbp:Arpajon-sur-C%C3%A8re;
-  cs:includesMountain cto:nan;
   cs:length 190.5;
   rdfs:label "Arpajon-sur-Cère - Montauban" .
 
@@ -191,7 +181,6 @@ cto:Arras_Amiens_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Amiens;
   cs:hasStart dbp:Arras;
-  cs:includesMountain cto:nan;
   cs:length 189.5;
   rdfs:label "Arras - Amiens" .
 
@@ -200,7 +189,6 @@ cto:Arras_Reims_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Reims;
   cs:hasStart dbp:Arras;
-  cs:includesMountain cto:nan;
   cs:length 194.0;
   rdfs:label "Arras - Reims" .
 
@@ -209,7 +197,6 @@ cto:Arras_Roubaix_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Roubaix;
   cs:hasStart dbp:Arras;
-  cs:includesMountain cto:nan;
   cs:length 156.5;
   rdfs:label "Arras - Roubaix" .
 
@@ -218,7 +205,6 @@ cto:Aurillac_Carmaux_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Carmaux;
   cs:hasStart dbp:Aurillac;
-  cs:includesMountain cto:nan;
   cs:length 158.0;
   rdfs:label "Aurillac - Carmaux" .
 
@@ -227,7 +213,6 @@ cto:Avranches_Mont_Saint-Michel_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Mont_Saint-Michel;
   cs:hasStart dbp:Avranches;
-  cs:includesMountain cto:nan;
   cs:length 33.0;
   rdfs:label "Avranches - Mont Saint-Michel" .
 
@@ -236,7 +221,6 @@ cto:Bagneres-de-Luchon_Pau_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Pau;
   cs:hasStart dbp:Bagn%C3%A8res-de-Luchon;
-  cs:includesMountain cto:nan;
   cs:length 199.5;
   rdfs:label "Bagnères-de-Luchon - Pau" .
 
@@ -266,7 +250,6 @@ cto:Barcelona_Andorra-Arcalis_%28Andorra%29_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Andorra;
   cs:hasStart dbp:Barcelona;
-  cs:includesMountain cto:nan;
   cs:length 224.0;
   rdfs:label "Barcelona - Andorra-Arcalis (Andorra)" .
 
@@ -285,7 +268,6 @@ cto:Belfort_Chalon-sur-Saone_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Chalon-sur-Sa%C3%B4ne;
   cs:hasStart dbp:Belfort;
-  cs:includesMountain cto:nan;
   cs:length 230.0;
   rdfs:label "Belfort - Chalon-sur-Saône" .
 
@@ -305,7 +287,6 @@ cto:Bergerac_Perigueux_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:P%C3%A9rigueux;
   cs:hasStart dbp:Bergerac;
-  cs:includesMountain cto:nan;
   cs:length 54.0;
   rdfs:label "Bergerac - Périgueux" .
 
@@ -333,7 +314,6 @@ cto:Binche_%28Belgium%29_Epernay_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:%C3%89pernay;
   cs:hasStart dbp:Binche%2CBelgium;
-  cs:includesMountain cto:nan;
   cs:length 215.0;
   rdfs:label "Binche (Belgium) - Épernay" .
 
@@ -342,7 +322,6 @@ cto:Binche_%28Belgium%29_Longwy_Path a cs:Path;
   cs:elevationGain 2483;
   cs:hasEnd dbp:Longwy;
   cs:hasStart dbp:Binche%2CBelgium;
-  cs:includesMountain cto:nan;
   cs:length 220.0;
   rdfs:label "Binche (Belgium) - Longwy" .
 
@@ -351,7 +330,6 @@ cto:Blagnac_Brive-la-Gaillarde_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Brive-la-Gaillarde;
   cs:hasStart dbp:Blagnac;
-  cs:includesMountain cto:nan;
   cs:length 222.5;
   rdfs:label "Blagnac - Brive-la-Gaillarde" .
 
@@ -369,7 +347,6 @@ cto:Blaye-les-Mines_Lavaur_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Lavaur;
   cs:hasStart dbp:Blaye-les-Mines;
-  cs:includesMountain cto:nan;
   cs:length 167.5;
   rdfs:label "Blaye-les-Mines - Lavaur" .
 
@@ -378,7 +355,6 @@ cto:Bonneval_Chartres_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Chartres;
   cs:hasStart dbp:Bonneval;
-  cs:includesMountain cto:nan;
   cs:length 53.5;
   rdfs:label "Bonneval - Chartres" .
 
@@ -387,7 +363,6 @@ cto:Bordeaux_Pauillac_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Pauillac;
   cs:hasStart dbp:Bordeaux;
-  cs:includesMountain cto:nan;
   cs:length 52.0;
   rdfs:label "Bordeaux - Pauillac" .
 
@@ -406,7 +381,6 @@ cto:Bourg-Saint-Maurice_Le_Grand-Bornand_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Le_Grand-Bornand;
   cs:hasStart dbp:Bourg-Saint-Maurice;
-  cs:includesMountain cto:nan;
   cs:length 169.5;
   rdfs:label "Bourg-Saint-Maurice - Le Grand-Bornand" .
 
@@ -424,7 +398,6 @@ cto:Bourg-de-Peage_Mende_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Mende;
   cs:hasStart dbp:Bourg-de-P%C3%A9age;
-  cs:includesMountain cto:nan;
   cs:length 210.5;
   rdfs:label "Bourg-de-Péage - Mende" .
 
@@ -433,7 +406,6 @@ cto:Bourg-en-Bresse_Champagnole_Path a cs:Path;
   cs:elevationGain 2208;
   cs:hasEnd dbp:Champagnole;
   cs:hasStart dbp:Bourg-en-Bresse;
-  cs:includesMountain cto:nan;
   cs:length 166.5;
   rdfs:label "Bourg-en-Bresse - Champagnole" .
 
@@ -452,7 +424,6 @@ cto:Bourg-en-Bresse_Saint-Etienne_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Saint-%C3%89tienne;
   cs:hasStart dbp:Bourg-en-Bresse;
-  cs:includesMountain cto:nan;
   cs:length 185.5;
   rdfs:label "Bourg-en-Bresse - Saint-Étienne" .
 
@@ -461,7 +432,6 @@ cto:Bourgoin-Jallieu_Aubenas_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Aubenas;
   cs:hasStart dbp:Bourgoin-Jallieu;
-  cs:includesMountain cto:nan;
   cs:length 178.0;
   rdfs:label "Bourgoin-Jallieu - Aubenas" .
 
@@ -470,7 +440,6 @@ cto:Brest_Landerneau_Path a cs:Path;
   cs:elevationGain 2785;
   cs:hasEnd dbp:Landerneau;
   cs:hasStart dbp:Brest;
-  cs:includesMountain cto:nan;
   cs:length 197.8;
   rdfs:label "Brest - Landerneau" .
 
@@ -479,7 +448,6 @@ cto:Brest_Mur-de-Bretagne_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:M%C3%BBr-de-Bretagne;
   cs:hasStart dbp:Brest;
-  cs:includesMountain cto:nan;
   cs:length 181.0;
   rdfs:label "Brest - Mûr-de-Bretagne" .
 
@@ -507,7 +475,6 @@ cto:Brussels-Royal_Palace_%28Belgium%29_Brussels-Atomium_%28Belgium%29_Path a cs
   cs:elevationGain 0;
   cs:hasEnd dbp:Belgium;
   cs:hasStart dbp:Belgium;
-  cs:includesMountain cto:nan;
   cs:length 27.6;
   rdfs:label "Brussels-Royal Palace (Belgium) - Brussels-Atomium (Belgium)" .
 
@@ -517,7 +484,6 @@ cto:Brussels_%28Belgium%29_Brussels_%28Belgium%29_via_Charleroi_%28Belgium%29_Pa
   cs:elevationGain 0;
   cs:hasEnd dbp:Brussels;
   cs:hasStart dbp:Brussels%2CBelgium;
-  cs:includesMountain cto:nan;
   cs:length 194.5;
   rdfs:label "Brussels (Belgium) - Brussels (Belgium) via Charleroi (Belgium)" .
 
@@ -526,7 +492,6 @@ cto:Brussels_Spa_%28Belgium%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Spa%2CBelgium;
   cs:hasStart dbp:Brussels;
-  cs:includesMountain cto:nan;
   cs:length 201.0;
   rdfs:label "Brussels - Spa (Belgium)" .
 
@@ -535,7 +500,6 @@ cto:Cagnes-sur-Mer_Marseille_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Marseille;
   cs:hasStart dbp:Cagnes-sur-Mer;
-  cs:includesMountain cto:nan;
   cs:length 228.5;
   rdfs:label "Cagnes-sur-Mer - Marseille" .
 
@@ -544,7 +508,6 @@ cto:Cambrai_Reims_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Reims;
   cs:hasStart dbp:Cambrai;
-  cs:includesMountain cto:nan;
   cs:length 153.5;
   rdfs:label "Cambrai - Reims" .
 
@@ -553,7 +516,6 @@ cto:Cambridge_London_%28United_Kingdom%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:London%2CUnited_Kingdom;
   cs:hasStart dbp:Cambridge;
-  cs:includesMountain cto:nan;
   cs:length 155.0;
   rdfs:label "Cambridge - London (United Kingdom)" .
 
@@ -562,7 +524,6 @@ cto:Cap_dAgde_Perpignan_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Perpignan;
   cs:hasStart dbp:Cap_d%27Agde;
-  cs:includesMountain cto:nan;
   cs:length 196.5;
   rdfs:label "Cap d'Agde - Perpignan" .
 
@@ -591,7 +552,6 @@ cto:Carcassonne_Montpellier_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Montpellier;
   cs:hasStart dbp:Carcassonne;
-  cs:includesMountain cto:nan;
   cs:length 162.5;
   rdfs:label "Carcassonne - Montpellier" .
 
@@ -610,7 +570,6 @@ cto:Carhaix_Cap_Frehel_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Cap_Fr%C3%A9hel;
   cs:hasStart dbp:Carhaix;
-  cs:includesMountain cto:nan;
   cs:length 164.5;
   rdfs:label "Carhaix - Cap Fréhel" .
 
@@ -619,7 +578,6 @@ cto:Castelnau-Magnoac_Cahors_Path a cs:Path;
   cs:elevationGain 1326;
   cs:hasEnd dbp:Cahors;
   cs:hasStart dbp:Castelnau-Magnoac;
-  cs:includesMountain cto:nan;
   cs:length 188.5;
   rdfs:label "Castelnau-Magnoac - Cahors" .
 
@@ -656,7 +614,6 @@ cto:Chambery_Gap_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Gap;
   cs:hasStart dbp:Chamb%C3%A9ry;
-  cs:includesMountain cto:nan;
   cs:length 179.0;
   rdfs:label "Chambéry - Gap" .
 
@@ -665,7 +622,6 @@ cto:Change_Laval_Path a cs:Path;
   cs:elevationGain 304;
   cs:hasEnd dbp:Laval;
   cs:hasStart dbp:Chang%C3%A9;
-  cs:includesMountain cto:nan;
   cs:length 27.2;
   rdfs:label "Changé - Laval" .
 
@@ -674,7 +630,6 @@ cto:Chantilly_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Chantilly;
-  cs:includesMountain cto:nan;
   cs:length 113.0;
   rdfs:label "Chantilly - Paris (Champs-Élysées)" .
 
@@ -693,7 +648,6 @@ cto:Chatelaillon-Plage_Poitiers_Path a cs:Path;
   cs:elevationGain 1004;
   cs:hasEnd dbp:Poitiers;
   cs:hasStart dbp:Ch%C3%A2telaillon-Plage;
-  cs:includesMountain cto:nan;
   cs:length 167.0;
   rdfs:label "Châtelaillon-Plage - Poitiers" .
 
@@ -702,7 +656,6 @@ cto:Chatou_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 619;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Chatou;
-  cs:includesMountain cto:nan;
   cs:length 108.4;
   rdfs:label "Chatou - Paris (Champs-Élysées)" .
 
@@ -711,7 +664,6 @@ cto:Chauvigny_Sarran_Path a cs:Path;
   cs:elevationGain 3389;
   cs:hasEnd dbp:Sarran;
   cs:hasStart dbp:Chauvigny;
-  cs:includesMountain cto:nan;
   cs:length 218.0;
   rdfs:label "Chauvigny - Sarran" .
 
@@ -720,7 +672,6 @@ cto:Cholet_Cholet_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Cholet;
   cs:hasStart dbp:Cholet;
-  cs:includesMountain cto:nan;
   cs:length 35.5;
   rdfs:label "Cholet - Cholet" .
 
@@ -729,7 +680,6 @@ cto:Clermont-Ferrand_Lyon_Path a cs:Path;
   cs:elevationGain 2646;
   cs:hasEnd dbp:Lyon;
   cs:hasStart dbp:Clermont-Ferrand;
-  cs:includesMountain cto:nan;
   cs:length 194.0;
   rdfs:label "Clermont-Ferrand - Lyon" .
 
@@ -1317,7 +1267,6 @@ cto:Colmar_Besancon_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Besan%C3%A7on;
   cs:hasStart dbp:Colmar;
-  cs:includesMountain cto:nan;
   cs:length 199.0;
   rdfs:label "Colmar - Besançon" .
 
@@ -1326,7 +1275,6 @@ cto:Creteil_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Cr%C3%A9teil;
-  cs:includesMountain cto:nan;
   cs:length 95.0;
   rdfs:label "Créteil - Paris (Champs-Élysées)" .
 
@@ -1335,7 +1283,6 @@ cto:Cugnaux_Luz_Ardiden_Path a cs:Path;
   cs:elevationGain 4000;
   cs:hasEnd dbp:Luz_Ardiden;
   cs:hasStart dbp:Cugnaux;
-  cs:includesMountain cto:nan;
   cs:length 211.0;
   rdfs:label "Cugnaux - Luz Ardiden" .
 
@@ -1354,7 +1301,6 @@ cto:Dinan_Lisieux_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Lisieux;
   cs:hasStart dbp:Dinan;
-  cs:includesMountain cto:nan;
   cs:length 226.5;
   rdfs:label "Dinan - Lisieux" .
 
@@ -1363,7 +1309,6 @@ cto:Dole_Lausanne_%28Switzerland%29_Path a cs:Path;
   cs:elevationGain 2529;
   cs:hasEnd dbp:Lausanne%2CSwitzerland;
   cs:hasStart dbp:Dole;
-  cs:includesMountain cto:nan;
   cs:length 186.5;
   rdfs:label "Dole - Lausanne (Switzerland)" .
 
@@ -1382,7 +1327,6 @@ cto:Dreux_Amiens_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Amiens;
   cs:hasStart dbp:Dreux;
-  cs:includesMountain cto:nan;
   cs:length 181.0;
   rdfs:label "Dreux - Amiens" .
 
@@ -1391,7 +1335,6 @@ cto:Dunkirk_Calais_Path a cs:Path;
   cs:elevationGain 1796;
   cs:hasEnd dbp:Calais;
   cs:hasStart dbp:Dunkirk;
-  cs:includesMountain cto:nan;
   cs:length 171.5;
   rdfs:label "Dunkirk - Calais" .
 
@@ -1400,7 +1343,6 @@ cto:Dusseldorf_%28Germany%29_Liege_%28Belgium%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Li%C3%A8ge%2CBelgium;
   cs:hasStart dbp:D%C3%BCsseldorf%2CGermany;
-  cs:includesMountain cto:nan;
   cs:length 203.5;
   rdfs:label "Düsseldorf (Germany) - Liège (Belgium)" .
 
@@ -1419,7 +1361,6 @@ cto:Embrun_Chorges_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Chorges;
   cs:hasStart dbp:Embrun;
-  cs:includesMountain cto:nan;
   cs:length 32.0;
   rdfs:label "Embrun - Chorges" .
 
@@ -1428,7 +1369,6 @@ cto:Embrun_Salon-de-Provence_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Salon-de-Provence;
   cs:hasStart dbp:Embrun;
-  cs:includesMountain cto:nan;
   cs:length 222.5;
   rdfs:label "Embrun - Salon-de-Provence" .
 
@@ -1447,7 +1387,6 @@ cto:Epernay_Metz_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Metz;
   cs:hasStart dbp:%C3%89pernay;
-  cs:includesMountain cto:nan;
   cs:length 205.0;
   rdfs:label "Épernay - Metz" .
 
@@ -1456,7 +1395,6 @@ cto:Epernay_Montargis_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Montargis;
   cs:hasStart dbp:%C3%89pernay;
-  cs:includesMountain cto:nan;
   cs:length 187.5;
   rdfs:label "Épernay - Montargis" .
 
@@ -1465,7 +1403,6 @@ cto:Epernay_Nancy_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Nancy;
   cs:hasStart dbp:%C3%89pernay;
-  cs:includesMountain cto:nan;
   cs:length 234.5;
   rdfs:label "Épernay - Nancy" .
 
@@ -1483,7 +1420,6 @@ cto:Evry_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:%C3%89vry;
-  cs:includesMountain cto:nan;
   cs:length 137.5;
   rdfs:label "Évry - Paris (Champs-Élysées)" .
 
@@ -1492,7 +1428,6 @@ cto:Eymet_Pau_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Pau;
   cs:hasStart dbp:Eymet;
-  cs:includesMountain cto:nan;
   cs:length 203.5;
   rdfs:label "Eymet - Pau" .
 
@@ -1501,7 +1436,6 @@ cto:Fougeres_Chartres_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Chartres;
   cs:hasStart dbp:Foug%C3%A8res;
-  cs:includesMountain cto:nan;
   cs:length 231.0;
   rdfs:label "Fougères - Chartres" .
 
@@ -1510,7 +1444,6 @@ cto:Fougeres_Tours_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Tours;
   cs:hasStart dbp:Foug%C3%A8res;
-  cs:includesMountain cto:nan;
   cs:length 218.0;
   rdfs:label "Fougères - Tours" .
 
@@ -1539,7 +1472,6 @@ cto:Gap_Privas_Path a cs:Path;
   cs:elevationGain 1388;
   cs:hasEnd dbp:Privas;
   cs:hasStart dbp:Gap;
-  cs:includesMountain cto:nan;
   cs:length 183.0;
   rdfs:label "Gap - Privas" .
 
@@ -1568,7 +1500,6 @@ cto:Girona_%28Spain%29_Barcelona_%28Spain%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Barcelona%2CSpain;
   cs:hasStart dbp:Girona%2CSpain;
-  cs:includesMountain cto:nan;
   cs:length 181.5;
   rdfs:label "Girona (Spain) - Barcelona (Spain)" .
 
@@ -1587,7 +1518,6 @@ cto:Granville_Angers_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Angers;
   cs:hasStart dbp:Granville;
-  cs:includesMountain cto:nan;
   cs:length 223.5;
   rdfs:label "Granville - Angers" .
 
@@ -1614,7 +1544,6 @@ cto:Houilles_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Houilles;
-  cs:includesMountain cto:nan;
   cs:length 116.0;
   rdfs:label "Houilles - Paris (Champs-Élysées)" .
 
@@ -1623,7 +1552,6 @@ cto:Ile_dOleron_Ile_de_Re_Path a cs:Path;
   cs:elevationGain 528;
   cs:hasEnd dbp:%C3%8Ele_de_R%C3%A9;
   cs:hasStart dbp:%C3%8Ele_d%27Ol%C3%A9ron;
-  cs:includesMountain cto:nan;
   cs:length 168.5;
   rdfs:label "Île d'Oléron - Île de Ré" .
 
@@ -1632,7 +1560,6 @@ cto:Issoire_Saint-Flour_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Saint-Flour;
   cs:hasStart dbp:Issoire;
-  cs:includesMountain cto:nan;
   cs:length 208.0;
   rdfs:label "Issoire - Saint-Flour" .
 
@@ -1650,7 +1577,6 @@ cto:La_Baule_Sarzeau_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Sarzeau;
   cs:hasStart dbp:La_Baule;
-  cs:includesMountain cto:nan;
   cs:length 195.0;
   rdfs:label "La Baule - Sarzeau" .
 
@@ -1679,7 +1605,6 @@ cto:Lacapelle-Marival_Rocamadour_Path a cs:Path;
   cs:elevationGain 442;
   cs:hasEnd dbp:Rocamadour;
   cs:hasStart dbp:Lacapelle-Marival;
-  cs:includesMountain cto:nan;
   cs:length 40.7;
   rdfs:label "Lacapelle-Marival - Rocamadour" .
 
@@ -1717,7 +1642,6 @@ cto:Le_Bourg-dOisans_Saint-Etienne_Path a cs:Path;
   cs:elevationGain 2114;
   cs:hasEnd dbp:Saint-%C3%89tienne;
   cs:hasStart dbp:Le_Bourg-d%27Oisans;
-  cs:includesMountain cto:nan;
   cs:length 193.0;
   rdfs:label "Le Bourg-d'Oisans - Saint-Étienne" .
 
@@ -1726,7 +1650,6 @@ cto:Le_Bourg-dOisans_Valence_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Valence;
   cs:hasStart dbp:Le_Bourg-d%27Oisans;
-  cs:includesMountain cto:nan;
   cs:length 169.5;
   rdfs:label "Le Bourg-d'Oisans - Valence" .
 
@@ -1735,7 +1658,6 @@ cto:Le_Mans_Chateauroux_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Ch%C3%A2teauroux;
   cs:hasStart dbp:Le_Mans;
-  cs:includesMountain cto:nan;
   cs:length 218.0;
   rdfs:label "Le Mans - Châteauroux" .
 
@@ -1753,7 +1675,6 @@ cto:Le_Teil_Mont_Aigoual_Path a cs:Path;
   cs:elevationGain 3087;
   cs:hasEnd dbp:Mont_Aigoual;
   cs:hasStart dbp:Le_Teil;
-  cs:includesMountain cto:nan;
   cs:length 191.0;
   rdfs:label "Le Teil - Mont Aigoual" .
 
@@ -1762,7 +1683,6 @@ cto:Le_Touquet-Paris-Plage_Lille_Metropole_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Lille_Metropole;
   cs:hasStart dbp:Le_Touquet-Paris-Plage;
-  cs:includesMountain cto:nan;
   cs:length 163.5;
   rdfs:label "Le Touquet-Paris-Plage - Lille Metropole" .
 
@@ -1771,7 +1691,6 @@ cto:Leeds_Harrogate_%28United_Kingdom%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Harrogate%2CUnited_Kingdom;
   cs:hasStart dbp:Leeds;
-  cs:includesMountain cto:nan;
   cs:length 190.5;
   rdfs:label "Leeds - Harrogate (United Kingdom)" .
 
@@ -1780,7 +1699,6 @@ cto:Libourne_Saint-Emilion_Path a cs:Path;
   cs:elevationGain 239;
   cs:hasEnd dbp:Saint-%C3%89milion;
   cs:hasStart dbp:Libourne;
-  cs:includesMountain cto:nan;
   cs:length 30.8;
   rdfs:label "Libourne - Saint-Émilion" .
 
@@ -1789,7 +1707,6 @@ cto:Liege_%28Belgium%29_Seraing_%28Belgium%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Seraing%2CBelgium;
   cs:hasStart dbp:Li%C3%A8ge%2CBelgium;
-  cs:includesMountain cto:nan;
   cs:length 198.0;
   rdfs:label "Liège (Belgium) - Seraing (Belgium)" .
 
@@ -1798,7 +1715,6 @@ cto:Lille_Arenberg_Path a cs:Path;
   cs:elevationGain 537;
   cs:hasEnd dbp:Arenberg;
   cs:hasStart dbp:Lille;
-  cs:includesMountain cto:nan;
   cs:length 157.0;
   rdfs:label "Lille - Arenberg" .
 
@@ -1807,7 +1723,6 @@ cto:Limoges_Issoudun_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Issoudun;
   cs:hasStart dbp:Limoges;
-  cs:includesMountain cto:nan;
   cs:length 194.5;
   rdfs:label "Limoges - Issoudun" .
 
@@ -1835,7 +1750,6 @@ cto:Limoux_Montpellier_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Montpellier;
   cs:hasStart dbp:Limoux;
-  cs:includesMountain cto:nan;
   cs:length 192.5;
   rdfs:label "Limoux - Montpellier" .
 
@@ -1844,7 +1758,6 @@ cto:Livarot_Fougeres_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Foug%C3%A8res;
   cs:hasStart dbp:Livarot;
-  cs:includesMountain cto:nan;
   cs:length 190.5;
   rdfs:label "Livarot - Fougères" .
 
@@ -1853,7 +1766,6 @@ cto:Longjumeau_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Longjumeau;
-  cs:includesMountain cto:nan;
   cs:length 102.5;
   rdfs:label "Longjumeau - Paris (Champs-Élysées)" .
 
@@ -1862,7 +1774,6 @@ cto:Lorient_Mur-de-Bretagne_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:M%C3%BBr-de-Bretagne;
   cs:hasStart dbp:Lorient;
-  cs:includesMountain cto:nan;
   cs:length 172.5;
   rdfs:label "Lorient - Mûr-de-Bretagne" .
 
@@ -1871,7 +1782,6 @@ cto:Lorient_Pontivy_Path a cs:Path;
   cs:elevationGain 1539;
   cs:hasEnd dbp:Pontivy;
   cs:hasStart dbp:Lorient;
-  cs:includesMountain cto:nan;
   cs:length 182.9;
   rdfs:label "Lorient - Pontivy" .
 
@@ -1880,7 +1790,6 @@ cto:Lorient_Quimper_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Quimper;
   cs:hasStart dbp:Lorient;
-  cs:includesMountain cto:nan;
   cs:length 204.5;
   rdfs:label "Lorient - Quimper" .
 
@@ -1908,7 +1817,6 @@ cto:Lure_La_Planche_des_Belles_Filles_Path a cs:Path;
   cs:elevationGain 962;
   cs:hasEnd dbp:La_Planche_des_Belles_Filles;
   cs:hasStart dbp:Lure;
-  cs:includesMountain cto:nan;
   cs:length 36.2;
   rdfs:label "Lure - La Planche des Belles Filles" .
 
@@ -1935,7 +1843,6 @@ cto:Macon_Saint-Etienne_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Saint-%C3%89tienne;
   cs:hasStart dbp:M%C3%A2con;
-  cs:includesMountain cto:nan;
   cs:length 200.0;
   rdfs:label "Mâcon - Saint-Étienne" .
 
@@ -1944,7 +1851,6 @@ cto:Mantes-la-Jolie_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 788;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Mantes-la-Jolie;
-  cs:includesMountain cto:nan;
   cs:length 122.0;
   rdfs:label "Mantes-la-Jolie - Paris (Champs-Élysées)" .
 
@@ -1953,7 +1859,6 @@ cto:Marseille_La_Grande-Motte_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:La_Grande-Motte;
   cs:hasStart dbp:Marseille;
-  cs:includesMountain cto:nan;
   cs:length 196.5;
   rdfs:label "Marseille - La Grande-Motte" .
 
@@ -1962,7 +1867,6 @@ cto:Martigny_%28Switzerland%29_Bourg-Saint-Maurice_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Bourg-Saint-Maurice;
   cs:hasStart dbp:Martigny%2CSwitzerland;
-  cs:includesMountain cto:nan;
   cs:length 159.0;
   rdfs:label "Martigny (Switzerland) - Bourg-Saint-Maurice" .
 
@@ -1981,7 +1885,6 @@ cto:Mende_Valence_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Valence;
   cs:hasStart dbp:Mende;
-  cs:includesMountain cto:nan;
   cs:length 183.0;
   rdfs:label "Mende - Valence" .
 
@@ -2000,7 +1903,6 @@ cto:Millau_Carcassonne_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Carcassonne;
   cs:hasStart dbp:Millau;
-  cs:includesMountain cto:nan;
   cs:length 181.5;
   rdfs:label "Millau - Carcassonne" .
 
@@ -2009,7 +1911,6 @@ cto:Millau_Lavaur_Path a cs:Path;
   cs:elevationGain 2007;
   cs:hasEnd dbp:Lavaur;
   cs:hasStart dbp:Millau;
-  cs:includesMountain cto:nan;
   cs:length 168.0;
   rdfs:label "Millau - Lavaur" .
 
@@ -2027,7 +1928,6 @@ cto:Moirans-en-Montagne_Bern_%28Switzerland%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Bern%2CSwitzerland;
   cs:hasStart dbp:Moirans-en-Montagne;
-  cs:includesMountain cto:nan;
   cs:length 209.0;
   rdfs:label "Moirans-en-Montagne - Bern (Switzerland)" .
 
@@ -2036,7 +1936,6 @@ cto:Monaco_Brignoles_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Brignoles;
   cs:hasStart dbp:Monaco;
-  cs:includesMountain cto:nan;
   cs:length 187.0;
   rdfs:label "Monaco - Brignoles" .
 
@@ -2045,7 +1944,6 @@ cto:Mondorf-les-Bains_%28Luxembourg%29_Vittel_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Vittel;
   cs:hasStart dbp:Mondorf-les-Bains%2CLuxembourg;
-  cs:includesMountain cto:nan;
   cs:length 207.5;
   rdfs:label "Mondorf-les-Bains (Luxembourg) - Vittel" .
 
@@ -2065,7 +1963,6 @@ cto:Mont_Saint-Michel_Utah_Beach_%28Sainte-Marie-du-Mont%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Utah_Beach%2CSainte-Marie-du-Mont;
   cs:hasStart dbp:Mont_Saint-Michel;
-  cs:includesMountain cto:nan;
   cs:length 188.0;
   rdfs:label "Mont Saint-Michel - Utah Beach (Sainte-Marie-du-Mont)" .
 
@@ -2074,7 +1971,6 @@ cto:Montargis_Gueugnon_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Gueugnon;
   cs:hasStart dbp:Montargis;
-  cs:includesMountain cto:nan;
   cs:length 227.5;
   rdfs:label "Montargis - Gueugnon" .
 
@@ -2092,7 +1988,6 @@ cto:Montelimar_Villars-les-Dombes_%28Parc_des_Oiseaux%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Villars-les-Dombes%2CParc_des_Oiseaux;
   cs:hasStart dbp:Mont%C3%A9limar;
-  cs:includesMountain cto:nan;
   cs:length 208.5;
   rdfs:label "Montélimar - Villars-les-Dombes (Parc des Oiseaux)" .
 
@@ -2101,7 +1996,6 @@ cto:Montereau-Fault-Yonne_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Montereau-Fault-Yonne;
-  cs:includesMountain cto:nan;
   cs:length 164.0;
   rdfs:label "Montereau-Fault-Yonne - Paris (Champs-Élysées)" .
 
@@ -2110,7 +2004,6 @@ cto:Montgeron_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Montgeron;
-  cs:includesMountain cto:nan;
   cs:length 103.0;
   rdfs:label "Montgeron - Paris (Champs-Élysées)" .
 
@@ -2119,7 +2012,6 @@ cto:Montpellier_Albi_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Albi;
   cs:hasStart dbp:Montpellier;
-  cs:includesMountain cto:nan;
   cs:length 205.5;
   rdfs:label "Montpellier - Albi" .
 
@@ -2128,7 +2020,6 @@ cto:Morzine-Avoriaz_Saint-Jean-de-Maurienne_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Saint-Jean-de-Maurienne;
   cs:hasStart dbp:Morzine-Avoriaz;
-  cs:includesMountain cto:nan;
   cs:length 204.5;
   rdfs:label "Morzine-Avoriaz - Saint-Jean-de-Maurienne" .
 
@@ -2147,7 +2038,6 @@ cto:Mouilleron-Saint-Germain_La_Roche-sur-Yon_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:La_Roche-sur-Yon;
   cs:hasStart dbp:Mouilleron-Saint-Germain;
-  cs:includesMountain cto:nan;
   cs:length 182.5;
   rdfs:label "Mouilleron-Saint-Germain - La Roche-sur-Yon" .
 
@@ -2156,7 +2046,6 @@ cto:Mourenx_Libourne_Path a cs:Path;
   cs:elevationGain 1241;
   cs:hasEnd dbp:Libourne;
   cs:hasStart dbp:Mourenx;
-  cs:includesMountain cto:nan;
   cs:length 207.0;
   rdfs:label "Mourenx - Libourne" .
 
@@ -2214,7 +2103,6 @@ cto:Nice_Sisteron_Path a cs:Path;
   cs:elevationGain 2978;
   cs:hasEnd dbp:Sisteron;
   cs:hasStart dbp:Nice;
-  cs:includesMountain cto:nan;
   cs:length 198.0;
   rdfs:label "Nice - Sisteron" .
 
@@ -2223,7 +2111,6 @@ cto:Nimes_Carcassonne_Path a cs:Path;
   cs:elevationGain 1973;
   cs:hasEnd dbp:Carcassonne;
   cs:hasStart dbp:N%C3%AEmes;
-  cs:includesMountain cto:nan;
   cs:length 219.9;
   rdfs:label "Nîmes - Carcassonne" .
 
@@ -2232,7 +2119,6 @@ cto:Nimes_Nimes_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:N%C3%AEmes;
   cs:hasStart dbp:N%C3%AEmes;
-  cs:includesMountain cto:nan;
   cs:length 177.0;
   rdfs:label "Nîmes - Nîmes" .
 
@@ -2241,7 +2127,6 @@ cto:Noirmoutier-en-lIle_Fontenay-le-Comte_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Fontenay-le-Comte;
   cs:hasStart dbp:Noirmoutier-en-l%27%C3%8Ele;
-  cs:includesMountain cto:nan;
   cs:length 201.0;
   rdfs:label "Noirmoutier-en-l'Île - Fontenay-le-Comte" .
 
@@ -2250,7 +2135,6 @@ cto:Olonne-sur-Mer_Redon_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Redon;
   cs:hasStart dbp:Olonne-sur-Mer;
-  cs:includesMountain cto:nan;
   cs:length 198.0;
   rdfs:label "Olonne-sur-Mer - Redon" .
 
@@ -2279,7 +2163,6 @@ cto:Pamiers_Bagneres-de-Luchon_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Bagn%C3%A8res-de-Luchon;
   cs:hasStart dbp:Pamiers;
-  cs:includesMountain cto:nan;
   cs:length 187.5;
   rdfs:label "Pamiers - Bagnères-de-Luchon" .
 
@@ -2288,7 +2171,6 @@ cto:Paris_La_Defense_Arena_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 614;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Paris_La_D%C3%A9fense_Arena;
-  cs:includesMountain cto:nan;
   cs:length 116.0;
   rdfs:label "Paris La Défense Arena - Paris (Champs-Élysées)" .
 
@@ -2297,7 +2179,6 @@ cto:Passage_du_Gois_Mont_des_Alouettes_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Mont_des_Alouettes;
   cs:hasStart dbp:Passage_du_Gois;
-  cs:includesMountain cto:nan;
   cs:length 191.5;
   rdfs:label "Passage du Gois - Mont des Alouettes" .
 
@@ -2327,7 +2208,6 @@ cto:Pau_Col_du_Tourmalet_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Col_du_Tourmalet;
   cs:hasStart dbp:Pau;
-  cs:includesMountain cto:nan;
   cs:length 174.0;
   rdfs:label "Pau - Col du Tourmalet" .
 
@@ -2356,7 +2236,6 @@ cto:Pau_Lourdes_Path a cs:Path;
   cs:elevationGain 4000;
   cs:hasEnd dbp:Lourdes;
   cs:hasStart dbp:Pau;
-  cs:includesMountain cto:nan;
   cs:length 152.5;
   rdfs:label "Pau - Lourdes" .
 
@@ -2375,7 +2254,6 @@ cto:Pau_Pau_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Pau;
   cs:hasStart dbp:Pau;
-  cs:includesMountain cto:nan;
   cs:length 27.2;
   rdfs:label "Pau - Pau" .
 
@@ -2394,7 +2272,6 @@ cto:Perigueux_Bergerac_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Bergerac;
   cs:hasStart dbp:P%C3%A9rigueux;
-  cs:includesMountain cto:nan;
   cs:length 178.0;
   rdfs:label "Périgueux - Bergerac" .
 
@@ -2413,7 +2290,6 @@ cto:Pinerolo_%28Italy%29_Col_du_Galibier_Path a cs:Path;
   cs:elevationGain 4000;
   cs:hasEnd dbp:Col_du_Galibier;
   cs:hasStart dbp:Pinerolo%2CItaly;
-  cs:includesMountain cto:nan;
   cs:length 200.5;
   rdfs:label "Pinerolo (Italy) - Col du Galibier" .
 
@@ -2422,7 +2298,6 @@ cto:Pont_du_Gard_Gap_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Gap;
   cs:hasStart dbp:Pont_du_Gard;
-  cs:includesMountain cto:nan;
   cs:length 200.0;
   rdfs:label "Pont du Gard - Gap" .
 
@@ -2431,7 +2306,6 @@ cto:Pontarlier_Verbier_%28Switzerland%29_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Verbier%2CSwitzerland;
   cs:hasStart dbp:Pontarlier;
-  cs:includesMountain cto:nan;
   cs:length 207.5;
   rdfs:label "Pontarlier - Verbier (Switzerland)" .
 
@@ -2492,7 +2366,6 @@ cto:Porto-Vecchio_Bastia_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Bastia;
   cs:hasStart dbp:Porto-Vecchio;
-  cs:includesMountain cto:nan;
   cs:length 213.0;
   rdfs:label "Porto-Vecchio - Bastia" .
 
@@ -2501,7 +2374,6 @@ cto:Rambouillet_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Rambouillet;
-  cs:includesMountain cto:nan;
   cs:length 120.0, 128.0;
   rdfs:label "Rambouillet - Paris (Champs-Élysées)" .
 
@@ -2510,7 +2382,6 @@ cto:Redon_Fougeres_Path a cs:Path;
   cs:elevationGain 1354;
   cs:hasEnd dbp:Foug%C3%A8res;
   cs:hasStart dbp:Redon;
-  cs:includesMountain cto:nan;
   cs:length 150.4;
   rdfs:label "Redon - Fougères" .
 
@@ -2519,7 +2390,6 @@ cto:Reims_Nancy_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Nancy;
   cs:hasStart dbp:Reims;
-  cs:includesMountain cto:nan;
   cs:length 213.5;
   rdfs:label "Reims - Nancy" .
 
@@ -2537,7 +2407,6 @@ cto:Revel_Ax_3_Domaines_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Ax_3_Domaines;
   cs:hasStart dbp:Revel;
-  cs:includesMountain cto:nan;
   cs:length 184.5;
   rdfs:label "Revel - Ax 3 Domaines" .
 
@@ -2546,7 +2415,6 @@ cto:Rodez_Carcassonne_Path a cs:Path;
   cs:elevationGain 2416;
   cs:hasEnd dbp:Carcassonne;
   cs:hasStart dbp:Rodez;
-  cs:includesMountain cto:nan;
   cs:length 202.5;
   rdfs:label "Rodez - Carcassonne" .
 
@@ -2565,7 +2433,6 @@ cto:Rodez_Revel_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Revel;
   cs:hasStart dbp:Rodez;
-  cs:includesMountain cto:nan;
   cs:length 196.0;
   rdfs:label "Rodez - Revel" .
 
@@ -2574,7 +2441,6 @@ cto:Roskilde_Nyborg_%28Denmark%29_Path a cs:Path;
   cs:elevationGain 1102;
   cs:hasEnd dbp:Nyborg%2CDenmark;
   cs:hasStart dbp:Roskilde;
-  cs:includesMountain cto:nan;
   cs:length 202.5;
   rdfs:label "Roskilde - Nyborg (Denmark)" .
 
@@ -2583,7 +2449,6 @@ cto:Rotterdam_Brussels_%28Belgium%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Brussels%2CBelgium;
   cs:hasStart dbp:Rotterdam;
-  cs:includesMountain cto:nan;
   cs:length 223.5;
   rdfs:label "Rotterdam - Brussels (Belgium)" .
 
@@ -2592,7 +2457,6 @@ cto:Rouen_Saint-Quentin_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Saint-Quentin;
   cs:hasStart dbp:Rouen;
-  cs:includesMountain cto:nan;
   cs:length 196.5;
   rdfs:label "Rouen - Saint-Quentin" .
 
@@ -2601,7 +2465,6 @@ cto:Saint-Die-des-Vosges_Colmar_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Colmar;
   cs:hasStart dbp:Saint-Di%C3%A9-des-Vosges;
-  cs:includesMountain cto:nan;
   cs:length 175.5;
   rdfs:label "Saint-Dié-des-Vosges - Colmar" .
 
@@ -2610,7 +2473,6 @@ cto:Saint-Etienne_Brioude_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Brioude;
   cs:hasStart dbp:Saint-%C3%89tienne;
-  cs:includesMountain cto:nan;
   cs:length 170.5;
   rdfs:label "Saint-Étienne - Brioude" .
 
@@ -2639,7 +2501,6 @@ cto:Saint-Flour_Albi_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Albi;
   cs:hasStart dbp:Saint-Flour;
-  cs:includesMountain cto:nan;
   cs:length 217.5;
   rdfs:label "Saint-Flour - Albi" .
 
@@ -2657,7 +2518,6 @@ cto:Saint-Gaudens_Plateau_de_Beille_Path a cs:Path;
   cs:elevationGain 4000;
   cs:hasEnd dbp:Plateau_de_Beille;
   cs:hasStart dbp:Saint-Gaudens;
-  cs:includesMountain cto:nan;
   cs:length 168.5;
   rdfs:label "Saint-Gaudens - Plateau de Beille" .
 
@@ -2666,7 +2526,6 @@ cto:Saint-Gaudens_Tarbes_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Tarbes;
   cs:hasStart dbp:Saint-Gaudens;
-  cs:includesMountain cto:nan;
   cs:length 160.5;
   rdfs:label "Saint-Gaudens - Tarbes" .
 
@@ -2675,7 +2534,6 @@ cto:Saint-Gildas-des-Bois_Saint-Malo_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Saint-Malo;
   cs:hasStart dbp:Saint-Gildas-des-Bois;
-  cs:includesMountain cto:nan;
   cs:length 197.0;
   rdfs:label "Saint-Gildas-des-Bois - Saint-Malo" .
 
@@ -2693,7 +2551,6 @@ cto:Saint-Lo_Cherbourg-en-Cotentin_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Cherbourg-en-Cotentin;
   cs:hasStart dbp:Saint-L%C3%B4;
-  cs:includesMountain cto:nan;
   cs:length 183.0;
   rdfs:label "Saint-Lô - Cherbourg-en-Cotentin" .
 
@@ -2702,7 +2559,6 @@ cto:Saint-Paul-Trois-Chateaux_Cap_dAgde_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Cap_d%27Agde;
   cs:hasStart dbp:Saint-Paul-Trois-Ch%C3%A2teaux;
-  cs:includesMountain cto:nan;
   cs:length 217.0;
   rdfs:label "Saint-Paul-Trois-Châteaux - Cap d'Agde" .
 
@@ -2711,7 +2567,6 @@ cto:Saint-Paul-Trois-Chateaux_Gap_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Gap;
   cs:hasStart dbp:Saint-Paul-Trois-Ch%C3%A2teaux;
-  cs:includesMountain cto:nan;
   cs:length 162.5;
   rdfs:label "Saint-Paul-Trois-Châteaux - Gap" .
 
@@ -2720,7 +2575,6 @@ cto:Saint-Paul-Trois-Chateaux_Mende_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Mende;
   cs:hasStart dbp:Saint-Paul-Trois-Ch%C3%A2teaux;
-  cs:includesMountain cto:nan;
   cs:length 188.0;
   rdfs:label "Saint-Paul-Trois-Châteaux - Mende" .
 
@@ -2729,7 +2583,6 @@ cto:Saint-Paul-Trois-Chateaux_Nimes_Path a cs:Path;
   cs:elevationGain 1959;
   cs:hasEnd dbp:N%C3%AEmes;
   cs:hasStart dbp:Saint-Paul-Trois-Ch%C3%A2teaux;
-  cs:includesMountain cto:nan;
   cs:length 159.4;
   rdfs:label "Saint-Paul-Trois-Châteaux - Nîmes" .
 
@@ -2738,7 +2591,6 @@ cto:Saint-Pee-sur-Nivelle_Espelette_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Espelette;
   cs:hasStart dbp:Saint-P%C3%A9e-sur-Nivelle;
-  cs:includesMountain cto:nan;
   cs:length 31.0;
   rdfs:label "Saint-Pée-sur-Nivelle - Espelette" .
 
@@ -2758,7 +2610,6 @@ cto:Salies-de-Bearn_Bordeaux_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Bordeaux;
   cs:hasStart dbp:Salies-de-B%C3%A9arn;
-  cs:includesMountain cto:nan;
   cs:length 198.0;
   rdfs:label "Salies-de-Béarn - Bordeaux" .
 
@@ -2776,7 +2627,6 @@ cto:Samatan_Pau_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Pau;
   cs:hasStart dbp:Samatan;
-  cs:includesMountain cto:nan;
   cs:length 158.5;
   rdfs:label "Samatan - Pau" .
 
@@ -2785,7 +2635,6 @@ cto:Saumur_Limoges_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Limoges;
   cs:hasStart dbp:Saumur;
-  cs:includesMountain cto:nan;
   cs:length 237.5;
   rdfs:label "Saumur - Limoges" .
 
@@ -2803,7 +2652,6 @@ cto:Sevres_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:S%C3%A8vres;
-  cs:includesMountain cto:nan;
   cs:length 109.5;
   rdfs:label "Sèvres - Paris (Champs-Élysées)" .
 
@@ -2812,7 +2660,6 @@ cto:Sisteron_Bourg-les-Valence_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Bourg-l%C3%A8s-Valence;
   cs:hasStart dbp:Sisteron;
-  cs:includesMountain cto:nan;
   cs:length 184.5;
   rdfs:label "Sisteron - Bourg-lès-Valence" .
 
@@ -2821,7 +2668,6 @@ cto:Sisteron_Orcieres-Merlette_Path a cs:Path;
   cs:elevationGain 3200;
   cs:hasEnd dbp:Orci%C3%A8res-Merlette;
   cs:hasStart dbp:Sisteron;
-  cs:includesMountain cto:nan;
   cs:length 160.5;
   rdfs:label "Sisteron - Orcières-Merlette" .
 
@@ -2840,7 +2686,6 @@ cto:Station_des_Rousses_Morzine-Avoriaz_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Morzine-Avoriaz;
   cs:hasStart dbp:Station_des_Rousses;
-  cs:includesMountain cto:nan;
   cs:length 189.0;
   rdfs:label "Station des Rousses - Morzine-Avoriaz" .
 
@@ -2849,7 +2694,6 @@ cto:Tallard_Nimes_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:N%C3%AEmes;
   cs:hasStart dbp:Tallard;
-  cs:includesMountain cto:nan;
   cs:length 222.0;
   rdfs:label "Tallard - Nîmes" .
 
@@ -2876,7 +2720,6 @@ cto:Tonnerre_Vittel_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Vittel;
   cs:hasStart dbp:Tonnerre;
-  cs:includesMountain cto:nan;
   cs:length 211.5;
   rdfs:label "Tonnerre - Vittel" .
 
@@ -2894,7 +2737,6 @@ cto:Tournus_Station_des_Rousses_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Station_des_Rousses;
   cs:hasStart dbp:Tournus;
-  cs:includesMountain cto:nan;
   cs:length 165.5;
   rdfs:label "Tournus - Station des Rousses" .
 
@@ -2903,7 +2745,6 @@ cto:Tours_Chateauroux_Path a cs:Path;
   cs:elevationGain 926;
   cs:hasEnd dbp:Ch%C3%A2teauroux;
   cs:hasStart dbp:Tours;
-  cs:includesMountain cto:nan;
   cs:length 160.6;
   rdfs:label "Tours - Châteauroux" .
 
@@ -2912,7 +2753,6 @@ cto:Tours_Saint-Amand-Montrond_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Saint-Amand-Montrond;
   cs:hasStart dbp:Tours;
-  cs:includesMountain cto:nan;
   cs:length 173.0;
   rdfs:label "Tours - Saint-Amand-Montrond" .
 
@@ -2921,7 +2761,6 @@ cto:Trie-sur-Baise_Pau_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Pau;
   cs:hasStart dbp:Trie-sur-Ba%C3%AFse;
-  cs:includesMountain cto:nan;
   cs:length 171.0;
   rdfs:label "Trie-sur-Baïse - Pau" .
 
@@ -2930,7 +2769,6 @@ cto:Troyes_Nuits-Saint-Georges_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Nuits-Saint-Georges;
   cs:hasStart dbp:Troyes;
-  cs:includesMountain cto:nan;
   cs:length 213.5;
   rdfs:label "Troyes - Nuits-Saint-Georges" .
 
@@ -2939,7 +2777,6 @@ cto:Utrecht_%28Netherlands%29_Zeeland%5Bb%5D_%28Netherlands%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Netherlands;
   cs:hasStart dbp:Utrecht%2CNetherlands;
-  cs:includesMountain cto:nan;
   cs:length 166.0;
   rdfs:label "Utrecht (Netherlands) - Zeeland[b] (Netherlands)" .
 
@@ -2958,7 +2795,6 @@ cto:Vannes_Plumelec_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Plumelec;
   cs:hasStart dbp:Vannes;
-  cs:includesMountain cto:nan;
   cs:length 28.0;
   rdfs:label "Vannes - Plumelec" .
 
@@ -2967,7 +2803,6 @@ cto:Vatan_Saint-Fargeau_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Saint-Fargeau;
   cs:hasStart dbp:Vatan;
-  cs:includesMountain cto:nan;
   cs:length 192.0;
   rdfs:label "Vatan - Saint-Fargeau" .
 
@@ -2976,7 +2811,6 @@ cto:Vejle_Snderborg_%28Denmark%29_Path a cs:Path;
   cs:elevationGain 1285;
   cs:hasEnd dbp:S%C3%B8nderborg%2CDenmark;
   cs:hasStart dbp:Vejle;
-  cs:includesMountain cto:nan;
   cs:length 182.0;
   rdfs:label "Vejle - Sønderborg (Denmark)" .
 
@@ -2985,7 +2819,6 @@ cto:Versailles_Paris_%28Champs-Elysees%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Paris%2CChamps-%C3%89lys%C3%A9es;
   cs:hasStart dbp:Versailles;
-  cs:includesMountain cto:nan;
   cs:length 133.5;
   rdfs:label "Versailles - Paris (Champs-Élysées)" .
 
@@ -3004,7 +2837,6 @@ cto:Vesoul_Troyes_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Troyes;
   cs:hasStart dbp:Vesoul;
-  cs:includesMountain cto:nan;
   cs:length 216.0;
   rdfs:label "Vesoul - Troyes" .
 
@@ -3033,7 +2865,6 @@ cto:Vise_%28Belgium%29_Tournai_%28Belgium%29_Path a cs:Path;
   cs:elevationGain 0;
   cs:hasEnd dbp:Tournai%2CBelgium;
   cs:hasStart dbp:Vis%C3%A9%2CBelgium;
-  cs:includesMountain cto:nan;
   cs:length 207.5;
   rdfs:label "Visé (Belgium) - Tournai (Belgium)" .
 
@@ -3042,7 +2873,6 @@ cto:Vittel_Colmar_Path a cs:Path;
   cs:elevationGain 2500;
   cs:hasEnd dbp:Colmar;
   cs:hasStart dbp:Vittel;
-  cs:includesMountain cto:nan;
   cs:length 200.0;
   rdfs:label "Vittel - Colmar" .
 
