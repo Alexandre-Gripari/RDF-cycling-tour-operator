@@ -5,6 +5,9 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix dbp:  <http://dbpedia.org/resource/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 
 # Bike shapes
 
