@@ -1,5 +1,6 @@
 from rdflib import Graph
 
+
 class SparqlService:
     def __init__(self, ttl_files):
         self.graph = Graph()
@@ -16,8 +17,9 @@ class SparqlService:
     def execute_query(self, query):
         try:
             results = self.graph.query(query)
-            return [
-                {str(var): str(row[var]) for var in row.labels} for row in results
-            ]
+            return [{str(var): str(row[var]) for var in row.labels} for row in results]
         except Exception as e:
             raise Exception(f"Error executing query: {e}")
+
+    def get_graph(self):
+        return self.graph
