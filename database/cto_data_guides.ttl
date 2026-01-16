@@ -21,3 +21,53 @@ cto:Guide_Sophie a cs:Guide ;
     foaf:name "Sophie Moreau" ;
     foaf:mbox "sophie@cyclingtour.fr" ;
     cs:contact "+33-6-98765432" .
+
+cto:Guide_John a cs:Guide ;
+    foaf:name "John Smith" ;
+    foaf:mbox "john@cyclingtour.fr" ;
+    cs:contact "+33-6-98765432" .
+
+cto:Guide_Sophie a cs:Guide ;
+    foaf:name "Sophie Martin" ;
+    foaf:mbox "sophie.martin@cyclingtour.fr" ;
+    cs:contact "+33-6-12345678" .
+
+cto:Guide_Lucas a cs:Guide ;
+    foaf:name "Lucas Bernard" ;
+    foaf:mbox "lucas@cyclingtour.fr" ;
+    cs:contact "+33-6-87654321" .
+
+cto:Guide_Claire a cs:Guide ;
+    foaf:name "Claire Dupont" ;
+    foaf:mbox "claire@cyclingtour.fr" ;
+    cs:contact "+33-6-34567890" .
+
+cto:Guide_Thomas a cs:Guide ;
+    foaf:name "Thomas Leroy" ;
+    foaf:mbox "thomas@cyclingtour.fr" ;
+    cs:contact "+33-6-45678901" .
+
+cto:Guide_Anna a cs:Guide ;
+    foaf:name "Anna Moreau" ;
+    foaf:mbox "anna@cyclingtour.fr" ;
+    cs:contact "+33-6-56789012" .
+
+cto:Guide_Mathieu a cs:Guide ;
+    foaf:name "Mathieu Petit" ;
+    foaf:mbox "mathieu@cyclingtour.fr" ;
+    cs:contact "+33-6-67890123" .
+
+cto:Guide_Elise a cs:Guide ;
+    foaf:name "Elise Laurent" ;
+    foaf:mbox "elise@cyclingtour.fr" ;
+    cs:contact "+33-6-78901234" .
+
+cto:Guide_Paul a cs:Guide ;
+    foaf:name "Paul Durand" ;
+    foaf:mbox "paul@cyclingtour.fr" ;
+    cs:contact "+33-6-89012345" .
+
+cto:Guide_Julie a cs:Guide ;
+    foaf:name "Julie Blanc" ;
+    foaf:mbox "julie@cyclingtour.fr" ;
+    cs:contact "+33-6-90123456" .

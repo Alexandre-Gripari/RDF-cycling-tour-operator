@@ -1,108 +1,2182 @@
+@prefix cs: <http://data.cyclingtour.fr/schema#> .
 @prefix cto: <http://data.cyclingtour.fr/data#> .
-@prefix cs:  <http://data.cyclingtour.fr/schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cto:Stage1 a cs:TourStage ;
-    rdfs:label "Stage 1: Nice to Cannes" ;
-    cs:stageNumber 1 ;
-    cs:stagePath cto:Nice_Cannes_Path ;
-    cs:tourCapacity 12 ;
-    cs:guideAssigned cto:Guide_Pierre ;
-    cs:duration "PT8H"^^xsd:duration .
+cto:Package_Aix-en-Provence_Montpellier_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Aix-en-Provence" ;
+    cs:duration "P1DT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:includesStage cto:Stage_Aix-en-Provence_Montpellier,
+        cto:Stage_Albi_Toulouse,
+        cto:Stage_Montpellier_Albi ;
+    cs:pricePerDayTour 360.0 .
 
-cto:Stage2 a cs:TourStage ;
-    rdfs:label "Stage 2: Cannes to Antibes" ;
-    cs:stageNumber 2 ;
-    cs:stagePath cto:Cannes_Antibes_Path ;
-    cs:tourCapacity 12 ;
-    cs:guideAssigned cto:Guide_Pierre ;
-    cs:duration "PT8H"^^xsd:duration .
-
-cto:Stage3 a cs:TourStage ;
-    rdfs:label "Stage 3: Antibes to Grasse" ;
-    cs:stageNumber 3 ;
-    cs:stagePath cto:Antibes_Grasse_Path ;
-    cs:tourCapacity 10 ;
-    cs:guideAssigned cto:Guide_Marie ;
-    cs:duration "PT8H"^^xsd:duration .
-
-cto:Stage4 a cs:TourStage ;
-    rdfs:label "Stage 4: Tomblaine to La Super Planche des Belles Filles" ;
-    cs:stageNumber 4 ;
-    cs:stagePath cto:Tomblaine_SuperPlanche_Path ;
-    cs:tourCapacity 8 ;
+cto:Package_Arc-et-Senans_Besancon_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Arc-et-Senans" ;
+    cs:duration "PT21H"^^xsd:duration ;
     cs:guideAssigned cto:Guide_Lucas ;
-    cs:duration "PT10H"^^xsd:duration .
+    cs:includesStage cto:Stage_Arc-et-Senans_Besancon,
+        cto:Stage_Besancon_Oyonnax,
+        cto:Stage_Oyonnax_Le_Grand-Bornand ;
+    cs:pricePerDayTour 360.0 .
 
-cto:Stage5 a cs:TourStage ;
-    rdfs:label "Stage 5: Lille to Arenberg" ;
-    cs:stageNumber 5 ;
+cto:Package_Bergerac_Perigueux_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Bergerac" ;
+    cs:duration "P1DT1H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:includesStage cto:Stage_Bergerac_Perigueux,
+        cto:Stage_Perigueux_Bergerac ;
+    cs:pricePerDayTour 480.0 .
+
+cto:Package_Bourg-de-Peage_Gap_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Bourg-de-P%C3%A9age" ;
+    cs:duration "P1DT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:includesStage cto:Stage_Bourg-de-Peage_Gap,
+        cto:Stage_Gap_Pinerolo_%28Italy%29,
+        cto:Stage_Pinerolo_%28Italy%29_Col_du_Galibier ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Bourg-en-Bresse_Saint-Etienne_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Bourg-en-Bresse" ;
+    cs:duration "P1DT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:includesStage cto:Stage_Bourg-en-Bresse_Saint-Etienne,
+        cto:Stage_Mende_Valence,
+        cto:Stage_Saint-Etienne_Mende ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Brussels-Royal_Palace_%28Belgium%29_Brussels-Atomium_%28Belgium%29_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Belgium" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:includesStage cto:Stage_Brussels-Royal_Palace_%28Belgium%29_Brussels-Atomium_%28Belgium%29 ;
+    cs:pricePerDayTour 600.0 .
+
+cto:Package_Carcassonne_Montpellier_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Carcassonne" ;
+    cs:duration "P1DT17H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:includesStage cto:Stage_Albi_Toulouse,
+        cto:Stage_Carcassonne_Montpellier,
+        cto:Stage_Montpellier_Albi,
+        cto:Stage_Toulouse_Bagneres-de-Bigorre ;
+    cs:pricePerDayTour 480.0 .
+
+cto:Package_Cholet_Cholet_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Cholet" ;
+    cs:duration "PT5H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:includesStage cto:Stage_Cholet_Cholet ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Colmar_Besancon_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Colmar" ;
+    cs:duration "P1DT5H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:includesStage cto:Stage_Besancon_Oyonnax,
+        cto:Stage_Colmar_Besancon,
+        cto:Stage_Oyonnax_Le_Grand-Bornand ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Dole_Station_des_Rousses_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Dole" ;
+    cs:duration "P1DT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:includesStage cto:Stage_Dole_Station_des_Rousses,
+        cto:Stage_Morzine-Avoriaz_Saint-Jean-de-Maurienne,
+        cto:Stage_Station_des_Rousses_Morzine-Avoriaz ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Dusseldorf_%28Germany%29_Liege_%28Belgium%29_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at D%C3%BCsseldorf%2CGermany" ;
+    cs:duration "P1DT19H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:includesStage cto:Stage_Cambrai_Reims,
+        cto:Stage_Dusseldorf_%28Germany%29_Liege_%28Belgium%29,
+        cto:Stage_Liege_%28Belgium%29_Seraing_%28Belgium%29,
+        cto:Stage_Seraing_%28Belgium%29_Cambrai ;
+    cs:pricePerDayTour 480.0 .
+
+cto:Package_Eymet_Pau_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Eymet" ;
+    cs:duration "P1DT3H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:includesStage cto:Stage_Eymet_Pau,
+        cto:Stage_Lourdes_Hautacam,
+        cto:Stage_Pau_Lourdes ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Issoire_Saint-Flour_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Issoire" ;
+    cs:duration "P1DT20H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:includesStage cto:Stage_Albi_Toulouse,
+        cto:Stage_Issoire_Saint-Flour,
+        cto:Stage_Saint-Flour_Albi,
+        cto:Stage_Toulouse_Bagneres-de-Bigorre ;
+    cs:pricePerDayTour 480.0 .
+
+cto:Package_Liege_%28Belgium%29_Seraing_%28Belgium%29_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Li%C3%A8ge%2CBelgium" ;
+    cs:duration "P1DT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:includesStage cto:Stage_Cambrai_Reims,
+        cto:Stage_Liege_%28Belgium%29_Seraing_%28Belgium%29,
+        cto:Stage_Seraing_%28Belgium%29_Cambrai ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Limoux_Montpellier_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Limoux" ;
+    cs:duration "P1DT19H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:includesStage cto:Stage_Albi_Toulouse,
+        cto:Stage_Limoux_Montpellier,
+        cto:Stage_Montpellier_Albi,
+        cto:Stage_Toulouse_Bagneres-de-Bigorre ;
+    cs:pricePerDayTour 480.0 .
+
+cto:Package_Megeve_Morzine_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Meg%C3%A8ve" ;
+    cs:duration "P1DT16H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:includesStage cto:Stage_Megeve_Morzine,
+        cto:Stage_Morzine_Megeve ;
+    cs:pricePerDayTour 600.0 .
+
+cto:Package_Montpellier_Albi_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Montpellier" ;
+    cs:duration "P1DT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:includesStage cto:Stage_Albi_Toulouse,
+        cto:Stage_Montpellier_Albi,
+        cto:Stage_Toulouse_Bagneres-de-Bigorre ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Morzine_Megeve_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Morzine" ;
+    cs:duration "P1DT17H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:includesStage cto:Stage_Megeve_Morzine,
+        cto:Stage_Morzine_Megeve ;
+    cs:pricePerDayTour 600.0 .
+
+cto:Package_Nantua_Chambery_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Nantua" ;
+    cs:duration "P1DT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:includesStage cto:Stage_Chambery_Gap,
+        cto:Stage_Gap_Saint-Jean-de-Maurienne,
+        cto:Stage_Nantua_Chambery ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Nimes_Nimes_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at N%C3%AEmes" ;
+    cs:duration "P1DT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:includesStage cto:Stage_Carcassonne_Foix,
+        cto:Stage_Nimes_Carcassonne,
+        cto:Stage_Nimes_Nimes ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Olonne-sur-Mer_Redon_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Olonne-sur-Mer" ;
+    cs:duration "P1DT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:includesStage cto:Stage_Fougeres_Chartres,
+        cto:Stage_Olonne-sur-Mer_Redon,
+        cto:Stage_Redon_Fougeres ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Perigueux_Bergerac_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at P%C3%A9rigueux" ;
+    cs:duration "P1DT1H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:includesStage cto:Stage_Bergerac_Perigueux,
+        cto:Stage_Perigueux_Bergerac ;
+    cs:pricePerDayTour 480.0 .
+
+cto:Package_Porto-Vecchio_Bastia_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Porto-Vecchio" ;
+    cs:duration "P1DT4H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:includesStage cto:Stage_Ajaccio_Calvi,
+        cto:Stage_Bastia_Ajaccio,
+        cto:Stage_Porto-Vecchio_Bastia ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Rotterdam_Brussels_%28Belgium%29_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Rotterdam" ;
+    cs:duration "P1DT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:includesStage cto:Stage_Brussels_%28Belgium%29_Brussels_%28Belgium%29_via_Charleroi_%28Belgium%29,
+        cto:Stage_Brussels_Spa_%28Belgium%29,
+        cto:Stage_Rotterdam_Brussels_%28Belgium%29 ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Saint-Die-des-Vosges_Colmar_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Saint-Di%C3%A9-des-Vosges" ;
+    cs:duration "P1DT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:includesStage cto:Stage_Besancon_Oyonnax,
+        cto:Stage_Colmar_Besancon,
+        cto:Stage_Saint-Die-des-Vosges_Colmar ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Saint-Flour_Albi_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Saint-Flour" ;
+    cs:duration "P1DT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:includesStage cto:Stage_Albi_Toulouse,
+        cto:Stage_Saint-Flour_Albi,
+        cto:Stage_Toulouse_Bagneres-de-Bigorre ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Sallanches_Megeve_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Sallanches" ;
+    cs:duration "P1DT1H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:includesStage cto:Stage_Megeve_Morzine,
+        cto:Stage_Morzine_Megeve,
+        cto:Stage_Sallanches_Megeve ;
+    cs:pricePerDayTour 480.0 .
+
+cto:Package_Seraing_%28Belgium%29_Cambrai_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Seraing%2CBelgium" ;
+    cs:duration "P1DT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:includesStage cto:Stage_Cambrai_Reims,
+        cto:Stage_Reims_Nancy,
+        cto:Stage_Seraing_%28Belgium%29_Cambrai ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Tallard_Nimes_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Tallard" ;
+    cs:duration "P1DT12H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:includesStage cto:Stage_Carcassonne_Bagneres-de-Luchon,
+        cto:Stage_Nimes_Carcassonne,
+        cto:Stage_Tallard_Nimes ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Tournus_Station_des_Rousses_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Tournus" ;
+    cs:duration "P1DT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:includesStage cto:Stage_Morzine-Avoriaz_Saint-Jean-de-Maurienne,
+        cto:Stage_Station_des_Rousses_Morzine-Avoriaz,
+        cto:Stage_Tournus_Station_des_Rousses ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Vaison-la-Romaine_Gap_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Vaison-la-Romaine" ;
+    cs:duration "P1DT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:includesStage cto:Stage_Gap_Pinerolo_%28Italy%29,
+        cto:Stage_Pinerolo_%28Italy%29_Col_du_Galibier,
+        cto:Stage_Vaison-la-Romaine_Gap ;
+    cs:pricePerDayTour 360.0 .
+
+cto:Package_Vittel_Colmar_Tour a cs:TourPackage ;
+    rdfs:label "Tour Package: Start at Vittel" ;
+    cs:duration "P1DT16H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:includesStage cto:Stage_Besancon_Oyonnax,
+        cto:Stage_Colmar_Besancon,
+        cto:Stage_Oyonnax_Le_Grand-Bornand,
+        cto:Stage_Vittel_Colmar ;
+    cs:pricePerDayTour 480.0 .
+
+cto:Stage_Abbeville_Le_Havre a cs:TourStage ;
+    rdfs:label "Stage: Abbeville - Le Havre" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Abbeville_Le_Havre_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Abbeville_Rouen a cs:TourStage ;
+    rdfs:label "Stage: Abbeville - Rouen" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Abbeville_Rouen_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Aigle_%28Switzerland%29_Chatel a cs:TourStage ;
+    rdfs:label "Stage: Aigle (Switzerland) - Châtel" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Aigle_%28Switzerland%29_Chatel_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Aigurande_Super_Besse a cs:TourStage ;
+    rdfs:label "Stage: Aigurande - Super Besse" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Aigurande_Super_Besse_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Albertville_Col_du_Granon a cs:TourStage ;
+    rdfs:label "Stage: Albertville - Col du Granon" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Albertville_Col_du_Granon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Albertville_La_Rosiere a cs:TourStage ;
+    rdfs:label "Stage: Albertville - La Rosière" ;
+    cs:duration "PT5H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Albertville_La_Rosiere_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Albertville_Saint_Gervais-les-Bains a cs:TourStage ;
+    rdfs:label "Stage: Albertville - Saint Gervais-les-Bains" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Albertville_Saint_Gervais-les-Bains_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Albertville_Val_Thorens a cs:TourStage ;
+    rdfs:label "Stage: Albertville - Val Thorens" ;
+    cs:duration "PT3H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Albertville_Val_Thorens_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Albertville_Valence a cs:TourStage ;
+    rdfs:label "Stage: Albertville - Valence" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Albertville_Valence_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Andorra_la_Vella_Saint-Girons a cs:TourStage ;
+    rdfs:label "Stage: Andorra la Vella - Saint-Girons" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Andorra_la_Vella_Saint-Girons_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Annecy_Le_Grand-Bornand a cs:TourStage ;
+    rdfs:label "Stage: Annecy - Le Grand-Bornand" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Annecy_Le_Grand-Bornand_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Annecy_Semnoz a cs:TourStage ;
+    rdfs:label "Stage: Annecy - Semnoz" ;
+    cs:duration "PT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Annecy_Semnoz_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Antwerp_%28Belgium%29_Huy_%28Belgium%29 a cs:TourStage ;
+    rdfs:label "Stage: Antwerp (Belgium) - Huy (Belgium)" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Antwerp_%28Belgium%29_Huy_%28Belgium%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Arpajon-sur-Cere_Montauban a cs:TourStage ;
+    rdfs:label "Stage: Arpajon-sur-Cère - Montauban" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Arpajon-sur-Cere_Montauban_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Arras_Amiens a cs:TourStage ;
+    rdfs:label "Stage: Arras - Amiens" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Arras_Amiens_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Arras_Reims a cs:TourStage ;
+    rdfs:label "Stage: Arras - Reims" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Arras_Reims_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Arras_Roubaix a cs:TourStage ;
+    rdfs:label "Stage: Arras - Roubaix" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Arras_Roubaix_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Aurillac_Carmaux a cs:TourStage ;
+    rdfs:label "Stage: Aurillac - Carmaux" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Aurillac_Carmaux_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Avranches_Mont_Saint-Michel a cs:TourStage ;
+    rdfs:label "Stage: Avranches - Mont Saint-Michel" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Avranches_Mont_Saint-Michel_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bagneres-de-Luchon_Pau a cs:TourStage ;
+    rdfs:label "Stage: Bagnères-de-Luchon - Pau" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Bagneres-de-Luchon_Pau_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bagneres-de-Luchon_Peyragudes a cs:TourStage ;
+    rdfs:label "Stage: Bagnères-de-Luchon - Peyragudes" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Bagneres-de-Luchon_Peyragudes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bagneres-de-Luchon_Saint-Lary-Soulan_%28Col_de_Portet%29 a cs:TourStage ;
+    rdfs:label "Stage: Bagnères-de-Luchon - Saint-Lary-Soulan (Col de Portet)" ;
+    cs:duration "PT3H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Bagneres-de-Luchon_Saint-Lary-Soulan_%28Col_de_Portet%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Barcelona_Andorra-Arcalis_%28Andorra%29 a cs:TourStage ;
+    rdfs:label "Stage: Barcelona - Andorra-Arcalis (Andorra)" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Barcelona_Andorra-Arcalis_%28Andorra%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Belfort_Chalon-sur-Saone a cs:TourStage ;
+    rdfs:label "Stage: Belfort - Chalon-sur-Saône" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Belfort_Chalon-sur-Saone_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Belfort_Porrentruy_%28Switzerland%29 a cs:TourStage ;
+    rdfs:label "Stage: Belfort - Porrentruy (Switzerland)" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Belfort_Porrentruy_%28Switzerland%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bern_%28Switzerland%29_FinhautEmosson_%28Switzerland%29 a cs:TourStage ;
+    rdfs:label "Stage: Bern (Switzerland) - Finhaut–Émosson (Switzerland)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Bern_%28Switzerland%29_FinhautEmosson_%28Switzerland%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Binche_%28Belgium%29_Epernay a cs:TourStage ;
+    rdfs:label "Stage: Binche (Belgium) - Épernay" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Binche_%28Belgium%29_Epernay_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Binche_%28Belgium%29_Longwy a cs:TourStage ;
+    rdfs:label "Stage: Binche (Belgium) - Longwy" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Binche_%28Belgium%29_Longwy_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Blagnac_Brive-la-Gaillarde a cs:TourStage ;
+    rdfs:label "Stage: Blagnac - Brive-la-Gaillarde" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Blagnac_Brive-la-Gaillarde_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Blagnac_Rodez a cs:TourStage ;
+    rdfs:label "Stage: Blagnac - Rodez" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Blagnac_Rodez_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Blaye-les-Mines_Lavaur a cs:TourStage ;
+    rdfs:label "Stage: Blaye-les-Mines - Lavaur" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Blaye-les-Mines_Lavaur_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bonneval_Chartres a cs:TourStage ;
+    rdfs:label "Stage: Bonneval - Chartres" ;
+    cs:duration "PT3H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Bonneval_Chartres_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bordeaux_Pauillac a cs:TourStage ;
+    rdfs:label "Stage: Bordeaux - Pauillac" ;
+    cs:duration "PT3H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Bordeaux_Pauillac_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bourg-Saint-Maurice_Alpe_dHuez a cs:TourStage ;
+    rdfs:label "Stage: Bourg-Saint-Maurice - Alpe d'Huez" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Bourg-Saint-Maurice_Alpe_dHuez_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bourg-Saint-Maurice_Le_Grand-Bornand a cs:TourStage ;
+    rdfs:label "Stage: Bourg-Saint-Maurice - Le Grand-Bornand" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Bourg-Saint-Maurice_Le_Grand-Bornand_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bourg-de-Peage_Mende a cs:TourStage ;
+    rdfs:label "Stage: Bourg-de-Péage - Mende" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Bourg-de-Peage_Mende_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bourg-en-Bresse_Champagnole a cs:TourStage ;
+    rdfs:label "Stage: Bourg-en-Bresse - Champagnole" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Bourg-en-Bresse_Champagnole_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bourg-en-Bresse_Culoz a cs:TourStage ;
+    rdfs:label "Stage: Bourg-en-Bresse - Culoz" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Bourg-en-Bresse_Culoz_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bourgoin-Jallieu_Aubenas a cs:TourStage ;
+    rdfs:label "Stage: Bourgoin-Jallieu - Aubenas" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Bourgoin-Jallieu_Aubenas_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Brest_Landerneau a cs:TourStage ;
+    rdfs:label "Stage: Brest - Landerneau" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Brest_Landerneau_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Brest_Mur-de-Bretagne a cs:TourStage ;
+    rdfs:label "Stage: Brest - Mûr-de-Bretagne" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Brest_Mur-de-Bretagne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Briancon_Alpe_dHuez a cs:TourStage ;
+    rdfs:label "Stage: Briançon - Alpe d'Huez" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Briancon_Alpe_dHuez_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Briancon_Col_dIzoard a cs:TourStage ;
+    rdfs:label "Stage: Briançon - Col d'Izoard" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Briancon_Col_dIzoard_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Cagnes-sur-Mer_Marseille a cs:TourStage ;
+    rdfs:label "Stage: Cagnes-sur-Mer - Marseille" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Cagnes-sur-Mer_Marseille_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Cambridge_London_%28United_Kingdom%29 a cs:TourStage ;
+    rdfs:label "Stage: Cambridge - London (United Kingdom)" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Cambridge_London_%28United_Kingdom%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Cap_dAgde_Perpignan a cs:TourStage ;
+    rdfs:label "Stage: Cap d'Agde - Perpignan" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Cap_dAgde_Perpignan_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Carcassonne_Quillan a cs:TourStage ;
+    rdfs:label "Stage: Carcassonne - Quillan" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Carcassonne_Quillan_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Carhaix_Cap_Frehel a cs:TourStage ;
+    rdfs:label "Stage: Carhaix - Cap Fréhel" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Carhaix_Cap_Frehel_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Castelnau-Magnoac_Cahors a cs:TourStage ;
+    rdfs:label "Stage: Castelnau-Magnoac - Cahors" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Castelnau-Magnoac_Cahors_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Castres_Ax_3_Domaines a cs:TourStage ;
+    rdfs:label "Stage: Castres - Ax 3 Domaines" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Castres_Ax_3_Domaines_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Cazeres_Loudenvielle a cs:TourStage ;
+    rdfs:label "Stage: Cazères - Loudenvielle" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Cazeres_Loudenvielle_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Ceret_Andorra_la_Vella_%28Andorra%29 a cs:TourStage ;
+    rdfs:label "Stage: Céret - Andorra la Vella (Andorra)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Ceret_Andorra_la_Vella_%28Andorra%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Change_Laval a cs:TourStage ;
+    rdfs:label "Stage: Changé - Laval" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Change_Laval_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Chantilly_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Chantilly - Paris (Champs-Élysées)" ;
+    cs:duration "PT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Chantilly_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Chatel-Guyon_Puy_Mary a cs:TourStage ;
+    rdfs:label "Stage: Châtel-Guyon - Puy Mary" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Chatel-Guyon_Puy_Mary_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Chatelaillon-Plage_Poitiers a cs:TourStage ;
+    rdfs:label "Stage: Châtelaillon-Plage - Poitiers" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Chatelaillon-Plage_Poitiers_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Chatou_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Chatou - Paris (Champs-Élysées)" ;
+    cs:duration "PT5H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Chatou_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Chauvigny_Sarran a cs:TourStage ;
+    rdfs:label "Stage: Chauvigny - Sarran" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Chauvigny_Sarran_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Clermont-Ferrand_Lyon a cs:TourStage ;
+    rdfs:label "Stage: Clermont-Ferrand - Lyon" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Clermont-Ferrand_Lyon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Cluses_Tignes a cs:TourStage ;
+    rdfs:label "Stage: Cluses - Tignes" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Cluses_Tignes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Creteil_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Créteil - Paris (Champs-Élysées)" ;
+    cs:duration "PT5H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Creteil_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Cugnaux_Luz_Ardiden a cs:TourStage ;
+    rdfs:label "Stage: Cugnaux - Luz Ardiden" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Cugnaux_Luz_Ardiden_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Digne-les-Bains_Pra-Loup a cs:TourStage ;
+    rdfs:label "Stage: Digne-les-Bains - Pra-Loup" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Digne-les-Bains_Pra-Loup_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Dinan_Lisieux a cs:TourStage ;
+    rdfs:label "Stage: Dinan - Lisieux" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Dinan_Lisieux_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Dole_Lausanne_%28Switzerland%29 a cs:TourStage ;
+    rdfs:label "Stage: Dole - Lausanne (Switzerland)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Dole_Lausanne_%28Switzerland%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Dreux_Amiens a cs:TourStage ;
+    rdfs:label "Stage: Dreux - Amiens" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Dreux_Amiens_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Dunkirk_Calais a cs:TourStage ;
+    rdfs:label "Stage: Dunkirk - Calais" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Dunkirk_Calais_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_El_Pas_de_la_Casa_%28Andorra%29_Saint-Gaudens a cs:TourStage ;
+    rdfs:label "Stage: El Pas de la Casa (Andorra) - Saint-Gaudens" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:El_Pas_de_la_Casa_%28Andorra%29_Saint-Gaudens_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Embrun_Chorges a cs:TourStage ;
+    rdfs:label "Stage: Embrun - Chorges" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Embrun_Chorges_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Embrun_Salon-de-Provence a cs:TourStage ;
+    rdfs:label "Stage: Embrun - Salon-de-Provence" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Embrun_Salon-de-Provence_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Embrun_Valloire a cs:TourStage ;
+    rdfs:label "Stage: Embrun - Valloire" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Embrun_Valloire_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Epernay_Metz a cs:TourStage ;
+    rdfs:label "Stage: Épernay - Metz" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Epernay_Metz_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Epernay_Montargis a cs:TourStage ;
+    rdfs:label "Stage: Épernay - Montargis" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Epernay_Montargis_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Epernay_Nancy a cs:TourStage ;
+    rdfs:label "Stage: Épernay - Nancy" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Epernay_Nancy_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Escaldes-Engordany_%28Andorra%29_Revel a cs:TourStage ;
+    rdfs:label "Stage: Escaldes-Engordany (Andorra) - Revel" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Escaldes-Engordany_%28Andorra%29_Revel_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Evry_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Évry - Paris (Champs-Élysées)" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Evry_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Fougeres_Tours a cs:TourStage ;
+    rdfs:label "Stage: Fougères - Tours" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Fougeres_Tours_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Gap_Alpe_dHuez a cs:TourStage ;
+    rdfs:label "Stage: Gap - Alpe d'Huez" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Gap_Alpe_dHuez_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Gap_Privas a cs:TourStage ;
+    rdfs:label "Stage: Gap - Privas" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Gap_Privas_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Gerardmer_Mulhouse a cs:TourStage ;
+    rdfs:label "Stage: Gérardmer - Mulhouse" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Gerardmer_Mulhouse_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Girona_%28Spain%29_Barcelona_%28Spain%29 a cs:TourStage ;
+    rdfs:label "Stage: Girona (Spain) - Barcelona (Spain)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Girona_%28Spain%29_Barcelona_%28Spain%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Givors_Mont_Ventoux a cs:TourStage ;
+    rdfs:label "Stage: Givors - Mont Ventoux" ;
+    cs:duration "PT12H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Givors_Mont_Ventoux_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Granville_Angers a cs:TourStage ;
+    rdfs:label "Stage: Granville - Angers" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Granville_Angers_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Grenoble_Meribel_%28Col_de_la_Loze%29 a cs:TourStage ;
+    rdfs:label "Stage: Grenoble - Méribel (Col de la Loze)" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Grenoble_Meribel_%28Col_de_la_Loze%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Grenoble_Risoul a cs:TourStage ;
+    rdfs:label "Stage: Grenoble - Risoul" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Grenoble_Risoul_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Houilles_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Houilles - Paris (Champs-Élysées)" ;
+    cs:duration "PT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Houilles_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Ile_dOleron_Ile_de_Re a cs:TourStage ;
+    rdfs:label "Stage: Île d'Oléron - Île de Ré" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Ile_dOleron_Ile_de_Re_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_LIsle-Jourdain_Lac_de_Payolle a cs:TourStage ;
+    rdfs:label "Stage: L'Isle-Jourdain - Lac de Payolle" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:LIsle-Jourdain_Lac_de_Payolle_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_La_Baule_Sarzeau a cs:TourStage ;
+    rdfs:label "Stage: La Baule - Sarzeau" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:La_Baule_Sarzeau_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_La_Mure_Serre_Chevalier a cs:TourStage ;
+    rdfs:label "Stage: La Mure - Serre Chevalier" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:La_Mure_Serre_Chevalier_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_La_Tour-du-Pin_Villard-de-Lans a cs:TourStage ;
+    rdfs:label "Stage: La Tour-du-Pin - Villard-de-Lans" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:La_Tour-du-Pin_Villard-de-Lans_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Lacapelle-Marival_Rocamadour a cs:TourStage ;
+    rdfs:label "Stage: Lacapelle-Marival - Rocamadour" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Lacapelle-Marival_Rocamadour_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Laissac-Severac-lEglise_Le_Puy-en-Velay a cs:TourStage ;
+    rdfs:label "Stage: Laissac-Sévérac-l'Église - Le Puy-en-Velay" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Laissac-Severac-lEglise_Le_Puy-en-Velay_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Lannemezan_Plateau_de_Beille a cs:TourStage ;
+    rdfs:label "Stage: Lannemezan - Plateau de Beille" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Lannemezan_Plateau_de_Beille_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Le_Bourg-dOisans_Le_Grand-Bornand a cs:TourStage ;
+    rdfs:label "Stage: Le Bourg-d'Oisans - Le Grand-Bornand" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Le_Bourg-dOisans_Le_Grand-Bornand_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Le_Bourg-dOisans_Saint-Etienne a cs:TourStage ;
+    rdfs:label "Stage: Le Bourg-d'Oisans - Saint-Étienne" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Le_Bourg-dOisans_Saint-Etienne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Le_Bourg-dOisans_Valence a cs:TourStage ;
+    rdfs:label "Stage: Le Bourg-d'Oisans - Valence" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Le_Bourg-dOisans_Valence_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Le_Mans_Chateauroux a cs:TourStage ;
+    rdfs:label "Stage: Le Mans - Châteauroux" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Le_Mans_Chateauroux_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Le_Puy-en-Velay_Romans-sur-Isere a cs:TourStage ;
+    rdfs:label "Stage: Le Puy-en-Velay - Romans-sur-Isère" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Le_Puy-en-Velay_Romans-sur-Isere_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Le_Teil_Mont_Aigoual a cs:TourStage ;
+    rdfs:label "Stage: Le Teil - Mont Aigoual" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Le_Teil_Mont_Aigoual_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Le_Touquet-Paris-Plage_Lille_Metropole a cs:TourStage ;
+    rdfs:label "Stage: Le Touquet-Paris-Plage - Lille Metropole" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Le_Touquet-Paris-Plage_Lille_Metropole_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Leeds_Harrogate_%28United_Kingdom%29 a cs:TourStage ;
+    rdfs:label "Stage: Leeds - Harrogate (United Kingdom)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Leeds_Harrogate_%28United_Kingdom%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Libourne_Saint-Emilion a cs:TourStage ;
+    rdfs:label "Stage: Libourne - Saint-Émilion" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Libourne_Saint-Emilion_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Lille_Arenberg a cs:TourStage ;
+    rdfs:label "Stage: Lille - Arenberg" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
     cs:stagePath cto:Lille_Arenberg_Path ;
-    cs:tourCapacity 10 ;
-    cs:guideAssigned cto:Guide_Lucas ;
-    cs:duration "PT8H"^^xsd:duration .
+    cs:tourCapacity 10 .
 
-cto:Stage6 a cs:TourStage ;
-    rdfs:label "Stage 6: Dunkerque to Calais" ;
-    cs:stageNumber 6 ;
-    cs:stagePath cto:Dunkerque_Calais_Path ;
-    cs:tourCapacity 10 ;
-    cs:guideAssigned cto:Guide_Sophie ;
-    cs:duration "PT8H"^^xsd:duration .
-
-cto:Stage7 a cs:TourStage ;
-    rdfs:label "Stage 7: Aigle to Chatel" ;
-    cs:stageNumber 7 ;
-    cs:stagePath cto:Aigle_Chatel_Path ;
-    cs:tourCapacity 8 ;
-    cs:guideAssigned cto:Guide_Marie ;
-    cs:duration "PT10H"^^xsd:duration .
-
-cto:Stage8 a cs:TourStage ;
-    rdfs:label "Stage 8: Albertville to Col du Granon" ;
-    cs:stageNumber 8 ;
-    cs:stagePath cto:Albertville_Granon_Path ;
-    cs:tourCapacity 6 ;
-    cs:guideAssigned cto:Guide_Sophie ;
-    cs:duration "PT10H"^^xsd:duration .
-
-cto:Stage9 a cs:TourStage ;
-    rdfs:label "Stage 9: Granon to Briançon" ;
-    cs:stageNumber 9 ;
-    cs:stagePath cto:Granon_Briancon_Path ;
-    cs:tourCapacity 6 ;
-    cs:guideAssigned cto:Guide_Marie ;
-    cs:duration "PT10H"^^xsd:duration .
-
-cto:Stage10 a cs:TourStage ;
-    rdfs:label "Stage 10: Briançon to Alpe d'Huez" ;
-    cs:stageNumber 10 ;
-    cs:stagePath cto:Briancon_Alpe_Path ;
-    cs:tourCapacity 6 ;
-    cs:guideAssigned cto:Guide_Lucas ;
-    cs:duration "PT10H"^^xsd:duration .
-
-cto:CoastalEasyWeek a cs:TourPackage ;
-    rdfs:label "Coastal Easy Week" ;
-    cs:pricePerDayTour "625.00"^^xsd:decimal ;
-    cs:packageCapacity 12 ;
-    cs:includesStage cto:Stage1, cto:Stage2, cto:Stage3 ;
+cto:Stage_Limoges_Issoudun a cs:TourStage ;
+    rdfs:label "Stage: Limoges - Issoudun" ;
+    cs:duration "PT9H"^^xsd:duration ;
     cs:guideAssigned cto:Guide_Pierre ;
-    cs:duration "PT56H"^^xsd:duration .
+    cs:stagePath cto:Limoges_Issoudun_Path ;
+    cs:tourCapacity 10 .
 
-cto:MountainAdventureWeek a cs:TourPackage ;
-    rdfs:label "Mountain Adventure Week" ;
-    cs:pricePerDayTour "750.00"^^xsd:decimal ;
-    cs:packageCapacity 10 ;
-    cs:includesStage cto:Stage4, cto:Stage5, cto:Stage6 ;
+cto:Stage_Limoges_Le_Lioran a cs:TourStage ;
+    rdfs:label "Stage: Limoges - Le Lioran" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Limoges_Le_Lioran_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Limoux_Foix a cs:TourStage ;
+    rdfs:label "Stage: Limoux - Foix" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Limoux_Foix_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Livarot_Fougeres a cs:TourStage ;
+    rdfs:label "Stage: Livarot - Fougères" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Livarot_Fougeres_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Longjumeau_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Longjumeau - Paris (Champs-Élysées)" ;
+    cs:duration "PT5H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Longjumeau_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Lorient_Mur-de-Bretagne a cs:TourStage ;
+    rdfs:label "Stage: Lorient - Mûr-de-Bretagne" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Lorient_Mur-de-Bretagne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Lorient_Pontivy a cs:TourStage ;
+    rdfs:label "Stage: Lorient - Pontivy" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Lorient_Pontivy_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Lorient_Quimper a cs:TourStage ;
+    rdfs:label "Stage: Lorient - Quimper" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Lorient_Quimper_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Lourdes_Laruns a cs:TourStage ;
+    rdfs:label "Stage: Lourdes - Laruns" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Lourdes_Laruns_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Lure_La_Planche_des_Belles_Filles a cs:TourStage ;
+    rdfs:label "Stage: Lure - La Planche des Belles Filles" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Lure_La_Planche_des_Belles_Filles_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Lyon_Grand_Colombier a cs:TourStage ;
+    rdfs:label "Stage: Lyon - Grand Colombier" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Lyon_Grand_Colombier_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Macon_Bellegarde-sur-Valserine a cs:TourStage ;
+    rdfs:label "Stage: Mâcon - Bellegarde-sur-Valserine" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Macon_Bellegarde-sur-Valserine_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Macon_Saint-Etienne a cs:TourStage ;
+    rdfs:label "Stage: Mâcon - Saint-Étienne" ;
+    cs:duration "PT10H"^^xsd:duration ;
     cs:guideAssigned cto:Guide_Lucas ;
-    cs:duration "PT54H"^^xsd:duration .
+    cs:stagePath cto:Macon_Saint-Etienne_Path ;
+    cs:tourCapacity 10 .
 
-cto:AlpsChallengeWeek a cs:TourPackage ;
-    rdfs:label "Alps Challenge Week" ;
-    cs:pricePerDayTour "975.00"^^xsd:decimal ;
-    cs:packageCapacity 8 ;
-    cs:includesStage cto:Stage7, cto:Stage8, cto:Stage9, cto:Stage10 ;
+cto:Stage_Mantes-la-Jolie_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Mantes-la-Jolie - Paris (Champs-Élysées)" ;
+    cs:duration "PT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Mantes-la-Jolie_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Marseille_La_Grande-Motte a cs:TourStage ;
+    rdfs:label "Stage: Marseille - La Grande-Motte" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Marseille_La_Grande-Motte_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Martigny_%28Switzerland%29_Bourg-Saint-Maurice a cs:TourStage ;
+    rdfs:label "Stage: Martigny (Switzerland) - Bourg-Saint-Maurice" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Martigny_%28Switzerland%29_Bourg-Saint-Maurice_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Meribel_La_Roche-sur-Foron a cs:TourStage ;
+    rdfs:label "Stage: Méribel - La Roche-sur-Foron" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Meribel_La_Roche-sur-Foron_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Millau_Carcassonne a cs:TourStage ;
+    rdfs:label "Stage: Millau - Carcassonne" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Millau_Carcassonne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Millau_Lavaur a cs:TourStage ;
+    rdfs:label "Stage: Millau - Lavaur" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Millau_Lavaur_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Modane_Alpe_dHuez a cs:TourStage ;
+    rdfs:label "Stage: Modane - Alpe d'Huez" ;
+    cs:duration "PT5H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Modane_Alpe_dHuez_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Moirans-en-Montagne_Bern_%28Switzerland%29 a cs:TourStage ;
+    rdfs:label "Stage: Moirans-en-Montagne - Bern (Switzerland)" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Moirans-en-Montagne_Bern_%28Switzerland%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Monaco_Brignoles a cs:TourStage ;
+    rdfs:label "Stage: Monaco - Brignoles" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Monaco_Brignoles_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Mondorf-les-Bains_%28Luxembourg%29_Vittel a cs:TourStage ;
+    rdfs:label "Stage: Mondorf-les-Bains (Luxembourg) - Vittel" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Mondorf-les-Bains_%28Luxembourg%29_Vittel_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Mont_Saint-Michel_Utah_Beach_%28Sainte-Marie-du-Mont%29 a cs:TourStage ;
+    rdfs:label "Stage: Mont Saint-Michel - Utah Beach (Sainte-Marie-du-Mont)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Mont_Saint-Michel_Utah_Beach_%28Sainte-Marie-du-Mont%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Montargis_Gueugnon a cs:TourStage ;
+    rdfs:label "Stage: Montargis - Gueugnon" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Montargis_Gueugnon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Montelimar_Mont_Ventoux a cs:TourStage ;
+    rdfs:label "Stage: Montélimar - Mont Ventoux" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Montelimar_Mont_Ventoux_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Montelimar_Villars-les-Dombes_%28Parc_des_Oiseaux%29 a cs:TourStage ;
+    rdfs:label "Stage: Montélimar - Villars-les-Dombes (Parc des Oiseaux)" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Montelimar_Villars-les-Dombes_%28Parc_des_Oiseaux%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Montereau-Fault-Yonne_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Montereau-Fault-Yonne - Paris (Champs-Élysées)" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Montereau-Fault-Yonne_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Montgeron_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Montgeron - Paris (Champs-Élysées)" ;
+    cs:duration "PT5H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Montgeron_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Mouilleron-Saint-Germain_La_Roche-sur-Yon a cs:TourStage ;
+    rdfs:label "Stage: Mouilleron-Saint-Germain - La Roche-sur-Yon" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Mouilleron-Saint-Germain_La_Roche-sur-Yon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Mourenx_Libourne a cs:TourStage ;
+    rdfs:label "Stage: Mourenx - Libourne" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Mourenx_Libourne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Mulhouse_La_Planche_des_Belles_Filles a cs:TourStage ;
+    rdfs:label "Stage: Mulhouse - La Planche des Belles Filles" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Mulhouse_La_Planche_des_Belles_Filles_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Muret_Rodez a cs:TourStage ;
+    rdfs:label "Stage: Muret - Rodez" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Muret_Rodez_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Muret_Saint-Lary-Soulan_%28Col_de_Portet%29 a cs:TourStage ;
+    rdfs:label "Stage: Muret - Saint-Lary-Soulan (Col de Portet)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Muret_Saint-Lary-Soulan_%28Col_de_Portet%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Nice_Nice a cs:TourStage ;
+    rdfs:label "Stage: Nice - Nice" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Nice_Nice_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Nice_Sisteron a cs:TourStage ;
+    rdfs:label "Stage: Nice - Sisteron" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Nice_Sisteron_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Noirmoutier-en-lIle_Fontenay-le-Comte a cs:TourStage ;
+    rdfs:label "Stage: Noirmoutier-en-l'Île - Fontenay-le-Comte" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Noirmoutier-en-lIle_Fontenay-le-Comte_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Orchies_Boulogne-sur-Mer a cs:TourStage ;
+    rdfs:label "Stage: Orchies - Boulogne-sur-Mer" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Orchies_Boulogne-sur-Mer_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pamiers_Bagneres-de-Luchon a cs:TourStage ;
+    rdfs:label "Stage: Pamiers - Bagnères-de-Luchon" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Pamiers_Bagneres-de-Luchon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Paris_La_Defense_Arena_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Paris La Défense Arena - Paris (Champs-Élysées)" ;
+    cs:duration "PT6H"^^xsd:duration ;
     cs:guideAssigned cto:Guide_Sophie ;
-    cs:duration "PT80H"^^xsd:duration .
+    cs:stagePath cto:Paris_La_Defense_Arena_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Passage_du_Gois_Mont_des_Alouettes a cs:TourStage ;
+    rdfs:label "Stage: Passage du Gois - Mont des Alouettes" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Passage_du_Gois_Mont_des_Alouettes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pau_Bagneres-de-Luchon a cs:TourStage ;
+    rdfs:label "Stage: Pau - Bagnères-de-Luchon" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Pau_Bagneres-de-Luchon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pau_Cauterets a cs:TourStage ;
+    rdfs:label "Stage: Pau - Cauterets" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Pau_Cauterets_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pau_Col_du_Tourmalet a cs:TourStage ;
+    rdfs:label "Stage: Pau - Col du Tourmalet" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Pau_Col_du_Tourmalet_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pau_Hautacam a cs:TourStage ;
+    rdfs:label "Stage: Pau - Hautacam" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Pau_Hautacam_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pau_Laruns a cs:TourStage ;
+    rdfs:label "Stage: Pau - Laruns" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Pau_Laruns_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pau_Luz_Ardiden a cs:TourStage ;
+    rdfs:label "Stage: Pau - Luz Ardiden" ;
+    cs:duration "PT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Pau_Luz_Ardiden_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pau_Pau a cs:TourStage ;
+    rdfs:label "Stage: Pau - Pau" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Pau_Pau_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pau_Peyragudes a cs:TourStage ;
+    rdfs:label "Stage: Pau - Peyragudes" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Pau_Peyragudes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Perros-Guirec_Mur-de-Bretagne_%28Guerledan%29 a cs:TourStage ;
+    rdfs:label "Stage: Perros-Guirec - Mûr-de-Bretagne (Guerlédan)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Perros-Guirec_Mur-de-Bretagne_%28Guerledan%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pont_du_Gard_Gap a cs:TourStage ;
+    rdfs:label "Stage: Pont du Gard - Gap" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Pont_du_Gard_Gap_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pontarlier_Verbier_%28Switzerland%29 a cs:TourStage ;
+    rdfs:label "Stage: Pontarlier - Verbier (Switzerland)" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Pontarlier_Verbier_%28Switzerland%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Rambouillet_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Rambouillet - Paris (Champs-Élysées)" ;
+    cs:duration "PT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Rambouillet_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Rennes_Mur-de-Bretagne a cs:TourStage ;
+    rdfs:label "Stage: Rennes - Mûr-de-Bretagne" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Rennes_Mur-de-Bretagne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Revel_Ax_3_Domaines a cs:TourStage ;
+    rdfs:label "Stage: Revel - Ax 3 Domaines" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Revel_Ax_3_Domaines_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Rodez_Carcassonne a cs:TourStage ;
+    rdfs:label "Stage: Rodez - Carcassonne" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Rodez_Carcassonne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Rodez_Mende a cs:TourStage ;
+    rdfs:label "Stage: Rodez - Mende" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Rodez_Mende_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Rodez_Revel a cs:TourStage ;
+    rdfs:label "Stage: Rodez - Revel" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Rodez_Revel_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Roskilde_Nyborg_%28Denmark%29 a cs:TourStage ;
+    rdfs:label "Stage: Roskilde - Nyborg (Denmark)" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Roskilde_Nyborg_%28Denmark%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Rouen_Saint-Quentin a cs:TourStage ;
+    rdfs:label "Stage: Rouen - Saint-Quentin" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Rouen_Saint-Quentin_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Etienne_Brioude a cs:TourStage ;
+    rdfs:label "Stage: Saint-Étienne - Brioude" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Saint-Etienne_Brioude_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Etienne_Chamrousse a cs:TourStage ;
+    rdfs:label "Stage: Saint-Étienne - Chamrousse" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Saint-Etienne_Chamrousse_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Gaudens_Peyragudes a cs:TourStage ;
+    rdfs:label "Stage: Saint-Gaudens - Peyragudes" ;
+    cs:duration "PT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Saint-Gaudens_Peyragudes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Gaudens_Plateau_de_Beille a cs:TourStage ;
+    rdfs:label "Stage: Saint-Gaudens - Plateau de Beille" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Saint-Gaudens_Plateau_de_Beille_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Gaudens_Tarbes a cs:TourStage ;
+    rdfs:label "Stage: Saint-Gaudens - Tarbes" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Saint-Gaudens_Tarbes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Gildas-des-Bois_Saint-Malo a cs:TourStage ;
+    rdfs:label "Stage: Saint-Gildas-des-Bois - Saint-Malo" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Saint-Gildas-des-Bois_Saint-Malo_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Girons_Foix a cs:TourStage ;
+    rdfs:label "Stage: Saint-Girons - Foix" ;
+    cs:duration "PT5H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Saint-Girons_Foix_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Lo_Cherbourg-en-Cotentin a cs:TourStage ;
+    rdfs:label "Stage: Saint-Lô - Cherbourg-en-Cotentin" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Saint-Lo_Cherbourg-en-Cotentin_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Paul-Trois-Chateaux_Cap_dAgde a cs:TourStage ;
+    rdfs:label "Stage: Saint-Paul-Trois-Châteaux - Cap d'Agde" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Saint-Paul-Trois-Chateaux_Cap_dAgde_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Paul-Trois-Chateaux_Gap a cs:TourStage ;
+    rdfs:label "Stage: Saint-Paul-Trois-Châteaux - Gap" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Saint-Paul-Trois-Chateaux_Gap_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Paul-Trois-Chateaux_Mende a cs:TourStage ;
+    rdfs:label "Stage: Saint-Paul-Trois-Châteaux - Mende" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Saint-Paul-Trois-Chateaux_Mende_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Paul-Trois-Chateaux_Nimes a cs:TourStage ;
+    rdfs:label "Stage: Saint-Paul-Trois-Châteaux - Nîmes" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Saint-Paul-Trois-Chateaux_Nimes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Pee-sur-Nivelle_Espelette a cs:TourStage ;
+    rdfs:label "Stage: Saint-Pée-sur-Nivelle - Espelette" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Saint-Pee-sur-Nivelle_Espelette_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Pourcain-sur-Sioule_Lyon a cs:TourStage ;
+    rdfs:label "Stage: Saint-Pourçain-sur-Sioule - Lyon" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Saint-Pourcain-sur-Sioule_Lyon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Salies-de-Bearn_Bordeaux a cs:TourStage ;
+    rdfs:label "Stage: Salies-de-Béarn - Bordeaux" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Salies-de-Bearn_Bordeaux_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Samatan_Pau a cs:TourStage ;
+    rdfs:label "Stage: Samatan - Pau" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Samatan_Pau_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saumur_Limoges a cs:TourStage ;
+    rdfs:label "Stage: Saumur - Limoges" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Saumur_Limoges_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Sevres_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Sèvres - Paris (Champs-Élysées)" ;
+    cs:duration "PT5H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Sevres_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Sisteron_Bourg-les-Valence a cs:TourStage ;
+    rdfs:label "Stage: Sisteron - Bourg-lès-Valence" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Sisteron_Bourg-les-Valence_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Sisteron_Orcieres-Merlette a cs:TourStage ;
+    rdfs:label "Stage: Sisteron - Orcières-Merlette" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Sisteron_Orcieres-Merlette_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Sorgues_Malaucene a cs:TourStage ;
+    rdfs:label "Stage: Sorgues - Malaucène" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Sorgues_Malaucene_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Tarbes_Col_du_Tourmalet a cs:TourStage ;
+    rdfs:label "Stage: Tarbes - Col du Tourmalet" ;
+    cs:duration "PT6H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Tarbes_Col_du_Tourmalet_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Tomblaine_La_Planche_des_Belles_Filles a cs:TourStage ;
+    rdfs:label "Stage: Tomblaine - La Planche des Belles Filles" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Tomblaine_La_Planche_des_Belles_Filles_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Tonnerre_Vittel a cs:TourStage ;
+    rdfs:label "Stage: Tonnerre - Vittel" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Tonnerre_Vittel_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Tours_Chateauroux a cs:TourStage ;
+    rdfs:label "Stage: Tours - Châteauroux" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Tours_Chateauroux_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Tours_Saint-Amand-Montrond a cs:TourStage ;
+    rdfs:label "Stage: Tours - Saint-Amand-Montrond" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Tours_Saint-Amand-Montrond_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Trie-sur-Baise_Pau a cs:TourStage ;
+    rdfs:label "Stage: Trie-sur-Baïse - Pau" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Trie-sur-Baise_Pau_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Troyes_Nuits-Saint-Georges a cs:TourStage ;
+    rdfs:label "Stage: Troyes - Nuits-Saint-Georges" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Troyes_Nuits-Saint-Georges_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Utrecht_%28Netherlands%29_Zeeland%5Bb%5D_%28Netherlands%29 a cs:TourStage ;
+    rdfs:label "Stage: Utrecht (Netherlands) - Zeeland[b] (Netherlands)" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Utrecht_%28Netherlands%29_Zeeland%5Bb%5D_%28Netherlands%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Vannes_Plumelec a cs:TourStage ;
+    rdfs:label "Stage: Vannes - Plumelec" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Vannes_Plumelec_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Vatan_Saint-Fargeau a cs:TourStage ;
+    rdfs:label "Stage: Vatan - Saint-Fargeau" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Vatan_Saint-Fargeau_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Vejle_Snderborg_%28Denmark%29 a cs:TourStage ;
+    rdfs:label "Stage: Vejle - Sønderborg (Denmark)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Vejle_Snderborg_%28Denmark%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Versailles_Paris_%28Champs-Elysees%29 a cs:TourStage ;
+    rdfs:label "Stage: Versailles - Paris (Champs-Élysées)" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Versailles_Paris_%28Champs-Elysees%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Verviers_%28Belgium%29_Longwy a cs:TourStage ;
+    rdfs:label "Stage: Verviers (Belgium) - Longwy" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Verviers_%28Belgium%29_Longwy_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Vesoul_Troyes a cs:TourStage ;
+    rdfs:label "Stage: Vesoul - Troyes" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Vesoul_Troyes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Vielha_Val_dAran_%28Spain%29_Andorra-Arcalis_%28Andorra%29 a cs:TourStage ;
+    rdfs:label "Stage: Vielha Val d'Aran (Spain) - Andorra-Arcalis (Andorra)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Vielha_Val_dAran_%28Spain%29_Andorra-Arcalis_%28Andorra%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Vierzon_Le_Creusot a cs:TourStage ;
+    rdfs:label "Stage: Vierzon - Le Creusot" ;
+    cs:duration "PT12H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Vierzon_Le_Creusot_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Vise_%28Belgium%29_Tournai_%28Belgium%29 a cs:TourStage ;
+    rdfs:label "Stage: Visé (Belgium) - Tournai (Belgium)" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Vise_%28Belgium%29_Tournai_%28Belgium%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Vittel_La_Planche_des_Belles_Filles a cs:TourStage ;
+    rdfs:label "Stage: Vittel - La Planche des Belles Filles" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Vittel_La_Planche_des_Belles_Filles_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_York_Sheffield_%28United_Kingdom%29 a cs:TourStage ;
+    rdfs:label "Stage: York - Sheffield (United Kingdom)" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:York_Sheffield_%28United_Kingdom%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Aix-en-Provence_Montpellier a cs:TourStage ;
+    rdfs:label "Stage: Aix-en-Provence - Montpellier" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Aix-en-Provence_Montpellier_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Ajaccio_Calvi a cs:TourStage ;
+    rdfs:label "Stage: Ajaccio - Calvi" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Ajaccio_Calvi_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Arc-et-Senans_Besancon a cs:TourStage ;
+    rdfs:label "Stage: Arc-et-Senans - Besançon" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Arc-et-Senans_Besancon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bastia_Ajaccio a cs:TourStage ;
+    rdfs:label "Stage: Bastia - Ajaccio" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Bastia_Ajaccio_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bourg-de-Peage_Gap a cs:TourStage ;
+    rdfs:label "Stage: Bourg-de-Péage - Gap" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Bourg-de-Peage_Gap_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bourg-en-Bresse_Saint-Etienne a cs:TourStage ;
+    rdfs:label "Stage: Bourg-en-Bresse - Saint-Étienne" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Bourg-en-Bresse_Saint-Etienne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Brussels-Royal_Palace_%28Belgium%29_Brussels-Atomium_%28Belgium%29 a cs:TourStage ;
+    rdfs:label "Stage: Brussels-Royal Palace (Belgium) - Brussels-Atomium (Belgium)" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Brussels-Royal_Palace_%28Belgium%29_Brussels-Atomium_%28Belgium%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Brussels_%28Belgium%29_Brussels_%28Belgium%29_via_Charleroi_%28Belgium%29 a cs:TourStage ;
+    rdfs:label "Stage: Brussels (Belgium) - Brussels (Belgium) via Charleroi (Belgium)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Brussels_%28Belgium%29_Brussels_%28Belgium%29_via_Charleroi_%28Belgium%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Brussels_Spa_%28Belgium%29 a cs:TourStage ;
+    rdfs:label "Stage: Brussels - Spa (Belgium)" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Brussels_Spa_%28Belgium%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Carcassonne_Bagneres-de-Luchon a cs:TourStage ;
+    rdfs:label "Stage: Carcassonne - Bagnères-de-Luchon" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Carcassonne_Bagneres-de-Luchon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Carcassonne_Foix a cs:TourStage ;
+    rdfs:label "Stage: Carcassonne - Foix" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Carcassonne_Foix_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Carcassonne_Montpellier a cs:TourStage ;
+    rdfs:label "Stage: Carcassonne - Montpellier" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Carcassonne_Montpellier_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Chambery_Gap a cs:TourStage ;
+    rdfs:label "Stage: Chambéry - Gap" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Chambery_Gap_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Cholet_Cholet a cs:TourStage ;
+    rdfs:label "Stage: Cholet - Cholet" ;
+    cs:duration "PT2H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Cholet_Cholet_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Dole_Station_des_Rousses a cs:TourStage ;
+    rdfs:label "Stage: Dole - Station des Rousses" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Dole_Station_des_Rousses_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Dusseldorf_%28Germany%29_Liege_%28Belgium%29 a cs:TourStage ;
+    rdfs:label "Stage: Düsseldorf (Germany) - Liège (Belgium)" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Dusseldorf_%28Germany%29_Liege_%28Belgium%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Eymet_Pau a cs:TourStage ;
+    rdfs:label "Stage: Eymet - Pau" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Eymet_Pau_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Fougeres_Chartres a cs:TourStage ;
+    rdfs:label "Stage: Fougères - Chartres" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Fougeres_Chartres_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Gap_Saint-Jean-de-Maurienne a cs:TourStage ;
+    rdfs:label "Stage: Gap - Saint-Jean-de-Maurienne" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Gap_Saint-Jean-de-Maurienne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Issoire_Saint-Flour a cs:TourStage ;
+    rdfs:label "Stage: Issoire - Saint-Flour" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Issoire_Saint-Flour_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Limoux_Montpellier a cs:TourStage ;
+    rdfs:label "Stage: Limoux - Montpellier" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Limoux_Montpellier_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Lourdes_Hautacam a cs:TourStage ;
+    rdfs:label "Stage: Lourdes - Hautacam" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Lourdes_Hautacam_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Mende_Valence a cs:TourStage ;
+    rdfs:label "Stage: Mende - Valence" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Mende_Valence_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Nantua_Chambery a cs:TourStage ;
+    rdfs:label "Stage: Nantua - Chambéry" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Nantua_Chambery_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Nimes_Nimes a cs:TourStage ;
+    rdfs:label "Stage: Nîmes - Nîmes" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Nimes_Nimes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Olonne-sur-Mer_Redon a cs:TourStage ;
+    rdfs:label "Stage: Olonne-sur-Mer - Redon" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Olonne-sur-Mer_Redon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pau_Lourdes a cs:TourStage ;
+    rdfs:label "Stage: Pau - Lourdes" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Pau_Lourdes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Porto-Vecchio_Bastia a cs:TourStage ;
+    rdfs:label "Stage: Porto-Vecchio - Bastia" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Porto-Vecchio_Bastia_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Redon_Fougeres a cs:TourStage ;
+    rdfs:label "Stage: Redon - Fougères" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Redon_Fougeres_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Reims_Nancy a cs:TourStage ;
+    rdfs:label "Stage: Reims - Nancy" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Reims_Nancy_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Rotterdam_Brussels_%28Belgium%29 a cs:TourStage ;
+    rdfs:label "Stage: Rotterdam - Brussels (Belgium)" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Rotterdam_Brussels_%28Belgium%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Die-des-Vosges_Colmar a cs:TourStage ;
+    rdfs:label "Stage: Saint-Dié-des-Vosges - Colmar" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Saint-Die-des-Vosges_Colmar_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Etienne_Mende a cs:TourStage ;
+    rdfs:label "Stage: Saint-Étienne - Mende" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Saint-Etienne_Mende_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Sallanches_Megeve a cs:TourStage ;
+    rdfs:label "Stage: Sallanches - Megève" ;
+    cs:duration "PT1H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:stagePath cto:Sallanches_Megeve_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Tallard_Nimes a cs:TourStage ;
+    rdfs:label "Stage: Tallard - Nîmes" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Tallard_Nimes_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Tournus_Station_des_Rousses a cs:TourStage ;
+    rdfs:label "Stage: Tournus - Station des Rousses" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Tournus_Station_des_Rousses_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Vaison-la-Romaine_Gap a cs:TourStage ;
+    rdfs:label "Stage: Vaison-la-Romaine - Gap" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:stagePath cto:Vaison-la-Romaine_Gap_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Vittel_Colmar a cs:TourStage ;
+    rdfs:label "Stage: Vittel - Colmar" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Vittel_Colmar_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Bergerac_Perigueux a cs:TourStage ;
+    rdfs:label "Stage: Bergerac - Périgueux" ;
+    cs:duration "PT3H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Bergerac_Perigueux_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Gap_Pinerolo_%28Italy%29 a cs:TourStage ;
+    rdfs:label "Stage: Gap - Pinerolo (Italy)" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Gap_Pinerolo_%28Italy%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Liege_%28Belgium%29_Seraing_%28Belgium%29 a cs:TourStage ;
+    rdfs:label "Stage: Liège (Belgium) - Seraing (Belgium)" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Liege_%28Belgium%29_Seraing_%28Belgium%29_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Morzine-Avoriaz_Saint-Jean-de-Maurienne a cs:TourStage ;
+    rdfs:label "Stage: Morzine-Avoriaz - Saint-Jean-de-Maurienne" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:stagePath cto:Morzine-Avoriaz_Saint-Jean-de-Maurienne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Nimes_Carcassonne a cs:TourStage ;
+    rdfs:label "Stage: Nîmes - Carcassonne" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Nimes_Carcassonne_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Perigueux_Bergerac a cs:TourStage ;
+    rdfs:label "Stage: Périgueux - Bergerac" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:stagePath cto:Perigueux_Bergerac_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Pinerolo_%28Italy%29_Col_du_Galibier a cs:TourStage ;
+    rdfs:label "Stage: Pinerolo (Italy) - Col du Galibier" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Pinerolo_%28Italy%29_Col_du_Galibier_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Saint-Flour_Albi a cs:TourStage ;
+    rdfs:label "Stage: Saint-Flour - Albi" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Saint-Flour_Albi_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Station_des_Rousses_Morzine-Avoriaz a cs:TourStage ;
+    rdfs:label "Stage: Station des Rousses - Morzine-Avoriaz" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:stagePath cto:Station_des_Rousses_Morzine-Avoriaz_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Cambrai_Reims a cs:TourStage ;
+    rdfs:label "Stage: Cambrai - Reims" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:stagePath cto:Cambrai_Reims_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Colmar_Besancon a cs:TourStage ;
+    rdfs:label "Stage: Colmar - Besançon" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Colmar_Besancon_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Megeve_Morzine a cs:TourStage ;
+    rdfs:label "Stage: Megève - Morzine" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Megeve_Morzine_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Morzine_Megeve a cs:TourStage ;
+    rdfs:label "Stage: Morzine - Megève" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:stagePath cto:Morzine_Megeve_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Oyonnax_Le_Grand-Bornand a cs:TourStage ;
+    rdfs:label "Stage: Oyonnax - Le Grand-Bornand" ;
+    cs:duration "PT7H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:stagePath cto:Oyonnax_Le_Grand-Bornand_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Seraing_%28Belgium%29_Cambrai a cs:TourStage ;
+    rdfs:label "Stage: Seraing (Belgium) - Cambrai" ;
+    cs:duration "PT11H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:stagePath cto:Seraing_%28Belgium%29_Cambrai_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Besancon_Oyonnax a cs:TourStage ;
+    rdfs:label "Stage: Besançon - Oyonnax" ;
+    cs:duration "PT9H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Besancon_Oyonnax_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Montpellier_Albi a cs:TourStage ;
+    rdfs:label "Stage: Montpellier - Albi" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Lucas ;
+    cs:stagePath cto:Montpellier_Albi_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Toulouse_Bagneres-de-Bigorre a cs:TourStage ;
+    rdfs:label "Stage: Toulouse - Bagnères-de-Bigorre" ;
+    cs:duration "PT10H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:stagePath cto:Toulouse_Bagneres-de-Bigorre_Path ;
+    cs:tourCapacity 10 .
+
+cto:Stage_Albi_Toulouse a cs:TourStage ;
+    rdfs:label "Stage: Albi - Toulouse" ;
+    cs:duration "PT8H"^^xsd:duration ;
+    cs:guideAssigned cto:Guide_Anna ;
+    cs:stagePath cto:Albi_Toulouse_Path ;
+    cs:tourCapacity 10 .
+
+cto:Guide_Julie a cs:Guide ;
+    cs:contact "+33-6-90123456" ;
+    foaf:mbox "julie@cyclingtour.fr" ;
+    foaf:name "Julie Blanc" .
+
+cto:Guide_Marie a cs:Guide ;
+    cs:contact "+33-6-87654321" ;
+    foaf:mbox "marie@cyclingtour.fr" ;
+    foaf:name "Marie Leclerc" .
+
+cto:Guide_Paul a cs:Guide ;
+    cs:contact "+33-6-89012345" ;
+    foaf:mbox "paul@cyclingtour.fr" ;
+    foaf:name "Paul Durand" .
+
+cto:Guide_Mathieu a cs:Guide ;
+    cs:contact "+33-6-67890123" ;
+    foaf:mbox "mathieu@cyclingtour.fr" ;
+    foaf:name "Mathieu Petit" .
+
+cto:Guide_Claire a cs:Guide ;
+    cs:contact "+33-6-34567890" ;
+    foaf:mbox "claire@cyclingtour.fr" ;
+    foaf:name "Claire Dupont" .
+
+cto:Guide_Thomas a cs:Guide ;
+    cs:contact "+33-6-45678901" ;
+    foaf:mbox "thomas@cyclingtour.fr" ;
+    foaf:name "Thomas Leroy" .
+
+cto:Guide_Sophie a cs:Guide ;
+    cs:contact "+33-6-12345678",
+        "+33-6-98765432" ;
+    foaf:mbox "sophie.martin@cyclingtour.fr",
+        "sophie@cyclingtour.fr" ;
+    foaf:name "Sophie Martin",
+        "Sophie Moreau" .
+
+cto:Guide_John a cs:Guide ;
+    cs:contact "+33-6-98765432" ;
+    foaf:mbox "john@cyclingtour.fr" ;
+    foaf:name "John Smith" .
+
+cto:Guide_Lucas a cs:Guide ;
+    cs:contact "+33-6-45678901",
+        "+33-6-87654321" ;
+    foaf:mbox "lucas@cyclingtour.fr" ;
+    foaf:name "Lucas Bernard" .
+
+cto:Guide_Anna a cs:Guide ;
+    cs:contact "+33-6-56789012" ;
+    foaf:mbox "anna@cyclingtour.fr" ;
+    foaf:name "Anna Moreau" .
+
+cto:Guide_Elise a cs:Guide ;
+    cs:contact "+33-6-78901234" ;
+    foaf:mbox "elise@cyclingtour.fr" ;
+    foaf:name "Elise Laurent" .
+
+cto:Guide_Pierre a cs:Guide ;
+    cs:contact "+33-6-12345678" ;
+    foaf:mbox "pierre@cyclingtour.fr" ;
+    foaf:name "Pierre Dupont" .
+
