@@ -46,6 +46,7 @@ class EnrichEndpoint(Resource):
     def post(self):
         """Enrich local data with remote DBpedia data"""
         local_query = request.json.get('query')
+        requested_fields = request.json.get('fields')
         if not local_query:
             return {'error': 'Query is required'}, 400
         
@@ -57,8 +58,11 @@ class EnrichEndpoint(Resource):
                 uri = row.get('sameAs')
                 if uri:
                     uris_to_fetch.add(uri)
-            
-            remote_data = dbpedia_service.get_enriched_data_bulk(list(uris_to_fetch))
+                    
+            remote_data = dbpedia_service.get_enriched_data_bulk(
+                list(uris_to_fetch), 
+                fields=requested_fields
+            )
             
             final_response = []
             for row in local_results:
