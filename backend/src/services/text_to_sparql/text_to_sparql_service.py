@@ -1,3 +1,4 @@
+from time import time
 from google import genai
 from google.genai import types
 from .data_summary import get_rdf_data_summary
@@ -16,7 +17,7 @@ class TextToSparqlService:
         sparql_query = self.call_gemini_api(prompt)
         return sparql_query
 
-    def call_gemini_api(self, prompt, model="gemini-3-flash-preview", temperature=0.0):
+    def call_gemini_api(self, prompt, model="gemini-2.5-flash-lite", temperature=0.0):
         try:
             response = self.client.models.generate_content(
                 model=model,

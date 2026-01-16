@@ -134,8 +134,6 @@ class TextToSparqlEndpoint(Resource):
         try:
             print("Received Text:" + text)
             sparql_query = text_to_sparql_service.text_to_sparql(text)
-            return {
-                "sparql_query": sparql_query,
-            }, 200
+            return sparql_query, 200
         except Exception as e:
             return {"error": str(e)}, 500
