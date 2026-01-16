@@ -25,10 +25,8 @@ class ChatBotService:
                 self.documents = data['documents']
                 self.metadata = data['metadata']
                 self.embeddings = data['embeddings']
-            print("Index loaded successfully.")
             return
 
-        print("Building index from Graph (this may take a while)...")
         query = "SELECT DISTINCT ?s WHERE { ?s ?p ?o }"
         subjects = self.graph.query(query)
         
@@ -60,7 +58,6 @@ class ChatBotService:
         if self.documents:
             self.embeddings = self.model.encode(self.documents, convert_to_tensor=True)
 
-        print(f"Saving index to {self.cache_file}...")
         with open(self.cache_file, 'wb') as f:
             pickle.dump({
                 'documents': self.documents,

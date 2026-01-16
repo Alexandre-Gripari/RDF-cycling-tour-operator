@@ -24,15 +24,14 @@ ttl_files = [
     for file in os.listdir(database_folder)
     if file.endswith(".ttl")
 ]
-
-sparql_service = SparqlService(ttl_files)
-dbpedia_service = DbpediaService()
 gemini_key = os.getenv("GEMINI_API_KEY")
-chatbot_service = ChatBotService(sparql_service.graph, gemini_key)
 
 with open(os.path.join(database_folder, "cto_schema.ttl"), "r", encoding="utf-8") as f:
     schema_content = f.read()
 
+sparql_service = SparqlService(ttl_files)
+dbpedia_service = DbpediaService()
+chatbot_service = ChatBotService(sparql_service.graph, gemini_key)
 text_to_sparql_service = TextToSparqlService(
     sparql_service.get_graph(), schema_content, gemini_key
 )
