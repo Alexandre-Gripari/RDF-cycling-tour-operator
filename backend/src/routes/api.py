@@ -33,14 +33,8 @@ chatbot_service = ChatBotService(sparql_service.graph, gemini_key)
 with open(os.path.join(database_folder, "cto_schema.ttl"), "r", encoding="utf-8") as f:
     schema_content = f.read()
 
-API_KEY = os.environ.get("GOOGLE_API_KEY")
-print("API Key Loaded:" + str(API_KEY is not None))
-if not API_KEY:
-    raise Exception("GOOGLE_API_KEY environment variable not set.")
-
-
 text_to_sparql_service = TextToSparqlService(
-    sparql_service.get_graph(), schema_content, API_KEY
+    sparql_service.get_graph(), schema_content, gemini_key
 )
 
 query_model = api.model(
