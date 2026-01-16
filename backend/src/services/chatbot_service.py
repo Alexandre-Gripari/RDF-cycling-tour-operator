@@ -1,20 +1,34 @@
+import os
+import pickle
 from sentence_transformers import SentenceTransformer, util
 import torch
 from google import genai
 
 class ChatBotService:
-    def __init__(self, graph, api_key):
+    def __init__(self, graph, api_key, cache_file="search_index.pkl"):
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
         self.graph = graph
         self.documents = []
         self.metadata = []
         self.embeddings = None
+        self.cache_file = cache_file
         
         self.client = genai.Client(api_key=api_key)
 
         self._build_index()
 
     def _build_index(self):
+        if os.path.exists(self.cache_file):
+            print(f"Loading index from {self.cache_file}...")
+            with open(self.cache_file, 'rb') as f:
+                data = pickle.load(f)
+                self.documents = data['documents']
+                self.metadata = data['metadata']
+                self.embeddings = data['embeddings']
+            print("Index loaded successfully.")
+            return
+
+        print("Building index from Graph (this may take a while)...")
         query = "SELECT DISTINCT ?s WHERE { ?s ?p ?o }"
         subjects = self.graph.query(query)
         
@@ -46,11 +60,22 @@ class ChatBotService:
         if self.documents:
             self.embeddings = self.model.encode(self.documents, convert_to_tensor=True)
 
+        print(f"Saving index to {self.cache_file}...")
+        with open(self.cache_file, 'wb') as f:
+            pickle.dump({
+                'documents': self.documents,
+                'metadata': self.metadata,
+                'embeddings': self.embeddings
+            }, f)
+
     def search(self, user_query, top_k=3):
         if self.embeddings is None or not self.documents:
             return []
 
         query_embedding = self.model.encode(user_query, convert_to_tensor=True)
+        if self.embeddings.device != query_embedding.device:
+            query_embedding = query_embedding.to(self.embeddings.device)
+            
         scores = util.cos_sim(query_embedding, self.embeddings)[0]
         top_results = torch.topk(scores, k=min(top_k, len(self.documents)))
 
@@ -75,9 +100,8 @@ class ChatBotService:
         Question: {user_query}
         """
         
-        # Appel via le nouveau client SDK
         response = self.client.models.generate_content(
-            model='gemini-1.5-flash',
+            model='gemini-3-flash-preview',
             contents=prompt
         )
         return response.text

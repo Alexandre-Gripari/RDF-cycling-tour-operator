@@ -5,3 +5,4 @@ data/
 .venv/
 __pycache__/
 uv.lock
+search_index.pkl
