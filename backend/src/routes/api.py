@@ -2,7 +2,11 @@ from flask import Blueprint, request, jsonify
 from flask_restx import Api, Resource, fields
 from services.sparql_service import SparqlService
 from services.dbpedia_service import DbpediaService
+from services.chatbot_service import ChatBotService
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
 
 api_blueprint = Blueprint('api', __name__, url_prefix='/api')
 api = Api(api_blueprint, title="Cycling Tour Operator API", version="1.0", description="API for querying RDF data",  doc='/docs')
@@ -16,6 +20,8 @@ ttl_files = [
 
 sparql_service = SparqlService(ttl_files)
 dbpedia_service = DbpediaService()
+gemini_key = os.getenv("GEMINI_API_KEY")
+chatbot_service = ChatBotService(sparql_service.graph, gemini_key)
 
 query_model = api.model('Query', {
     'query': fields.String(required=True, description='SPARQL query to execute')
@@ -23,6 +29,10 @@ query_model = api.model('Query', {
 
 enrich_model = api.model('EnrichQuery', {
     'query': fields.String(required=True, description='SPARQL query to fetch local data')
+})
+
+nl_query_model = api.model('NaturalLanguageQuery', {
+    'question': fields.String(required=True, description='User question in natural language (e.g. "Where does the tour start?")')
 })
 
 @api.route('/query')
@@ -58,7 +68,7 @@ class EnrichEndpoint(Resource):
                 uri = row.get('sameAs')
                 if uri:
                     uris_to_fetch.add(uri)
-                    
+
             remote_data = dbpedia_service.get_enriched_data_bulk(
                 list(uris_to_fetch), 
                 fields=requested_fields
@@ -80,3 +90,16 @@ class EnrichEndpoint(Resource):
         except Exception as e:
             return {'error': str(e)}, 500
 
+@api.route('/ask')
+class NaturalLanguageEndpoint(Resource):
+    @api.expect(nl_query_model)
+    def post(self):
+        question = request.json.get('question')
+        if not question:
+            return {'error': 'Question is required'}, 400
+        
+        try:
+            answer = chatbot_service.ask_gemini(question)
+            return {'question': question, 'answer': answer}, 200
+        except Exception as e:
+            return {'error': str(e)}, 500
