@@ -52,6 +52,10 @@ enrich_model = api.model('EnrichQuery', {
     'query': fields.String(required=True, description='SPARQL query to fetch local data')
 })
 
+text_to_sqarl_model = api.model("TextToSparql", {
+    "text": fields.String(required=True, description="Natural language text to convert to SPARQL"),
+})
+
 nl_query_model = api.model('NaturalLanguageQuery', {
     'question': fields.String(required=True, description='User question in natural language (e.g. "Where does the tour start?")')
 })
