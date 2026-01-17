@@ -257,12 +257,6 @@ cs:contact a owl:DatatypeProperty ;
     rdfs:range xsd:string ;
     rdfs:label "contact phone number" .
 
-cs:bike a owl:ObjectProperty ;
-    rdfs:domain cs:Client ;
-    rdfs:range cs:Bike ;
-    rdfs:label "bike" ;
-    rdfs:comment "Bike assigned to or rented by the client." .
-
 cs:phone a owl:DatatypeProperty ;
     rdfs:domain cs:Client ;
     rdfs:range xsd:string ;

@@ -3,591 +3,183 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cto:Client_adrien_vlo_de_route_lectrique_sram_apex_axs_1x1_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
-    cs:phone "+33 3 10 26 02 56"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Adrien"^^xsd:string .
-
-cto:Client_adrien_vlo_enfant_16_pouces_46_ans_discover_900_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_enfant_16_pouces_46_ans_discover_900 ;
-    cs:phone "02 41 09 47 77"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Adrien"^^xsd:string .
-
-cto:Client_agnes_vlo_enfant_16_pouces_46_ans_discover_900_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_enfant_16_pouces_46_ans_discover_900 ;
-    cs:phone "+33 (0)2 54 40 08 42"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Agnes"^^xsd:string .
-
-cto:Client_alexandra_vlo_route_edr_easy_van_rysel_bordeaux_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_route_edr_easy_van_rysel_bordeaux ;
-    cs:phone "0750154303"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Alexandra"^^xsd:string .
-
-cto:Client_amelie_vlo_tout_chemin_lectrique_cadre_bas_eact_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_lectrique_cadre_bas_eact ;
-    cs:phone "+33 (0)2 98 65 42 35"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Amelie"^^xsd:string .
-
-cto:Client_angelo_vlo_tout_chemin_riverside_500_bleu_nuit_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_riverside_500_bleu_nuit ;
-    cs:phone "+33 5 62 62 99 46"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "angelo"^^xsd:string .
-
-cto:Client_anne_vtt_enfant_26_912_ans_expl_500_violet_1 a cs:Client ;
-    cs:bike cto:Bike_vtt_enfant_26_912_ans_expl_500_violet ;
-    cs:phone "0699769453"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Anne"^^xsd:string .
-
 cto:Client_anthony_vlo_cargo_lectrique_longtail_chargement__1 a cs:Client ;
-    cs:bike cto:Bike_vlo_cargo_lectrique_longtail_chargement_ ;
-    cs:phone "+33 (0)5 63 00 13 38"^^xsd:string ;
+    cs:phone "+33 (0)2 35 61 55 94"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Anthony"^^xsd:string .
 
 cto:Client_antoine_velo_vtc_neomouv_raipon_2_2 a cs:Client ;
-    cs:bike cto:Bike_velo_vtc_neomouv_raipon_2 ;
-    cs:phone "03 66 28 70 83"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Antoine"^^xsd:string .
-
-cto:Client_antoine_vlo_gravel_microshift_sword_1x10v_grvl_a_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_gravel_microshift_sword_1x10v_grvl_a ;
-    cs:phone "0352103413"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "ANTOINE"^^xsd:string .
-
-cto:Client_antoine_vlo_tout_chemin_lectrique_cadre_bas_eact_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_lectrique_cadre_bas_eact ;
-    cs:phone "+33 (0)2 35 61 55 94"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 (0)5 32 69 78 48"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Antoine"^^xsd:string .
 
 cto:Client_av_vlo_de_ville_lectrique_elops_900_cadre_h_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h ;
-    cs:phone "+33 8 06 72 42 38"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 (0)1 76 80 13 26"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "AV"^^xsd:string .
 
 cto:Client_belloc_vlo_cargo_lectrique_longtail_chargement__2 a cs:Client ;
-    cs:bike cto:Bike_vlo_cargo_lectrique_longtail_chargement_ ;
-    cs:phone "+33 (0)3 55 86 37 94"^^xsd:string ;
+    cs:phone "+33 (0)6 34 81 61 84"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Belloc"^^xsd:string .
 
 cto:Client_benot_vlo_cargo_lectrique_longtail_chargement__0 a cs:Client ;
-    cs:bike cto:Bike_vlo_cargo_lectrique_longtail_chargement_ ;
-    cs:phone "+33 (0)1 49 43 32 18"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 (0)2 98 65 42 35"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Benoît"^^xsd:string .
 
-cto:Client_bertrand_vtt_enfant_20_expl_500_orange_69_ans_2 a cs:Client ;
-    cs:bike cto:Bike_vtt_enfant_20_expl_500_orange_69_ans ;
-    cs:phone "+33 1 70 91 69 98"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Bertrand"^^xsd:string .
-
 cto:Client_blanc_vlo_vtt_electrique_tout_suspendu_29__sti_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti ;
-    cs:phone "03 85 01 64 00"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 (0)2 48 84 51 46"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Blanc"^^xsd:string .
 
-cto:Client_blerim_velo_de_ville_elops_120___cadre_bas_bleu_0 a cs:Client ;
-    cs:bike cto:Bike_velo_de_ville_elops_120___cadre_bas_bleu ;
-    cs:phone "+33 4 15 21 60 73"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Blerim"^^xsd:string .
-
 cto:Client_bruno_rcr_pro_team_dura_ace_di2_signature_0 a cs:Client ;
-    cs:bike cto:Bike_rcr_pro_team_dura_ace_di2_signature ;
-    cs:phone "+33 (0)2 30 62 72 04"^^xsd:string ;
+    cs:phone "+33 (0)1 49 43 32 18"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Bruno "^^xsd:string .
 
-cto:Client_carlo_vlo_gravel_microshift_sword_1x10v_grvl_a_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_gravel_microshift_sword_1x10v_grvl_a ;
-    cs:phone "+33 4 15 19 28 32"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "CARLO"^^xsd:string .
-
-cto:Client_cdric_vlo_tout_chemin_lectrique__moteur_centra_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_lectrique__moteur_centra ;
-    cs:phone "0480134332"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Cédric "^^xsd:string .
-
-cto:Client_cedric_vlo_enfant_16_pouces_46_ans_discover_500_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_enfant_16_pouces_46_ans_discover_500 ;
-    cs:phone "+33 (0)5 82 55 69 81"^^xsd:string ;
+cto:Client_chevalier_xcr_tri_rival_axs_power_roues_fulcrum_wi_0 a cs:Client ;
+    cs:phone "06 98 36 02 60"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Cedric"^^xsd:string .
+    foaf:name "Chevalier"^^xsd:string .
 
-cto:Client_celine_vlo_de_voyage_offroad_bikepacking_advt_9_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_voyage_offroad_bikepacking_advt_9 ;
-    cs:phone "0563670106"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Celine"^^xsd:string .
-
-cto:Client_chris_vlo_tout_chemin_riverside_500_bleu_nuit_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_riverside_500_bleu_nuit ;
-    cs:phone "0467656482"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Chris"^^xsd:string .
-
-cto:Client_christophe_velo_tout_chemin_riverside_120_enjambeme_2 a cs:Client ;
-    cs:bike cto:Bike_velo_tout_chemin_riverside_120_enjambeme ;
-    cs:phone "+33 4 23 49 35 34"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Christophe "^^xsd:string .
-
-cto:Client_christophe_vlo_enfant_16_pouces_46_ans_discover_500_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_enfant_16_pouces_46_ans_discover_500 ;
-    cs:phone "03 51 40 60 88"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Christophe"^^xsd:string .
+cto:Client_clment_velo_ville_electrique_a_moteur_automatiq_1 a cs:Client ;
+    cs:phone "+33 (0)3 44 19 13 61"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
+    foaf:name "clément"^^xsd:string .
 
 cto:Client_cristina_vlo_vtt_electrique_tout_suspendu_29__sti_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti ;
-    cs:phone "+33 (0)2 47 12 80 59"^^xsd:string ;
+    cs:phone "0355252880"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "CRISTINA "^^xsd:string .
 
 cto:Client_david_vlo_de_route_lectrique_sram_apex_axs_1x1_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
-    cs:phone "+33 (0)2 48 84 51 46"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "DAVID"^^xsd:string .
-
-cto:Client_david_vlo_vtt_randonne__expl_50_gris_clair_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_vtt_randonne__expl_50_gris_clair ;
     cs:phone "0546578713"^^xsd:string ;
     cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "david"^^xsd:string .
+    foaf:name "DAVID"^^xsd:string .
 
-cto:Client_didgen_vlo_tout_chemin_lectrique__moteur_centra_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_lectrique__moteur_centra ;
-    cs:phone "05 94 73 87 21"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Didgen "^^xsd:string .
-
-cto:Client_didier_vlo_de_route__assistance_lectrique__eedr_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_route__assistance_lectrique__eedr ;
-    cs:phone "+33 (0)1 76 80 13 26"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+cto:Client_didier_vlo_tout_chemin_riverside_120_gris_2 a cs:Client ;
+    cs:phone "+33 4 13 89 63 83"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Didier"^^xsd:string .
 
-cto:Client_dimitri_vlo_tout_chemin_riverside_500_bleu_nuit_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_riverside_500_bleu_nuit ;
-    cs:phone "+33 4 95 61 59 51"^^xsd:string ;
+cto:Client_francois_vlo_de_route_lectrique_sram_apex_axs_1x1_0 a cs:Client ;
+    cs:phone "0352103413"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Dimitri "^^xsd:string .
+    foaf:name "FRANCOIS"^^xsd:string .
 
-cto:Client_dominique_vtt_enfant_20_expl_500_orange_69_ans_0 a cs:Client ;
-    cs:bike cto:Bike_vtt_enfant_20_expl_500_orange_69_ans ;
-    cs:phone "+33 (0)1 76 97 88 20"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Dominique"^^xsd:string .
-
-cto:Client_elodie_vlo_tout_chemin_lectrique__moteur_centra_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_lectrique__moteur_centra ;
-    cs:phone "0390353462"^^xsd:string ;
+cto:Client_guillaume_velo_ville_electrique_a_moteur_automatiq_2 a cs:Client ;
+    cs:phone "+33 1 70 91 69 98"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Elodie"^^xsd:string .
-
-cto:Client_fabienne_vtc_enfant_20_69_ans_btwin_500_beige_2 a cs:Client ;
-    cs:bike cto:Bike_vtc_enfant_20_69_ans_btwin_500_beige ;
-    cs:phone "0498299124"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Fabienne"^^xsd:string .
-
-cto:Client_ff_velo_enfant_2en1_draisienne_35_ans_14_po_2 a cs:Client ;
-    cs:bike cto:Bike_velo_enfant_2en1_draisienne_35_ans_14_po ;
-    cs:phone "+33 4 27 87 34 71"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Ff"^^xsd:string .
-
-cto:Client_flore_velo_de_ville_elops_120___cadre_bas_bleu_1 a cs:Client ;
-    cs:bike cto:Bike_velo_de_ville_elops_120___cadre_bas_bleu ;
-    cs:phone "+33 6 34 54 33 03"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Flore"^^xsd:string .
-
-cto:Client_florent_velo_enfant_2en1_draisienne_35_ans_14_po_0 a cs:Client ;
-    cs:bike cto:Bike_velo_enfant_2en1_draisienne_35_ans_14_po ;
-    cs:phone "+33 (0)6 32 27 88 95"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "florent"^^xsd:string .
-
-cto:Client_francis_vlo_de_route__assistance_lectrique__eedr_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_route__assistance_lectrique__eedr ;
-    cs:phone "0245333872"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "FRANCIS"^^xsd:string .
-
-cto:Client_francoise_velo_tout_chemin_riverside_120_enjambeme_0 a cs:Client ;
-    cs:bike cto:Bike_velo_tout_chemin_riverside_120_enjambeme ;
-    cs:phone "+33 (0)3 82 54 27 84"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Francoise"^^xsd:string .
-
-cto:Client_gregory_vlo_gravel_microshift_sword_1x10v_grvl_a_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_gravel_microshift_sword_1x10v_grvl_a ;
-    cs:phone "+33 (0)5 19 47 52 55"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "GREGORY"^^xsd:string .
-
-cto:Client_hadj_vlo_enfant_16_pouces_46_ans_discover_500_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_enfant_16_pouces_46_ans_discover_500 ;
-    cs:phone "0155142940"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Hadj"^^xsd:string .
-
-cto:Client_jean_claude_vlo_de_route__assistance_lectrique__eedr_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_route__assistance_lectrique__eedr ;
-    cs:phone "03 29 47 31 78"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "JEAN CLAUDE"^^xsd:string .
+    foaf:name "Guillaume "^^xsd:string .
 
 cto:Client_jean_franois_rcr_pro_team_dura_ace_di2_signature_1 a cs:Client ;
-    cs:bike cto:Bike_rcr_pro_team_dura_ace_di2_signature ;
-    cs:phone "04 76 37 55 64"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 (0)5 63 00 13 38"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Jean François"^^xsd:string .
 
-cto:Client_jean_michel_vlo_tout_chemin_lectrique__moteur_centra_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_lectrique__moteur_centra ;
-    cs:phone "+33 (0)2 21 83 84 25"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "JEAN MICHEL"^^xsd:string .
-
-cto:Client_jean_pierre_vlo_enfant_16_pouces_46_ans_discover_900_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_enfant_16_pouces_46_ans_discover_900 ;
-    cs:phone "0339047116"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Jean Pierre"^^xsd:string .
-
-cto:Client_jeanluc_vlo_tout_chemin_lectrique__moteur_centra_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_lectrique__moteur_centra ;
-    cs:phone "+33 (0)4 63 43 69 95"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Jean-Luc"^^xsd:string .
-
-cto:Client_jonathan_vtt_enfant_26_912_ans_expl_500_violet_0 a cs:Client ;
-    cs:bike cto:Bike_vtt_enfant_26_912_ans_expl_500_violet ;
-    cs:phone "+33 (0)5 81 57 26 28"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Jonathan"^^xsd:string .
-
-cto:Client_jordan_vtc_enfant_20_69_ans_btwin_500_beige_0 a cs:Client ;
-    cs:bike cto:Bike_vtc_enfant_20_69_ans_btwin_500_beige ;
-    cs:phone "+33 2 18 00 33 09"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "JORDAN"^^xsd:string .
-
 cto:Client_jouinot_vlo_tout_chemin_electrique__neomouv_raip_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_electrique__neomouv_raip ;
-    cs:phone "+33 (0)5 19 70 54 66"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 (0)3 76 47 38 29"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Jouinot "^^xsd:string .
 
-cto:Client_julie_velo_ville_longue_distance_900_cadre_bas_0 a cs:Client ;
-    cs:bike cto:Bike_velo_ville_longue_distance_900_cadre_bas ;
-    cs:phone "0155752735"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Julie"^^xsd:string .
-
-cto:Client_karim_vlo_tout_chemin_riverside_100_noir_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_riverside_100_noir ;
-    cs:phone "04 13 74 68 72"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Karim"^^xsd:string .
-
-cto:Client_katie_vtt_enfant_26_912_ans_expl_500_violet_2 a cs:Client ;
-    cs:bike cto:Bike_vtt_enfant_26_912_ans_expl_500_violet ;
-    cs:phone "+33 (0)4 30 73 79 96"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Katie "^^xsd:string .
-
-cto:Client_lagaffe007_velo_enfant_2en1_draisienne_35_ans_14_po_2 a cs:Client ;
-    cs:bike cto:Bike_velo_enfant_2en1_draisienne_35_ans_14_po ;
-    cs:phone "0637603669"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Lagaffe007"^^xsd:string .
-
-cto:Client_laurent_vlo_vtt_randonne__expl_50_gris_clair_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_vtt_randonne__expl_50_gris_clair ;
-    cs:phone "+33 1 83 50 98 39"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "laurent"^^xsd:string .
-
-cto:Client_lg_vlo_de_route_lectrique_sram_apex_axs_1x1_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
-    cs:phone "+33 5 79 20 45 05"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+cto:Client_lg_vlo_de_route_lectrique_sram_apex_axs_1x1_2 a cs:Client ;
+    cs:phone "+33 4 15 19 28 32"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "LG"^^xsd:string .
 
-cto:Client_lili_velo_de_ville_elops_520_cadre_bas_vert_0 a cs:Client ;
-    cs:bike cto:Bike_velo_de_ville_elops_520_cadre_bas_vert ;
-    cs:phone "0567965328"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Lili"^^xsd:string .
-
-cto:Client_los_velo_de_ville_elops_520_cadre_bas_vert_1 a cs:Client ;
-    cs:bike cto:Bike_velo_de_ville_elops_520_cadre_bas_vert ;
+cto:Client_marc_velo_vtc_neomouv_raipon_2_1 a cs:Client ;
     cs:phone "02 34 01 22 69"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Loïs"^^xsd:string .
-
-cto:Client_los_velo_de_ville_elops_520_cadre_bas_vert_2 a cs:Client ;
-    cs:bike cto:Bike_velo_de_ville_elops_520_cadre_bas_vert ;
-    cs:phone "+33 (0)5 32 69 78 48"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Loïs"^^xsd:string .
-
-cto:Client_luc_velo_enfant_2en1_draisienne_35_ans_14_po_1 a cs:Client ;
-    cs:bike cto:Bike_velo_enfant_2en1_draisienne_35_ans_14_po ;
-    cs:phone "05 65 87 27 74"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "LUC"^^xsd:string .
-
-cto:Client_ludovic_vtt_enfant_24_expl_500_jaune_912_ans_1 a cs:Client ;
-    cs:bike cto:Bike_vtt_enfant_24_expl_500_jaune_912_ans ;
-    cs:phone "+33 2 41 49 19 05"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Ludovic"^^xsd:string .
-
-cto:Client_malik_laroug_vlo_de_voyage_offroad_bikepacking_advt_9_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_voyage_offroad_bikepacking_advt_9 ;
-    cs:phone "+33 (0)3 76 47 38 29"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Malik laroug"^^xsd:string .
-
-cto:Client_marc_velo_vtc_neomouv_raipon_2_1 a cs:Client ;
-    cs:bike cto:Bike_velo_vtc_neomouv_raipon_2 ;
-    cs:phone "+33 5 31 76 32 01"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Marc"^^xsd:string .
-
-cto:Client_marc_vlo_route_edr_easy_van_rysel_bordeaux_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_route_edr_easy_van_rysel_bordeaux ;
-    cs:phone "+33 4 13 89 63 83"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Marc"^^xsd:string .
-
-cto:Client_mariepierre_velo_enfant_2en1_draisienne_35_ans_14_po_0 a cs:Client ;
-    cs:bike cto:Bike_velo_enfant_2en1_draisienne_35_ans_14_po ;
-    cs:phone "0375455812"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Marie-Pierre"^^xsd:string .
-
-cto:Client_mia_vlo_tout_chemin_lectrique_cadre_bas_eact_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_lectrique_cadre_bas_eact ;
-    cs:phone "+33 (0)6 34 81 61 84"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Mia"^^xsd:string .
-
-cto:Client_michael_vtt_enfant_24_expl_500_jaune_912_ans_2 a cs:Client ;
-    cs:bike cto:Bike_vtt_enfant_24_expl_500_jaune_912_ans ;
-    cs:phone "04 99 18 50 67"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Michael "^^xsd:string .
 
 cto:Client_michel_vlo_de_route_lectrique_sram_apex_axs_1x1_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
-    cs:phone "0355252880"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 1 40 10 31 05"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Michel"^^xsd:string .
 
 cto:Client_michelle_vlo_de_ville_lectrique_elops_900_cadre_h_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h ;
-    cs:phone "+33 (0)4 70 64 13 95"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "03 29 47 31 78"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Michelle"^^xsd:string .
 
-cto:Client_milano_vtt_enfant_20_expl_500_orange_69_ans_1 a cs:Client ;
-    cs:bike cto:Bike_vtt_enfant_20_expl_500_orange_69_ans ;
-    cs:phone "+33 (0)3 44 19 13 61"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Milano"^^xsd:string .
-
-cto:Client_mlanie_vtc_enfant_20_69_ans_btwin_500_beige_1 a cs:Client ;
-    cs:bike cto:Bike_vtc_enfant_20_69_ans_btwin_500_beige ;
-    cs:phone "+33 3 79 27 19 37"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Mélanie"^^xsd:string .
-
-cto:Client_monnier_velo_tout_chemin_riverside_120_enjambeme_1 a cs:Client ;
-    cs:bike cto:Bike_velo_tout_chemin_riverside_120_enjambeme ;
-    cs:phone "+33 (0)4 57 12 41 18"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Monnier"^^xsd:string .
-
 cto:Client_mumu_vlo_tout_chemin_electrique__neomouv_raip_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_electrique__neomouv_raip ;
-    cs:phone "+33 7 43 46 70 65"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "03 81 76 31 16"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Mumu"^^xsd:string .
 
-cto:Client_nathalie_velo_ville_longue_distance_900_cadre_bas_2 a cs:Client ;
-    cs:bike cto:Bike_velo_ville_longue_distance_900_cadre_bas ;
-    cs:phone "+33 2 31 36 78 37"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Nathalie"^^xsd:string .
-
-cto:Client_ornella_vtt_enfant_24_expl_500_jaune_912_ans_0 a cs:Client ;
-    cs:bike cto:Bike_vtt_enfant_24_expl_500_jaune_912_ans ;
-    cs:phone "+33 (0)1 53 49 66 31"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Ornella"^^xsd:string .
-
-cto:Client_pascal_vlo_tout_chemin_lectrique__moteur_centra_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_lectrique__moteur_centra ;
-    cs:phone "0633510799"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "Pascal"^^xsd:string .
+cto:Client_nm88_vlo_tout_chemin_riverside_120_gris_1 a cs:Client ;
+    cs:phone "+33 (0)2 31 71 82 27"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
+    foaf:name "nm88"^^xsd:string .
 
 cto:Client_pauline_rcr_pro_team_dura_ace_di2_signature_2 a cs:Client ;
-    cs:bike cto:Bike_rcr_pro_team_dura_ace_di2_signature ;
-    cs:phone "03 86 17 08 05"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 (0)3 55 86 37 94"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Pauline"^^xsd:string .
 
 cto:Client_pedro_velo_route_cyclotouriste_rc500_microshif_0 a cs:Client ;
-    cs:bike cto:Bike_velo_route_cyclotouriste_rc500_microshif ;
-    cs:phone "06 10 14 36 34"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "05 19 48 35 03"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Pedro"^^xsd:string .
 
-cto:Client_philippe_vlo_de_voyage_offroad_bikepacking_advt_9_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_voyage_offroad_bikepacking_advt_9 ;
-    cs:phone "03 81 76 31 16"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "PHILIPPE"^^xsd:string .
-
 cto:Client_philippe_vlo_vtt_electrique_tout_suspendu_29__sti_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti ;
-    cs:phone "0256427868"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 6 31 04 82 81"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Philippe"^^xsd:string .
 
-cto:Client_reze_velo_enfant_35_ans_14_pouces__discover_1_0 a cs:Client ;
-    cs:bike cto:Bike_velo_enfant_35_ans_14_pouces__discover_1 ;
-    cs:phone "02 21 90 22 94"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "reze"^^xsd:string .
-
-cto:Client_ronan_xcr_tri_rival_axs_power_roues_fulcrum_wi_0 a cs:Client ;
-    cs:bike cto:Bike_xcr_tri_rival_axs_power_roues_fulcrum_wi ;
-    cs:phone "+33 (0)3 39 33 74 98"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+cto:Client_ronan_xcr_tri_rival_axs_power_roues_fulcrum_wi_1 a cs:Client ;
+    cs:phone "04 13 74 68 72"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Ronan"^^xsd:string .
 
+cto:Client_sam_velo_ville_electrique_a_moteur_automatiq_0 a cs:Client ;
+    cs:phone "+33 (0)1 76 97 88 20"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
+    foaf:name "Sam"^^xsd:string .
+
 cto:Client_sarah_velo_route_cyclotouriste_rc500_microshif_2 a cs:Client ;
-    cs:bike cto:Bike_velo_route_cyclotouriste_rc500_microshif ;
-    cs:phone "04 22 44 31 35"^^xsd:string ;
+    cs:phone "+33 8 06 72 42 38"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Sarah"^^xsd:string .
 
-cto:Client_shan_velo_enfant_35_ans_14_pouces__discover_1_2 a cs:Client ;
-    cs:bike cto:Bike_velo_enfant_35_ans_14_pouces__discover_1 ;
-    cs:phone "+33 5 19 77 49 64"^^xsd:string ;
+cto:Client_thomas_vlo_tout_chemin_riverside_120_gris_0 a cs:Client ;
+    cs:phone "0750154303"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "shan "^^xsd:string .
-
-cto:Client_stcy_vlo_route_edr_easy_van_rysel_bordeaux_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_route_edr_easy_van_rysel_bordeaux ;
-    cs:phone "+33 (0)2 31 71 82 27"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Stécy"^^xsd:string .
-
-cto:Client_syed_vlo_tout_chemin_riverside_100_noir_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_riverside_100_noir ;
-    cs:phone "+33 4 50 30 98 05"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Syed"^^xsd:string .
-
-cto:Client_sylvain_velo_enfant_35_ans_14_pouces__discover_1_1 a cs:Client ;
-    cs:bike cto:Bike_velo_enfant_35_ans_14_pouces__discover_1 ;
-    cs:phone "+33 (0)3 84 18 69 99"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Sylvain"^^xsd:string .
-
-cto:Client_tamara_vlo_vtt_randonne__expl_50_gris_clair_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_vtt_randonne__expl_50_gris_clair ;
-    cs:phone "+33 1 40 10 31 05"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "TAMARA"^^xsd:string .
-
-cto:Client_tardyl_velo_enfant_2en1_draisienne_35_ans_14_po_1 a cs:Client ;
-    cs:bike cto:Bike_velo_enfant_2en1_draisienne_35_ans_14_po ;
-    cs:phone "+33 3 72 62 31 66"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "TardyL"^^xsd:string .
-
-cto:Client_thierry_velo_ville_longue_distance_900_cadre_bas_1 a cs:Client ;
-    cs:bike cto:Bike_velo_ville_longue_distance_900_cadre_bas ;
-    cs:phone "0483494808"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Thierry "^^xsd:string .
-
-cto:Client_thierry_vlo_de_route_lectrique_sram_apex_axs_1x1_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
-    cs:phone "+33 3 84 15 86 92"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "THIERRY"^^xsd:string .
+    foaf:name "thomas"^^xsd:string .
 
 cto:Client_walid_velo_route_cyclotouriste_rc500_microshif_1 a cs:Client ;
-    cs:bike cto:Bike_velo_route_cyclotouriste_rc500_microshif ;
-    cs:phone "0668856855"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 (0)4 70 64 13 95"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Walid"^^xsd:string .
 
+cto:Client_wallez_vlo_de_route_lectrique_sram_apex_axs_1x1_1 a cs:Client ;
+    cs:phone "+33 (0)5 19 47 52 55"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
+    foaf:name "wallez "^^xsd:string .
+
 cto:Client_willy_vlo_de_route_lectrique_sram_apex_axs_1x1_1 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
-    cs:phone "+33 6 31 04 82 81"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 1 83 50 98 39"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Willy"^^xsd:string .
 
-cto:Client_wilma_vlo_tout_chemin_riverside_100_noir_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_riverside_100_noir ;
-    cs:phone "06 98 36 02 60"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
-    foaf:name "Wilma "^^xsd:string .
-
 cto:Client_yassine_vlo_de_ville_lectrique_elops_900_cadre_h_0 a cs:Client ;
-    cs:bike cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h ;
-    cs:phone "05 19 48 35 03"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "0245333872"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "yassine"^^xsd:string .
 
 cto:Client_youcef_velo_vtc_neomouv_raipon_2_0 a cs:Client ;
-    cs:bike cto:Bike_velo_vtc_neomouv_raipon_2 ;
-    cs:phone "+33 (0)1 74 37 91 76"^^xsd:string ;
+    cs:phone "0567965328"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Youcef"^^xsd:string .
 
 cto:Client_yvesalain_vlo_tout_chemin_electrique__neomouv_raip_2 a cs:Client ;
-    cs:bike cto:Bike_vlo_tout_chemin_electrique__neomouv_raip ;
-    cs:phone "03 20 72 98 06"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "0563670106"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Yves-Alain"^^xsd:string .
 
-cto:Client_yvon_velo_de_ville_elops_120___cadre_bas_bleu_2 a cs:Client ;
-    cs:bike cto:Bike_velo_de_ville_elops_120___cadre_bas_bleu ;
-    cs:phone "04 77 41 45 86"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
-    foaf:name "YVON"^^xsd:string .
-
-cto:Client_zapf_xcr_tri_rival_axs_power_roues_fulcrum_wi_1 a cs:Client ;
-    cs:bike cto:Bike_xcr_tri_rival_axs_power_roues_fulcrum_wi ;
-    cs:phone "0240343524"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+cto:Client_zapf_xcr_tri_rival_axs_power_roues_fulcrum_wi_2 a cs:Client ;
+    cs:phone "+33 4 50 30 98 05"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Zapf "^^xsd:string .
 

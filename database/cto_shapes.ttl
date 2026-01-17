@@ -171,13 +171,6 @@ cs:ClientShape
         sh:maxCount 1 ;
         sh:in ( "Finished" "In Progress" "Not Started" ) ;
         sh:description "Tour status for the client" ;
-    ] ;
-    sh:property [
-        sh:path cs:bike ;
-        sh:class cs:Bike ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:description "Bike assigned to or rented by the client" ;
     ] .
 
 # Guide shapes
