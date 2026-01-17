@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cycling Tour OS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+  </head>
+  <body class="h-screen flex">
+    
+    <aside class="w-64 border-r border-white/5 flex flex-col justify-between p-6 bg-bg-main z-10">
+      <div>
+        <div class="flex items-center gap-3 mb-10 text-brand-DEFAULT">
+          <i data-lucide="bike" class="w-8 h-8"></i>
+          <span class="font-bold text-xl tracking-wide text-white">Cycling<span class="text-brand-DEFAULT">Tour</span></span>
+        </div>
+
+        <nav class="space-y-2">
+          <button id="nav-chat" class="nav-btn active">
+            <i data-lucide="message-square"></i> AI Assistant
+          </button>
+          <button id="nav-explorer" class="nav-btn">
+            <i data-lucide="database"></i> Data Explorer
+          </button>
+          <button id="nav-predict" class="nav-btn">
+            <i data-lucide="sparkles"></i> Predict
+          </button>
+        </nav>
+      </div>
+      
+      <div class="text-xs text-slate-500 font-mono">
+        v1.0.0 • Connected
+      </div>
+    </aside>
+
+    <main class="flex-1 relative flex flex-col h-full overflow-hidden">
+      <header class="h-16 border-b border-white/5 flex items-center px-8 justify-between bg-bg-main/50 backdrop-blur-sm z-10">
+        <h2 id="page-title" class="text-lg font-semibold text-white">AI Assistant</h2>
+      </header>
+
+      <div id="content-area" class="flex-1 overflow-y-auto p-8 relative">
+        </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
