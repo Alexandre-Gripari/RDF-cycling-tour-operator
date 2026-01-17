@@ -383,7 +383,7 @@ function renderPredictView() {
         <p class="text-slate-400 text-sm mb-6">Enter a Client URI to predict their next best tour package based on similarity graphs.</p>
         
         <div class="flex gap-2">
-          <input type="text" id="client-uri" placeholder="http://data.cyclingtour.fr/resource/client/123" class="flex-1">
+          <input type="text" id="client-uri" placeholder="http://data.cyclingtour.fr/data#Client_bruno_rcr_pro_team_dura_ace_di2_signature_0" class="flex-1">
           <button id="get-pred" class="bg-brand-DEFAULT text-bg-main font-bold px-6 rounded-lg">Predict</button>
         </div>
       </div>

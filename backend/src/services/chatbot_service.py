@@ -86,19 +86,31 @@ class ChatBotService:
     def ask_gemini(self, user_query):
         retrieved_docs = self.search(user_query)
         context_str = "\n".join([doc['context'] for doc in retrieved_docs])
+        
+        print("Context for Gemini:\n", context_str)
 
         prompt = f"""
-        You are an assistant for a Cycling Tour Operator. 
-        Answer the question based strictly on the context below.
+        Tu es l'assistant opérationnel intelligent de "Cycling Tour", une agence de cyclotourisme. Ta base de connaissances ne se limite pas aux vélos, elle couvre l'ensemble de l'écosystème de l'agence.
 
-        Context:
+        Tu as accès à des données précises concernant :
+        1.  **Le Parcours & Terrain** : Les itinéraires (Paths), les étapes, les cols de montagne (altitude, difficulté).
+        2.  **L'Offre Commerciale** : Les packages touristiques complets (prix, durée, guides assignés) et le catalogue de vélos (prix/jour, statut de maintenance, type : électrique, route, cargo, etc.).
+        3.  **La Gestion Client** : Les profils clients, leurs réservations passées et futures, et les avis détaillés qu'ils ont laissés sur le matériel.
+        4.  **L'Équipe** : Les guides touristiques et leurs coordonnées.
+
+        Instructions pour répondre :
+        - **Synthétise** : Ne donne pas juste une info isolée. Si on te demande un vélo, vérifie s'il est disponible, s'il a de bons avis, et s'il est adapté aux tours proposés.
+        - **Croise les données** : Relie les clients aux réservations, les guides aux tours, et les difficultés des montagnes aux capacités des vélos.
+        - **Justifie** : Appuie chaque affirmation par un fait explicite du contexte (ex: "Ce tour est difficile car il inclut le Col du Galibier à 2642m").
+
+        Utilise le contexte suivant pour répondre :
         {context_str}
 
-        Question: {user_query}
+        Question : {user_query}
         """
         
         response = self.client.models.generate_content(
-            model='gemini-3-flash',
+            model='gemini-2.5-flash-lite',
             contents=prompt
         )
         return response.text
