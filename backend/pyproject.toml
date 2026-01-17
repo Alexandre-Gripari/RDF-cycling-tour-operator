@@ -16,4 +16,5 @@ dependencies = [
     "sentence-transformers>=5.2.0",
     "sparqlwrapper==1.8.5",
     "werkzeug==2.3.7",
+    "owlrl==6.0.2",
 ]
