@@ -1,476 +1,75 @@
 # ----------------------------------------------------------------------------
-# QUERY 1: What is the average price per day for each bike type, and which 
-# type offers the best value considering maintenance status?
+# QUERY 1: Quel est le dénivelé total cumulé pour chaque 'Tour Package' et quel est le guide responsable de ce tour ?
 # ----------------------------------------------------------------------------
 
-PREFIX cto: <http://data.cyclingtour.fr/data#>
 PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX cto: <http://data.cyclingtour.fr/data#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?bikeType (AVG(?price) AS ?avgPrice) (COUNT(?bike) AS ?bikeCount) 
-       (SUM(IF(?status = "ok", 1, 0)) AS ?okBikes)
-WHERE {
-  ?bike a ?bikeType ;
-        cs:pricePerDayBike ?price ;
-        cs:maintenanceStatus ?status .
-  FILTER(?bikeType != cs:Bike)
-}
-GROUP BY ?bikeType
-ORDER BY ?avgPrice
-
-
-# ----------------------------------------------------------------------------
-# QUERY 2: Find all tour packages with their total distance, total elevation 
-# gain, and overall difficulty score, ranked by challenge level
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?packageLabel ?totalDistance ?totalElevation ?avgDifficultyScore
-WHERE {
-  ?package a cs:TourPackage ;
-           rdfs:label ?packageLabel .
-  {
-    SELECT ?package (SUM(?pathLength) AS ?totalDistance) 
-           (SUM(?elevation) AS ?totalElevation)
-           (AVG(?diffScore) AS ?avgDifficultyScore)
-    WHERE {
-      ?package cs:includesStage ?stage .
-      ?stage cs:stagePath ?path .
-      ?path cs:length ?pathLength ;
-            cs:elevationGain ?elevation ;
-            cs:hasDifficultyScore ?diffScore .
-    }
-    GROUP BY ?package
-  }
-}
-ORDER BY DESC(?avgDifficultyScore)
-
-
-# ----------------------------------------------------------------------------
-# QUERY 3: Which clients have completed tours on bikes that need service, 
-# and what are their contact details for follow-up?
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?clientName ?phone ?email ?bikeLabel ?bikeStatus
+SELECT ?tourLabel ?guideName (SUM(?elevation) AS ?totalElevation)
 WHERE {
-  ?client a cs:Client ;
-          foaf:name ?clientName ;
-          cs:phone ?phone ;
-          foaf:mbox ?email ;
-          cs:bike ?bike ;
-          cs:status ?tourStatus .
-  ?bike rdfs:label ?bikeLabel ;
-        cs:maintenanceStatus ?bikeStatus .
-  FILTER(?tourStatus = "Finished" && ?bikeStatus = "needs_service")
+  ?tour a cs:TourPackage ;
+        rdfs:label ?tourLabel ;
+        cs:guideAssigned ?guide ;
+        cs:includesStage ?stage .
+
+  ?guide foaf:name ?guideName .
+
+  ?stage cs:stagePath ?path .
+  ?path cs:elevationGain ?elevation . 
+
+FILTER (?elevation > 0)
 }
-ORDER BY ?clientName
-
+GROUP BY ?tourLabel ?guideName
+ORDER BY DESC(?totalElevation)
 
 # ----------------------------------------------------------------------------
-# QUERY 4: List "In Progress" customers with their bike and contact details for 
-# real-time tracking
+# QUERY 2: Quels vélos ont reçu de mauvaises critiques (note < 4) et quel est leur statut de maintenance actuel ?
 # ----------------------------------------------------------------------------
 
-PREFIX cto: <http://data.cyclingtour.fr/data#>
 PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?clientName ?phone ?email ?bikeLabel ?bikeType
+SELECT ?bikeLabel ?rating ?maintenanceStatus ?reviewText
 WHERE {
-  ?client a cs:Client ;
-          foaf:name ?clientName ;
-          cs:phone ?phone ;
-          foaf:mbox ?email ;
-          cs:status "In Progress" ;
-          cs:bike ?bike .
+  ?review a cs:Review ;
+          cs:rating ?rating ;
+          cs:reviewText ?reviewText ;
+          cs:reviewsItem ?bike .
   
-  ?bike rdfs:label ?bikeLabel ;
-        a ?bikeType .
-  
-  FILTER(?bikeType != cs:Bike)
-}
+  FILTER (?rating < 4)
 
-
-# ----------------------------------------------------------------------------
-# QUERY 5: Find all mountain climbs with gradient above 8% that are part of 
-# tour paths, along with the regions they're located in
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX dbp: <http://dbpedia.org/resource/>
-
-SELECT DISTINCT ?mountainLabel ?gradient ?elevation ?region ?pathLabel
-WHERE {
-  ?mountain a cs:Mountain ;
-            rdfs:label ?mountainLabel ;
-            cs:averageGradient ?gradient ;
-            cs:elevation ?elevation ;
-            cs:locatedInRegion ?region .
-  ?path cs:includesMountain ?mountain ;
-        rdfs:label ?pathLabel .
-  FILTER(?gradient > 8.0)
-}
-ORDER BY DESC(?gradient)
-
-
-# ----------------------------------------------------------------------------
-# QUERY 6: Which tour packages include at least one "very hard" stage, and 
-# what's the ratio of very hard stages to total stages?
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?packageLabel ?totalStages ?veryHardStages 
-       (?veryHardStages / ?totalStages AS ?hardnessRatio)
-WHERE {
-  ?package a cs:TourPackage ;
-           rdfs:label ?packageLabel .
-  {
-    SELECT ?package (COUNT(?stage) AS ?totalStages)
-    WHERE {
-      ?package cs:includesStage ?stage .
-    }
-    GROUP BY ?package
-  }
-  {
-    SELECT ?package (COUNT(?hardStage) AS ?veryHardStages)
-    WHERE {
-      ?package cs:includesStage ?hardStage .
-      ?hardStage cs:stagePath ?path .
-      ?path cs:difficulty "very hard" .
-    }
-    GROUP BY ?package
-  }
-  FILTER(?veryHardStages > 0)
-}
-ORDER BY DESC(?hardnessRatio)
-
-
-# ----------------------------------------------------------------------------
-# QUERY 7: Calculate the total cost of a package tour including bike rental 
-# for one week (7 days)
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?packageLabel ?tourPriceWeek ?bikeLabel ?bikePriceWeek
-       (?tourPriceWeek + ?bikePriceWeek AS ?totalCost)
-WHERE {
-  ?package a cs:TourPackage ;
-           rdfs:label ?packageLabel ;
-           cs:pricePerDayTour ?tourPriceDay .
-  
   ?bike a cs:Bike ;
         rdfs:label ?bikeLabel ;
-        cs:pricePerDayBike ?bikePriceDay ;
-        cs:maintenanceStatus "ok" .
-  
-  BIND(?tourPriceDay * 7 AS ?tourPriceWeek)
-  BIND(?bikePriceDay * 7 AS ?bikePriceWeek)
+        cs:maintenanceStatus ?maintenanceStatus .
 }
-ORDER BY ?totalCost
-
+ORDER BY ?rating
 
 # ----------------------------------------------------------------------------
-# QUERY 8: What's the booking pattern analysis showing tour dates, booking 
-# lead times, and bike preferences?
+# QUERY 3: Quels guides sont assignés à des étapes longues (durée > 8 heures) et quel est le prix journalier du tour associé ?
 # ----------------------------------------------------------------------------
 
-PREFIX cto: <http://data.cyclingtour.fr/data#>
 PREFIX cs: <http://data.cyclingtour.fr/schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-
-SELECT ?bookingType ?clientName ?bookingDate ?tourDate ?bikeLabel
-       ?leadTimeDays
-WHERE {
-  {
-    ?booking a cs:BikeBooking ;
-             cs:bookedBy ?client ;
-             cs:bookingDate ?bookingDate ;
-             cs:endDate ?tourDate ;
-             cs:bikeBooked ?bike .
-    BIND("Bike Only" AS ?bookingType)
-    
-    BIND(
-      (YEAR(?tourDate) - YEAR(?bookingDate)) * 365 +
-      (MONTH(?tourDate) - MONTH(?bookingDate)) * 30 +
-      (DAY(?tourDate) - DAY(?bookingDate))
-      AS ?leadTimeDays
-    )
-  }
-  UNION
-  {
-    ?booking a cs:TourBooking ;
-             cs:bookedBy ?client ;
-             cs:bookingDate ?bookingDate ;
-             cs:tourStartDate ?tourDate .
-    BIND("Tour Package" AS ?bookingType)
-    OPTIONAL { ?client cs:bike ?bike . }
-    
-    BIND(
-      (YEAR(?tourDate) - YEAR(?bookingDate)) * 365 +
-      (MONTH(?tourDate) - MONTH(?bookingDate)) * 30 +
-      (DAY(?tourDate) - DAY(?bookingDate))
-      AS ?leadTimeDays
-    )
-  }
-  ?client foaf:name ?clientName .
-  OPTIONAL { ?bike rdfs:label ?bikeLabel . }
-}
-ORDER BY ?tourDate
-
-
-# ----------------------------------------------------------------------------
-# QUERY 9: Find the most challenging multi-mountain path and all mountains 
-# included with their cumulative statistics
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?pathLabel ?difficulty ?pathLength 
-       (COUNT(?mountain) AS ?mountainCount)
-       (GROUP_CONCAT(?mountainLabel; separator=", ") AS ?mountains)
-       (SUM(?mountainElevation) AS ?totalMountainElevation)
-WHERE {
-  ?path a cs:Path ;
-        rdfs:label ?pathLabel ;
-        cs:difficulty ?difficulty ;
-        cs:length ?pathLength ;
-        cs:includesMountain ?mountain .
-  ?mountain rdfs:label ?mountainLabel ;
-            cs:elevation ?mountainElevation .
-}
-GROUP BY ?pathLabel ?difficulty ?pathLength
-ORDER BY DESC(?totalMountainElevation)
-HAVING (COUNT(?mountain) > 1)
-
-
-# ----------------------------------------------------------------------------
-# QUERY 10: For each tour stage and package, find the next available date
-# considering guide assignments and existing bookings
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT
-  ?stage
-  ?label
-  ?guide
-  (COALESCE(MAX(?end), "2025-03-01"^^xsd:date) AS ?nextAvailable)
+SELECT DISTINCT ?guideName ?stageLabel ?length ?tourPrice
 WHERE {
   ?stage a cs:TourStage ;
-         rdfs:label ?label ;
-         cs:guideAssigned ?guide .
+         cs:guideAssigned ?guide ;
+         cs:stagePath ?path . 
+
+  ?path cs:length ?length .
   
-  FILTER NOT EXISTS { ?stage a cs:TourBooking }
-  
-  OPTIONAL {
-    ?tourBooking a cs:TourBooking ;
-                 cs:guideAssigned ?guide ;
-                 cs:endDate ?end .
-  }
+  FILTER (?length > 50.0)
+
+  ?tour cs:includesStage ?stage ;
+        cs:pricePerDayTour ?tourPrice .
+
+  OPTIONAL { ?guide rdfs:label ?guideName } . 
+  OPTIONAL { ?guide foaf:name ?guideName } .
+  OPTIONAL { ?stage rdfs:label ?stageLabel } .
 }
-GROUP BY ?stage ?label ?guide
-ORDER BY ?guide ?nextAvailable
+ORDER BY DESC(?tourPrice)
 
-
-
-# ----------------------------------------------------------------------------
-# QUERY 11: Generate a guide workload report with their assigned tours, 
-# stages, and client capacity
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-
-SELECT ?guideName ?guideContact
-       (COUNT(DISTINCT ?stage) AS ?uniqueStagesAssigned)
-       (COUNT(DISTINCT ?package) AS ?packagesAssigned)
-       ((COUNT(DISTINCT ?stage) + COUNT(DISTINCT ?package)) AS ?totalAssignments)
-       (SUM(COALESCE(?stageCapacity, 0)) AS ?totalStageCapacity)
-       (SUM(COALESCE(?packageCapacity, 0)) AS ?totalPackageCapacity)
-       ((SUM(COALESCE(?stageCapacity, 0)) + SUM(COALESCE(?packageCapacity, 0))) AS ?totalParticipantCapacity)
-       (xsd:decimal(SUM(COALESCE(?stageCapacity, 0)) + SUM(COALESCE(?packageCapacity, 0))) / 40.0 AS ?capacityRatio)
-       (IF((SUM(COALESCE(?stageCapacity, 0)) + SUM(COALESCE(?packageCapacity, 0))) > 50, "OVERBOOKED", 
-           IF((SUM(COALESCE(?stageCapacity, 0)) + SUM(COALESCE(?packageCapacity, 0))) > 40, "High Load", "Normal")) 
-        AS ?workloadStatus)
-WHERE {
-  ?guide a cs:Guide ;
-         foaf:name ?guideName ;
-         cs:contact ?guideContact .
-  
-  OPTIONAL {
-    ?stage a cs:TourStage ;
-           cs:guideAssigned ?guide ;
-           cs:tourCapacity ?stageCapacity .
-  }
-  
-  OPTIONAL {
-    ?package a cs:TourPackage ;
-             cs:guideAssigned ?guide ;
-             cs:packageCapacity ?packageCapacity .
-  }
-}
-GROUP BY ?guideName ?guideContact
-ORDER BY DESC(?totalParticipantCapacity)
-
-
-# ----------------------------------------------------------------------------
-# QUERY 12: Find paths with water points and calculate water availability 
-# per kilometer of cycling
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?pathLabel ?startName ?waterPointLabel ?waterCapacity ?pathLength
-       (ROUND(?waterCapacity / ?pathLength) AS ?watersPerKm)
-WHERE {
-  ?path a cs:Path ;
-        rdfs:label ?pathLabel ;
-        cs:hasStart ?start ;
-        cs:length ?pathLength .
-  
-  ?waterPoint a cs:WaterPoint ;
-              rdfs:label ?waterPointLabel ;
-              cs:location ?start ;
-              cs:capacity ?waterCapacity .
-  
-  BIND(REPLACE(STR(?start), "^.*/", "") AS ?startName)
-  
-  FILTER(?pathLength > 0)
-}
-ORDER BY DESC(?watersPerKm)
-
-
-# ----------------------------------------------------------------------------
-# QUERY 13: Analyze client status distribution and their bike type preferences 
-# with completion rates
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?status ?bikeType 
-       (COUNT(?client) AS ?clientCount)
-       ((COUNT(?client) * 100.0 / ?totalClients) AS ?percentage)
-WHERE {
-  {
-    SELECT (COUNT(DISTINCT ?c) AS ?totalClients)
-    WHERE { ?c a cs:Client . }
-  }
-  
-  ?client a cs:Client ;
-          cs:status ?status ;
-          cs:bike ?bike .
-  
-  ?bike a ?bikeType .
-  
-  FILTER(?bikeType != cs:Bike)
-}
-GROUP BY ?status ?bikeType ?totalClients
-ORDER BY ?status DESC(?clientCount)
-
-
-# ----------------------------------------------------------------------------
-# QUERY 14: Find the optimal tour package for beginners based on difficulty (< 3.0), 
-# price, and available beginner-friendly bikes
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?packageLabel ?pricePerDay ?avgDifficulty ?availableBikes
-WHERE {
-  ?package a cs:TourPackage ;
-           rdfs:label ?packageLabel ;
-           cs:pricePerDayTour ?pricePerDay .
-  
-  {
-    SELECT ?package (AVG(?diffScore) AS ?avgDifficulty)
-    WHERE {
-      ?package cs:includesStage ?stage .
-      ?stage cs:stagePath ?path .
-      ?path cs:hasDifficultyScore ?diffScore .
-    }
-    GROUP BY ?package
-  }
-  
-  {
-    SELECT (COUNT(?bike) AS ?availableBikes)
-    WHERE {
-      ?bike a cs:Bike ;
-            cs:maintenanceStatus "ok" ;
-            cs:pricePerDayBike ?price .
-      FILTER(?price < 25.00)
-    }
-  }
-  
-  FILTER(?avgDifficulty < 3.0)
-}
-ORDER BY ?avgDifficulty ?pricePerDay
-
-
-# ----------------------------------------------------------------------------
-# QUERY 15: Complex federated-style query finding paths that connect regions 
-# with mountains, analyzing the geographic clustering of challenges
-# ----------------------------------------------------------------------------
-
-PREFIX cto: <http://data.cyclingtour.fr/data#>
-PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX dbp: <http://dbpedia.org/resource/>
-
-SELECT ?region ?mountainsInRegion ?pathsInRegion ?avgGradient ?maxElevation
-WHERE {
-  {
-    SELECT ?region
-           (COUNT(DISTINCT ?mountain) AS ?mountainsInRegion)
-           (COUNT(DISTINCT ?path) AS ?pathsInRegion)
-           (AVG(?gradient) AS ?avgGradient)
-           (MAX(?elevation) AS ?maxElevation)
-    WHERE {
-      ?mountain a cs:Mountain ;
-                cs:locatedInRegion ?region ;
-                cs:averageGradient ?gradient ;
-                cs:elevation ?elevation .
-      
-      ?path cs:includesMountain ?mountain .
-      
-      FILTER(EXISTS {
-        ?mountain cs:difficulty ?diff .
-        FILTER(?diff IN ("hard", "very hard"))
-      })
-    }
-    GROUP BY ?region
-  }
-  FILTER(?mountainsInRegion >= 2)
-}
-ORDER BY DESC(?mountainsInRegion) DESC(?avgGradient)
