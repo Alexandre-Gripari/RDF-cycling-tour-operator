@@ -1,10 +1,11 @@
 from rdflib import Graph
-
+import owlrl
 
 class SparqlService:
     def __init__(self, ttl_files):
         self.graph = Graph()
         self._load_ttl_files(ttl_files)
+        self.apply_inference()
 
     def _load_ttl_files(self, ttl_files):
         for ttl_file in ttl_files:
@@ -13,6 +14,10 @@ class SparqlService:
                 print(f"Loaded {ttl_file} successfully.")
             except Exception as e:
                 print(f"Error loading {ttl_file}: {e}")
+
+    def apply_inference(self):
+        print("Applying RDFS inference...")
+        owlrl.DeductiveClosure(owlrl.RDFS_Semantics).expand(self.graph)
 
     def execute_query(self, query):
         try:
