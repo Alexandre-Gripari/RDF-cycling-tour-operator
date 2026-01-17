@@ -87,6 +87,11 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
     if not reviews:
         return
 
+    has_in_progress = False
+    latest_end_date = date.min
+    status_of_latest_booking = None
+    has_future_booking = False
+
     for i, review in enumerate(reviews):
         raw_author = review.get("author", {}).get("username", f"Anonyme_{i}")
         raw_comment = (
@@ -104,24 +109,36 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         booking_uri = CTO_DATA[booking_id_str]
 
         today = date.today()
-        delta_start = random.randint(-30, 30)
+        delta_start = random.randint(-40, 40)
         booking_date = today + timedelta(days=delta_start)
 
         duration = random.randint(1, 14)
         end_date = booking_date + timedelta(days=duration)
+
+        if end_date < today:
+            tour_status = "Finished"
+        elif booking_date <= today <= end_date:
+            tour_status = "In Progress"
+        else:
+            tour_status = "Not Started"
+
+        if tour_status == "In Progress":
+            has_in_progress = True
+        elif tour_status == "Not Started":
+            has_future_booking = True
+
+        if end_date > latest_end_date:
+            latest_end_date = end_date
+            status_of_latest_booking = tour_status
 
         g_clients.add((client_uri, RDF.type, CS.Client))
         g_clients.add((client_uri, FOAF.name, Literal(raw_author, datatype=XSD.string)))
         g_clients.add(
             (client_uri, CS.phone, Literal(fake.phone_number(), datatype=XSD.string))
         )
-        if end_date < today:
-            status = "Finished"
-        elif booking_date <= today <= end_date:
-            status = "In Progress"
-        else:
-            status = "Not Started"
-        g_clients.add((client_uri, CS.tourStatus, Literal(status, datatype=XSD.string)))
+        g_clients.add(
+            (client_uri, CS.tourStatus, Literal(tour_status, datatype=XSD.string))
+        )
 
         g_bookings.add((booking_uri, RDF.type, CS.BikeBooking))
         g_bookings.add((booking_uri, CS.bookedBy, client_uri))
@@ -140,6 +157,28 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         )
         g_reviews.add((review_uri, CS.reviewedBy, client_uri))
         g_reviews.add((review_uri, CS.reviewsItem, bike_uri))
+
+    g_bikes.remove((bike_uri, CS.maintenanceStatus, None))
+
+    final_maintenance_status = CS.MaintenanceOperational
+
+    if has_in_progress:
+        final_maintenance_status = CS.MaintenanceOperational
+
+    elif status_of_latest_booking == "Finished":
+        if random.random() < 0.6:
+            final_maintenance_status = random.choice(
+                [CS.MaintenanceNeedsService, CS.MaintenanceUnderRepair]
+            )
+        else:
+            final_maintenance_status = CS.MaintenanceOperational
+
+    elif has_future_booking or status_of_latest_booking == "Not Started":
+        final_maintenance_status = random.choice(
+            [CS.MaintenanceOperational, CS.MaintenanceUnderRepair]
+        )
+
+    g_bikes.add((bike_uri, CS.maintenanceStatus, final_maintenance_status))
 
 
 def scrape_bike_page(url, scraper):
@@ -171,7 +210,8 @@ def scrape_bike_page(url, scraper):
         (bike_uri, CS.pricePerDayBike, Literal(rental_price, datatype=XSD.decimal))
     )
     g_bikes.add((bike_uri, CS.availableFrom, Literal(date.today(), datatype=XSD.date)))
-    g_bikes.add((bike_uri, CS.maintenanceStatus, CS.MaintenanceOk))
+
+    g_bikes.add((bike_uri, CS.maintenanceStatus, CS.MaintenanceOperational))
 
     sku = None
     ref_span = soup.find("span", class_=re.compile("current-selected-model"))
@@ -212,6 +252,7 @@ def main():
 
     for i, url in enumerate(all_links):
         scrape_bike_page(url, scraper)
+        time.sleep(random.uniform(1, 3))
 
     g_bikes.serialize("../database/cto_data_bikes.ttl", format="turtle")
     print("cto_data_bikes.ttl generated")

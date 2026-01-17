@@ -6,49 +6,49 @@
 cto:Bike_ado_air20s_vlo_lectrique_pliable_ebike_e a cs:ElectricBike ;
     rdfs:label "ADO Air20S Vélo électrique Pliable, EBike Entraînement par Courroie, 18.5kg, APP"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 17.98 ;
     rdfs:comment "Vélo électrique ADO Air20S poids net 18.5 kg, application ADO Smart, entraînement par poulie, 3 modes de vitesse Rendre les déplacements en ville plus confortables et pratiques"^^xsd:string .
 
 cto:Bike_ado_air28_vlo_lectrique_28_ebike_entrane a cs:ElectricBike ;
     rdfs:label "ADO Air28 Vélo électrique, 28\" Ebike, Entraînement par Courroie, APP, 250W, 36V"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 20.98 ;
     rdfs:comment "ADO Air28 Combine les Déplacements Contemporains avec le Confort Classique. C'est le Vélo Idéal pour les Navetteurs Réguliers qui allie Confort Géométrique et Excellentes Performances Technologiques."^^xsd:string .
 
 cto:Bike_cargobike_electrique_compactail_shimano_ a cs:ElectricBike ;
     rdfs:label "Cargobike Electrique Compactail, SHIMANO 7v, jusqu'a 100 km, Baterrie 48V15Ah"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 27.0 ;
     rdfs:comment "Grâce à son format compact et son assistance électrique performante, le Compactail est parfait pour la ville : agile, léger et facile à stationner."^^xsd:string .
 
 cto:Bike_deryan_vlo_enfant_3en1__14_inch__draisie a cs:Bike ;
     rdfs:label "Deryan Vélo Enfant 3-en-1 - 14 Inch - Draisienne - Incl. roulettes"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 1.81 ;
     rdfs:comment "Découvrez le vélo enfant 3-en-1 ultime de Deryan – le compagnon parfait pour grandir avec votre enfant !"^^xsd:string .
 
 cto:Bike_draisienne_berg_moov_10_rose a cs:Bike ;
     rdfs:label "Draisienne BERG MOOV 10 Rose"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 0.89 ;
     rdfs:comment "Découvrez le monde avec la BERG MOOV 10 en vert !"^^xsd:string .
 
 cto:Bike_generation_blanco_14_pouces_rose__vlo_en a cs:Bike ;
     rdfs:label "Generation Blanco 14 pouces Rose – Vélo enfant avec panier"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 2.7 ;
     rdfs:comment "Avec le Generation Blanco 14 pouces Rose, les enfants de 3 à 5 ans apprennent à faire du vélo en toute sécurité grâce aux roulettes et au cadre léger."^^xsd:string .
 
 cto:Bike_rcr_pro_team_dura_ace_di2_signature a cs:RoadBike ;
     rdfs:label "RCR PRO TEAM DURA ACE DI2 SIGNATURE"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceUnderRepair ;
     cs:pricePerDayBike 135.0 ;
     rdfs:comment """Conçu pour battre vos records personnels ou gagner en course, le RCR Pro de l’équipe Decathlon AG2R La Mondiale est là. Découvrez le RCR Pro, conçu par des experts en soufflerie, c’est l’équilibre parfait entre aérodynamisme, légèreté et rigidité. 
 Roulez comme un pro !"""^^xsd:string .
@@ -56,56 +56,56 @@ Roulez comme un pro !"""^^xsd:string .
 cto:Bike_reconditionn__vtt_electrique_tout_suspen a cs:MountainBike ;
     rdfs:label "Reconditionné - VTT Electrique Tout Suspendu E-MTB 29\" - Excellent"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 15.0 ;
     rdfs:comment "État EXCELLENT - Optez pour un vélo reconditionné : réduisez votre empreinte écologique avec un excellent rapport qualité-prix. Vélos remis a neuf et testés par nos techniciens, 100% fonctionnels."^^xsd:string .
 
 cto:Bike_reconditionn_velocargo_ecompactail_auton a cs:Bike ;
     rdfs:label "Reconditionné -VELOCARGO E-Compactail, Autonomie jusqu'a 100km - Excellent"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 27.0 ;
     rdfs:comment "État EXCELLENT - Optez pour un vélo reconditionné : réduisez votre empreinte écologique avec un excellent rapport qualité-prix. Vélos remis a neuf et testés par nos techniciens, 100% fonctionnels."^^xsd:string .
 
 cto:Bike_reconditionn_vtt_electrique_semi_rigide_ a cs:MountainBike ;
     rdfs:label "Reconditionné- VTT Electrique Semi Rigide 27.5\", Autonomie 120km - Excellent"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 13.5 ;
     rdfs:comment "État EXCELLENT - Optez pour un vélo reconditionné : réduisez votre empreinte écologique avec un excellent rapport qualité-prix. Vélos remis a neuf et testés par nos techniciens, 100% fonctionnels."^^xsd:string .
 
 cto:Bike_tricycle_volutif_pour_bb_explorer_4_en_1 a cs:Bike ;
     rdfs:label "Tricycle évolutif pour bébé EXPLORER 4 en 1 - Noir"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 2.55 ;
     rdfs:comment "Le tricycle innovant qui se transforme en draisienne sans outils ! Nouveau canopée"^^xsd:string .
 
 cto:Bike_ub400b__vtt_lectrique_tout_suspendu__jus a cs:ElectricMountainBike ;
     rdfs:label "UB400B | VTT Électrique Tout Suspendu | Jusqu’à 140 km | 29\""^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 22.48 ;
     rdfs:comment "UB400B : VTT électrique tout suspendu. Puissance, confort et contrôle avec batterie 48V intégrée au cadre."^^xsd:string .
 
 cto:Bike_velo_route_cyclotouriste_rc500_microshif a cs:RoadBike ;
     rdfs:label "VELO ROUTE CYCLOTOURISTE RC500 MICROSHIFT 9V GRIS"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceUnderRepair ;
     cs:pricePerDayBike 9.0 ;
     rdfs:comment "Nous avons conçu et testé ce vélo route pour vos sorties régulières. Il vous garantira un confort sans concession pour rouler plus loin, plus souvent. Roulez plus loin et plus souvent avec notre vélo route le plus confortable que nous ayons conçu. Découvrez son freinage à disque et sa géométrie spécifique."^^xsd:string .
 
 cto:Bike_velo_route_sava_levar_20 a cs:RoadBike ;
     rdfs:label "Velo route Sava Levar 2.0"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 16.48 ;
     rdfs:comment "Vélo de route avec cadre sportif en aluminium et fourche en carbone. Le vélo idéal pour les cyclistes qui veulent vivre les sensations de la route. Certifié pour les courses UCI."^^xsd:string .
 
 cto:Bike_velo_ville_electrique_a_moteur_automatiq a cs:RoadBike ;
     rdfs:label "Velo ville electrique a moteur automatique owuru cadre bas ld 920 e"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceUnderRepair ;
     cs:pricePerDayBike 30.0 ;
     rdfs:comment """Ce vélo est conçu pour booster vos trajets quotidiens en ville et sur routes. Rendez vos déplacements fluides et faciles quelles que soient les conditions. Et si on n'avait plus besoin de changer de vitesse ? Laissez-vous porter par une nouvelle expérience de pédalage avec ce vélo à transmission entièrement automatique.
 Testez-le, c'est magique!"""^^xsd:string .
@@ -113,14 +113,14 @@ Testez-le, c'est magique!"""^^xsd:string .
 cto:Bike_velo_vtc_neomouv_raipon_2 a cs:ElectricRoadBike ;
     rdfs:label "VELO VTC NEOMOUV RAIPON 2"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 21.0 ;
     rdfs:comment "Notre partenaire NEOMOUV a conçu ce vélo à assistance électrique pour faciliter vos randonnées sur routes et chemins Gagnez en confort et roulez sans effort grâce au coup de pouce de l'électrique ! Moteur à capteur de pédalage, autonomie jusqu'à 100km, fourche suspendue, freins hydrauliques, pour un confort garanti."^^xsd:string .
 
 cto:Bike_vlo_cargo_lectrique_longtail_chargement_ a cs:ElectricRoadBike ;
     rdfs:label "Vélo cargo électrique longtail chargement arrière R500E vert clair"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 37.5 ;
     rdfs:comment "Avec sa grande capacité de chargement, ce vélo cargo Longtail électrique est conçu pour transporter votre quotidien à vélo, en ville et sur route. Si vous cherchez une très grosse capacité de chargement sur votre vélo, le longtail VELOCARGO R500E vous permettra de transporter 2 enfants et 1 adulte ou 170 kg de chargement hors poids du vélo."^^xsd:string .
 
@@ -128,7 +128,7 @@ cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 a cs:ElectricRoadBike ;
     rdfs:label "Vélo de route électrique SRAM Apex AXS 1x12v, E-EDR AF lila"^^xsd:string,
         "Vélo de route électrique SRAM Apex AXS 1x12v, E-EDR AF rouge"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 24.0 ;
     rdfs:comment """Notre VAE route E-EDR AF vous permet de vous attaquer à des montées plus longues et plus raides lors de vos sorties sans vous pénaliser sur les portions plates. Le kit électrique quasiment invisible Mahle X35 bénéficie de 3 modes d'assistance. Sa batterie de 250Wh vous assure une autonomie jusqu'à 100km.
 Transmission électronique sans fil SRAM APEX AXS 1x12S."""^^xsd:string .
@@ -136,126 +136,126 @@ Transmission électronique sans fil SRAM APEX AXS 1x12S."""^^xsd:string .
 cto:Bike_vlo_de_ville_lectrique_bicyklet_camille_ a cs:ElectricBike ;
     rdfs:label "Vélo de Ville Électrique Bicyklet Camille Shimano Acera/Altus 8V 504 Wh 700 mm B"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 14.32 ;
     rdfs:comment "Si vous avez déjà pensé à abandonner la voiture pour vos trajets du quotidien, le vélo de ville électrique Bicyklet Camille peut parfaitement s'adapter à votre nouveau mode de vie.Les + produit :	S..."^^xsd:string .
 
 cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h a cs:ElectricBike ;
     rdfs:label "Vélo de ville électrique elops 900 cadre haut bleu marine"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 14.98 ;
     rdfs:comment "Ce vélo électrique tout équipé vous emmènera confortablement et facilement lors de vos trajets urbains et réguliers. Ce VAE (Vélo à Assistance Électrique) vous apportera du confort, grâce à sa fourche suspendue et sa position typique des vélos hollandais. Son autonomie vous permet des déplacements de 40 à 70 km."^^xsd:string .
 
 cto:Bike_vlo_de_ville_pliant__assistance_lectriqu a cs:ElectricBike ;
     rdfs:label "Vélo de Ville Pliant à Assistance Électrique 24\" - Legend Siena 13Ah Rouge"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 19.5 ;
     rdfs:comment "Vélo électrique pliant de ville, confort urbain et design. Ses pneus 24 facilitent vos trajets quotidiens en ville. Système électrique MAHLE Smartbike."^^xsd:string .
 
 cto:Bike_vlo_de_ville_pliant_fold_20_shimano_7v_s a cs:Bike ;
     rdfs:label "Vélo de Ville Pliant FOLD 20\", SHIMANO 7v, selle comfort"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 3.0 ;
     rdfs:comment "Le même confort que tous nos modèles non pliables, mais avec une polyvalence supplémentaire. Pratique, compact, facile à plier et à ranger"^^xsd:string .
 
 cto:Bike_vlo_de_ville_urban_28_shimano_21v a cs:Bike ;
     rdfs:label "Vélo de Ville URBAN 28\", SHIMANO 21v"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 3.0 ;
     rdfs:comment "Un vélo style hollandais capable de transformer nos promenades 2 roues en une expérience agréable. Un vélo de ville au design classique et élégant, fusionnant style et confort."^^xsd:string .
 
 cto:Bike_vlo_electrique_adulte_275_ebike_app__nfc a cs:ElectricBike ;
     rdfs:label "Vélo Electrique Adulte 27.5\" E-Bike, APP & NFC, RCB-G6"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 14.25 ;
     rdfs:comment "Vélo électrique intelligent G6: moteur 250W, batterie 36V 10.4Ah (30-50km), 25km/h max, APP/NFC, pneus 27.5, 1850×680×1150mm, 25.5kg, charge rapide 6.5-7h, charge max 120kg."^^xsd:string .
 
 cto:Bike_vlo_gravel_shimano_a70_2x7_cloot_xland_7 a cs:Bike ;
     rdfs:label "Vélo gravel Shimano A70 2x7 Cloot XLAND 700"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 9.0 ;
     rdfs:comment "Nouveaux cadres gravel avec axes traversants sur les roues et préparation pour le bikepacking, transmission groupe Shimano A70 en 7x2 avec pédalier 46-30 et cassette 12-32."^^xsd:string .
 
 cto:Bike_vlo_inconnu a cs:Bike ;
     rdfs:label "Vélo Inconnu"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
-    cs:pricePerDayBike 23.98 ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
+    cs:pricePerDayBike 22.5 ;
     rdfs:comment ""^^xsd:string .
 
 cto:Bike_vlo_lectrique_day_sport_rc_gris_28_80km_ a cs:ElectricBike ;
     rdfs:label "Vélo électrique DAY SPORT RC Gris 28'' 80km 460Wh Courroie, PB AR"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 12.73 ;
     rdfs:comment "Le vélo électrique Performant équipé pour la ville : Porte Bagage Arrière. Cadre léger, roues 28’’. Batterie 460Wh jusqu’à 80km, Transmission courroie, Freins à disques, pneus renforcés"^^xsd:string .
 
 cto:Bike_vlo_lectrique_yeepme_day_plus_carrier_2_ a cs:ElectricBike ;
     rdfs:label "Vélo électrique YEEP.ME DAY PLUS Carrier 2 BLANC - PB AV+AR 26’’ 60km 7 vit"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 10.48 ;
     rdfs:comment "Le vélo électrique Maniable et Performant équipé pour la ville : Porte Bagage Avant et Arrière. Cadre léger, Roues 26’’, Batterie jusqu’à 60km, 7 vitesses, Freins à disques, Pneus renforcés"^^xsd:string .
 
 cto:Bike_vlo_tout_chemin_electrique__neomouv_raip a cs:ElectricRoadBike ;
     rdfs:label "Vélo Tout Chemin Electrique - NEOMOUV RAIPON"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 16.5 ;
     rdfs:comment "Notre partenaire NEOMOUV a conçu ce vélo à assistance électrique pour faciliter vos randonnées sur routes et chemins Gagnez en confort et roulez sans effort grâce au coup de pouce de l'électrique ! Moteur à capteur de pédalage, autonomie jusqu'à 100km, fourche suspendue, freins hydrauliques, pour un confort garanti."^^xsd:string .
 
 cto:Bike_vlo_tout_chemin_riverside_120_gris a cs:RoadBike ;
     rdfs:label "VÉLO TOUT CHEMIN RIVERSIDE 120 GRIS"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceUnderRepair ;
     cs:pricePerDayBike 3.9 ;
     rdfs:comment "Vélo polyvalent et confortable pour vos balades occasionnelles sur piste cyclable, route et chemin. Changez de vitesse facilement, avec une seule gâchette. Sa selle, son cintre ergonomique et sa position à 60° optimisent votre confort."^^xsd:string .
 
 cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti a cs:ElectricMountainBike ;
     rdfs:label "vélo VTT ELECTRIQUE tout suspendu 29\" - STILUS E-TRAIL Gris"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 22.5 ;
     rdfs:comment "Ce VTT électrique tout suspendu (VTTAE) a été sélectionné pour les randonnées tout terrain, avec beaucoup de dénivelé (parcours en montagne). C'est un vélo parfaitement adapté pour rouler sur des trails moyennement engagés. Son amortisseur et sa fourche suspendue vous apporteront plus de confort."^^xsd:string .
 
 cto:Bike_vlo_vtt_lectrique_pliant_275_smartbike__ a cs:ElectricMountainBike ;
     rdfs:label "Vélo VTT Électrique Pliant 27,5\" Smartbike - Legend Etna SR 14Ah Gris"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 25.5 ;
     rdfs:comment "VTT électrique pliant tout-suspendu. Découvrez le Smart eBike Etna, un vélo adapté pour tous les terrains et ses fonctionnalités uniques. Système électrique MAHLE Smartbike."^^xsd:string .
 
 cto:Bike_vlo_vtt_rock_26_shimano_21v_freins_a_dis a cs:MountainBike ;
     rdfs:label "Vélo VTT ROCK 26\", SHIMANO 21v, Freins a disques & Suspension avant"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 3.15 ;
     rdfs:comment "Débutants et experts ont une chose en commun : la passion de la montagne. Et quelle meilleure façon d'en profiter pleinement qu'avec le ROCK26 qui vous accompagnera dans vos aventures."^^xsd:string .
 
 cto:Bike_vtt_lectrique_scooty_country_282__275_48 a cs:ElectricMountainBike ;
     rdfs:label "VTT électrique SCOOTY COUNTRY 28.2 - 27,5'' 482Wh"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 10.48 ;
     rdfs:comment "VTT semi rigide optimisé pour la route et tous chemins, très maniable. Compagnon idéal pour une utilisation loisirs et active. Fourche Hydraulique, Cadre alu, 8 vitesses Shimano !"^^xsd:string .
 
 cto:Bike_vtt_vlo_lectrique_20_ek30batterie_amovib a cs:ElectricMountainBike ;
     rdfs:label "VTT Vélo Électrique 20\" EK30-Batterie amovible 750Wh-7 vitesse-Double suspension"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 14.25 ;
     rdfs:comment "VTT Vélo électrique tout terrain 20x4.0- Double suspension avant/arrière-Batterie amovible 750Wh-Moteur 250W-Shimano 7 vitesses- NFC - APP - 55-100KM. Parfait pour neige, sable et chemins accidentés."^^xsd:string .
 
 cto:Bike_xcr_tri_rival_axs_power_roues_fulcrum_wi a cs:Bike ;
     rdfs:label "XCR TRI RIVAL AXS POWER ROUES FULCRUM WIND 750/550"^^xsd:string ;
     cs:availableFrom "2026-01-17"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOk ;
+    cs:maintenanceStatus cs:MaintenanceUnderRepair ;
     cs:pricePerDayBike 87.0 ;
     rdfs:comment "Le XCR a été conçu pour le triathlon longue distance. Il est le fruit d'une collaboration avec l'entreprise spécialiste en aérodynamisme Swiss Side. Chaque ligne à été étudiée pour offrir la plus faible résistance à l'avancement ce qui en fait un des vélos de contre la montre les plus rapide de sa catégorie."^^xsd:string .
 
