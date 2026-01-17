@@ -8,6 +8,7 @@ import random
 import re
 import json
 from faker import Faker
+import random
 
 CS = Namespace("http://data.cyclingtour.fr/schema#")
 CTO_DATA = Namespace("http://data.cyclingtour.fr/data#")
@@ -19,6 +20,8 @@ g_bikes = Graph()
 g_clients = Graph()
 g_reviews = Graph()
 g_bookings = Graph()
+
+list_names_created = set()
 
 for g in [g_bikes, g_clients, g_reviews, g_bookings]:
     g.bind("cs", CS)
@@ -100,7 +103,10 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         raw_rating = review.get("rating", {}).get("code", 5)
 
         author_slug = generate_slug(raw_author)
-        client_id_str = f"{author_slug}_{bike_slug}_{i}"
+        if author_slug in list_names_created:
+            author_slug += f"_{random.randint(1, 100)}"
+        list_names_created.add(author_slug)
+        client_id_str = f"{author_slug}"
         review_id_str = f"{bike_slug}_R{i}"
         booking_id_str = f"Booking_{client_id_str}"
 
@@ -166,7 +172,7 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         final_maintenance_status = CS.MaintenanceOperational
 
     elif status_of_latest_booking == "Finished":
-        if random.random() < 0.6:
+        if random.random() < 0.75:
             final_maintenance_status = random.choice(
                 [CS.MaintenanceNeedsService, CS.MaintenanceUnderRepair]
             )
