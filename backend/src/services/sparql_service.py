@@ -23,3 +23,6 @@ class SparqlService:
 
     def get_graph(self):
         return self.graph
+    
+    def predict_recommendations(self, client_uri):        
+        return { "tour_uri": "tour_uri", "score": 0.95, "reason": "Based on similar clients" } 

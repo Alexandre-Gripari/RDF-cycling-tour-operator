@@ -53,6 +53,10 @@ nl_query_model = api.model('NaturalLanguageQuery', {
     'question': fields.String(required=True, description='User question in natural language (e.g. "Where does the tour start?")')
 })
 
+link_prediction_model = api.model("LinkPrediction", {
+    "client_uri": fields.String(required=True, description="URI of the client for whom to predict tour recommendations"),
+})
+
 @api.route('/query')
 class QueryEndpoint(Resource):
     @api.expect(query_model)
@@ -112,6 +116,7 @@ class EnrichEndpoint(Resource):
 class NaturalLanguageEndpoint(Resource):
     @api.expect(nl_query_model)
     def post(self):
+        """Ask a natural language question to the chatbot service"""
         question = request.json.get('question')
         if not question:
             return {'error': 'Question is required'}, 400
@@ -135,5 +140,20 @@ class TextToSparqlEndpoint(Resource):
             print("Received Text:" + text)
             sparql_query = text_to_sparql_service.text_to_sparql(text)
             return sparql_query, 200
+        except Exception as e:
+            return {"error": str(e)}, 500
+
+@api.route("/prediction")
+class LinkPredictionEndpoint(Resource):
+    @api.expect(link_prediction_model)
+    def post(self):
+        """Predict tour recommendations for a given client URI"""
+        client_uri = request.json.get("client_uri")
+        if not client_uri:
+            return {"error": "Client URI is required"}, 400
+
+        try:
+            predictions = sparql_service.predict_recommendations(client_uri)
+            return predictions, 200
         except Exception as e:
             return {"error": str(e)}, 500
