@@ -1,5 +1,6 @@
 import './style.css'
 import { createIcons, icons } from 'lucide';
+import { marked } from 'marked';
 
 const API_BASE = 'http://127.0.0.1:5000/api';
 
@@ -118,7 +119,7 @@ function renderChatView() {
     btnQuery.className = `px-4 py-1.5 rounded-md text-xs font-medium flex items-center gap-2 transition-all border ${mode === 'query' ? activeClass : inactiveClass}`;
 
     if(mode === 'chat') {
-        input.placeholder = "Ex: How do I prepare for a cycling tour?";
+        input.placeholder = "Ex: List a few cycling tours in the Alps";
         indicator.innerText = "Mode: Human-like text answer";
     } else {
         input.placeholder = "Ex: List all bikes cheaper than 50 euros";
@@ -169,6 +170,7 @@ function renderChatView() {
         });
         const data = await res.json();
         responseText = data.answer.replace(/\n/g, '<br>');
+        responseText = marked.parse(data.answer);
       }
 
       messages.lastElementChild.remove();
