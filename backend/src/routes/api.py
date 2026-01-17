@@ -1,15 +1,18 @@
 from flask import Blueprint, request, jsonify
 from flask_restx import Api, Resource, fields
+from flask_cors import CORS
 from services.sparql_service import SparqlService
 from services.dbpedia_service import DbpediaService
 from services.text_to_sparql.text_to_sparql_service import TextToSparqlService
 from services.chatbot_service import ChatBotService
+from urllib.parse import unquote
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
 api_blueprint = Blueprint("api", __name__, url_prefix="/api")
+CORS(api_blueprint)
 api = Api(
     api_blueprint,
     title="Cycling Tour Operator API",
@@ -91,6 +94,9 @@ class EnrichEndpoint(Resource):
                 uri = row.get("sameAs")
                 if uri:
                     uris_to_fetch.add(uri)
+    
+            if not uris_to_fetch:
+                return {"message": "No URIs found to enrich"}, 200
 
             remote_data = dbpedia_service.get_enriched_data_bulk(
                 list(uris_to_fetch), fields=requested_fields
@@ -102,8 +108,8 @@ class EnrichEndpoint(Resource):
 
                 uri_key = row.get("sameAs")
 
-                if uri_key and uri_key in remote_data:
-                    merged_item.update(remote_data[uri_key])
+                if unquote(uri_key) and uri_key in remote_data:
+                    merged_item.update(remote_data[unquote(uri_key)])
 
                 final_response.append(merged_item)
 

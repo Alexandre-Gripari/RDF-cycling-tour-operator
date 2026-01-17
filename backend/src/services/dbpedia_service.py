@@ -16,7 +16,7 @@ class DbpediaService:
             },
             'description': {
                 'var': '?description',
-                'pred': 'dbo:abstract',
+                'pred': 'dbo:description',
                 'extra': "FILTER (LANG(?description) = 'fr')" 
             },
             'website': {

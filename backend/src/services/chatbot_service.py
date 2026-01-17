@@ -98,7 +98,7 @@ class ChatBotService:
         """
         
         response = self.client.models.generate_content(
-            model='gemini-2.5-flash-lite',
+            model='gemini-3-flash',
             contents=prompt
         )
         return response.text
