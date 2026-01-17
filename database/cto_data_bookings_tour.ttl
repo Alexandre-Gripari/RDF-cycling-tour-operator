@@ -1,0 +1,220 @@
+@prefix cs: <http://data.cyclingtour.fr/schema#> .
+@prefix cto: <http://data.cyclingtour.fr/data#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cto:Booking_Tour_anthony_3286 a cs:TourBooking ;
+    cs:bookedBy cto:Client_anthony ;
+    cs:bookingDate "2026-01-15T16:28:59.368102"^^xsd:dateTime ;
+    cs:endDate "2026-02-09"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:label "Booking for Tour Package: Start at Cholet by anthony"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Cholet_Cholet_Tour .
+
+cto:Booking_Tour_antoine_7912 a cs:TourBooking ;
+    cs:bookedBy cto:Client_antoine ;
+    cs:bookingDate "2025-12-25T15:48:40.373264"^^xsd:dateTime ;
+    cs:endDate "2026-01-10"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:label "Booking for Tour Package: Start at Carcassonne by antoine"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Carcassonne_Montpellier_Tour .
+
+cto:Booking_Tour_belloc_1434 a cs:TourBooking ;
+    cs:bookedBy cto:Client_belloc ;
+    cs:bookingDate "2026-01-16T13:33:00.374263"^^xsd:dateTime ;
+    cs:endDate "2026-02-28"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:label "Booking for Tour Package: Start at Bergerac by belloc"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Bergerac_Perigueux_Tour .
+
+cto:Booking_Tour_benot_4611 a cs:TourBooking ;
+    cs:bookedBy cto:Client_benot ;
+    cs:bookingDate "2025-12-24T19:01:40.374263"^^xsd:dateTime ;
+    cs:endDate "2026-01-30"^^xsd:date ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:label "Booking for Tour Package: Start at Issoire by benot"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Issoire_Saint-Flour_Tour .
+
+cto:Booking_Tour_bruno_3615 a cs:TourBooking ;
+    cs:bookedBy cto:Client_bruno ;
+    cs:bookingDate "2025-12-29T06:54:19.374263"^^xsd:dateTime ;
+    cs:endDate "2026-01-09"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:label "Booking for Tour Package: Start at Tallard by bruno"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Tallard_Nimes_Tour .
+
+cto:Booking_Tour_chevalier_6514 a cs:TourBooking ;
+    cs:bookedBy cto:Client_chevalier ;
+    cs:bookingDate "2026-01-06T07:37:01.374263"^^xsd:dateTime ;
+    cs:endDate "2026-03-06"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:label "Booking for Tour Package: Start at Seraing%2CBelgium by chevalier"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Seraing_%28Belgium%29_Cambrai_Tour .
+
+cto:Booking_Tour_clment_5333 a cs:TourBooking ;
+    cs:bookedBy cto:Client_clment ;
+    cs:bookingDate "2026-01-14T03:39:52.374263"^^xsd:dateTime ;
+    cs:endDate "2026-02-16"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Sophie ;
+    cs:label "Booking for Tour Package: Start at Carcassonne by clment"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Carcassonne_Montpellier_Tour .
+
+cto:Booking_Tour_david_2291 a cs:TourBooking ;
+    cs:bookedBy cto:Client_david ;
+    cs:bookingDate "2025-12-24T01:12:07.375263"^^xsd:dateTime ;
+    cs:endDate "2026-01-28"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:label "Booking for Tour Package: Start at Bergerac by david"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Bergerac_Perigueux_Tour .
+
+cto:Booking_Tour_didier_4150 a cs:TourBooking ;
+    cs:bookedBy cto:Client_didier ;
+    cs:bookingDate "2025-12-20T19:06:18.376263"^^xsd:dateTime ;
+    cs:endDate "2026-01-23"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:label "Booking for Tour Package: Start at Nantua by didier"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Nantua_Chambery_Tour .
+
+cto:Booking_Tour_francois_2307 a cs:TourBooking ;
+    cs:bookedBy cto:Client_francois ;
+    cs:bookingDate "2026-01-14T18:31:25.376263"^^xsd:dateTime ;
+    cs:endDate "2026-02-12"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:label "Booking for Tour Package: Start at Bourg-en-Bresse by francois"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Bourg-en-Bresse_Saint-Etienne_Tour .
+
+cto:Booking_Tour_guillaume_6977 a cs:TourBooking ;
+    cs:bookedBy cto:Client_guillaume ;
+    cs:bookingDate "2025-12-20T12:21:57.377263"^^xsd:dateTime ;
+    cs:endDate "2026-01-29"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Pierre ;
+    cs:label "Booking for Tour Package: Start at Limoux by guillaume"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Limoux_Montpellier_Tour .
+
+cto:Booking_Tour_jean_franois_2169 a cs:TourBooking ;
+    cs:bookedBy cto:Client_jean_franois ;
+    cs:bookingDate "2026-01-05T04:32:32.377783"^^xsd:dateTime ;
+    cs:endDate "2026-02-02"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:label "Booking for Tour Package: Start at D%C3%BCsseldorf%2CGermany by jean_franois"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Dusseldorf_%28Germany%29_Liege_%28Belgium%29_Tour .
+
+cto:Booking_Tour_jouinot_7216 a cs:TourBooking ;
+    cs:bookedBy cto:Client_jouinot ;
+    cs:bookingDate "2025-12-29T16:31:04.378560"^^xsd:dateTime ;
+    cs:endDate "2026-02-07"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:label "Booking for Tour Package: Start at D%C3%BCsseldorf%2CGermany by jouinot"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Dusseldorf_%28Germany%29_Liege_%28Belgium%29_Tour .
+
+cto:Booking_Tour_lg_6313 a cs:TourBooking ;
+    cs:bookedBy cto:Client_lg ;
+    cs:bookingDate "2025-12-17T19:01:39.379148"^^xsd:dateTime ;
+    cs:endDate "2026-01-11"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Thomas ;
+    cs:label "Booking for Tour Package: Start at Morzine by lg"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Morzine_Megeve_Tour .
+
+cto:Booking_Tour_marc_5386 a cs:TourBooking ;
+    cs:bookedBy cto:Client_marc ;
+    cs:bookingDate "2026-01-09T13:54:54.379148"^^xsd:dateTime ;
+    cs:endDate "2026-02-14"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:label "Booking for Tour Package: Start at Bourg-de-P%C3%A9age by marc"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Bourg-de-Peage_Gap_Tour .
+
+cto:Booking_Tour_michel_4483 a cs:TourBooking ;
+    cs:bookedBy cto:Client_michel ;
+    cs:bookingDate "2026-01-09T20:49:29.379148"^^xsd:dateTime ;
+    cs:endDate "2026-02-09"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:label "Booking for Tour Package: Start at Bourg-en-Bresse by michel"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Bourg-en-Bresse_Saint-Etienne_Tour .
+
+cto:Booking_Tour_mumu_3287 a cs:TourBooking ;
+    cs:bookedBy cto:Client_mumu ;
+    cs:bookingDate "2026-01-03T19:17:05.379148"^^xsd:dateTime ;
+    cs:endDate "2026-01-30"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Marie ;
+    cs:label "Booking for Tour Package: Start at Vittel by mumu"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Vittel_Colmar_Tour .
+
+cto:Booking_Tour_nm88_8019 a cs:TourBooking ;
+    cs:bookedBy cto:Client_nm88 ;
+    cs:bookingDate "2025-12-23T22:11:58.379148"^^xsd:dateTime ;
+    cs:endDate "2026-02-19"^^xsd:date ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:label "Booking for Tour Package: Start at Meg%C3%A8ve by nm88"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Megeve_Morzine_Tour .
+
+cto:Booking_Tour_pauline_2489 a cs:TourBooking ;
+    cs:bookedBy cto:Client_pauline ;
+    cs:bookingDate "2026-01-05T08:37:42.379148"^^xsd:dateTime ;
+    cs:endDate "2026-02-16"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:label "Booking for Tour Package: Start at Saint-Flour by pauline"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Saint-Flour_Albi_Tour .
+
+cto:Booking_Tour_ronan_7916 a cs:TourBooking ;
+    cs:bookedBy cto:Client_ronan ;
+    cs:bookingDate "2025-12-20T12:36:34.379148"^^xsd:dateTime ;
+    cs:endDate "2026-01-10"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Claire ;
+    cs:label "Booking for Tour Package: Start at Bourg-de-P%C3%A9age by ronan"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Bourg-de-Peage_Gap_Tour .
+
+cto:Booking_Tour_sam_5119 a cs:TourBooking ;
+    cs:bookedBy cto:Client_sam ;
+    cs:bookingDate "2026-01-04T03:07:45.379148"^^xsd:dateTime ;
+    cs:endDate "2026-02-17"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Elise ;
+    cs:label "Booking for Tour Package: Start at Bourg-en-Bresse by sam"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Bourg-en-Bresse_Saint-Etienne_Tour .
+
+cto:Booking_Tour_thomas_5371 a cs:TourBooking ;
+    cs:bookedBy cto:Client_thomas ;
+    cs:bookingDate "2025-12-25T16:38:31.380660"^^xsd:dateTime ;
+    cs:endDate "2026-02-08"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:label "Booking for Tour Package: Start at Aix-en-Provence by thomas"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Aix-en-Provence_Montpellier_Tour .
+
+cto:Booking_Tour_wallez_1053 a cs:TourBooking ;
+    cs:bookedBy cto:Client_wallez ;
+    cs:bookingDate "2026-01-13T06:19:04.380660"^^xsd:dateTime ;
+    cs:endDate "2026-02-22"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Julie ;
+    cs:label "Booking for Tour Package: Start at P%C3%A9rigueux by wallez"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Perigueux_Bergerac_Tour .
+
+cto:Booking_Tour_willy_5889 a cs:TourBooking ;
+    cs:bookedBy cto:Client_willy ;
+    cs:bookingDate "2025-12-31T10:13:16.380660"^^xsd:dateTime ;
+    cs:endDate "2026-01-17"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Mathieu ;
+    cs:label "Booking for Tour Package: Start at Montpellier by willy"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Montpellier_Albi_Tour .
+
+cto:Booking_Tour_youcef_9689 a cs:TourBooking ;
+    cs:bookedBy cto:Client_youcef ;
+    cs:bookingDate "2026-01-12T03:58:04.380660"^^xsd:dateTime ;
+    cs:endDate "2026-02-26"^^xsd:date ;
+    cs:guideAssigned cto:Guide_John ;
+    cs:label "Booking for Tour Package: Start at Issoire by youcef"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Issoire_Saint-Flour_Tour .
+
+cto:Booking_Tour_yvesalain_6947 a cs:TourBooking ;
+    cs:bookedBy cto:Client_yvesalain ;
+    cs:bookingDate "2025-12-28T05:15:13.380660"^^xsd:dateTime ;
+    cs:endDate "2026-01-15"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:label "Booking for Tour Package: Start at Aix-en-Provence by yvesalain"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Aix-en-Provence_Montpellier_Tour .
+
+cto:Booking_Tour_zapf_2290 a cs:TourBooking ;
+    cs:bookedBy cto:Client_zapf ;
+    cs:bookingDate "2026-01-09T14:30:18.381667"^^xsd:dateTime ;
+    cs:endDate "2026-02-25"^^xsd:date ;
+    cs:guideAssigned cto:Guide_Paul ;
+    cs:label "Booking for Tour Package: Start at N%C3%AEmes by zapf"^^xsd:string ;
+    cs:tourPackageBooked cto:Package_Nimes_Nimes_Tour .
+
