@@ -1,3 +1,4 @@
+from urllib.parse import unquote
 from rdflib import Graph, URIRef, Namespace
 from rdflib.namespace import RDFS
 import owlrl
@@ -91,17 +92,22 @@ class SparqlService:
                     candidates[tour] += jaccard_score
 
         recommendations = []
+        max_score = max(candidates.values()) if candidates else 1.0
+        
         for tour_uri, score in candidates.items():
             label_res = self.graph.query(
                 "SELECT ?label WHERE { ?tour rdfs:label ?label }", 
                 initBindings={'tour': tour_uri}
             )
-            label = next(iter(label_res)).label if label_res else str(tour_uri)
-
+            
+            raw_label = next(iter(label_res)).label if label_res else str(tour_uri)
+            clean_label = unquote(str(raw_label))
+            normalized_score = score / max_score 
+            
             recommendations.append({
                 "tour_uri": str(tour_uri),
-                "label": str(label),
-                "score": round(score, 3),
+                "label": clean_label,
+                "score": round(normalized_score, 2),
             })
 
         recommendations.sort(key=lambda x: x['score'], reverse=True)
