@@ -1,0 +1,75 @@
+# ----------------------------------------------------------------------------
+# QUERY 1: Quel est le dénivelé total cumulé pour chaque 'Tour Package' et quel est le guide responsable de ce tour ?
+# ----------------------------------------------------------------------------
+
+PREFIX cs: <http://data.cyclingtour.fr/schema#>
+PREFIX cto: <http://data.cyclingtour.fr/data#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+SELECT ?tourLabel ?guideName (SUM(?elevation) AS ?totalElevation)
+WHERE {
+  ?tour a cs:TourPackage ;
+        rdfs:label ?tourLabel ;
+        cs:guideAssigned ?guide ;
+        cs:includesStage ?stage .
+
+  ?guide foaf:name ?guideName .
+
+  ?stage cs:stagePath ?path .
+  ?path cs:elevationGain ?elevation . 
+
+FILTER (?elevation > 0)
+}
+GROUP BY ?tourLabel ?guideName
+ORDER BY DESC(?totalElevation)
+
+# ----------------------------------------------------------------------------
+# QUERY 2: Quels vélos ont reçu de mauvaises critiques (note < 4) et quel est leur statut de maintenance actuel ?
+# ----------------------------------------------------------------------------
+
+PREFIX cs: <http://data.cyclingtour.fr/schema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?bikeLabel ?rating ?maintenanceStatus ?reviewText
+WHERE {
+  ?review a cs:Review ;
+          cs:rating ?rating ;
+          cs:reviewText ?reviewText ;
+          cs:reviewsItem ?bike .
+  
+  FILTER (?rating < 4)
+
+  ?bike a cs:Bike ;
+        rdfs:label ?bikeLabel ;
+        cs:maintenanceStatus ?maintenanceStatus .
+}
+ORDER BY ?rating
+
+# ----------------------------------------------------------------------------
+# QUERY 3: Quels guides sont assignés à des étapes longues (durée > 8 heures) et quel est le prix journalier du tour associé ?
+# ----------------------------------------------------------------------------
+
+PREFIX cs: <http://data.cyclingtour.fr/schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?guideName ?stageLabel ?length ?tourPrice
+WHERE {
+  ?stage a cs:TourStage ;
+         cs:guideAssigned ?guide ;
+         cs:stagePath ?path . 
+
+  ?path cs:length ?length .
+  
+  FILTER (?length > 50.0)
+
+  ?tour cs:includesStage ?stage ;
+        cs:pricePerDayTour ?tourPrice .
+
+  OPTIONAL { ?guide rdfs:label ?guideName } . 
+  OPTIONAL { ?guide foaf:name ?guideName } .
+  OPTIONAL { ?stage rdfs:label ?stageLabel } .
+}
+ORDER BY DESC(?tourPrice)
+
