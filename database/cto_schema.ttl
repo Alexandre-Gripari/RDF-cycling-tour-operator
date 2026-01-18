@@ -217,7 +217,7 @@ cs:stagePath a owl:ObjectProperty ;
     rdfs:label "path of the stage" .
 
 cs:guideAssigned a owl:ObjectProperty ;
-    rdfs:domain cs:TourStage , cs:TourPackage ;
+    rdfs:domain [ owl:unionOf ( cs:TourStage cs:TourPackage ) ] ;
     rdfs:range cs:Guide ;
     rdfs:label "assigned guide" .
 
