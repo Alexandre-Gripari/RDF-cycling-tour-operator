@@ -5,234 +5,234 @@
 cto:Booking_anne a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_velo_vtc_neomouv_raipon_2 ;
     cs:bookedBy cto:Client_anne ;
-    cs:bookingDate "2025-11-30"^^xsd:date ;
-    cs:endDate "2026-01-29"^^xsd:date .
+    cs:bookingDate "2025-10-31T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-11-28"^^xsd:date .
 
 cto:Booking_anthony a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_cargo_lectrique_longtail_chargement_ ;
     cs:bookedBy cto:Client_anthony ;
-    cs:bookingDate "2025-12-30"^^xsd:date ;
-    cs:endDate "2026-02-18"^^xsd:date .
+    cs:bookingDate "2025-12-01T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-15"^^xsd:date .
 
 cto:Booking_av a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h ;
     cs:bookedBy cto:Client_av ;
-    cs:bookingDate "2025-12-19"^^xsd:date ;
-    cs:endDate "2026-01-27"^^xsd:date .
+    cs:bookingDate "2025-10-21T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-11-30"^^xsd:date .
 
 cto:Booking_belloc a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_cargo_lectrique_longtail_chargement_ ;
     cs:bookedBy cto:Client_belloc ;
-    cs:bookingDate "2025-12-19"^^xsd:date ;
-    cs:endDate "2026-02-09"^^xsd:date .
+    cs:bookingDate "2026-02-03T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-03-12"^^xsd:date .
 
 cto:Booking_benot a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_cargo_lectrique_longtail_chargement_ ;
     cs:bookedBy cto:Client_benot ;
-    cs:bookingDate "2025-10-19"^^xsd:date ;
-    cs:endDate "2025-11-30"^^xsd:date .
+    cs:bookingDate "2026-01-08T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-02-04"^^xsd:date .
 
 cto:Booking_blanc a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti ;
     cs:bookedBy cto:Client_blanc ;
-    cs:bookingDate "2026-01-29"^^xsd:date ;
-    cs:endDate "2026-03-09"^^xsd:date .
+    cs:bookingDate "2025-10-12T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-12-10"^^xsd:date .
 
 cto:Booking_bruno a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_rcr_pro_team_dura_ace_di2_signature ;
     cs:bookedBy cto:Client_bruno ;
-    cs:bookingDate "2026-02-04"^^xsd:date ;
-    cs:endDate "2026-02-26"^^xsd:date .
+    cs:bookingDate "2025-10-15T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-11-17"^^xsd:date .
 
 cto:Booking_chevalier a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_xcr_tri_rival_axs_power_roues_fulcrum_wi ;
     cs:bookedBy cto:Client_chevalier ;
-    cs:bookingDate "2025-11-18"^^xsd:date ;
-    cs:endDate "2025-12-16"^^xsd:date .
+    cs:bookingDate "2025-11-27T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-12"^^xsd:date .
 
 cto:Booking_christopher a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_tout_chemin_riverside_500_vert_deau ;
     cs:bookedBy cto:Client_christopher ;
-    cs:bookingDate "2026-01-16"^^xsd:date ;
-    cs:endDate "2026-02-07"^^xsd:date .
+    cs:bookingDate "2025-11-27T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-12-24"^^xsd:date .
 
 cto:Booking_clment a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_velo_ville_electrique_a_moteur_automatiq ;
     cs:bookedBy cto:Client_clment ;
-    cs:bookingDate "2025-11-07"^^xsd:date ;
-    cs:endDate "2025-12-08"^^xsd:date .
+    cs:bookingDate "2025-12-22T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-20"^^xsd:date .
 
 cto:Booking_cristina a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti ;
     cs:bookedBy cto:Client_cristina ;
-    cs:bookingDate "2026-01-19"^^xsd:date ;
-    cs:endDate "2026-03-06"^^xsd:date .
+    cs:bookingDate "2026-02-05T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-04-01"^^xsd:date .
 
 cto:Booking_david a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
     cs:bookedBy cto:Client_david ;
-    cs:bookingDate "2025-12-10"^^xsd:date ;
-    cs:endDate "2026-01-28"^^xsd:date .
+    cs:bookingDate "2025-10-12T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-11-27"^^xsd:date .
 
 cto:Booking_didier a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_tout_chemin_riverside_120_gris ;
     cs:bookedBy cto:Client_didier ;
-    cs:bookingDate "2025-12-07"^^xsd:date ;
-    cs:endDate "2026-01-12"^^xsd:date .
+    cs:bookingDate "2025-10-22T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-11-23"^^xsd:date .
 
 cto:Booking_francois a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
     cs:bookedBy cto:Client_francois ;
-    cs:bookingDate "2025-11-16"^^xsd:date ;
-    cs:endDate "2025-12-28"^^xsd:date .
+    cs:bookingDate "2025-12-06T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-05"^^xsd:date .
 
 cto:Booking_guillaume a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_velo_ville_electrique_a_moteur_automatiq ;
     cs:bookedBy cto:Client_guillaume ;
-    cs:bookingDate "2026-01-29"^^xsd:date ;
-    cs:endDate "2026-03-14"^^xsd:date .
+    cs:bookingDate "2025-12-19T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-02-14"^^xsd:date .
 
 cto:Booking_jean_franois a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_rcr_pro_team_dura_ace_di2_signature ;
     cs:bookedBy cto:Client_jean_franois ;
-    cs:bookingDate "2025-11-26"^^xsd:date ;
-    cs:endDate "2026-01-07"^^xsd:date .
+    cs:bookingDate "2025-11-06T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-03"^^xsd:date .
 
 cto:Booking_jouinot a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_tout_chemin_electrique__neomouv_raip ;
     cs:bookedBy cto:Client_jouinot ;
-    cs:bookingDate "2026-01-31"^^xsd:date ;
-    cs:endDate "2026-02-25"^^xsd:date .
+    cs:bookingDate "2025-10-16T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-12-12"^^xsd:date .
 
 cto:Booking_lg a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
     cs:bookedBy cto:Client_lg ;
-    cs:bookingDate "2025-12-07"^^xsd:date ;
-    cs:endDate "2026-01-10"^^xsd:date .
+    cs:bookingDate "2025-12-20T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-24"^^xsd:date .
 
 cto:Booking_marc a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_velo_vtc_neomouv_raipon_2 ;
     cs:bookedBy cto:Client_marc ;
-    cs:bookingDate "2025-10-10"^^xsd:date ;
-    cs:endDate "2025-11-07"^^xsd:date .
+    cs:bookingDate "2026-01-15T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-03-18"^^xsd:date .
 
 cto:Booking_martin a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_tout_chemin_riverside_500_vert_deau ;
     cs:bookedBy cto:Client_martin ;
-    cs:bookingDate "2026-02-03"^^xsd:date ;
-    cs:endDate "2026-04-04"^^xsd:date .
+    cs:bookingDate "2025-10-29T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-12-10"^^xsd:date .
 
 cto:Booking_michel a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
     cs:bookedBy cto:Client_michel ;
-    cs:bookingDate "2025-10-19"^^xsd:date ;
-    cs:endDate "2025-12-02"^^xsd:date .
+    cs:bookingDate "2026-02-12T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-03-27"^^xsd:date .
 
 cto:Booking_michelle a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h ;
     cs:bookedBy cto:Client_michelle ;
-    cs:bookingDate "2025-12-08"^^xsd:date ;
-    cs:endDate "2026-01-03"^^xsd:date .
+    cs:bookingDate "2026-01-31T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-03-05"^^xsd:date .
 
 cto:Booking_mumu a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_tout_chemin_electrique__neomouv_raip ;
     cs:bookedBy cto:Client_mumu ;
-    cs:bookingDate "2026-01-27"^^xsd:date ;
-    cs:endDate "2026-02-26"^^xsd:date .
+    cs:bookingDate "2025-12-17T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-13"^^xsd:date .
 
 cto:Booking_nm88 a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_tout_chemin_riverside_120_gris ;
     cs:bookedBy cto:Client_nm88 ;
-    cs:bookingDate "2025-12-24"^^xsd:date ;
-    cs:endDate "2026-02-04"^^xsd:date .
+    cs:bookingDate "2025-12-11T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-08"^^xsd:date .
 
 cto:Booking_pauline a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_rcr_pro_team_dura_ace_di2_signature ;
     cs:bookedBy cto:Client_pauline ;
-    cs:bookingDate "2025-10-24"^^xsd:date ;
-    cs:endDate "2025-12-03"^^xsd:date .
+    cs:bookingDate "2026-02-03T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-03-10"^^xsd:date .
 
 cto:Booking_pedro a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_velo_route_cyclotouriste_rc500_microshif ;
     cs:bookedBy cto:Client_pedro ;
-    cs:bookingDate "2025-12-30"^^xsd:date ;
-    cs:endDate "2026-02-06"^^xsd:date .
+    cs:bookingDate "2025-12-02T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-09"^^xsd:date .
 
 cto:Booking_philippe a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti ;
     cs:bookedBy cto:Client_philippe ;
-    cs:bookingDate "2025-11-03"^^xsd:date ;
-    cs:endDate "2025-11-23"^^xsd:date .
+    cs:bookingDate "2025-11-08T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-12-26"^^xsd:date .
 
 cto:Booking_roger a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_tout_chemin_riverside_500_vert_deau ;
     cs:bookedBy cto:Client_roger ;
-    cs:bookingDate "2026-01-26"^^xsd:date ;
-    cs:endDate "2026-03-12"^^xsd:date .
+    cs:bookingDate "2026-01-21T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-03-17"^^xsd:date .
 
 cto:Booking_ronan a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_xcr_tri_rival_axs_power_roues_fulcrum_wi ;
     cs:bookedBy cto:Client_ronan ;
-    cs:bookingDate "2025-10-27"^^xsd:date ;
-    cs:endDate "2025-12-01"^^xsd:date .
+    cs:bookingDate "2025-11-18T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-24"^^xsd:date .
 
 cto:Booking_sam a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_velo_ville_electrique_a_moteur_automatiq ;
     cs:bookedBy cto:Client_sam ;
-    cs:bookingDate "2026-02-02"^^xsd:date ;
-    cs:endDate "2026-04-09"^^xsd:date .
+    cs:bookingDate "2025-10-25T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-12-18"^^xsd:date .
 
 cto:Booking_sarah a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_velo_route_cyclotouriste_rc500_microshif ;
     cs:bookedBy cto:Client_sarah ;
-    cs:bookingDate "2025-11-25"^^xsd:date ;
-    cs:endDate "2026-01-29"^^xsd:date .
+    cs:bookingDate "2025-10-30T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-02"^^xsd:date .
 
 cto:Booking_thomas a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_tout_chemin_riverside_120_gris ;
     cs:bookedBy cto:Client_thomas ;
-    cs:bookingDate "2025-12-12"^^xsd:date ;
-    cs:endDate "2026-02-06"^^xsd:date .
+    cs:bookingDate "2025-11-15T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-12-18"^^xsd:date .
 
 cto:Booking_walid a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_velo_route_cyclotouriste_rc500_microshif ;
     cs:bookedBy cto:Client_walid ;
-    cs:bookingDate "2025-10-10"^^xsd:date ;
-    cs:endDate "2025-11-27"^^xsd:date .
+    cs:bookingDate "2025-12-17T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-07"^^xsd:date .
 
 cto:Booking_wallez a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
     cs:bookedBy cto:Client_wallez ;
-    cs:bookingDate "2025-11-29"^^xsd:date ;
-    cs:endDate "2026-01-18"^^xsd:date .
+    cs:bookingDate "2025-10-19T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-12-02"^^xsd:date .
 
 cto:Booking_willy a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 ;
     cs:bookedBy cto:Client_willy ;
-    cs:bookingDate "2026-02-10"^^xsd:date ;
-    cs:endDate "2026-04-01"^^xsd:date .
+    cs:bookingDate "2025-11-19T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-01-17"^^xsd:date .
 
 cto:Booking_yassine a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h ;
     cs:bookedBy cto:Client_yassine ;
-    cs:bookingDate "2026-02-17"^^xsd:date ;
-    cs:endDate "2026-04-02"^^xsd:date .
+    cs:bookingDate "2025-10-31T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2025-12-25"^^xsd:date .
 
 cto:Booking_youcef a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_velo_vtc_neomouv_raipon_2 ;
     cs:bookedBy cto:Client_youcef ;
-    cs:bookingDate "2025-11-08"^^xsd:date ;
-    cs:endDate "2025-12-21"^^xsd:date .
+    cs:bookingDate "2025-12-14T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-02-01"^^xsd:date .
 
 cto:Booking_yvesalain a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_vlo_tout_chemin_electrique__neomouv_raip ;
     cs:bookedBy cto:Client_yvesalain ;
-    cs:bookingDate "2025-12-01"^^xsd:date ;
-    cs:endDate "2026-01-04"^^xsd:date .
+    cs:bookingDate "2026-01-03T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-02-15"^^xsd:date .
 
 cto:Booking_zapf a cs:BikeBooking ;
     cs:bikeBooked cto:Bike_xcr_tri_rival_axs_power_roues_fulcrum_wi ;
     cs:bookedBy cto:Client_zapf ;
-    cs:bookingDate "2026-01-29"^^xsd:date ;
-    cs:endDate "2026-02-25"^^xsd:date .
+    cs:bookingDate "2025-12-13T00:00:00"^^xsd:dateTime ;
+    cs:endDate "2026-02-08"^^xsd:date .
 

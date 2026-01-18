@@ -2,91 +2,91 @@
 @prefix cto: <http://data.cyclingtour.fr/data#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-cto:Review_rcr_pro_team_dura_ace_di2_signature_R0 a cs:Review ;
+cto:Review_rcr_pro_team_dura_ace_di2_signature_8901934_R0 a cs:Review ;
     cs:rating 4.0 ;
     cs:reviewText "Le vélo est magnifique et à rouler il a un rendement de fou; pour l'instant je n'ai fait que 2 sorties mais il m'a fait rêver (je viens du VTT, j'ai eu un vélo de route mais il avait 15 ans).<br>J'ai mis que 4 étoiles car déçu par le magasin; transmission mal réglé, capteur de puissance pas chargé et incapable de me faire les réglages à ma taille; dommage au prix du vélo.<br>Heureusement que je fais du vélo depuis plus de 20 ans mais pour un débutant c'est limite !"^^xsd:string ;
     cs:reviewedBy cto:Client_bruno ;
     cs:reviewsItem cto:Bike_rcr_pro_team_dura_ace_di2_signature .
 
-cto:Review_rcr_pro_team_dura_ace_di2_signature_R1 a cs:Review ;
+cto:Review_rcr_pro_team_dura_ace_di2_signature_8901934_R1 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "J'ai hésité un bon moment puis ai franchi le pas. Même avec un niveau sans commune mesure inférieur par rapport à des pros, ce biclous est une vraie tuerie. J'ai cru le premier mois à l’effet \"waouhh\" de l'achat mais maintenant, 6 mois après, ben, non c'est pas ça. Pourtant je sors d'un biclou déjà pas dégueu (Origine Axxome 3) mais il y a un monde d'écart. A ce tarif là (8000€ au moment de l'achat), c'est une belle affaire à tout le moins. "^^xsd:string ;
     cs:reviewedBy cto:Client_jean_franois ;
     cs:reviewsItem cto:Bike_rcr_pro_team_dura_ace_di2_signature .
 
-cto:Review_rcr_pro_team_dura_ace_di2_signature_R2 a cs:Review ;
+cto:Review_rcr_pro_team_dura_ace_di2_signature_8901934_R2 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Magnifique!!!un rendement de fou! Confort ! Ce vélo devrait être remboursé par la secu tellement il procure de bonheur!!!"^^xsd:string ;
     cs:reviewedBy cto:Client_pauline ;
     cs:reviewsItem cto:Bike_rcr_pro_team_dura_ace_di2_signature .
 
-cto:Review_velo_route_cyclotouriste_rc500_microshif_R0 a cs:Review ;
+cto:Review_velo_route_cyclotouriste_rc500_microshif_8774014_R0 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Très boin rapport qualité prix cadre nerveux à souhait."^^xsd:string ;
     cs:reviewedBy cto:Client_pedro ;
     cs:reviewsItem cto:Bike_velo_route_cyclotouriste_rc500_microshif .
 
-cto:Review_velo_route_cyclotouriste_rc500_microshif_R1 a cs:Review ;
+cto:Review_velo_route_cyclotouriste_rc500_microshif_8774014_R1 a cs:Review ;
     cs:rating 2.0 ;
     cs:reviewText "Acheté récemment, le vélo RC500 présente dès les premiers jours des bruits au niveau du dérailleur et des freins. Après environ deux semaines d’utilisation, le dérailleur commence à mal fonctionner : il passe les vitesses de façon aléatoire, parfois sans que je touche aux commandes, ce qui est dangereux et gênant.<br>Je suis déçu de cette expérience et je recommande un contrôle ou une réparation en garantie"^^xsd:string ;
     cs:reviewedBy cto:Client_walid ;
     cs:reviewsItem cto:Bike_velo_route_cyclotouriste_rc500_microshif .
 
-cto:Review_velo_route_cyclotouriste_rc500_microshif_R2 a cs:Review ;
+cto:Review_velo_route_cyclotouriste_rc500_microshif_8774014_R2 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Parfait "^^xsd:string ;
     cs:reviewedBy cto:Client_sarah ;
     cs:reviewsItem cto:Bike_velo_route_cyclotouriste_rc500_microshif .
 
-cto:Review_velo_ville_electrique_a_moteur_automatiq_R0 a cs:Review ;
+cto:Review_velo_ville_electrique_a_moteur_automatiq_8664452_R0 a cs:Review ;
     cs:rating 1.0 ;
     cs:reviewText "Je suis extrêmement déçu. Le vélo a failli me tuer deux fois ce matin je roule sur une route à 30 et tout d’un coup les pédales lâchent et je tourne dans le vide, je suis tombé par terre à côté des voitures. C’est la 50e fois que ça arrive en quelques mois depuis mon achat. À part ça, l’autonomie est très loin d’être celle promise. Une catastrophe"^^xsd:string ;
     cs:reviewedBy cto:Client_sam ;
     cs:reviewsItem cto:Bike_velo_ville_electrique_a_moteur_automatiq .
 
-cto:Review_velo_ville_electrique_a_moteur_automatiq_R1 a cs:Review ;
+cto:Review_velo_ville_electrique_a_moteur_automatiq_8664452_R1 a cs:Review ;
     cs:rating 1.0 ;
     cs:reviewText "Après presque un an d’utilisation : puissance et fluidité OK.<br>Mais à ce prix, certains choix sont difficilement acceptables : devoir sortir la batterie à chaque charge, absence de fourche suspendue rendant l’usage routier inconfortable, et surtout clés non reproductibles impliquant le remplacement de toutes les serrures (+150 €) en cas de perte.<br>Je m’interroge sur la conformité de ce dernier point avec la réglementation française et européenne."^^xsd:string ;
     cs:reviewedBy cto:Client_clment ;
     cs:reviewsItem cto:Bike_velo_ville_electrique_a_moteur_automatiq .
 
-cto:Review_velo_ville_electrique_a_moteur_automatiq_R2 a cs:Review ;
+cto:Review_velo_ville_electrique_a_moteur_automatiq_8664452_R2 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Grande autonomie (une charge permet de faire plus de 100km au plat et plus de 30km avec plus de 1000 mètres de dénivelé), antivol hyper pratique, bon éclairage, freinage excellent..."^^xsd:string ;
     cs:reviewedBy cto:Client_guillaume ;
     cs:reviewsItem cto:Bike_velo_ville_electrique_a_moteur_automatiq .
 
-cto:Review_velo_vtc_neomouv_raipon_2_R0 a cs:Review ;
+cto:Review_velo_vtc_neomouv_raipon_2_8925164_R0 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Mon meilleur achat pour cette nouvelle année.  Design, confortable soldé tout pour plaire"^^xsd:string ;
     cs:reviewedBy cto:Client_anne ;
     cs:reviewsItem cto:Bike_velo_vtc_neomouv_raipon_2 .
 
-cto:Review_velo_vtc_neomouv_raipon_2_R1 a cs:Review ;
+cto:Review_velo_vtc_neomouv_raipon_2_8925164_R1 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Je recommande vraiment ce vélo. Je l'utilise tous les jours en tirant une cariole avec mes deux enfants dedans.<br>Le seul point négatif est l'économie qu'ils ont fait sur le lampe de devant, elle est bralante et la connectique ne tient pas.<br>J'ai du la remplacer avec une lampe perso rechargeable. "^^xsd:string ;
     cs:reviewedBy cto:Client_youcef ;
     cs:reviewsItem cto:Bike_velo_vtc_neomouv_raipon_2 .
 
-cto:Review_velo_vtc_neomouv_raipon_2_R2 a cs:Review ;
+cto:Review_velo_vtc_neomouv_raipon_2_8925164_R2 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Bonne autonomie, facilite de prise en main,equipement ,<br>Defaut selle un peu dure sur long trajet"^^xsd:string ;
     cs:reviewedBy cto:Client_marc ;
     cs:reviewsItem cto:Bike_velo_vtc_neomouv_raipon_2 .
 
-cto:Review_vlo_cargo_lectrique_longtail_chargement__R0 a cs:Review ;
+cto:Review_vlo_cargo_lectrique_longtail_chargement__8826511_R0 a cs:Review ;
     cs:rating 4.0 ;
     cs:reviewText "Vélo vite pris en main. Très maniable. Très utile en ville pour les déplacements au quotidien.<br>Prix un peu trop important. Déçu sur les pièces détachées (prix et disponibilité). Le câble d'alimentation de la lampe avant a été sectionné net (mauvaise manip) et la lampe originale n'existe plus. Impossible d'avoir les informations en ligne ou au tél ..... Et la lampe qui serait adaptée et en ligne, a un niveau d'éclairement moins important (60 lux au lieu de 80). "^^xsd:string ;
     cs:reviewedBy cto:Client_benot ;
     cs:reviewsItem cto:Bike_vlo_cargo_lectrique_longtail_chargement_ .
 
-cto:Review_vlo_cargo_lectrique_longtail_chargement__R1 a cs:Review ;
+cto:Review_vlo_cargo_lectrique_longtail_chargement__8826511_R1 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "tres confortable super moteur et tres maniable"^^xsd:string ;
     cs:reviewedBy cto:Client_anthony ;
     cs:reviewsItem cto:Bike_vlo_cargo_lectrique_longtail_chargement_ .
 
-cto:Review_vlo_cargo_lectrique_longtail_chargement__R2 a cs:Review ;
+cto:Review_vlo_cargo_lectrique_longtail_chargement__8826511_R2 a cs:Review ;
     cs:rating 3.0 ;
     cs:reviewText """Mieux mais encore déçu…
 Je roule avec ce modèle depuis 2022, 14000 kms vélo-taff-école enfant. C’est mon véhicule au quotidien qui a remplacé une voiture dans notre foyer. J’en suis à mon 2e vélo. 
@@ -99,130 +99,140 @@ Et la, pneu en rupture de stock !Impossible de trouver sur d’autres enseignes,
     cs:reviewedBy cto:Client_belloc ;
     cs:reviewsItem cto:Bike_vlo_cargo_lectrique_longtail_chargement_ .
 
-cto:Review_vlo_de_route_lectrique_sram_apex_axs_1x1_R0 a cs:Review ;
-    cs:rating 4.0,
-        5.0 ;
-    cs:reviewText "Le rapport qualité prix est vraiment bon !<br>C’est ma conjointe qui utilise ce vélo et cela lui permet d'enchainer les sorties sur le weekend.<br>"^^xsd:string,
-        "Très beau vélo avec un super équipement. Une réserve concernant le changement de niveau d autonomie qui ne se fait pas au guidon mais sur le cadre ce qui nécessite une certaine habilité "^^xsd:string ;
-    cs:reviewedBy cto:Client_david,
-        cto:Client_francois ;
+cto:Review_vlo_de_route_lectrique_sram_apex_axs_1x1_8788538_R0 a cs:Review ;
+    cs:rating 4.0 ;
+    cs:reviewText "Très beau vélo avec un super équipement. Une réserve concernant le changement de niveau d autonomie qui ne se fait pas au guidon mais sur le cadre ce qui nécessite une certaine habilité "^^xsd:string ;
+    cs:reviewedBy cto:Client_francois ;
     cs:reviewsItem cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 .
 
-cto:Review_vlo_de_route_lectrique_sram_apex_axs_1x1_R1 a cs:Review ;
+cto:Review_vlo_de_route_lectrique_sram_apex_axs_1x1_8788538_R1 a cs:Review ;
     cs:rating 5.0 ;
-    cs:reviewText "1er sortie 50 km vélo très agréable dérailleur électrique très réactif une vraie boîte automatique "^^xsd:string,
-        "Vélo idéal pour la pratique en zone montagne. L’assistance électrique aide à la réalisation de parcours qui seraient quasi inaccessibles sans entraînement (c’est le cas de la conjointe qui utilise ce vélo).<br>La démultiplication permet de rouler sans soucis sans assistance et au delà des 25 km/h. En outre, le poids est contenu.<br>Le système SRAM est génial, rapide et agréable.<br>Sorties de 50/60 km, la batterie est encore à moitié pleine.<br>L’application téléphone dédiée Mahle facilite l’utilisation de la gestion de l’assistance plus que le bouton sur le cadre.<br>Et replace avantageusement le compteur décathlon bas de gamme qui n’est pas en lien avec la batterie du vélo.<br>Les choix technologiques pour ce vélo le rendent très agréable ! Le rapport qualité prix est vraiment bon !<br>Un super produit conseillé par les vendeurs du rayon vélo de décathlon à Foix, et une vraie découverte !"^^xsd:string ;
-    cs:reviewedBy cto:Client_wallez,
-        cto:Client_willy ;
+    cs:reviewText "1er sortie 50 km vélo très agréable dérailleur électrique très réactif une vraie boîte automatique "^^xsd:string ;
+    cs:reviewedBy cto:Client_wallez ;
     cs:reviewsItem cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 .
 
-cto:Review_vlo_de_route_lectrique_sram_apex_axs_1x1_R2 a cs:Review ;
-    cs:rating 4.0,
-        5.0 ;
+cto:Review_vlo_de_route_lectrique_sram_apex_axs_1x1_8788538_R2 a cs:Review ;
+    cs:rating 4.0 ;
     cs:reviewText """Léger malgré le moteur, pneus en 32  confortables. Le changement de vitesse est parfait tout comme le freinage.
-La batterie tient bien. Sur une sortie de 140 km avec 1500m de deniv + j'ai consommé 35% en mode eco, assistance utilisée uniquement sur les montées. Sur le plat le faible poids du vélo n oblige pas à utiliser le moteur qui de toute façon se coupe à plus de 25 km/h. Je recommande donc à toutes les personnes qui veulent faire du sport sans avoir  l appréhension du dénivelé. """^^xsd:string,
-        "Super vélo de route très léger bonne autonomie de batterie "^^xsd:string ;
-    cs:reviewedBy cto:Client_lg,
-        cto:Client_michel ;
+La batterie tient bien. Sur une sortie de 140 km avec 1500m de deniv + j'ai consommé 35% en mode eco, assistance utilisée uniquement sur les montées. Sur le plat le faible poids du vélo n oblige pas à utiliser le moteur qui de toute façon se coupe à plus de 25 km/h. Je recommande donc à toutes les personnes qui veulent faire du sport sans avoir  l appréhension du dénivelé. """^^xsd:string ;
+    cs:reviewedBy cto:Client_lg ;
     cs:reviewsItem cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 .
 
-cto:Review_vlo_de_ville_lectrique_elops_900_cadre_h_R0 a cs:Review ;
+cto:Review_vlo_de_route_lectrique_sram_apex_axs_1x1_8788564_R0 a cs:Review ;
+    cs:rating 5.0 ;
+    cs:reviewText "Le rapport qualité prix est vraiment bon !<br>C’est ma conjointe qui utilise ce vélo et cela lui permet d'enchainer les sorties sur le weekend.<br>"^^xsd:string ;
+    cs:reviewedBy cto:Client_david ;
+    cs:reviewsItem cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 .
+
+cto:Review_vlo_de_route_lectrique_sram_apex_axs_1x1_8788564_R1 a cs:Review ;
+    cs:rating 5.0 ;
+    cs:reviewText "Vélo idéal pour la pratique en zone montagne. L’assistance électrique aide à la réalisation de parcours qui seraient quasi inaccessibles sans entraînement (c’est le cas de la conjointe qui utilise ce vélo).<br>La démultiplication permet de rouler sans soucis sans assistance et au delà des 25 km/h. En outre, le poids est contenu.<br>Le système SRAM est génial, rapide et agréable.<br>Sorties de 50/60 km, la batterie est encore à moitié pleine.<br>L’application téléphone dédiée Mahle facilite l’utilisation de la gestion de l’assistance plus que le bouton sur le cadre.<br>Et replace avantageusement le compteur décathlon bas de gamme qui n’est pas en lien avec la batterie du vélo.<br>Les choix technologiques pour ce vélo le rendent très agréable ! Le rapport qualité prix est vraiment bon !<br>Un super produit conseillé par les vendeurs du rayon vélo de décathlon à Foix, et une vraie découverte !"^^xsd:string ;
+    cs:reviewedBy cto:Client_willy ;
+    cs:reviewsItem cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 .
+
+cto:Review_vlo_de_route_lectrique_sram_apex_axs_1x1_8788564_R2 a cs:Review ;
+    cs:rating 5.0 ;
+    cs:reviewText "Super vélo de route très léger bonne autonomie de batterie "^^xsd:string ;
+    cs:reviewedBy cto:Client_michel ;
+    cs:reviewsItem cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 .
+
+cto:Review_vlo_de_ville_lectrique_elops_900_cadre_h_8605298_R0 a cs:Review ;
     cs:rating 3.0 ;
     cs:reviewText "Vélo, un petit peu fragile quand on freine pas de feu de stop à l’arrière"^^xsd:string ;
     cs:reviewedBy cto:Client_yassine ;
     cs:reviewsItem cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h .
 
-cto:Review_vlo_de_ville_lectrique_elops_900_cadre_h_R1 a cs:Review ;
+cto:Review_vlo_de_ville_lectrique_elops_900_cadre_h_8605298_R1 a cs:Review ;
     cs:rating 1.0 ;
     cs:reviewText "12/09 je viens encore de passer qq heure à l atelier j y étais le 4/09 déjà. Le 4 on m annonce que le moteur du vélo est mort .  Le 12 on m annonce que c est le cadre qui est voilé. Le 4 ils ont re serré les freins. Le 12 re belotte sauf que là  pour freiner il va d'abord falloir que j aille à la salle pousser de la fonte. N y les n y les autre on vu que j avais  un rayon de cassé qui vol au vent . Si vous avez besoin d un vélo  jetable elios est bien ou c est le personnel qu il faut jeter. Suite la semaine prochaine "^^xsd:string ;
     cs:reviewedBy cto:Client_michelle ;
     cs:reviewsItem cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h .
 
-cto:Review_vlo_de_ville_lectrique_elops_900_cadre_h_R2 a cs:Review ;
+cto:Review_vlo_de_ville_lectrique_elops_900_cadre_h_8605298_R2 a cs:Review ;
     cs:rating 3.0 ;
     cs:reviewText "J'ai acheté ce vélo il y a une semaine. Je suis plutôt satisfait du vélo qui fait le job pour son prix accessible (entrée de gamme).<br>Toutefois, hier soir, j'ai pris la route après une grosse averse, et un simple freinage de routine en amont d'un passage piéton m'a fait chuter du vélo violemment. Je ne me suis pas fais très mal mais l'issue aurait pu être différente si une voiture me suivait.<br>J'ai contacté le decath Paris Madeleine qui m'a invité à venir en urgence pour voir si le vélo présentait un défaut et essayer de comprendre ce qui avait pu se passer (de ce côté là , je félicite et remercie decath pour la qualité de la prise en charge et de l'écoute). <br>On m'a indiqué que le vélo ne présentait pas de défaut particulier, mais que j'avais mal fais le rodage des freins à disque. On m'a également indiqué que les pneux de ce VAE ne sont pas forcément les meilleurs pour \"accrocher\" le bitume. Bref, diagnostic et prise en charge gratuits, et changement du frein à disque arrière pris en charge également. Je ressors donc avec un vélo nickel, satisfait de la prise en charge très pro, mais pas de réponse sur la raison de ma chute... je n'ai jamais chuté comme ça en 10 ans de vélotaf quotidien. Je reprend donc la route avec ce VAE satisfait de la prise en charge, mais quand même anxieux que cela puisse se reproduire, n'ayant pas vraiment de réponse sur la cause de ma chute ... en tout cas, je serai très vigilant à l'avenir par temps de pluie ou sur route humide pour freiner ! "^^xsd:string ;
     cs:reviewedBy cto:Client_av ;
     cs:reviewsItem cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h .
 
-cto:Review_vlo_tout_chemin_electrique__neomouv_raip_R0 a cs:Review ;
+cto:Review_vlo_tout_chemin_electrique__neomouv_raip_8925162_R0 a cs:Review ;
     cs:rating 1.0 ;
     cs:reviewText "Pour le moment, je donne zéro étoile. Vélo qui se met en sécurité selon Neomouv. je suis  en attente des tests sur banc. Mais je trouve ça ubuesque qu'un vélo à assistance se mette en sécurité d'un coup sans alerte ou autre, au milieu d'une côte, dans le flux de circulation.On se retrouve en danger.  Et pour rappel, un vélo à assistance est essentiellement pris par les gens pour les aider en cas de difficultés."^^xsd:string ;
     cs:reviewedBy cto:Client_jouinot ;
     cs:reviewsItem cto:Bike_vlo_tout_chemin_electrique__neomouv_raip .
 
-cto:Review_vlo_tout_chemin_electrique__neomouv_raip_R1 a cs:Review ;
+cto:Review_vlo_tout_chemin_electrique__neomouv_raip_8925162_R1 a cs:Review ;
     cs:rating 1.0 ;
     cs:reviewText "2jour et marche plus  .pourri ce velo "^^xsd:string ;
     cs:reviewedBy cto:Client_mumu ;
     cs:reviewsItem cto:Bike_vlo_tout_chemin_electrique__neomouv_raip .
 
-cto:Review_vlo_tout_chemin_electrique__neomouv_raip_R2 a cs:Review ;
+cto:Review_vlo_tout_chemin_electrique__neomouv_raip_8925162_R2 a cs:Review ;
     cs:rating 4.0 ;
     cs:reviewText "J’aime bien le vélo juste l’application n’a pas vraiment d’utilité ou c’est compliqué d’arriver à l’utiliser . Ensuite très peu de contenu en ligne pour aider. Et dernier point sur le vélo les câble sont un petit peu trop exposé. Dans l’ensemble sur le vélo en lui même rien à rien très performant et j’ai reçu des compliments sur la couleur et sur la beauté du vélo."^^xsd:string ;
     cs:reviewedBy cto:Client_yvesalain ;
     cs:reviewsItem cto:Bike_vlo_tout_chemin_electrique__neomouv_raip .
 
-cto:Review_vlo_tout_chemin_riverside_120_gris_R0 a cs:Review ;
+cto:Review_vlo_tout_chemin_riverside_120_gris_8771010_R0 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Bon vélo, confortable, agile, silencieux, léger. Les pédales de bonne taille permettent de bien accrocher ses jambes, et la selle est impeccable. Un seul plateau, mais les vitesses arrières permettent sans mal de franchir des zones vallonnees. Le systeme passage des vitesses au guidon convient pour la ville ou le chemin en balade mais pas pour une conduite sportive. Les gardes boues sont un peu courts en cas de grosse intempéries, c'est le seul défaut que j'ai trouvé au vélo. Freins v-brake a l'ancienne faciles a régler. La Suspension généralisée ces dernières années a presque tous les modèles finalement pas si indispensable que ça. Le gros point fort de ce vélo : sa discrétion. Vous pouvez rouler habillé en costume ou en survêtement sans que cela soit choquant, il conviendra à tous les styles vestimentaires. "^^xsd:string ;
     cs:reviewedBy cto:Client_thomas ;
     cs:reviewsItem cto:Bike_vlo_tout_chemin_riverside_120_gris .
 
-cto:Review_vlo_tout_chemin_riverside_120_gris_R1 a cs:Review ;
+cto:Review_vlo_tout_chemin_riverside_120_gris_8771010_R1 a cs:Review ;
     cs:rating 2.0 ;
     cs:reviewText "Malgré plusieurs réglages par les techniciens decathlon, les freins sont une catastrophe! A chaque montée ou descente de trottoir ou chaque bosse, les arceaux se déplacent et le frein frotte les roues de côté ce qui fait qu'on doit s'arrêter pour les remettre en place sinon on roule avec du freinage... ça gâche tout le vélo, parce que le reste fonctionne bien. Egalement peu compatible avec les accessoires, y compris les garde-boue, car pas autant de prises de fixation que les autres modèles. "^^xsd:string ;
     cs:reviewedBy cto:Client_nm88 ;
     cs:reviewsItem cto:Bike_vlo_tout_chemin_riverside_120_gris .
 
-cto:Review_vlo_tout_chemin_riverside_120_gris_R2 a cs:Review ;
+cto:Review_vlo_tout_chemin_riverside_120_gris_8771010_R2 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Excellent produit, bonne tenue de route, Bonne qualité/prix, robuste sur tous types de terrains, correspond tout à fait à mes attentes. "^^xsd:string ;
     cs:reviewedBy cto:Client_didier ;
     cs:reviewsItem cto:Bike_vlo_tout_chemin_riverside_120_gris .
 
-cto:Review_vlo_tout_chemin_riverside_500_vert_deau_R0 a cs:Review ;
+cto:Review_vlo_tout_chemin_riverside_500_vert_deau_8582570_R0 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Rien à redire du début à la fin"^^xsd:string ;
     cs:reviewedBy cto:Client_martin ;
     cs:reviewsItem cto:Bike_vlo_tout_chemin_riverside_500_vert_deau .
 
-cto:Review_vlo_tout_chemin_riverside_500_vert_deau_R1 a cs:Review ;
+cto:Review_vlo_tout_chemin_riverside_500_vert_deau_8582570_R1 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Bien"^^xsd:string ;
     cs:reviewedBy cto:Client_christopher ;
     cs:reviewsItem cto:Bike_vlo_tout_chemin_riverside_500_vert_deau .
 
-cto:Review_vlo_tout_chemin_riverside_500_vert_deau_R2 a cs:Review ;
+cto:Review_vlo_tout_chemin_riverside_500_vert_deau_8582570_R2 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Utiser 2 fois rien à redire pour le moment "^^xsd:string ;
     cs:reviewedBy cto:Client_roger ;
     cs:reviewsItem cto:Bike_vlo_tout_chemin_riverside_500_vert_deau .
 
-cto:Review_vlo_vtt_electrique_tout_suspendu_29__sti_R0 a cs:Review ;
+cto:Review_vlo_vtt_electrique_tout_suspendu_29__sti_8754162_R0 a cs:Review ;
     cs:rating 4.0 ;
     cs:reviewText "Fait le job"^^xsd:string ;
     cs:reviewedBy cto:Client_blanc ;
     cs:reviewsItem cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti .
 
-cto:Review_vlo_vtt_electrique_tout_suspendu_29__sti_R1 a cs:Review ;
+cto:Review_vlo_vtt_electrique_tout_suspendu_29__sti_8754162_R1 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Suite à des soucie sur un eexpl520 remplacement par ce model qui est vraiment de meilleur qualité pour l’instant mise a par une chaîne de mauvaise qualité qui n’a durer que 130km aujourd’hui 800km est aucun problème, juste dommage que le Kiox ne soit pas monter d’origine sur se model"^^xsd:string ;
     cs:reviewedBy cto:Client_philippe ;
     cs:reviewsItem cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti .
 
-cto:Review_vlo_vtt_electrique_tout_suspendu_29__sti_R2 a cs:Review ;
+cto:Review_vlo_vtt_electrique_tout_suspendu_29__sti_8754162_R2 a cs:Review ;
     cs:rating 1.0 ;
     cs:reviewText "Jai acheté ce velo, il y a 3 semaines, au bout de 2 sorties vtt en forêt une pédale cassée, le verrin de la suspension arrière fuit, le dérailleur est déconnant !"^^xsd:string ;
     cs:reviewedBy cto:Client_cristina ;
     cs:reviewsItem cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti .
 
-cto:Review_xcr_tri_rival_axs_power_roues_fulcrum_wi_R0 a cs:Review ;
+cto:Review_xcr_tri_rival_axs_power_roues_fulcrum_wi_8758200_R0 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Superbe équipe "^^xsd:string ;
     cs:reviewedBy cto:Client_chevalier ;
     cs:reviewsItem cto:Bike_xcr_tri_rival_axs_power_roues_fulcrum_wi .
 
-cto:Review_xcr_tri_rival_axs_power_roues_fulcrum_wi_R1 a cs:Review ;
+cto:Review_xcr_tri_rival_axs_power_roues_fulcrum_wi_8758200_R1 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText """Le vélo a été récupéré en magasin (merci au magasin de Cholet pour le montage et le réglage) 
 Pour information il est livré avec un porte bidon et surtout une multitude de cales qui permettent des réglages qui s adaptent à tous les profils. Je conseil néanmoins une étude posturale tellement il y a de possibilités. 
@@ -230,7 +240,7 @@ Très bon vélo avec un rapport qualité /prix imbattable """^^xsd:string ;
     cs:reviewedBy cto:Client_ronan ;
     cs:reviewsItem cto:Bike_xcr_tri_rival_axs_power_roues_fulcrum_wi .
 
-cto:Review_xcr_tri_rival_axs_power_roues_fulcrum_wi_R2 a cs:Review ;
+cto:Review_xcr_tri_rival_axs_power_roues_fulcrum_wi_8758200_R2 a cs:Review ;
     cs:rating 5.0 ;
     cs:reviewText "Top Preis / Leistung"^^xsd:string ;
     cs:reviewedBy cto:Client_zapf ;

@@ -2,11 +2,11 @@ import cloudscraper
 from bs4 import BeautifulSoup
 from rdflib import Graph, Literal, RDF, URIRef, Namespace
 from rdflib.namespace import XSD, RDFS, FOAF
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 import time
 import random
 import re
-import json
+import os
 from faker import Faker
 
 CS = Namespace("http://data.cyclingtour.fr/schema#")
@@ -29,6 +29,7 @@ for g in [g_bikes, g_clients, g_reviews, g_bookings, g_tour_bookings]:
     g.bind("foaf", FOAF)
     g.bind("xsd", XSD)
 
+AVAILABLE_PACKAGES = []
 
 def clean_price(price_str):
     if not price_str:
@@ -41,6 +42,32 @@ def generate_slug(text):
     slug = text.lower().strip().replace(" ", "_").replace("'", "").replace("/", "")
     slug = re.sub(r"[^a-z0-9_]", "", slug)
     return slug[:40]
+
+
+def load_tour_packages(file_path):
+    print(f"Chargement des packages depuis {file_path}...")
+    
+    if not os.path.exists(file_path):
+        print(f"Erreur : Le fichier {file_path} est introuvable.")
+        return
+
+    g_packages = Graph()
+    g_packages.parse(file_path, format="turtle")
+    
+    count = 0
+    for package_uri in g_packages.subjects(RDF.type, CS.TourPackage):
+        label = g_packages.value(package_uri, RDFS.label)
+        guide_uri = g_packages.value(package_uri, CS.guideAssigned)
+        
+        if label and guide_uri:
+            AVAILABLE_PACKAGES.append({
+                "uri": package_uri,         
+                "label": str(label),         
+                "guide_uri": guide_uri      
+            })
+            count += 1
+            
+    print(f"{count} packages chargés avec succès.")
 
 
 def get_bike_type(name, description):
@@ -119,23 +146,34 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         first_tour_start = current_cursor_date
         last_tour_end = current_cursor_date    
         
-        for t_idx in range(num_tours):
-            tour_duration = random.randint(2, 7)
-            tour_start_date = current_cursor_date
-            tour_end_date = tour_start_date + timedelta(days=tour_duration)
-            
-            tour_booking_uri = CTO_DATA[f"TourBooking_{client_id_str}_{t_idx}"]
-            
-            g_tour_bookings.add((tour_booking_uri, RDF.type, CS.TourBooking))
-            g_tour_bookings.add((tour_booking_uri, CS.bookedBy, client_uri))
-            g_tour_bookings.add((tour_booking_uri, CS.bookingDate, Literal(tour_start_date, datatype=XSD.date)))
-            g_tour_bookings.add((tour_booking_uri, CS.endDate, Literal(tour_end_date, datatype=XSD.date)))
-            
-            last_tour_end = tour_end_date
-            
-            gap = random.randint(1, 5)
-            current_cursor_date = tour_end_date + timedelta(days=gap)
-
+        if AVAILABLE_PACKAGES:
+            for t_idx in range(num_tours):
+                package_data = random.choice(AVAILABLE_PACKAGES)
+                
+                tour_duration = random.randint(2, 7)
+                tour_start_date = current_cursor_date
+                tour_end_date = tour_start_date + timedelta(days=tour_duration)
+                
+                tour_booking_uri = CTO_DATA[f"TourBooking_{client_id_str}_{t_idx}"]
+                
+                g_tour_bookings.add((tour_booking_uri, RDF.type, CS.TourBooking))
+                
+                label_text = f"Booking for {package_data['label']}"
+                g_tour_bookings.add((tour_booking_uri, RDFS.label, Literal(label_text, datatype=XSD.string)))
+                
+                g_tour_bookings.add((tour_booking_uri, CS.bookedBy, client_uri))
+                
+                booking_datetime = datetime.combine(tour_start_date, datetime.min.time())
+                g_tour_bookings.add((tour_booking_uri, CS.bookingDate, Literal(booking_datetime, datatype=XSD.dateTime)))
+                g_tour_bookings.add((tour_booking_uri, CS.endDate, Literal(tour_end_date, datatype=XSD.date)))
+                
+                g_tour_bookings.add((tour_booking_uri, CS.tourPackageBooked, package_data['uri']))
+                
+                g_tour_bookings.add((tour_booking_uri, CS.guideAssigned, package_data['guide_uri']))
+                
+                last_tour_end = tour_end_date
+                gap = random.randint(1, 5)
+                current_cursor_date = tour_end_date + timedelta(days=gap)
 
         bike_booking_id_str = f"Booking_{client_id_str}"
         booking_uri = CTO_DATA[bike_booking_id_str]
@@ -171,12 +209,14 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         g_bookings.add((booking_uri, RDF.type, CS.BikeBooking))
         g_bookings.add((booking_uri, CS.bookedBy, client_uri))
         g_bookings.add((booking_uri, CS.bikeBooked, bike_uri))
+        
+        bike_booking_dt = datetime.combine(booking_date, datetime.min.time())
         g_bookings.add(
-            (booking_uri, CS.bookingDate, Literal(booking_date, datatype=XSD.date))
+            (booking_uri, CS.bookingDate, Literal(bike_booking_dt, datatype=XSD.dateTime))
         )
         g_bookings.add((booking_uri, CS.endDate, Literal(end_date, datatype=XSD.date)))
 
-        review_id_str = f"{bike_slug}_R{i}"
+        review_id_str = f"{bike_slug}_{sku}_R{i}"
         review_uri = CTO_DATA[f"Review_{review_id_str}"]
         
         g_reviews.add((review_uri, RDF.type, CS.Review))
@@ -268,6 +308,13 @@ def get_bike_links(main_url, scraper):
 
 
 def main():
+    path_to_tour_ttl = "../database/cto_data_tour.ttl"
+    
+    load_tour_packages(path_to_tour_ttl)
+    
+    if not AVAILABLE_PACKAGES:
+        print("ATTENTION: Aucun package n'a été chargé. Les TourBookings ne seront pas générés correctement.")
+    
     scraper = cloudscraper.create_scraper()
     main_url = "https://www.decathlon.fr/tous-les-sports/velo-cyclisme/velos"
 

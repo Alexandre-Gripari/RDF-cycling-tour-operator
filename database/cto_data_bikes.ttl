@@ -77,7 +77,7 @@ cto:Bike_ub400b__vtt_lectrique_tout_suspendu__jus a cs:ElectricMountainBike ;
 cto:Bike_velo_route_cyclotouriste_rc500_microshif a cs:RoadBike ;
     rdfs:label "VELO ROUTE CYCLOTOURISTE RC500 MICROSHIFT 9V GRIS"^^xsd:string ;
     cs:availableFrom "2026-01-18"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOperational ;
+    cs:maintenanceStatus cs:MaintenanceNeedsService ;
     cs:pricePerDayBike 9.0 ;
     rdfs:comment "Nous avons conçu et testé ce vélo route pour vos sorties régulières. Il vous garantira un confort sans concession pour rouler plus loin, plus souvent. Roulez plus loin et plus souvent avec notre vélo route le plus confortable que nous ayons conçu. Découvrez son freinage à disque et sa géométrie spécifique."^^xsd:string .
 
@@ -129,7 +129,7 @@ cto:Bike_vlo_de_ville_lectrique_bicyklet_camille_ a cs:ElectricBike ;
 cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h a cs:ElectricBike ;
     rdfs:label "Vélo de ville électrique elops 900 cadre haut bleu marine"^^xsd:string ;
     cs:availableFrom "2026-01-18"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOperational ;
+    cs:maintenanceStatus cs:MaintenanceUnderRepair ;
     cs:pricePerDayBike 14.98 ;
     rdfs:comment "Ce vélo électrique tout équipé vous emmènera confortablement et facilement lors de vos trajets urbains et réguliers. Ce VAE (Vélo à Assistance Électrique) vous apportera du confort, grâce à sa fourche suspendue et sa position typique des vélos hollandais. Son autonomie vous permet des déplacements de 40 à 70 km."^^xsd:string .
 
@@ -199,28 +199,28 @@ cto:Bike_vlo_lectrique_yeepme_day_plus_carrier_2_ a cs:ElectricBike ;
 cto:Bike_vlo_tout_chemin_electrique__neomouv_raip a cs:ElectricRoadBike ;
     rdfs:label "Vélo Tout Chemin Electrique - NEOMOUV RAIPON"^^xsd:string ;
     cs:availableFrom "2026-01-18"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceUnderRepair ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 16.5 ;
     rdfs:comment "Notre partenaire NEOMOUV a conçu ce vélo à assistance électrique pour faciliter vos randonnées sur routes et chemins Gagnez en confort et roulez sans effort grâce au coup de pouce de l'électrique ! Moteur à capteur de pédalage, autonomie jusqu'à 100km, fourche suspendue, freins hydrauliques, pour un confort garanti."^^xsd:string .
 
 cto:Bike_vlo_tout_chemin_riverside_120_gris a cs:RoadBike ;
     rdfs:label "VÉLO TOUT CHEMIN RIVERSIDE 120 GRIS"^^xsd:string ;
     cs:availableFrom "2026-01-18"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOperational ;
+    cs:maintenanceStatus cs:MaintenanceNeedsService ;
     cs:pricePerDayBike 3.9 ;
     rdfs:comment "Vélo polyvalent et confortable pour vos balades occasionnelles sur piste cyclable, route et chemin. Changez de vitesse facilement, avec une seule gâchette. Sa selle, son cintre ergonomique et sa position à 60° optimisent votre confort."^^xsd:string .
 
 cto:Bike_vlo_tout_chemin_riverside_500_vert_deau a cs:RoadBike ;
     rdfs:label "VÉLO TOUT CHEMIN RIVERSIDE 500 VERT D'EAU"^^xsd:string ;
     cs:availableFrom "2026-01-18"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceOperational ;
+    cs:maintenanceStatus cs:MaintenanceUnderRepair ;
     cs:pricePerDayBike 5.25 ;
     rdfs:comment "Vélo polyvalent,  confortable et dynamique pour vos balades régulières sur piste cyclable, route et chemin. Partez en balade en pleine nature ! Léger, maniable et confort, le Riverside 500 saura vous convaincre de toute sa polyvalence sur route et chemin."^^xsd:string .
 
 cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti a cs:ElectricMountainBike ;
     rdfs:label "vélo VTT ELECTRIQUE tout suspendu 29\" - STILUS E-TRAIL Gris"^^xsd:string ;
     cs:availableFrom "2026-01-18"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceUnderRepair ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 22.5 ;
     rdfs:comment "Ce VTT électrique tout suspendu (VTTAE) a été sélectionné pour les randonnées tout terrain, avec beaucoup de dénivelé (parcours en montagne). C'est un vélo parfaitement adapté pour rouler sur des trails moyennement engagés. Son amortisseur et sa fourche suspendue vous apporteront plus de confort."^^xsd:string .
 
@@ -255,7 +255,7 @@ cto:Bike_vtt_vlo_lectrique_20_ek30batterie_amovib a cs:ElectricMountainBike ;
 cto:Bike_xcr_tri_rival_axs_power_roues_fulcrum_wi a cs:Bike ;
     rdfs:label "XCR TRI RIVAL AXS POWER ROUES FULCRUM WIND 750/550"^^xsd:string ;
     cs:availableFrom "2026-01-18"^^xsd:date ;
-    cs:maintenanceStatus cs:MaintenanceUnderRepair ;
+    cs:maintenanceStatus cs:MaintenanceOperational ;
     cs:pricePerDayBike 87.0 ;
     rdfs:comment "Le XCR a été conçu pour le triathlon longue distance. Il est le fruit d'une collaboration avec l'entreprise spécialiste en aérodynamisme Swiss Side. Chaque ligne à été étudiée pour offrir la plus faible résistance à l'avancement ce qui en fait un des vélos de contre la montre les plus rapide de sa catégorie."^^xsd:string .
 

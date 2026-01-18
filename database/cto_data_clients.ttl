@@ -4,197 +4,197 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 cto:Client_anne a cs:Client ;
-    cs:phone "+33 (0)1 49 43 32 18"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "0750154303"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Anne "^^xsd:string .
 
 cto:Client_anthony a cs:Client ;
-    cs:phone "03 29 47 31 78"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 1 83 50 98 39"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Anthony"^^xsd:string .
 
 cto:Client_av a cs:Client ;
-    cs:phone "+33 1 70 91 69 98"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "0563670106"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "AV"^^xsd:string .
 
 cto:Client_belloc a cs:Client ;
-    cs:phone "+33 (0)1 76 80 13 26"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 1 40 10 31 05"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Belloc"^^xsd:string .
 
 cto:Client_benot a cs:Client ;
-    cs:phone "0245333872"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "0546578713"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Benoît"^^xsd:string .
 
 cto:Client_blanc a cs:Client ;
-    cs:phone "06 98 36 02 60"^^xsd:string ;
-    cs:tourStatus "Not Started"^^xsd:string ;
+    cs:phone "0567965328"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Blanc"^^xsd:string .
 
 cto:Client_bruno a cs:Client ;
-    cs:phone "0390353462"^^xsd:string ;
-    cs:tourStatus "Not Started"^^xsd:string ;
+    cs:phone "0245333872"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Bruno "^^xsd:string .
 
 cto:Client_chevalier a cs:Client ;
-    cs:phone "+33 (0)2 98 65 42 35"^^xsd:string ;
+    cs:phone "0390353462"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Chevalier"^^xsd:string .
 
 cto:Client_christopher a cs:Client ;
-    cs:phone "+33 6 31 04 82 81"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 (0)2 35 61 55 94"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Christopher"^^xsd:string .
 
 cto:Client_clment a cs:Client ;
-    cs:phone "+33 (0)2 31 71 82 27"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 (0)5 19 47 52 55"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "clément"^^xsd:string .
 
 cto:Client_cristina a cs:Client ;
-    cs:phone "+33 4 50 30 98 05"^^xsd:string ;
+    cs:phone "+33 (0)5 32 69 78 48"^^xsd:string ;
     cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "CRISTINA "^^xsd:string .
 
 cto:Client_david a cs:Client ;
     cs:phone "05 19 48 35 03"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "DAVID"^^xsd:string .
 
 cto:Client_didier a cs:Client ;
-    cs:phone "+33 1 40 10 31 05"^^xsd:string ;
+    cs:phone "0355252880"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Didier"^^xsd:string .
 
 cto:Client_francois a cs:Client ;
-    cs:phone "+33 (0)3 76 47 38 29"^^xsd:string ;
+    cs:phone "06 98 36 02 60"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "FRANCOIS"^^xsd:string .
 
 cto:Client_guillaume a cs:Client ;
-    cs:phone "+33 4 13 89 63 83"^^xsd:string ;
-    cs:tourStatus "Not Started"^^xsd:string ;
+    cs:phone "+33 4 15 19 28 32"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Guillaume "^^xsd:string .
 
 cto:Client_jean_franois a cs:Client ;
-    cs:phone "0633510799"^^xsd:string ;
+    cs:phone "03 29 47 31 78"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Jean François"^^xsd:string .
 
 cto:Client_jouinot a cs:Client ;
-    cs:phone "0352103413"^^xsd:string ;
-    cs:tourStatus "Not Started"^^xsd:string ;
+    cs:phone "+33 (0)1 49 43 32 18"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Jouinot "^^xsd:string .
 
 cto:Client_lg a cs:Client ;
-    cs:phone "0563670106"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 4 50 30 98 05"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "LG"^^xsd:string .
 
 cto:Client_marc a cs:Client ;
-    cs:phone "+33 (0)3 55 86 37 94"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 4 13 89 63 83"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Marc"^^xsd:string .
 
 cto:Client_martin a cs:Client ;
-    cs:phone "+33 (0)2 48 84 51 46"^^xsd:string ;
-    cs:tourStatus "Not Started"^^xsd:string ;
+    cs:phone "+33 (0)2 98 65 42 35"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Martin"^^xsd:string .
 
 cto:Client_michel a cs:Client ;
     cs:phone "+33 8 06 72 42 38"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Michel"^^xsd:string .
 
 cto:Client_michelle a cs:Client ;
-    cs:phone "+33 (0)3 44 19 13 61"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "03 81 76 31 16"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Michelle"^^xsd:string .
 
 cto:Client_mumu a cs:Client ;
-    cs:phone "+33 (0)5 19 47 52 55"^^xsd:string ;
-    cs:tourStatus "Not Started"^^xsd:string ;
+    cs:phone "+33 (0)5 63 00 13 38"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Mumu"^^xsd:string .
 
 cto:Client_nm88 a cs:Client ;
-    cs:phone "+33 1 83 50 98 39"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 6 31 04 82 81"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "nm88"^^xsd:string .
 
 cto:Client_pauline a cs:Client ;
-    cs:phone "+33 (0)2 21 83 84 25"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 (0)1 76 80 13 26"^^xsd:string ;
+    cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "Pauline"^^xsd:string .
 
 cto:Client_pedro a cs:Client ;
-    cs:phone "0567965328"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 (0)1 76 97 88 20"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Pedro"^^xsd:string .
 
 cto:Client_philippe a cs:Client ;
-    cs:phone "04 13 74 68 72"^^xsd:string ;
+    cs:phone "02 34 01 22 69"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Philippe"^^xsd:string .
 
 cto:Client_roger a cs:Client ;
-    cs:phone "0355252880"^^xsd:string ;
+    cs:phone "+33 (0)6 34 81 61 84"^^xsd:string ;
     cs:tourStatus "Not Started"^^xsd:string ;
     foaf:name "ROGER"^^xsd:string .
 
 cto:Client_ronan a cs:Client ;
-    cs:phone "+33 (0)2 35 61 55 94"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "0633510799"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Ronan"^^xsd:string .
 
 cto:Client_sam a cs:Client ;
-    cs:phone "0750154303"^^xsd:string ;
-    cs:tourStatus "Not Started"^^xsd:string ;
+    cs:phone "0352103413"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Sam"^^xsd:string .
 
 cto:Client_sarah a cs:Client ;
-    cs:phone "+33 (0)5 32 69 78 48"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 1 70 91 69 98"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Sarah"^^xsd:string .
 
 cto:Client_thomas a cs:Client ;
-    cs:phone "0546578713"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "+33 (0)2 48 84 51 46"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "thomas"^^xsd:string .
 
 cto:Client_walid a cs:Client ;
-    cs:phone "02 34 01 22 69"^^xsd:string ;
+    cs:phone "+33 (0)3 44 19 13 61"^^xsd:string ;
     cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Walid"^^xsd:string .
 
 cto:Client_wallez a cs:Client ;
-    cs:phone "03 81 76 31 16"^^xsd:string ;
-    cs:tourStatus "In Progress"^^xsd:string ;
+    cs:phone "04 13 74 68 72"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "wallez "^^xsd:string .
 
 cto:Client_willy a cs:Client ;
     cs:phone "+33 (0)4 70 64 13 95"^^xsd:string ;
-    cs:tourStatus "Not Started"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "Willy"^^xsd:string .
 
 cto:Client_yassine a cs:Client ;
-    cs:phone "+33 (0)1 76 97 88 20"^^xsd:string ;
-    cs:tourStatus "Not Started"^^xsd:string ;
+    cs:phone "+33 (0)3 76 47 38 29"^^xsd:string ;
+    cs:tourStatus "Finished"^^xsd:string ;
     foaf:name "yassine"^^xsd:string .
 
 cto:Client_youcef a cs:Client ;
-    cs:phone "+33 (0)5 63 00 13 38"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 (0)2 31 71 82 27"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Youcef"^^xsd:string .
 
 cto:Client_yvesalain a cs:Client ;
-    cs:phone "+33 4 15 19 28 32"^^xsd:string ;
-    cs:tourStatus "Finished"^^xsd:string ;
+    cs:phone "+33 (0)3 55 86 37 94"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Yves-Alain"^^xsd:string .
 
 cto:Client_zapf a cs:Client ;
-    cs:phone "+33 (0)6 34 81 61 84"^^xsd:string ;
-    cs:tourStatus "Not Started"^^xsd:string ;
+    cs:phone "+33 (0)2 21 83 84 25"^^xsd:string ;
+    cs:tourStatus "In Progress"^^xsd:string ;
     foaf:name "Zapf "^^xsd:string .
 
