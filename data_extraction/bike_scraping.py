@@ -8,7 +8,6 @@ import random
 import re
 import json
 from faker import Faker
-import random
 
 CS = Namespace("http://data.cyclingtour.fr/schema#")
 CTO_DATA = Namespace("http://data.cyclingtour.fr/data#")
@@ -19,11 +18,12 @@ fake.seed_instance(42)
 g_bikes = Graph()
 g_clients = Graph()
 g_reviews = Graph()
-g_bookings = Graph()
+g_bookings = Graph()    
+g_tour_bookings = Graph()
 
 list_names_created = set()
 
-for g in [g_bikes, g_clients, g_reviews, g_bookings]:
+for g in [g_bikes, g_clients, g_reviews, g_bookings, g_tour_bookings]:
     g.bind("cs", CS)
     g.bind("cto", CTO_DATA)
     g.bind("foaf", FOAF)
@@ -91,7 +91,7 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         return
 
     has_in_progress = False
-    latest_end_date = date.min
+    latest_global_end_date = date.min
     status_of_latest_booking = None
     has_future_booking = False
 
@@ -106,21 +106,43 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         if author_slug in list_names_created:
             author_slug += f"_{random.randint(1, 100)}"
         list_names_created.add(author_slug)
+        
         client_id_str = f"{author_slug}"
-        review_id_str = f"{bike_slug}_R{i}"
-        booking_id_str = f"Booking_{client_id_str}"
-
         client_uri = CTO_DATA[f"Client_{client_id_str}"]
-        review_uri = CTO_DATA[f"Review_{review_id_str}"]
-        booking_uri = CTO_DATA[booking_id_str]
-
+        
+        num_tours = random.randint(4, 8)
+        
         today = date.today()
-        delta_start = random.randint(-40, 40)
-        booking_date = today + timedelta(days=delta_start)
+        start_offset = random.randint(-100, 30) 
+        current_cursor_date = today + timedelta(days=start_offset)
+        
+        first_tour_start = current_cursor_date
+        last_tour_end = current_cursor_date    
+        
+        for t_idx in range(num_tours):
+            tour_duration = random.randint(2, 7)
+            tour_start_date = current_cursor_date
+            tour_end_date = tour_start_date + timedelta(days=tour_duration)
+            
+            tour_booking_uri = CTO_DATA[f"TourBooking_{client_id_str}_{t_idx}"]
+            
+            g_tour_bookings.add((tour_booking_uri, RDF.type, CS.TourBooking))
+            g_tour_bookings.add((tour_booking_uri, CS.bookedBy, client_uri))
+            g_tour_bookings.add((tour_booking_uri, CS.bookingDate, Literal(tour_start_date, datatype=XSD.date)))
+            g_tour_bookings.add((tour_booking_uri, CS.endDate, Literal(tour_end_date, datatype=XSD.date)))
+            
+            last_tour_end = tour_end_date
+            
+            gap = random.randint(1, 5)
+            current_cursor_date = tour_end_date + timedelta(days=gap)
 
-        duration = random.randint(1, 14)
-        end_date = booking_date + timedelta(days=duration)
 
+        bike_booking_id_str = f"Booking_{client_id_str}"
+        booking_uri = CTO_DATA[bike_booking_id_str]
+        
+        booking_date = first_tour_start
+        end_date = last_tour_end
+        
         if end_date < today:
             tour_status = "Finished"
         elif booking_date <= today <= end_date:
@@ -133,8 +155,8 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         elif tour_status == "Not Started":
             has_future_booking = True
 
-        if end_date > latest_end_date:
-            latest_end_date = end_date
+        if end_date > latest_global_end_date:
+            latest_global_end_date = end_date
             status_of_latest_booking = tour_status
 
         g_clients.add((client_uri, RDF.type, CS.Client))
@@ -154,6 +176,9 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         )
         g_bookings.add((booking_uri, CS.endDate, Literal(end_date, datatype=XSD.date)))
 
+        review_id_str = f"{bike_slug}_R{i}"
+        review_uri = CTO_DATA[f"Review_{review_id_str}"]
+        
         g_reviews.add((review_uri, RDF.type, CS.Review))
         g_reviews.add(
             (review_uri, CS.rating, Literal(float(raw_rating), datatype=XSD.decimal))
@@ -165,12 +190,10 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
         g_reviews.add((review_uri, CS.reviewsItem, bike_uri))
 
     g_bikes.remove((bike_uri, CS.maintenanceStatus, None))
-
     final_maintenance_status = CS.MaintenanceOperational
 
     if has_in_progress:
         final_maintenance_status = CS.MaintenanceOperational
-
     elif status_of_latest_booking == "Finished":
         if random.random() < 0.75:
             final_maintenance_status = random.choice(
@@ -178,7 +201,6 @@ def fetch_real_reviews_via_api(scraper, sku, bike_uri, bike_slug):
             )
         else:
             final_maintenance_status = CS.MaintenanceOperational
-
     elif has_future_booking or status_of_latest_booking == "Not Started":
         final_maintenance_status = random.choice(
             [CS.MaintenanceOperational, CS.MaintenanceUnderRepair]
@@ -269,9 +291,11 @@ def main():
     g_reviews.serialize("../database/cto_data_reviews.ttl", format="turtle")
     print("cto_data_reviews.ttl generated")
 
-    g_bookings.serialize("../database/cto_data_bookings.ttl", format="turtle")
-    print("cto_data_bookings.ttl generated")
-
+    g_bookings.serialize("../database/cto_data_bookings_bike.ttl", format="turtle")
+    print("cto_data_bookings_bike.ttl generated")
+    
+    g_tour_bookings.serialize("../database/cto_data_bookings_tour.ttl", format="turtle")
+    print("cto_data_bookings_tour.ttl generated")
 
 if __name__ == "__main__":
     main()

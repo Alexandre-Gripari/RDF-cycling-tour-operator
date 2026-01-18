@@ -20,6 +20,24 @@ cto:Review_rcr_pro_team_dura_ace_di2_signature_R2 a cs:Review ;
     cs:reviewedBy cto:Client_pauline ;
     cs:reviewsItem cto:Bike_rcr_pro_team_dura_ace_di2_signature .
 
+cto:Review_velo_route_cyclotouriste_rc500_microshif_R0 a cs:Review ;
+    cs:rating 5.0 ;
+    cs:reviewText "Très boin rapport qualité prix cadre nerveux à souhait."^^xsd:string ;
+    cs:reviewedBy cto:Client_pedro ;
+    cs:reviewsItem cto:Bike_velo_route_cyclotouriste_rc500_microshif .
+
+cto:Review_velo_route_cyclotouriste_rc500_microshif_R1 a cs:Review ;
+    cs:rating 2.0 ;
+    cs:reviewText "Acheté récemment, le vélo RC500 présente dès les premiers jours des bruits au niveau du dérailleur et des freins. Après environ deux semaines d’utilisation, le dérailleur commence à mal fonctionner : il passe les vitesses de façon aléatoire, parfois sans que je touche aux commandes, ce qui est dangereux et gênant.<br>Je suis déçu de cette expérience et je recommande un contrôle ou une réparation en garantie"^^xsd:string ;
+    cs:reviewedBy cto:Client_walid ;
+    cs:reviewsItem cto:Bike_velo_route_cyclotouriste_rc500_microshif .
+
+cto:Review_velo_route_cyclotouriste_rc500_microshif_R2 a cs:Review ;
+    cs:rating 5.0 ;
+    cs:reviewText "Parfait "^^xsd:string ;
+    cs:reviewedBy cto:Client_sarah ;
+    cs:reviewsItem cto:Bike_velo_route_cyclotouriste_rc500_microshif .
+
 cto:Review_velo_ville_electrique_a_moteur_automatiq_R0 a cs:Review ;
     cs:rating 1.0 ;
     cs:reviewText "Je suis extrêmement déçu. Le vélo a failli me tuer deux fois ce matin je roule sur une route à 30 et tout d’un coup les pédales lâchent et je tourne dans le vide, je suis tombé par terre à côté des voitures. C’est la 50e fois que ça arrive en quelques mois depuis mon achat. À part ça, l’autonomie est très loin d’être celle promise. Une catastrophe"^^xsd:string ;
@@ -40,20 +58,20 @@ cto:Review_velo_ville_electrique_a_moteur_automatiq_R2 a cs:Review ;
 
 cto:Review_velo_vtc_neomouv_raipon_2_R0 a cs:Review ;
     cs:rating 5.0 ;
-    cs:reviewText "Je recommande vraiment ce vélo. Je l'utilise tous les jours en tirant une cariole avec mes deux enfants dedans.<br>Le seul point négatif est l'économie qu'ils ont fait sur le lampe de devant, elle est bralante et la connectique ne tient pas.<br>J'ai du la remplacer avec une lampe perso rechargeable. "^^xsd:string ;
-    cs:reviewedBy cto:Client_youcef ;
+    cs:reviewText "Mon meilleur achat pour cette nouvelle année.  Design, confortable soldé tout pour plaire"^^xsd:string ;
+    cs:reviewedBy cto:Client_anne ;
     cs:reviewsItem cto:Bike_velo_vtc_neomouv_raipon_2 .
 
 cto:Review_velo_vtc_neomouv_raipon_2_R1 a cs:Review ;
     cs:rating 5.0 ;
-    cs:reviewText "Bonne autonomie, facilite de prise en main,equipement ,<br>Defaut selle un peu dure sur long trajet"^^xsd:string ;
-    cs:reviewedBy cto:Client_marc ;
+    cs:reviewText "Je recommande vraiment ce vélo. Je l'utilise tous les jours en tirant une cariole avec mes deux enfants dedans.<br>Le seul point négatif est l'économie qu'ils ont fait sur le lampe de devant, elle est bralante et la connectique ne tient pas.<br>J'ai du la remplacer avec une lampe perso rechargeable. "^^xsd:string ;
+    cs:reviewedBy cto:Client_youcef ;
     cs:reviewsItem cto:Bike_velo_vtc_neomouv_raipon_2 .
 
 cto:Review_velo_vtc_neomouv_raipon_2_R2 a cs:Review ;
     cs:rating 5.0 ;
-    cs:reviewText "Très bon vélo.  Service DECATHLON AJACCIO super ."^^xsd:string ;
-    cs:reviewedBy cto:Client_antoine ;
+    cs:reviewText "Bonne autonomie, facilite de prise en main,equipement ,<br>Defaut selle un peu dure sur long trajet"^^xsd:string ;
+    cs:reviewedBy cto:Client_marc ;
     cs:reviewsItem cto:Bike_velo_vtc_neomouv_raipon_2 .
 
 cto:Review_vlo_cargo_lectrique_longtail_chargement__R0 a cs:Review ;
@@ -108,6 +126,24 @@ La batterie tient bien. Sur une sortie de 140 km avec 1500m de deniv + j'ai cons
         cto:Client_michel ;
     cs:reviewsItem cto:Bike_vlo_de_route_lectrique_sram_apex_axs_1x1 .
 
+cto:Review_vlo_de_ville_lectrique_elops_900_cadre_h_R0 a cs:Review ;
+    cs:rating 3.0 ;
+    cs:reviewText "Vélo, un petit peu fragile quand on freine pas de feu de stop à l’arrière"^^xsd:string ;
+    cs:reviewedBy cto:Client_yassine ;
+    cs:reviewsItem cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h .
+
+cto:Review_vlo_de_ville_lectrique_elops_900_cadre_h_R1 a cs:Review ;
+    cs:rating 1.0 ;
+    cs:reviewText "12/09 je viens encore de passer qq heure à l atelier j y étais le 4/09 déjà. Le 4 on m annonce que le moteur du vélo est mort .  Le 12 on m annonce que c est le cadre qui est voilé. Le 4 ils ont re serré les freins. Le 12 re belotte sauf que là  pour freiner il va d'abord falloir que j aille à la salle pousser de la fonte. N y les n y les autre on vu que j avais  un rayon de cassé qui vol au vent . Si vous avez besoin d un vélo  jetable elios est bien ou c est le personnel qu il faut jeter. Suite la semaine prochaine "^^xsd:string ;
+    cs:reviewedBy cto:Client_michelle ;
+    cs:reviewsItem cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h .
+
+cto:Review_vlo_de_ville_lectrique_elops_900_cadre_h_R2 a cs:Review ;
+    cs:rating 3.0 ;
+    cs:reviewText "J'ai acheté ce vélo il y a une semaine. Je suis plutôt satisfait du vélo qui fait le job pour son prix accessible (entrée de gamme).<br>Toutefois, hier soir, j'ai pris la route après une grosse averse, et un simple freinage de routine en amont d'un passage piéton m'a fait chuter du vélo violemment. Je ne me suis pas fais très mal mais l'issue aurait pu être différente si une voiture me suivait.<br>J'ai contacté le decath Paris Madeleine qui m'a invité à venir en urgence pour voir si le vélo présentait un défaut et essayer de comprendre ce qui avait pu se passer (de ce côté là , je félicite et remercie decath pour la qualité de la prise en charge et de l'écoute). <br>On m'a indiqué que le vélo ne présentait pas de défaut particulier, mais que j'avais mal fais le rodage des freins à disque. On m'a également indiqué que les pneux de ce VAE ne sont pas forcément les meilleurs pour \"accrocher\" le bitume. Bref, diagnostic et prise en charge gratuits, et changement du frein à disque arrière pris en charge également. Je ressors donc avec un vélo nickel, satisfait de la prise en charge très pro, mais pas de réponse sur la raison de ma chute... je n'ai jamais chuté comme ça en 10 ans de vélotaf quotidien. Je reprend donc la route avec ce VAE satisfait de la prise en charge, mais quand même anxieux que cela puisse se reproduire, n'ayant pas vraiment de réponse sur la cause de ma chute ... en tout cas, je serai très vigilant à l'avenir par temps de pluie ou sur route humide pour freiner ! "^^xsd:string ;
+    cs:reviewedBy cto:Client_av ;
+    cs:reviewsItem cto:Bike_vlo_de_ville_lectrique_elops_900_cadre_h .
+
 cto:Review_vlo_tout_chemin_electrique__neomouv_raip_R0 a cs:Review ;
     cs:rating 1.0 ;
     cs:reviewText "Pour le moment, je donne zéro étoile. Vélo qui se met en sécurité selon Neomouv. je suis  en attente des tests sur banc. Mais je trouve ça ubuesque qu'un vélo à assistance se mette en sécurité d'un coup sans alerte ou autre, au milieu d'une côte, dans le flux de circulation.On se retrouve en danger.  Et pour rappel, un vélo à assistance est essentiellement pris par les gens pour les aider en cas de difficultés."^^xsd:string ;
@@ -143,6 +179,42 @@ cto:Review_vlo_tout_chemin_riverside_120_gris_R2 a cs:Review ;
     cs:reviewText "Excellent produit, bonne tenue de route, Bonne qualité/prix, robuste sur tous types de terrains, correspond tout à fait à mes attentes. "^^xsd:string ;
     cs:reviewedBy cto:Client_didier ;
     cs:reviewsItem cto:Bike_vlo_tout_chemin_riverside_120_gris .
+
+cto:Review_vlo_tout_chemin_riverside_500_vert_deau_R0 a cs:Review ;
+    cs:rating 5.0 ;
+    cs:reviewText "Rien à redire du début à la fin"^^xsd:string ;
+    cs:reviewedBy cto:Client_martin ;
+    cs:reviewsItem cto:Bike_vlo_tout_chemin_riverside_500_vert_deau .
+
+cto:Review_vlo_tout_chemin_riverside_500_vert_deau_R1 a cs:Review ;
+    cs:rating 5.0 ;
+    cs:reviewText "Bien"^^xsd:string ;
+    cs:reviewedBy cto:Client_christopher ;
+    cs:reviewsItem cto:Bike_vlo_tout_chemin_riverside_500_vert_deau .
+
+cto:Review_vlo_tout_chemin_riverside_500_vert_deau_R2 a cs:Review ;
+    cs:rating 5.0 ;
+    cs:reviewText "Utiser 2 fois rien à redire pour le moment "^^xsd:string ;
+    cs:reviewedBy cto:Client_roger ;
+    cs:reviewsItem cto:Bike_vlo_tout_chemin_riverside_500_vert_deau .
+
+cto:Review_vlo_vtt_electrique_tout_suspendu_29__sti_R0 a cs:Review ;
+    cs:rating 4.0 ;
+    cs:reviewText "Fait le job"^^xsd:string ;
+    cs:reviewedBy cto:Client_blanc ;
+    cs:reviewsItem cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti .
+
+cto:Review_vlo_vtt_electrique_tout_suspendu_29__sti_R1 a cs:Review ;
+    cs:rating 5.0 ;
+    cs:reviewText "Suite à des soucie sur un eexpl520 remplacement par ce model qui est vraiment de meilleur qualité pour l’instant mise a par une chaîne de mauvaise qualité qui n’a durer que 130km aujourd’hui 800km est aucun problème, juste dommage que le Kiox ne soit pas monter d’origine sur se model"^^xsd:string ;
+    cs:reviewedBy cto:Client_philippe ;
+    cs:reviewsItem cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti .
+
+cto:Review_vlo_vtt_electrique_tout_suspendu_29__sti_R2 a cs:Review ;
+    cs:rating 1.0 ;
+    cs:reviewText "Jai acheté ce velo, il y a 3 semaines, au bout de 2 sorties vtt en forêt une pédale cassée, le verrin de la suspension arrière fuit, le dérailleur est déconnant !"^^xsd:string ;
+    cs:reviewedBy cto:Client_cristina ;
+    cs:reviewsItem cto:Bike_vlo_vtt_electrique_tout_suspendu_29__sti .
 
 cto:Review_xcr_tri_rival_axs_power_roues_fulcrum_wi_R0 a cs:Review ;
     cs:rating 5.0 ;
