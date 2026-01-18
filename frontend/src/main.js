@@ -376,53 +376,68 @@ function formatTable(data) {
 
 function renderPredictView() {
   contentArea.innerHTML = `
-    <div class="max-w-2xl mx-auto mt-10">
+    <div class="max-w-4xl mx-auto mt-10">
       <div class="glass-panel p-8 text-center mb-8">
         <div class="w-16 h-16 bg-brand-dim rounded-full flex items-center justify-center mx-auto mb-4 text-brand-DEFAULT">
           <i data-lucide="brain-circuit" class="w-8 h-8"></i>
         </div>
         <h3 class="text-xl font-bold text-white mb-2">Recommendation Engine</h3>
-        <p class="text-slate-400 text-sm mb-6">Enter a Client URI to predict their next best tour package based on similarity graphs.</p>
+        <p class="text-slate-400 text-sm mb-6">Enter a Client URI to predict potential missing links (future bookings) based on Jaccard Similarity.</p>
         
-        <div class="flex gap-2">
-          <input type="text" id="client-uri" placeholder="http://data.cyclingtour.fr/data#Client_bruno_rcr_pro_team_dura_ace_di2_signature_0" class="flex-1">
-          <button id="get-pred" class="bg-brand-DEFAULT text-bg-main font-bold px-6 rounded-lg">Predict</button>
+        <div class="flex gap-2 max-w-xl mx-auto">
+          <input type="text" id="client-uri" placeholder="http://data.cyclingtour.fr/data#Client_didier" class="flex-1 bg-bg-main border border-slate-700 rounded-lg px-4 py-2 text-sm text-white focus:border-brand-DEFAULT outline-none">
+          <button id="get-pred" class="bg-brand-DEFAULT hover:bg-brand-glow transition-all text-bg-main font-bold px-6 py-2 rounded-lg text-sm">Predict</button>
         </div>
       </div>
 
-      <div id="pred-result" class="hidden glass-panel p-6 border-l-4 border-l-brand-DEFAULT">
-        <h4 class="text-sm font-mono text-slate-400 uppercase mb-4">Top Recommendation</h4>
-        <div class="flex justify-between items-start">
-           <div>
-              <div class="text-2xl text-white font-bold mb-1" id="rec-tour">Tour Name</div>
-              <div class="text-slate-400 text-sm" id="rec-reason">Reasoning...</div>
-           </div>
-           <div class="text-brand-DEFAULT font-mono text-xl font-bold" id="rec-score">98%</div>
-        </div>
+      <div id="pred-result" class="hidden flex flex-col gap-4">
+         <h4 class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Top Predicted Links</h4>
+         <div id="pred-list" class="space-y-3">
+            </div>
       </div>
     </div>
   `;
 
   document.getElementById('get-pred').onclick = async () => {
-    const uri = document.getElementById('client-uri').value;
-    const resDiv = document.getElementById('pred-result');
+    const uri = document.getElementById('client-uri').value.trim();
+    const resultContainer = document.getElementById('pred-result');
+    const listContainer = document.getElementById('pred-list');
     
-    if(!uri) return alert("Please enter a URI");
+    if(!uri) return alert("Please enter a Client URI");
+
+    listContainer.innerHTML = '<div class="text-center text-brand-DEFAULT text-sm py-4 animate-pulse">Calculating Jaccard Similarities...</div>';
+    resultContainer.classList.remove('hidden');
 
     try {
       const res = await fetch(`${API_BASE}/prediction`, {
-         method: 'POST', headers: {'Content-Type': 'application/json'},
-         body: JSON.stringify({ client_uri: uri })
+          method: 'POST', 
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ client_uri: uri })
       });
       const data = await res.json();
       
-      document.getElementById('rec-tour').innerText = data.tour_uri;
-      document.getElementById('rec-reason').innerText = data.reason;
-      document.getElementById('rec-score').innerText = (data.score * 100).toFixed(0) + '% Match';
+      if (data.error) throw new Error(data.error);
       
-      resDiv.classList.remove('hidden');
+      if (!Array.isArray(data) || data.length === 0) {
+          listContainer.innerHTML = '<div class="text-center text-slate-500 italic py-4">No recommendations found. (Score too low or no history)</div>';
+          return;
+      }
+
+      listContainer.innerHTML = data.map((item, index) => `
+        <div class="glass-panel p-4 flex items-center justify-between border-l-4 ${index === 0 ? 'border-l-brand-DEFAULT' : 'border-l-slate-600'}">
+            <div class="flex-1 min-w-0 pr-4">
+                <div class="text-white font-bold truncate text-sm" title="${item.tour_uri}">${item.tour_uri.split('#').pop()}</div>
+                <div class="text-slate-500 text-xs mt-1 truncate">${item.label}</div>
+            </div>
+            <div class="text-right">
+                <div class="text-brand-DEFAULT font-mono text-lg font-bold">${(item.score * 100).toFixed(1)}%</div>
+                <div class="text-slate-600 text-[10px] uppercase font-bold">Confidence</div>
+            </div>
+        </div>
+      `).join('');
+      
     } catch(e) {
-      alert("Error fetching prediction");
+      listContainer.innerHTML = `<div class="p-4 bg-red-900/20 border border-red-500/30 text-red-400 rounded text-sm text-center">Error: ${e.message}</div>`;
     }
   };
 }
