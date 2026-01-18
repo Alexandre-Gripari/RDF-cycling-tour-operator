@@ -5,8 +5,7 @@ import { marked } from 'marked';
 const API_BASE = 'http://127.0.0.1:5000/api';
 
 const state = {
-  currentView: 'chat',
-  chatHistory: [],
+  activeView: 'chat',
 };
 
 const contentArea = document.getElementById('content-area');
@@ -14,8 +13,18 @@ const pageTitle = document.getElementById('page-title');
 const navButtons = document.querySelectorAll('.nav-btn');
 
 function init() {
+  contentArea.innerHTML = `
+    <div id="view-chat" class="h-full flex flex-col w-full"></div>
+    <div id="view-explorer" class="h-full hidden w-full"></div>
+    <div id="view-predict" class="h-full hidden w-full"></div>
+  `;
+
+  renderChatView(document.getElementById('view-chat'));
+  renderExplorerView(document.getElementById('view-explorer'));
+  renderPredictView(document.getElementById('view-predict'));
+
   setupNavigation();
-  renderView('chat');
+  switchTab('chat');
   initLucide();
 }
 
@@ -26,45 +35,44 @@ function initLucide() {
 function setupNavigation() {
   navButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      navButtons.forEach(b => {
-        b.className = `flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm text-slate-400 hover:bg-bg-hover hover:text-white transition-all`;
-      });
-      
-      const target = e.currentTarget;
-      target.className = `flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm bg-brand-dim text-brand-DEFAULT border border-brand-DEFAULT/20 shadow-neon font-medium transition-all`;
-      
-      const view = target.id.replace('nav-', '');
-      renderView(view);
+      const targetId = e.currentTarget.id.replace('nav-', '');
+      switchTab(targetId);
     });
   });
-  
-  document.getElementById('nav-chat').click();
 }
 
-function renderView(view) {
-  state.currentView = view;
-  contentArea.innerHTML = '';
-  
+function switchTab(viewName) {
+  state.activeView = viewName;
+
+  navButtons.forEach(btn => {
+    const isTarget = btn.id === `nav-${viewName}`;
+    btn.className = isTarget 
+      ? `flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm bg-brand-dim text-brand-DEFAULT border border-brand-DEFAULT/20 shadow-neon font-medium transition-all`
+      : `flex items-center gap-3 w-full px-4 py-3 rounded-lg text-sm text-slate-400 hover:bg-bg-hover hover:text-white transition-all`;
+  });
+
   const titles = {
     chat: 'AI Assistant & SPARQL Generator',
     explorer: 'Knowledge Graph Explorer',
     predict: 'Tour Recommendation Engine'
   };
-  pageTitle.innerText = titles[view];
+  pageTitle.innerText = titles[viewName];
 
-  if (view === 'chat') renderChatView();
-  if (view === 'explorer') renderExplorerView();
-  if (view === 'predict') renderPredictView();
-  
-  initLucide();
+  ['chat', 'explorer', 'predict'].forEach(v => {
+    const el = document.getElementById(`view-${v}`);
+    if (v === viewName) {
+        el.classList.remove('hidden');
+    } else {
+        el.classList.add('hidden');
+    }
+  });
 }
 
-function renderChatView() {
+function renderChatView(container) {
   let searchMode = 'chat'; 
 
-  contentArea.innerHTML = `
-    <div class="max-w-3xl mx-auto h-full flex flex-col">
-      
+  container.innerHTML = `
+    <div class="max-w-3xl mx-auto h-full flex flex-col w-full">
       <div id="chat-messages" class="flex-1 overflow-y-auto space-y-4 mb-6 pr-2 scroll-smooth">
         <div class="flex gap-4">
           <div class="w-8 h-8 rounded-full bg-brand-DEFAULT flex items-center justify-center text-bg-main font-bold shrink-0">AI</div>
@@ -77,7 +85,6 @@ function renderChatView() {
       </div>
       
       <div class="flex flex-col gap-3">
-        
         <div class="flex justify-center">
             <div class="bg-bg-main border border-white/10 p-1 rounded-lg flex gap-1">
                 <button id="btn-mode-chat" class="px-4 py-1.5 rounded-md text-xs font-medium flex items-center gap-2 transition-all bg-brand-dim text-brand-DEFAULT border border-brand-DEFAULT/20 shadow-neon">
@@ -103,12 +110,12 @@ function renderChatView() {
     </div>
   `;
 
-  const input = document.getElementById('chat-input');
-  const btn = document.getElementById('send-chat');
-  const messages = document.getElementById('chat-messages');
-  const btnChat = document.getElementById('btn-mode-chat');
-  const btnQuery = document.getElementById('btn-mode-query');
-  const indicator = document.getElementById('mode-indicator');
+  const input = container.querySelector('#chat-input');
+  const btn = container.querySelector('#send-chat');
+  const messages = container.querySelector('#chat-messages');
+  const btnChat = container.querySelector('#btn-mode-chat');
+  const btnQuery = container.querySelector('#btn-mode-query');
+  const indicator = container.querySelector('#mode-indicator');
 
   const setMode = (mode) => {
     searchMode = mode;
@@ -126,6 +133,7 @@ function renderChatView() {
         indicator.innerText = "Mode: Generate SPARQL & Data Table";
     }
     input.focus();
+    createIcons({ icons });
   };
 
   btnChat.onclick = () => setMode('chat');
@@ -135,10 +143,10 @@ function renderChatView() {
     const text = input.value;
     if (!text) return;
 
-    addMessage('user', text);
+    addMessageToContainer(messages, 'user', text);
     input.value = '';
     
-    addMessage('system', 'Thinking...');
+    addMessageToContainer(messages, 'system', 'Thinking...');
     
     try {
       let responseText = "";
@@ -174,24 +182,21 @@ function renderChatView() {
       }
 
       messages.lastElementChild.remove();
-      addMessage('ai', responseText, true);
+      addMessageToContainer(messages, 'ai', responseText, true);
 
       createIcons({ icons });
 
     } catch (e) {
       messages.lastElementChild.remove();
-      addMessage('system', `Error: ${e.message}`);
+      addMessageToContainer(messages, 'system', `Error: ${e.message}`);
     }
   };
 
   btn.onclick = handleSend;
   input.onkeypress = (e) => { if(e.key === 'Enter') handleSend() };
-  
-  createIcons({ icons });
 }
 
-function addMessage(role, html, isHtml = false) {
-  const messages = document.getElementById('chat-messages');
+function addMessageToContainer(container, role, html, isHtml = false) {
   const div = document.createElement('div');
   div.className = `flex gap-4 ${role === 'user' ? 'flex-row-reverse' : ''}`;
   
@@ -205,13 +210,13 @@ function addMessage(role, html, isHtml = false) {
       ${isHtml ? html : html.replace(/</g, "&lt;")}
     </div>
   `;
-  messages.appendChild(div);
-  messages.scrollTop = messages.scrollHeight;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
 }
 
-function renderExplorerView() {
-  contentArea.innerHTML = `
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-full">
+function renderExplorerView(container) {
+  container.innerHTML = `
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 h-full w-full">
       <div class="lg:col-span-1 flex flex-col gap-4">
         <div class="glass-panel p-4 flex-1 flex flex-col">
           <label class="text-xs font-mono text-slate-400 mb-2 uppercase tracking-wider">SPARQL Query Editor</label>
@@ -268,7 +273,7 @@ WHERE {
     </div>
   `;
   
-  const textarea = document.getElementById('sparql-input');
+  const textarea = container.querySelector('#sparql-input');
   textarea.addEventListener('keydown', function(e) {
     if (e.key === 'Tab') {
       e.preventDefault();
@@ -279,41 +284,39 @@ WHERE {
     }
   });
 
-  document.getElementById('run-query').onclick = () => executeRawQuery(false);
-  document.getElementById('enrich-query').onclick = () => executeRawQuery(true);
-  
-  createIcons({ icons });
-}
+  const run = async (enrich) => {
+      const query = textarea.value;
+      const resultDiv = container.querySelector('#query-results');
+      const countSpan = container.querySelector('#result-count');
+      
+      resultDiv.innerHTML = '<div class="h-full flex flex-col items-center justify-center gap-3"><div class="w-6 h-6 border-2 border-brand-DEFAULT border-t-transparent rounded-full animate-spin"></div><div class="text-brand-DEFAULT text-xs animate-pulse">Querying Knowledge Graph...</div></div>';
+      countSpan.innerText = '';
 
-async function executeRawQuery(enrich) {
-  const query = document.getElementById('sparql-input').value;
-  const resultDiv = document.getElementById('query-results');
-  const countSpan = document.getElementById('result-count');
-  
-  resultDiv.innerHTML = '<div class="h-full flex flex-col items-center justify-center gap-3"><div class="w-6 h-6 border-2 border-brand-DEFAULT border-t-transparent rounded-full animate-spin"></div><div class="text-brand-DEFAULT text-xs animate-pulse">Querying Knowledge Graph...</div></div>';
-  countSpan.innerText = '';
+      try {
+        const endpoint = enrich ? '/enrich' : '/query';
+        const checkedBoxes = container.querySelectorAll('.enrich-opt:checked');
+        const selectedFields = Array.from(checkedBoxes).map(cb => cb.value);
 
-  try {
-    const endpoint = enrich ? '/enrich' : '/query';
-    
-    const checkedBoxes = document.querySelectorAll('.enrich-opt:checked');
-    const selectedFields = Array.from(checkedBoxes).map(cb => cb.value);
+        const payload = enrich ? { query, fields: selectedFields } : { query };
+        
+        const res = await fetch(`${API_BASE}${endpoint}`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        
+        const data = await res.json();
+        
+        resultDiv.innerHTML = formatTable(data);
+        countSpan.innerText = Array.isArray(data) ? `${data.length} rows found` : '';
+        createIcons({ icons });
+        
+      } catch (e) {
+        resultDiv.innerHTML = `<div class="p-4 text-red-400 font-mono text-xs">Error: ${e.message}</div>`;
+      }
+  };
 
-    const payload = enrich ? { query, fields: selectedFields } : { query };
-    
-    const res = await fetch(`${API_BASE}${endpoint}`, {
-      method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
-    
-    const data = await res.json();
-    
-    resultDiv.innerHTML = formatTable(data);
-    countSpan.innerText = Array.isArray(data) ? `${data.length} rows found` : '';
-    
-  } catch (e) {
-    resultDiv.innerHTML = `<div class="p-4 text-red-400 font-mono text-xs">Error: ${e.message}</div>`;
-  }
+  container.querySelector('#run-query').onclick = () => run(false);
+  container.querySelector('#enrich-query').onclick = () => run(true);
 }
 
 function formatTable(data) {
@@ -355,7 +358,7 @@ function formatTable(data) {
         else if (typeof val === 'string' && val.startsWith('http')) {
             const shortName = val.split(/[#/]/).pop();
             val = `<a href="${val}" target="_blank" class="text-blue-400 hover:text-blue-300 hover:underline truncate max-w-[200px] block font-mono text-xs" title="${val}">
-                    ${shortName || 'link'} <i data-lucide="external-link" class="inline w-3 h-3 opacity-50"></i>
+                     ${shortName || 'link'} <i data-lucide="external-link" class="inline w-3 h-3 opacity-50"></i>
                    </a>`;
         }
         else if (h === 'description' && val.length > 100) {
@@ -368,15 +371,12 @@ function formatTable(data) {
   });
   
   html += `</tbody></table>`;
-  
-  setTimeout(() => createIcons({ icons }), 0);
-
   return html;
 }
 
-function renderPredictView() {
-  contentArea.innerHTML = `
-    <div class="max-w-4xl mx-auto mt-10">
+function renderPredictView(container) {
+  container.innerHTML = `
+    <div class="max-w-4xl mx-auto mt-10 w-full">
       <div class="glass-panel p-8 text-center mb-8">
         <div class="w-16 h-16 bg-brand-dim rounded-full flex items-center justify-center mx-auto mb-4 text-brand-DEFAULT">
           <i data-lucide="brain-circuit" class="w-8 h-8"></i>
@@ -392,16 +392,18 @@ function renderPredictView() {
 
       <div id="pred-result" class="hidden flex flex-col gap-4">
          <h4 class="text-xs font-mono text-slate-400 uppercase tracking-wider mb-2">Top Predicted Links</h4>
-         <div id="pred-list" class="space-y-3">
-            </div>
+         <div id="pred-list" class="space-y-3"></div>
       </div>
     </div>
   `;
 
-  document.getElementById('get-pred').onclick = async () => {
-    const uri = document.getElementById('client-uri').value.trim();
-    const resultContainer = document.getElementById('pred-result');
-    const listContainer = document.getElementById('pred-list');
+  const btn = container.querySelector('#get-pred');
+  const input = container.querySelector('#client-uri');
+  const resultContainer = container.querySelector('#pred-result');
+  const listContainer = container.querySelector('#pred-list');
+
+  btn.onclick = async () => {
+    const uri = input.value.trim();
     
     if(!uri) return alert("Please enter a Client URI");
 
