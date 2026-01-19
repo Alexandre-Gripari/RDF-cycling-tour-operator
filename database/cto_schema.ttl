@@ -58,14 +58,14 @@ cs:MaintenanceUnavailable a skos:Concept ;
     skos:definition "The bike cannot be used due to mechanical issues."@en .
 
 cs:MaintenanceNeedsService a skos:Concept ;
-    skos:narrower cs:MaintenanceKO ;
+    skos:broader cs:MaintenanceUnavailable ;
     skos:inScheme cs:MaintenanceStatus ;
     skos:prefLabel "Needs Service"@en ;
     skos:prefLabel "Besoin de maintenance"@fr ;
     skos:definition "Bike requires maintenance before it can be used."@en .
 
 cs:MaintenanceUnderRepair a skos:Concept ;
-    skos:narrower cs:MaintenanceKO ;
+    skos:broader cs:MaintenanceUnavailable ;
     skos:inScheme cs:MaintenanceStatus ;
     skos:prefLabel "Under Repair"@en ;
     skos:prefLabel "En réparation"@fr ;

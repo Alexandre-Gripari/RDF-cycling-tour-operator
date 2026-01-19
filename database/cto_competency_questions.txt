@@ -46,7 +46,7 @@ WHERE {
 ORDER BY ?rating
 
 # ----------------------------------------------------------------------------
-# QUERY 3: Quels guides sont assignés à des étapes longues (durée > 8 heures) et quel est le prix journalier du tour associé ?
+# QUERY 3: Quels guides sont assignés à des étapes longues (longueur > 50 km) et quel est le prix journalier du tour associé ?
 # ----------------------------------------------------------------------------
 
 PREFIX cs: <http://data.cyclingtour.fr/schema#>
