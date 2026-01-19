@@ -39,6 +39,16 @@ class SparqlService:
         return self.graph
     
     def predict_recommendations(self, client_uri):
+        def get_client_name(uri):
+            q = "SELECT ?n WHERE { ?c foaf:name ?n }"
+            res = self.graph.query(q, initBindings={'c': uri})
+            return list(res)[0].n if res else str(uri)
+
+        def get_tour_label(uri):
+            q = "SELECT ?l WHERE { ?t rdfs:label ?l }"
+            res = self.graph.query(q, initBindings={'t': uri})
+            return unquote(str(list(res)[0].l)) if res else str(uri).split('#')[-1]
+        
         client_ref = URIRef(client_uri) 
         
         query_target = """
@@ -84,15 +94,23 @@ class SparqlService:
             
             jaccard_score = len(intersection) / len(union)
             
-            if jaccard_score > 0:
+            if jaccard_score > 0.20:
                 potential_new_links = other_tours - target_tours
+                if potential_new_links:
+                    other_name = get_client_name(other_client_ref)
+                    common_names = [get_tour_label(t) for t in intersection]
+                    suggested_names = [get_tour_label(t) for t in potential_new_links]
+                    
+                    print(f"\nClient similaire : {other_name}")
+                    print(f"    Score de similarité: {jaccard_score:.2f}")
+                    print(f"    Historique commun ({len(intersection)}) : {', '.join(common_names)}")
+                    print(f"    Suggère les tours ({len(potential_new_links)}) : {', '.join(suggested_names)}")
                 for tour in potential_new_links:
                     if tour not in candidates:
                         candidates[tour] = 0.0
                     candidates[tour] += jaccard_score
 
         recommendations = []
-        max_score = max(candidates.values()) if candidates else 1.0
         
         for tour_uri, score in candidates.items():
             label_res = self.graph.query(
@@ -102,12 +120,11 @@ class SparqlService:
             
             raw_label = next(iter(label_res)).label if label_res else str(tour_uri)
             clean_label = unquote(str(raw_label))
-            normalized_score = score / max_score 
             
             recommendations.append({
                 "tour_uri": str(tour_uri),
                 "label": clean_label,
-                "score": round(normalized_score, 2),
+                "score": round(score , 2),
             })
 
         recommendations.sort(key=lambda x: x['score'], reverse=True)
