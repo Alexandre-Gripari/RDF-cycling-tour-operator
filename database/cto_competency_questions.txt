@@ -60,30 +60,43 @@ WHERE {
 GROUP BY ?tourLabel ?price
 
 # ----------------------------------------------------------------------------
-# QUERY 3: Quels guides sont assignés à des étapes longues (longueur > 50 km) et quel est le prix journalier du tour associé ?
+# QUERY 3: Quels sont les "Couples de Géants", des montagnes de haute altitude (> 1000m) qui sont directement reliées entre elles, et quel est le dénivelé qu'il faudrait pour passer de l'une à l'autre ?
 # ----------------------------------------------------------------------------
 
 PREFIX cs: <http://data.cyclingtour.fr/schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX cto: <http://data.cyclingtour.fr/data#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT DISTINCT ?guideName ?stageLabel ?length ?tourPrice
+SELECT 
+  ?massif 
+  ?sommet1 
+  ?alt1 
+  ?sommet2 
+  ?alt2 
+  ?ecartAltitude
+  ?statut
 WHERE {
-  ?stage a cs:TourStage ;
-         cs:guideAssigned ?guide ;
-         cs:stagePath ?path . 
+  ?m1 a cs:Mountain ;
+      rdfs:label ?sommet1 ;
+      cs:elevation ?alt1 ;
+      cs:mountainRange ?rangeUri .
 
-  ?path cs:length ?length .
-  
-  FILTER (?length > 50.0)
+  ?m1 cs:isNear ?m2 .
 
-  ?tour cs:includesStage ?stage ;
-        cs:pricePerDayTour ?tourPrice .
+  ?m2 a cs:Mountain ;
+      rdfs:label ?sommet2 ;
+      cs:elevation ?alt2 .
 
-  OPTIONAL { ?guide rdfs:label ?guideName } . 
-  OPTIONAL { ?guide foaf:name ?guideName } .
-  OPTIONAL { ?stage rdfs:label ?stageLabel } .
+  FILTER (?alt1 > 1000 && ?alt2 > 1000 && ?alt1 > ?alt2)
+  BIND ((?alt1 - ?alt2) AS ?ecartAltitude)
+  BIND (
+    IF(?ecartAltitude < 100, "Traversée Plane", 
+    IF(?ecartAltitude < 500, "Vallonné", "Casse-Pattes")) 
+    AS ?statut
+  )
+  BIND (REPLACE(STR(?rangeUri), "^.*/", "") AS ?massif)
 }
-ORDER BY DESC(?tourPrice)
+ORDER BY DESC(?alt1)
+LIMIT 15
 
