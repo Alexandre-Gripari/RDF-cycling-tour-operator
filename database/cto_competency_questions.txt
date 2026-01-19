@@ -33,7 +33,6 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?tourLabel ?price (AVG(?elevation) AS ?averageElevation) (COUNT(DISTINCT ?client) AS ?nbClients)
 WHERE {
-  # Identification du Tour et du prix
   ?tour a cs:TourPackage ;
         rdfs:label ?tourLabel ;
         cs:pricePerDayTour ?price .
