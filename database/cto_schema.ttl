@@ -110,10 +110,6 @@ cs:Mountain a owl:Class ;
     rdfs:label "Mountain" ;
     rdfs:comment "A mountain or climb along a cycling route." .
 
-cs:WaterPoint a owl:Class ;
-    rdfs:label "Water Point" ;
-    rdfs:comment "A location where riders can refill water during a tour." .
-
 cs:Guide a owl:Class ;
     rdfs:subClassOf foaf:Person ;
     rdfs:label "Tour Guide" ;
@@ -263,20 +259,10 @@ cs:phone a owl:DatatypeProperty ;
     rdfs:label "phone" ;
     rdfs:comment "Primary phone number of the client." .
 
-cs:description a owl:DatatypeProperty ;
-    rdfs:domain cs:WaterPoint ;
-    rdfs:range xsd:string ;
-    rdfs:label "description" .
-
 cs:tourPackageBooked a owl:ObjectProperty ;
     rdfs:domain cs:TourBooking ;
     rdfs:range cs:TourPackage ;
     rdfs:label "tour package booked" .
-
-cs:isNear a owl:ObjectProperty, owl:SymmetricProperty ;
-    rdfs:domain cs:WaterPoint ;
-    rdfs:range cs:WaterPoint ;
-    rdfs:label "is near" .
 
 cs:isHigherThan a owl:ObjectProperty, owl:TransitiveProperty ;
     rdfs:domain cs:Mountain ;
@@ -288,6 +274,11 @@ cs:isSmallerThan a owl:ObjectProperty ;
     rdfs:domain cs:Mountain ;
     rdfs:range cs:Mountain ;
     rdfs:label "is smaller than" .
+
+cs:isNear a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain cs:Mountain ;
+    rdfs:range cs:Mountain ;
+    rdfs:label "is near" .
 
 cs:isAssignedTo a owl:ObjectProperty ; 
     rdfs:domain cs:Bike ;

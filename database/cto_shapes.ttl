@@ -267,6 +267,11 @@ cs:MountainShape
         sh:maxCount 1 ;
         sh:datatype xsd:float ;
         sh:description "Longitude of the mountain's location" ;
+    ] ; sh:property [
+        sh:path cs:isNear ;
+        sh:minCount 0 ;
+        sh:nodeKind sh:IRI ;
+        sh:description "Other mountains that are near this mountain" ;
     ] .
 
 # Review shapes
@@ -459,39 +464,4 @@ cs:TourPackageShape
         sh:path cs:duration ;
         sh:datatype xsd:duration ;
         sh:description "Total duration of the tour" ;
-    ] .
-
-# Water Point shapes
-
-cs:WaterPointShape
-    a sh:NodeShape ;
-    sh:targetClass cs:WaterPoint ;
-    sh:property [
-        sh:path rdfs:label ;
-        sh:datatype xsd:string ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:description "Name/label of the water point" ;
-    ] ;
-    sh:property [
-        sh:path cs:location ;
-        sh:nodeKind sh:IRI ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:description "Location of the water point (DBpedia reference)" ;
-    ] ;
-    sh:property [
-        sh:path cs:capacity ;
-        sh:datatype xsd:integer ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:minInclusive 1 ;
-        sh:description "Water capacity in liters" ;
-    ] ;
-    sh:property [
-        sh:path cs:description ;
-        sh:datatype xsd:string ;
-        sh:minCount 1 ;
-        sh:maxCount 1 ;
-        sh:description "Description of the water point location and features" ;
     ] .
