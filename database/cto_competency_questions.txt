@@ -25,25 +25,40 @@ GROUP BY ?tourLabel ?guideName
 ORDER BY DESC(?totalElevation)
 
 # ----------------------------------------------------------------------------
-# QUERY 2: Quels vélos ont reçu de mauvaises critiques (note < 4) et quel est leur statut de maintenance actuel ?
+# QUERY 2: Quels 'Tour Packages' ont des étapes avec une difficulté 'Hard' ou 'Very Hard', mais sans étapes 'Easy', et quel est le prix moyen par jour ainsi que le nombre de clients ayant réservé ces tours ?
 # ----------------------------------------------------------------------------
 
 PREFIX cs: <http://data.cyclingtour.fr/schema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-SELECT ?bikeLabel ?rating ?maintenanceStatus ?reviewText
-WHERE {
-  ?review a cs:Review ;
-          cs:rating ?rating ;
-          cs:reviewText ?reviewText ;
-          cs:reviewsItem ?bike .
-  
-  FILTER (?rating < 4)
 
-  ?bike a cs:Bike ;
-        rdfs:label ?bikeLabel ;
-        cs:maintenanceStatus ?maintenanceStatus .
+SELECT ?tourLabel ?price (AVG(?elevation) AS ?averageElevation) (COUNT(DISTINCT ?client) AS ?nbClients)
+WHERE {
+  # Identification du Tour et du prix
+  ?tour a cs:TourPackage ;
+        rdfs:label ?tourLabel ;
+        cs:pricePerDayTour ?price .
+
+  ?tour cs:includesStage/cs:stagePath/cs:difficulty ?difficulty .
+  FILTER (?difficulty IN (cs:Hard, cs:VeryHard))
+
+  FILTER NOT EXISTS {
+    ?tour cs:includesStage ?stageEasy .
+    ?stageEasy cs:stagePath ?pathEasy .
+    ?pathEasy cs:difficulty cs:Easy .
+  }
+
+  ?tour cs:includesStage ?stage .
+  ?stage cs:stagePath ?path .
+  ?path cs:elevationGain ?elevation .
+
+  FILTER (?elevation > 0)
+
+  OPTIONAL {
+    ?booking cs:tourPackageBooked ?tour ;
+             cs:bookedBy ?client .
+  }
 }
-ORDER BY ?rating
+GROUP BY ?tourLabel ?price
 
 # ----------------------------------------------------------------------------
 # QUERY 3: Quels guides sont assignés à des étapes longues (longueur > 50 km) et quel est le prix journalier du tour associé ?
