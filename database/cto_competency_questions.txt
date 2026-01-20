@@ -92,7 +92,7 @@ WHERE {
   BIND ((?alt1 - ?alt2) AS ?ecartAltitude)
   BIND (
     IF(?ecartAltitude < 100, "Traversée Plane", 
-    IF(?ecartAltitude < 500, "Vallonné", "Casse-Pattes")) 
+    IF(?ecartAltitude < 500, "Vallonné", "Montagneux")) 
     AS ?statut
   )
   BIND (REPLACE(STR(?rangeUri), "^.*/", "") AS ?massif)
